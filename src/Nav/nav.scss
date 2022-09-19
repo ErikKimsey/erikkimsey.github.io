@@ -1,0 +1,51 @@
+@import '../styles/responsive.scss';
+@import '../styles/globals.scss';
+@import '../styles/mixins.scss';
+
+$hover-color: #fcfa85;
+
+.nav-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+
+    .nav-item {
+        text-decoration: none;
+        padding: 5px 20px;
+    }
+
+    @media only screen and (max-width: $xlDevice) {}
+
+    @media only screen and (max-width: $lgDevice) {}
+
+    @media only screen and (max-width: $mdDevice) {}
+
+    @media only screen and (max-width: $smDevice) {}
+
+    @media only screen and (max-width: $xsDevice) {
+        font-size: 1em;
+    }
+}
+
+
+@keyframes navbuzz {
+    0% {
+        // transform: translate3d(0, 0, 0);
+        filter: blur(0);
+    }
+
+    20% {
+        filter: blur(6px);
+    }
+
+    80% {
+        filter: blur(0);
+    }
+
+    100% {
+        // transform: translate3d(0, 0, 0);
+        filter: blur(0);
+    }
+}

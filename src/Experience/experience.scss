@@ -1,0 +1,49 @@
+@import "../styles/globals.scss";
+@import "../styles/responsive.scss";
+
+.experienceContainer {
+    width: 100%;
+    min-height: 100vh;
+
+    .experienceHeader {
+        padding-top: 10px;
+        border-top: solid 1px #9D0A9D;
+
+        .label {
+            padding-bottom: 45px;
+            font-size: $componentLabelFontSize_Desktop;
+
+        }
+    }
+
+    .experienceContent {
+        display: flex;
+        flex-flow: row wrap;
+        padding-left: 5%;
+
+        .experienceItemContainer {
+            display: flex;
+            flex-flow: column;
+            width: 300px;
+            margin: 10px;
+            padding: 5px;
+            border-left: solid 1px #9D0A9D;
+
+            .expItemLabel {
+                font-weight: 800;
+            }
+
+            .expItemStack {
+                padding: 5px;
+                font-style: italic;
+            }
+
+            .expItemAbout {
+                padding: 5px;
+                color: #ccc;
+            }
+        }
+
+    }
+
+}

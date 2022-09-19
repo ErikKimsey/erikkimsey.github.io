@@ -1,0 +1,16 @@
+Drei
+https://github.com/pmndrs/drei#html
+https://drei.pmnd.rs/
+
+React Post Processing
+https://docs.pmnd.rs/react-postprocessing/introduction
+
+Post Processing Examples
+https://codesandbox.io/examples/package/postprocessing
+
+R3F Blog???
+https://gracious-keller-98ef35.netlify.app/docs/api/objects-and-properties/
+
+PMNDS ??
+https://docs.pmnd.rs/react-three-fiber/api/hooks
+

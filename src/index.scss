@@ -1,0 +1,58 @@
+@import './styles/globals.scss';
+
+* {
+    font-weight: 100;
+    box-sizing: content-box;
+    overflow-x: hidden;
+}
+
+$comfortaa: "comfortaa";
+
+@font-face {
+    font-family: "comfortaa";
+    src: url(./assets/fonts/comfortaa/Comfortaa-Light.ttf) format("truetype");
+}
+
+body {
+
+    font-family: $comfortaa, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: blueviolet;
+    background-color: #291d40;
+    color: #fff;
+
+    div,
+    i,
+    li,
+    a {
+        color: #fff;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: $darkGrayish;
+}
+
+::-webkit-scrollbar-button {
+    background-color: $darkGrayish;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $darkGrayish;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $yellow;
+}

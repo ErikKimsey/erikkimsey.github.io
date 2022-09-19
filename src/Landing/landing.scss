@@ -1,0 +1,52 @@
+@import '../styles/globals.scss';
+@import '../styles/responsive.scss';
+@import '../styles/mixins.scss';
+
+
+.landing-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .landingLinksContainer {
+        position: absolute;
+        z-index: 1000;
+        padding: 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        right: 0px;
+        bottom: 50px;
+
+        .resumeText {
+            align-self: center;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        a {
+            display: flex;
+            padding: 0 10px;
+            transition: all 500ms;
+
+
+
+            &:hover {
+                color: $pink;
+                transform: rotate(10deg) scale(1.1);
+            }
+        }
+    }
+
+    // @media only screen and (max-width: $lgDevice) {}
+
+    // @media only screen and (max-width: $mdDevice) {}
+
+    // @media only screen and (max-width: $smDevice) {}
+
+    // @media only screen and (max-width: $xsDevice) {}
+}

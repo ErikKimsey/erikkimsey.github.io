@@ -1,0 +1,193 @@
+@import '../styles/responsive.scss';
+@import '../styles/globals.scss';
+@import '../styles/mixins.scss';
+
+$hover-color: #fcfa85;
+
+
+// $dope: 'dope';
+
+// @font-face {
+//     font-family: 'dope';
+//     src: url(../../../assets/fonts/Dopestyle.ttf) format('truetype');
+// }
+
+.about-container {
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    overflow-y: scroll;
+    margin-left: 140px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    @include fade-load-mixin;
+
+    .bold-list-title {
+        font-weight: 600;
+    }
+
+    .fas {
+        margin: 16px 33px -40px 600px;
+        transform: rotate(30deg);
+        width: 100px;
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    .self-blurb-container {
+        margin: 0 auto;
+    }
+
+    .icons-container {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        background-color: rgba(136, 141, 170, 0.1);
+
+        .icon {
+            color: white;
+            margin: 30px;
+            padding: 3px;
+            height: 50px;
+            border: solid 0px $grayish;
+            border-radius: 10px;
+        }
+    }
+
+    .resume-skillset-block {
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .tech-knowledge-container {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .education-block-container {
+        width: 100%;
+        padding-top: 185px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        .education-header {}
+
+        .employment-header {}
+
+        .block-label {
+            font-weight: 400;
+            font-size: 2em;
+            color: $darkGrayish;
+            // font-family: $dope;
+        }
+
+    }
+
+    .professional-history-block-container {
+        padding-top: 185px;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        .block-label {
+            font-weight: 400;
+            font-size: 2em;
+            color: $darkGrayish;
+            // font-family: $dope;
+        }
+
+    }
+
+    h5 {
+        font-size: 1.4em;
+    }
+
+    h4 {
+        font-size: 1.6em;
+    }
+
+    @media only screen and (max-width: $lgDevice) {
+        display: block;
+        width: 100%;
+        margin: 0px 0px;
+        overflow: scroll;
+
+        .fas {
+            margin: 16px 33px -40px 400px;
+            transform: rotate(30deg);
+            width: 100px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .tech-knowledge-container {
+            display: flex;
+            flex-flow: column;
+            height: auto;
+            overflow: scroll;
+        }
+    }
+
+    @media only screen and (max-width: $mdDevice) {
+        display: block;
+        flex-flow: column;
+        height: 87vh;
+        justify-content: space-between;
+        margin: 0px 0px;
+
+        .fas {
+            margin: 16px 33px -40px 100px;
+            transform: rotate(30deg);
+            width: 100px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .resume-skillset-block {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .tech-knowledge-container {
+            display: flex;
+            flex-flow: column;
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: $smDevice) {
+        display: block;
+        flex-flow: column;
+        justify-content: space-between;
+        margin-left: 0px;
+        height: 100vh;
+
+        .resume-skillset-block {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .tech-knowledge-container {
+            display: flex;
+            flex-flow: column;
+            height: auto;
+        }
+
+    }
+
+    @media only screen and (max-width: $xsDevice) {
+        .resume-skillset-block {
+            display: flex;
+            flex-flow: column;
+        }
+    }
+}

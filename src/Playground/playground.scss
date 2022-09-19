@@ -1,0 +1,145 @@
+@import '../styles/globals.scss';
+@import '../styles/responsive.scss';
+
+
+.playgroundContainer {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+
+    .playgroundHeader {
+        padding-top: 10px;
+        border-top: solid 1px #444;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .labelContainer {
+            display: flex;
+            flex-flow: column;
+
+            .label {
+                font-size: $componentLabelFontSize_Desktop;
+            }
+        }
+
+        .sketchesTextContainer {
+            display: flex;
+            flex-flow: row wrap;
+            // justify-content: flex-end;
+            align-items: center;
+
+            a {
+                padding: 0 10px;
+                transition: all 500ms;
+
+                &:hover {
+                    color: $teal;
+                    transform: rotate(10deg) scale(1.1);
+                }
+            }
+        }
+
+    }
+
+    .playgroundContent {
+        flex: 0.9 1 auto;
+
+    }
+
+    @keyframes distort1 {
+        0% {
+            top: 49.5%;
+            left: 49.5%;
+        }
+
+        12.5% {
+            top: 49.5%;
+            left: 50%;
+        }
+
+        25% {
+            top: 49.5%;
+            left: 50.5%;
+        }
+
+        37.5% {
+            top: 50%;
+            left: 50.5%;
+        }
+
+        50% {
+            top: 50.5%;
+            left: 50.5%;
+        }
+
+        62.5% {
+            top: 50.5%;
+            left: 50%;
+        }
+
+        75% {
+            top: 50.5%;
+            left: 49.5%;
+        }
+
+        87.5% {
+            top: 50%;
+            left: 49.5%;
+        }
+
+        100% {
+            top: 49.5%;
+            left: 49.5%;
+        }
+    }
+
+    @keyframes distort2 {
+        0% {
+            top: 50.5%;
+            left: 50.5%;
+        }
+
+        12.5% {
+            top: 50%;
+            left: 50.5%;
+        }
+
+        25% {
+            top: 49.5%;
+            left: 50.5%;
+        }
+
+        37.5% {
+            top: 49.5%;
+            left: 50%;
+        }
+
+        50% {
+            top: 49.5%;
+            left: 49.5%;
+        }
+
+        62.5% {
+            top: 50%;
+            left: 49.5%;
+        }
+
+        75% {
+            top: 50.5%;
+            left: 49.5%;
+        }
+
+        87.5% {
+            top: 50.5%;
+            left: 50%;
+        }
+
+        100% {
+            top: 50.5%;
+            left: 50.5%;
+        }
+    }
+}

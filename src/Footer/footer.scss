@@ -1,0 +1,47 @@
+@import "../styles/globals.scss";
+
+.footerContainer {
+    width: 90vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .linksContainer {
+        z-index: 1000;
+        padding: 10px;
+        display: flex;
+
+        .resumeText {
+            align-self: center;
+            text-align: end;
+            font-weight: 800;
+            font-size: 12px;
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            margin-left: -20px;
+        }
+
+        a {
+            display: flex;
+            padding: 0 10px;
+            transition: all 500ms;
+
+
+            &:hover {
+                color: $pink;
+                transform: rotate(10deg) scale(1.1);
+            }
+        }
+    }
+
+
+    .textItemContainer {
+        padding: 10px;
+
+        .textItem {
+            font-size: 14px;
+            color: $teal;
+        }
+    }
+}
