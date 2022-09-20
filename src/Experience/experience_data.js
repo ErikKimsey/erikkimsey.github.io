@@ -89,7 +89,7 @@ export const EXPERIENCE_DATA = [
         url: 'https://play.google.com/store/apps/details?id=com.raincrow.covens&hl=en_US',
         github: '',
         img: '../assets/port_images/raincrow.png',
-        about: []
+        about: ['Contributed to development of the Covens map-based, realtime Redis database']
     },
     {
         name: 'ChartIQ',
