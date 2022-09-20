@@ -23,7 +23,7 @@ export default function Experience() {
             <div className='experienceContent'>
                 {
                     data && data.map((e, i) => {
-                        return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} key={i} />
+                        return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={i} />
                     })
                 }
             </div>
