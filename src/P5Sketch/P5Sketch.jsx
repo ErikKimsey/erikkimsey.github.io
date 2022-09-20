@@ -7,6 +7,7 @@ import LandingText from "./LandingText";
 
 let x = 50;
 let y = 50;
+let timer = 0;
 
 let textColors = {
     white: "#ffffff",
@@ -85,8 +86,8 @@ export default function P5Sketch({ props }) {
 
     function windowResized(p5) {
         if (p5) {
-            // p5.resizeCanvas(p5.displayWidth, p5.displayHeight);
-            // initTextElements(p5);
+            p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+            initTextElements(p5);
         }
     }
 
@@ -109,9 +110,18 @@ export default function P5Sketch({ props }) {
     //     }
     // }
 
+    function keyPressed(p5) {
+        p5.noStroke();
+    }
+
     function draw(p5) {
-        p5.background(textColors.tankDarkBlue);
         // p5.image(img, plantXPos, plantYPos, plantW, plantH);
+        p5.background(textColors.tankDarkBlue);
+
+        // p5.fill(0);
+        // p5.rect((p5.windowWidth / 2) / 2,
+        //     (p5.windowHeight / 2) / 2, p5.windowWidth / 2,
+        //     p5.windowHeight / 2);
 
         // drawText(p5);
 
@@ -127,6 +137,6 @@ export default function P5Sketch({ props }) {
 
     return (
         <>
-            <Sketch preload={preload} setup={setup} draw={draw} windowResized={windowResized} style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }} />
+            <Sketch preload={preload} setup={setup} draw={draw} windowResized={windowResized} keyPressed={keyPressed} style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }} />
         </>)
 }

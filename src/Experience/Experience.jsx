@@ -16,13 +16,14 @@ export default function Experience() {
 
     return (
         <div className="experienceContainer" ref={containerRef}>
+
             <div className='experienceHeader'>
                 <div className='label'>Experience In Brief</div>
             </div>
             <div className='experienceContent'>
                 {
                     data && data.map((e, i) => {
-                        return <ExperienceItem name={e.name} stack={e.stack} about={e.about} key={i} />
+                        return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} key={i} />
                     })
                 }
             </div>

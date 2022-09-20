@@ -27,20 +27,43 @@
             width: 300px;
             margin: 10px;
             padding: 5px;
-            border-left: solid 1px #9D0A9D;
+            padding-left: 10px;
+            border-left: solid 1px #444;
 
-            .expItemLabel {
+            .expItemLabel {}
+
+            .expItemRole {
                 font-weight: 800;
+                color: $antiquewhite;
             }
 
             .expItemStack {
                 padding: 5px;
-                font-style: italic;
+                font-size: small;
+
             }
 
-            .expItemAbout {
-                padding: 5px;
-                color: #ccc;
+            .expItemDate {
+                margin: 2px;
+                text-indent: 10px;
+                font-style: italic;
+                font-size: x-small;
+            }
+
+            .expAboutList {
+                padding: 0;
+                list-style-type: circle;
+                list-style-position: inside;
+                list-style-color: white;
+
+                li.expAboutListItem {
+                    display: list-item;
+                    list-style-type: disc;
+                    padding: 5px;
+                    color: #ccc;
+
+                }
+
             }
         }
 
