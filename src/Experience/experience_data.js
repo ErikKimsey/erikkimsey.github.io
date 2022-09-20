@@ -62,24 +62,24 @@ export const EXPERIENCE_DATA = [
             'Researched and drafted the application UI-design decisions',],
     },
     {
-        name: 'NextLevel - Kardion / ',
+        name: 'NextLevel - Kardion Website',
         dates: '10/2017 - 11/2017',
         role: 'Frontend Developer',
         stack: 'Boostrap 4, Sass',
         url: 'http://www.kardion.de/',
         github: '',
         img: '',
-        about: ['']
+        about: ['Developed a landing site, based on design-specs, in tandem with a colleague in Germany, for a design firm in Stuttgart.']
     },
     {
-        name: 'NextLevel - Interactive Guilloche',
+        name: 'NextLevel - Kardion Dynamic Guilloche',
         dates: ' 05/2018 - 06/2018',
         role: 'Angular / Typescript / D3.js Developer',
         stack: 'Angular, D3.js',
-        url: 'https://www.npmjs.com/package/nls-guilloche',
-        github: '',
+        url: 'http://www.kardion.de/',
+        github: 'https://www.npmjs.com/package/nls-guilloche',
         img: '',
-        about: ['']
+        about: ['Completed development of an application which procedurally generates a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website']
     },
     {
         name: 'Raincrow Studios - Covens',
@@ -89,16 +89,16 @@ export const EXPERIENCE_DATA = [
         url: 'https://play.google.com/store/apps/details?id=com.raincrow.covens&hl=en_US',
         github: '',
         img: '../assets/port_images/raincrow.png',
-        about: ['']
+        about: []
     },
     {
         name: 'ChartIQ',
         dates: '09/2016 - 06/2017',
-        role: 'Javascript Engineer',
+        role: 'Junior Javascript Engineer',
         stack: 'JavaScript, Angular, HTML5 / Canvas API, CSS3',
         url: 'https://www.chartiq.com/html5-charting-library/',
         github: '',
         img: '../assets/port_images/chartiq.png',
-        about: ['']
+        about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability', 'Contributed to ChartIQ library\s public-facing developer documentation']
     },
 ];
