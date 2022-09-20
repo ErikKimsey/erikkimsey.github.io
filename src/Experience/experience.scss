@@ -29,6 +29,8 @@
             padding: 5px;
             padding-left: 10px;
             border-left: solid 1px #222;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
 
             .expItemLabel {
                 padding-bottom: 5px;
@@ -47,26 +49,32 @@
                 font-weight: 600;
             }
 
-            .expItemURL {
-                text-decoration: none;
-                padding: 5px;
-                font-size: small;
+            .expItemLinkContainer {
+                display: flex;
+                justify-content: flex-end;
 
-                // color: $lighterpink;
-                &:hover {
-                    color: $yellow;
+                .expItemURL {
+                    text-decoration: none;
+                    padding: 5px;
+                    font-size: small;
+
+                    // color: $lighterpink;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+
+                .expItemGithub {
+                    text-decoration: none;
+                    padding: 5px;
+                    font-size: small;
+
+                    &:hover {
+                        color: $yellow;
+                    }
                 }
             }
 
-            .expItemGithub {
-                text-decoration: none;
-                padding: 5px;
-                font-size: small;
-
-                &:hover {
-                    color: $yellow;
-                }
-            }
 
             .expItemDate {
                 padding: 5px;
