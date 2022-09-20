@@ -74,7 +74,7 @@ export const EXPERIENCE_DATA = [
     {
         name: 'NextLevel - Interactive Guilloche',
         dates: ' 05/2018 - 06/2018',
-        role: 'Angular / D3.js Developer',
+        role: 'Angular / Typescript / D3.js Developer',
         stack: 'Angular, D3.js',
         url: 'https://www.npmjs.com/package/nls-guilloche',
         github: '',
