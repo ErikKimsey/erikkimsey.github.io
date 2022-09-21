@@ -3,9 +3,9 @@ import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFloppyDisk, faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
-import { } from "@fortawesome/fontawesome-svg-core"
-import { } from "@fortawesome/free-regular-svg-icons"
-import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { } from "@fortawesome/fontawesome-svg-core"
+// import { } from "@fortawesome/free-regular-svg-icons"
+import { faGithub, faSoundcloud, faLinkedin, faItchIo, faBehance } from "@fortawesome/free-brands-svg-icons";
 import resume from "./erikkimsey_creativeEngineer_resume.pdf";
 
 export default function Footer() {
@@ -19,7 +19,7 @@ export default function Footer() {
                 <a target="_blank" href="https://github.com/erikkimsey">
                     <FontAwesomeIcon icon={faSoundcloud} size="3x" />
                 </a>
-                <a target="_blank" href="https://github.com/erikkimsey">
+                <a target="_blank" href="https://www.linkedin.com/in/erikkimsey">
                     <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
                 <a target="_blank" href={resume}>

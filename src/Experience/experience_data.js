@@ -82,14 +82,14 @@ export const EXPERIENCE_DATA = [
         about: ['Completed development of an application which procedurally generates a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website']
     },
     {
-        name: 'Raincrow Studios - Covens',
+        name: 'Raincrow Studios - Covens (mobile game)',
         dates: ' 12/2017 - 02/2018',
         role: 'Node.js Developer',
         stack: 'JavaScript (ES6), NodeJS, Redis, Python / Pandas',
         url: 'https://play.google.com/store/apps/details?id=com.raincrow.covens&hl=en_US',
         github: '',
         img: '../assets/port_images/raincrow.png',
-        about: ['Contributed to development of the Covens map-based, realtime Redis database']
+        about: ['Node/Redis database, which cached real-time, international geospatial user-data, and in-app communication, required for Covens\'s gameplay.']
     },
     {
         name: 'ChartIQ',
