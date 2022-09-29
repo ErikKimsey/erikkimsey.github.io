@@ -1,18 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "./playground.scss";
 import Traveling from '../ThreeSketches/Traveling';
+import Loading from '../Loading/Loading';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
+import { Html, useProgress } from "@react-three/drei";
 
 export default function Playground() {
 
+    let { progress } = useProgress();
     let [divDimens, setDivDimens] = useState();
+    let [loading, setLoading] = useState(true);
+
     const playgroundContentRef = useRef();
 
     useEffect(() => {
         let w = playgroundContentRef.current.offsetWidth;
         let h = playgroundContentRef.current.offsetHeight;
         setDivDimens({ w: w, h: h });
+
+
     }, []);
 
     return (
@@ -33,7 +40,7 @@ export default function Playground() {
 
             </div>
             <div className='playgroundContent' ref={playgroundContentRef}>
-                {divDimens && <Traveling dimens={divDimens} />}
+                {progress < 100 ? <Loading /> : <Traveling dimens={divDimens} />}
             </div>
         </div>
     );

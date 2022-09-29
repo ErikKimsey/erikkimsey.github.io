@@ -2,14 +2,14 @@ import React, { useEffect, useState, Suspense, useMemo, useRef } from "react";
 import { EffectComposer, DepthOfField, Bloom, Noise, Vignette } from '@react-three/postprocessing'
 import { BlurPass, Resizer, KernelSize } from 'postprocessing'
 import { extend, Canvas, useFrame, useThree, useResource } from '@react-three/fiber';
-
+import Loading from "../Loading/Loading";
 import * as THREE from "three";
-import { OrbitControls, PerspectiveCamera, Sparkles, Html } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Sparkles, Html, useProgress } from "@react-three/drei";
 
 
 function Box(props) {
-    let { position } = props;
 
+    let { position } = props;
     let [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
@@ -33,12 +33,12 @@ export default function Traveling(props) {
     return (
         <Canvas colorManagement
             camera={{ position: [0, 0, 3] }} style={{ width: w, height: h }} >
-            <Suspense fallback={<Html center style={{ fontSize: "24px", color: "#fff" }}>Loading.</Html>}>
-                <Box position={new THREE.Vector3(0, -1, 0)} />
-                <directionalLight color="#ffffff" intensity={5} position={[-5, 0, 5]} />
-                <OrbitControls />
-                <Sparkles size={2} amount={100} scale={20} />
-            </Suspense>
+            {/* <Suspense fallback={<Loading />}> */}
+
+            <Box position={new THREE.Vector3(0, -1, 0)} />
+            <directionalLight color="#ffffff" intensity={5} position={[-5, 0, 5]} />
+            <OrbitControls />
+            <Sparkles size={2} amount={100} scale={20} />
             {/* <ambientLight intensity={1} color="#fff" /> */}
             <EffectComposer>
                 <Bloom
@@ -46,5 +46,7 @@ export default function Traveling(props) {
                 />
 
             </EffectComposer>
-        </Canvas>)
+            {/* </Suspense > */}
+        </Canvas>
+    )
 }
