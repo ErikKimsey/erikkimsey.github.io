@@ -26,6 +26,7 @@
         }
 
         .sketchesTextContainer {
+            width: 100%;
             display: flex;
             flex-flow: row wrap;
             // justify-content: flex-end;
@@ -41,12 +42,13 @@
                 }
             }
         }
-
     }
 
     .playgroundContent {
-        flex: 0.9 1 auto;
-
+        flex: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     @keyframes distort1 {

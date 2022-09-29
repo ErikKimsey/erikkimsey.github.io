@@ -40,7 +40,8 @@ export default function Playground() {
 
             </div>
             <div className='playgroundContent' ref={playgroundContentRef}>
-                {progress < 100 ? <Loading /> : <Traveling dimens={divDimens} />}
+                {<h1 style={{ width: "min-content", color: "#fff", fontSize: "80px", transform: "rotate(-15deg)" }}>Coming Soon.</h1>}
+                {/* {progress < 100 ? <Loading /> : <Traveling dimens={divDimens} />} */}
             </div>
         </div>
     );

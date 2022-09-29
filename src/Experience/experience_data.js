@@ -1,6 +1,21 @@
 
 export const EXPERIENCE_DATA = [
     {
+        name: 'Moxie',
+        role: 'Founder / Engineer / Designer',
+        dates: '2020 - 2021',
+        stack: 'Unity3D, C#, Blender',
+        url: '',
+        github: '',
+        img: '',
+        about: [
+            'Develop the entirety of Moxie\'s core functionality, desired interactivity, and environmental aesthetic traits,',
+            'Where needed, create Moxie\'s 2D assets (i.e., sprites, icons) and 3D assets (i.e., 3D models, shaders, and VFX),',
+            'Design and build Moxie\'s core backend,',
+            'Draft marketing plans and branding.'
+        ]
+    },
+    {
         name: 'University of Virginia - Curry School of Education',
         role: 'Principal Engineer (mobile app)',
         dates: '2020 - 2021',
@@ -9,9 +24,8 @@ export const EXPERIENCE_DATA = [
         github: 'https://github.com/sartography/SkillSTAR',
         img: '',
         about: [
-            'Designed and Developed the UI and UX for SkillSTAR mobile app.',
-            'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining"',
-            ''
+            'Designed and Developed the UI and UX for SkillSTAR mobile app,',
+            'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
         ]
     },
     {
@@ -54,7 +68,7 @@ export const EXPERIENCE_DATA = [
         url: 'http://www.kardion.de/',
         github: 'https://www.npmjs.com/package/nls-guilloche',
         img: '',
-        about: ['Developed a D3.js module to procedurally generate a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website.  Developed Kardion\'s landing site, in which the guilloche was implemeneted.']
+        about: ['Developed a D3.js module to procedurally generate a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website,', ' Developed Kardion\'s landing site, in which the guilloche was implemeneted.']
     },
     {
         name: 'Raincrow Studios - Covens (mobile game)',
@@ -74,6 +88,6 @@ export const EXPERIENCE_DATA = [
         url: 'https://www.chartiq.com/html5-charting-library/',
         github: '',
         img: '../assets/port_images/chartiq.png',
-        about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability', 'Contributed to ChartIQ library\s public-facing developer documentation']
+        about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature,', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability,', 'Contributed to ChartIQ library\s public-facing developer documentation.']
     },
 ];
