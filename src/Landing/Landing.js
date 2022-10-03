@@ -20,7 +20,7 @@ function Landing(props) {
         <div
             className="landing-container"
         >
-            <Banner />
+            <Banner timerTime={3000} />
             <div className="landingLinksContainer">
 
                 {/* <a target="_blank" href={resume}>

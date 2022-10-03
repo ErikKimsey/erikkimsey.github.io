@@ -31,7 +31,7 @@ export default function ExperienceItem(props) {
             <ul className="expAboutList">
                 {
                     about.map((e) => {
-                        return <li className="expAboutListItem">{e}</li>
+                        return <li className="expAboutListItem" key={e}>{e}</li>
                     })
                 }
             </ul>
