@@ -13,7 +13,7 @@ let textColors = {
     white: "#ffffff",
     pink: "#f0f",
     tankMidBlue: "#04157E",
-    // tankDarkBlue: "#140034"
+    tankDarkBlue: "#1c1827"
 }
 
 let nameDimens = {
@@ -91,39 +91,12 @@ export default function P5Sketch({ props }) {
         }
     }
 
-    // function drawText(p5) {
-    //     if (landingName.textDrawn) {
-    //         landingName.drawCompleteText();
-    //     }
-    //     if (landingTitle.textDrawn) {
-    //         landingTitle.drawCompleteText();
-    //     }
-
-    //     if (!landingName.textDrawn) {
-    //         let rIndex = Math.ceil(p5.millis() / 100) - 1;
-    //         landingName.drawText(rIndex);
-    //     }
-
-    //     if (!landingTitle.textDrawn) {
-    //         let rIndex = Math.ceil(p5.millis() / 100) - 1;
-    //         landingTitle.drawText(rIndex);
-    //     }
-    // }
-
     function keyPressed(p5) {
         p5.noStroke();
     }
 
     function draw(p5) {
-        // p5.image(img, plantXPos, plantYPos, plantW, plantH);
         p5.background(textColors.tankDarkBlue);
-
-        // p5.fill(0);
-        // p5.rect((p5.windowWidth / 2) / 2,
-        //     (p5.windowHeight / 2) / 2, p5.windowWidth / 2,
-        //     p5.windowHeight / 2);
-
-        // drawText(p5);
 
         if (devType !== "desktop") {
             // console.log(devType);

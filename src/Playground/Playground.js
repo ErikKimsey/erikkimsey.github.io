@@ -21,8 +21,6 @@ export default function Playground() {
         let w = playgroundContentRef.current.offsetWidth;
         let h = playgroundContentRef.current.offsetHeight;
         setDivDimens({ w: w, h: h });
-
-
     }, []);
 
     return (
@@ -43,7 +41,7 @@ export default function Playground() {
             <div className='playgroundContent' ref={playgroundContentRef}>
                 {<h1 style={{ width: "min-content", color: "#fff", fontSize: "80px", transform: "rotate(-15deg)" }}>Coming Soon.</h1>}
                 {/* {progress < 100 ? <Loading /> : <Traveling dimens={divDimens} />} */}
-                {/* <Background dimens={divDimens} /> */}
+                {/* {divDimens && <Background dimens={divDimens} />} */}
             </div>
         </div>
     );
