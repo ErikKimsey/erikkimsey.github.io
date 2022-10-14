@@ -2,9 +2,7 @@ import React, { } from "react";
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFloppyDisk, faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
-// import { } from "@fortawesome/fontawesome-svg-core"
-// import { } from "@fortawesome/free-regular-svg-icons"
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSoundcloud, faLinkedin, faItchIo, faBehance } from "@fortawesome/free-brands-svg-icons";
 import resume from "./erikkimsey_creativeEngineer_resume.pdf";
 
