@@ -1,0 +1,18 @@
+@import "../styles/globals.scss";
+@import "../styles/responsive.scss";
+
+.screenItemContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border-top: solid 1px #9D0A9D;
+
+    .label {
+        padding-bottom: 45px;
+        font-size: $componentLabelFontSize_Desktop;
+    }
+}

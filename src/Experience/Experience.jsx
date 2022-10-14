@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { motion } from "framer-motion";
 import "./experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
 import ExperienceItem from './ExperienceItem';
