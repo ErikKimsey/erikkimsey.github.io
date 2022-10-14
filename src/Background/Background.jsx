@@ -6,7 +6,6 @@ import Loading from "../Loading/Loading";
 import * as THREE from "three";
 import { OrbitControls, PerspectiveCamera, Sparkles, Html, useProgress } from "@react-three/drei";
 
-
 function Box(props) {
 
     let { position } = props;
@@ -27,7 +26,8 @@ function Box(props) {
     </mesh>
 }
 
-export default function Traveling(props) {
+
+export default function Background(props) {
     let { w, h } = props.dimens;
 
     return (
@@ -35,7 +35,7 @@ export default function Traveling(props) {
             camera={{ position: [0, 0, 3] }} style={{ width: w, height: h }} >
             {/* <Suspense fallback={<Loading />}> */}
 
-            {/* <Box position={new THREE.Vector3(0, -1, 0)} /> */}
+            <Box position={new THREE.Vector3(0, -1, 0)} />
             <directionalLight color="#ffffff" intensity={5} position={[-5, 0, 5]} />
             <OrbitControls />
             <Sparkles size={2} amount={100} scale={20} />

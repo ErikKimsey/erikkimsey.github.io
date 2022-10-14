@@ -14,6 +14,14 @@ export default function Experience() {
         }
     }, []);
 
+    /***
+     * TODO:
+     * -- Initialize Experience as collapsed,
+     * -- text "Experience" is not initially displayed,
+     * -- display graphic, if hovered-on, will display "Experience",
+     * -- if graphic or text is clicked on, then Experience list will expand/be displayed.
+     */
+
     return (
         <div className="experienceContainer" ref={containerRef}>
 

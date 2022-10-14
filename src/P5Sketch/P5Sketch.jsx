@@ -13,7 +13,7 @@ let textColors = {
     white: "#ffffff",
     pink: "#f0f",
     tankMidBlue: "#04157E",
-    tankDarkBlue: "#140034"
+    // tankDarkBlue: "#140034"
 }
 
 let nameDimens = {

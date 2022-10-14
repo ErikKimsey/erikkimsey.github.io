@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./banner.scss";
 import "../Nav/Nav";
 // import { Spin } from "react-burgers";
@@ -53,9 +54,36 @@ export default function Banner(props) {
     return (
         <div className="banner-container">
             <div className="text-container">
-                <div className="name banner-item">Erik Kimsey</div>
-                <div className="underscore banner-item"></div>
-                {currRole && timer && <div className="role banner-item" data-text={currRole}>{currRole}</div>}
+                <motion.div
+                    className="name banner-item"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 1,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}
+                >Erik Kimsey</motion.div>
+                <motion.div
+                    className="underscore banner-item"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.4,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}
+                ></motion.div>
+                {currRole && timer && <motion.div
+                    className="role banner-item"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 1,
+                        delay: 1.3,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}
+                    data-text={currRole}>{currRole}</motion.div>}
             </div>
         </div>
     );

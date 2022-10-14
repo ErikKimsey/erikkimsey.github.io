@@ -5,6 +5,9 @@ import Loading from '../Loading/Loading';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
 import { Html, useProgress } from "@react-three/drei";
+import Redundancy from './Redundancy/Redundancy';
+
+import Background from '../Background/Background';
 
 export default function Playground() {
 
@@ -30,18 +33,17 @@ export default function Playground() {
                     <div>Multimedia sketches.</div>
                 </div>
                 <div className='sketchesTextContainer'>
-
                     See past sketches:
                     <a target="_blank" href="https://github.com/erikkimsey">
                         <FontAwesomeIcon icon={faPalette} size="2x" />
                     </a>
-
                 </div>
 
             </div>
             <div className='playgroundContent' ref={playgroundContentRef}>
                 {<h1 style={{ width: "min-content", color: "#fff", fontSize: "80px", transform: "rotate(-15deg)" }}>Coming Soon.</h1>}
                 {/* {progress < 100 ? <Loading /> : <Traveling dimens={divDimens} />} */}
+                {/* <Background dimens={divDimens} /> */}
             </div>
         </div>
     );
