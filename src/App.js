@@ -22,12 +22,11 @@ export default function App() {
         <div className="App">
             <P5Sketch />
             <Landing />
-            <Playground />
+            {/* <Playground /> */}
             {/* <Experience /> */}
-            <Routes>
-                {/* <Route path="/" element={<LandingScreenItem label={"Experience"} navTo={"experience"} />} /> */}
-                <Route path="/" element={<Experience />} />
-            </Routes>
+
+            {/* <Route path="/" element={<LandingScreenItem label={"Experience"} navTo={"experience"} />} /> */}
+            <Experience />
             <Footer />
         </div>
     );

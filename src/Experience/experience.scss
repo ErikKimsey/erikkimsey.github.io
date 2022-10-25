@@ -1,111 +1,118 @@
 @import "../styles/globals.scss";
 @import "../styles/responsive.scss";
 
-.experienceContainer {
+.expandingParent {
     width: 100%;
     min-height: 100vh;
 
-    .experienceHeader {
-        padding-top: 10px;
-        border-top: solid 1px #9D0A9D;
 
-        .label {
-            padding-bottom: 45px;
-            font-size: $componentLabelFontSize_Desktop;
 
+    .experienceContainer {
+        width: 100%;
+        height: 100%;
+
+        .experienceHeader {
+            padding-top: 10px;
+            border-top: solid 1px #9D0A9D;
+
+            .label {
+                padding-bottom: 45px;
+                font-size: $componentLabelFontSize_Desktop;
+
+            }
         }
-    }
 
-    .experienceContent {
-        display: flex;
-        flex-flow: row wrap;
-        padding-left: 5%;
-
-        .experienceItemContainer {
+        .experienceContent {
             display: flex;
-            flex-flow: column;
-            max-width: 350px;
-            margin: 10px;
-            padding: 5px;
-            padding-left: 10px;
-            border-left: solid 1px #222;
-            background-color: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            flex-flow: row wrap;
+            padding-left: 5%;
 
-            .expItemLabel {
-                padding-bottom: 5px;
-                font-weight: 800;
-            }
-
-            .expItemRole {
-                padding-bottom: 5px;
-                font-weight: 800;
-                color: $pink;
-            }
-
-            .expItemStack {
-                padding: 5px;
-                font-size: small;
-                font-weight: 600;
-            }
-
-            .expItemLinkContainer {
+            .experienceItemContainer {
                 display: flex;
-                justify-content: flex-end;
-
-
-                .expItemURL {
-                    text-decoration: none;
-                    padding: 10px;
-                    font-size: small;
-
-                    // color: $lighterpink;
-                    &:hover {
-                        color: $yellow;
-                    }
-                }
-
-                .expItemGithub {
-                    text-decoration: none;
-                    padding: 10px;
-                    font-size: small;
-
-                    &:hover {
-                        color: $yellow;
-                    }
-                }
-
-            }
-
-
-            .expItemDate {
+                flex-flow: column;
+                max-width: 350px;
+                margin: 10px;
                 padding: 5px;
-                margin: 2px;
-                text-indent: 10px;
-                font-style: italic;
-                font-size: small;
-                align-self: flex-end;
-            }
+                padding-left: 10px;
+                border-left: solid 1px #222;
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
 
+                .expItemLabel {
+                    padding-bottom: 5px;
+                    font-weight: 800;
+                }
 
-            .expAboutList {
-                padding: 0;
-                list-style-type: circle;
-                list-style-position: inside;
-                list-style-color: white;
-                font-size: small;
+                .expItemRole {
+                    padding-bottom: 5px;
+                    font-weight: 800;
+                    color: $pink;
+                }
 
-                li.expAboutListItem {
-                    display: list-item;
-                    list-style-type: disc;
+                .expItemStack {
                     padding: 5px;
-                    color: #ccc;
+                    font-size: small;
+                    font-weight: 600;
+                }
+
+                .expItemLinkContainer {
+                    display: flex;
+                    justify-content: flex-end;
+
+
+                    .expItemURL {
+                        text-decoration: none;
+                        padding: 10px;
+                        font-size: small;
+
+                        // color: $lighterpink;
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
+
+                    .expItemGithub {
+                        text-decoration: none;
+                        padding: 10px;
+                        font-size: small;
+
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
 
                 }
 
+
+                .expItemDate {
+                    padding: 5px;
+                    margin: 2px;
+                    text-indent: 10px;
+                    font-style: italic;
+                    font-size: small;
+                    align-self: flex-end;
+                }
+
+
+                .expAboutList {
+                    padding: 0;
+                    list-style-type: circle;
+                    list-style-position: inside;
+                    list-style-color: white;
+                    font-size: small;
+
+                    li.expAboutListItem {
+                        display: list-item;
+                        list-style-type: disc;
+                        padding: 5px;
+                        color: #ccc;
+
+                    }
+
+                }
             }
+
         }
 
     }
-
 }
