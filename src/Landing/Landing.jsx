@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFloppyDisk, faPrint } from "@fortawesome/free-solid-svg-icons";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
+import ExperienceMarquee from "../Experience/ExperienceMarquee";
 
 
 function Landing(props) {
@@ -20,6 +21,7 @@ function Landing(props) {
         <div
             className="landing-container"
         >
+            <ExperienceMarquee />
             <Banner timerTime={3000} />
             <div className="landingLinksContainer">
 
