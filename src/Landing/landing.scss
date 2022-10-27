@@ -27,19 +27,6 @@
             text-align: center;
             font-size: 12px;
         }
-
-        a {
-            display: flex;
-            padding: 0 10px;
-            transition: all 500ms;
-
-
-
-            &:hover {
-                color: $pink;
-                transform: rotate(10deg) scale(1.1);
-            }
-        }
     }
 
     // @media only screen and (max-width: $lgDevice) {}

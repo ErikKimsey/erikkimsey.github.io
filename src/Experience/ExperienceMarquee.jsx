@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { EXPERIENCE_DATA } from "./experience_data";
 
 import "./experienceMarquee.scss";
 
@@ -10,16 +11,20 @@ let mockData = [
     { title: "cxvcxbg." },
 ]
 
+
 export default function ExperienceMarquee() {
+
+    let marqueeControl = useAnimation();
 
     let [marqueeVariants, setMarqueeVariants] = useState({});
     let [mockD, setMockData] = useState();
+    let [marqueePaused, setMarqueePaused] = useState(false);
 
 
     useEffect(() => {
         let left = window.innerWidth;
         let animate = {
-            x: [left / 2, -left / 2],
+            x: [left, -left / 2],
             transition: {
                 x: {
                     repeat: Infinity,
@@ -33,17 +38,36 @@ export default function ExperienceMarquee() {
         setMockData(mockData);
     }, []);
 
+    function togglePause(pauseVal) {
+        setMarqueePaused(pauseVal);
+    }
+
+    function staggerMarqueeElements(i) {
+        return i + 1;
+    }
+
     return (
         <div className="marquee">
             {marqueeVariants && <motion.div
                 className="track"
                 variants={marqueeVariants}
                 animate="animate"
+                onHoverStart={() => { togglePause(true) }}
+                onHoverEnd={() => { togglePause(false) }}
             >
                 <div className="marqueeDataContainer">
                     {
-                        mockD && mockData.map((e) => {
-                            return <h1>{e.title}</h1>
+                        mockD && mockData.map((e, i) => {
+                            return <motion.h1
+                                transition={{
+                                    duration: 0.5,
+                                    delay: staggerMarqueeElements(i),
+                                    ease: [0, 0.71, 0.2, 1.01]
+                                }}
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+
+                            >{e.title}</motion.h1>
                         })
                     }
                 </div>

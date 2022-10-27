@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1024 1024" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M51.9094 512C51.9094 257.899 257.899 51.9094 512 51.9094C766.101 51.9094 972.091 257.899 972.091 512C972.091 766.101 766.101 972.091 512 972.091C257.899 972.091 51.9094 766.101 51.9094 512Z" id="Fill"/>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="1024" width="1024" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-1" vectornator:layerName="Layer 1" visibility="hidden">
+<path d="M165.108 983.388L324.701 178.777L912.828 40.6116L994.102 729.223L29.8982 462.497L165.108 983.388Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+<g id="Layer-1-copy" vectornator:layerName="Layer 1 copy" visibility="hidden">
+<path d="M165.108 983.388L324.701 178.777L912.828 40.6116L994.102 729.223L29.8982 462.497L165.108 983.388Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20.3804"/>
+</g>
+<g id="Layer-2-copy" vectornator:layerName="Layer 2 copy" visibility="hidden">
+<path d="M577.711 810.482L305.521 697.737L192.776 425.547L305.521 153.357L577.711 40.6116L849.901 153.357L962.646 425.547L849.901 697.737L577.711 810.482Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M383.016 823.482L147.736 940.343L100.992 781.412L383.016 823.482Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+<g id="Layer-2" vectornator:layerName="Layer 2" visibility="hidden">
+<g opacity="1">
+<path d="M382.614 712.423L92.4943 544.922L92.4943 209.921L382.614 42.4206L672.734 209.921L672.734 544.922L382.614 712.423Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M884.302 893.168L698.727 871.512L661.977 688.327L824.84 596.769L962.244 723.368L884.302 893.168Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M61.756 897.138L146.197 720.345L322.99 804.786L238.549 981.579L61.756 897.138Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+</g>
+<g id="Layer-3" vectornator:layerName="Layer 3" visibility="hidden">
+<g opacity="1">
+<path d="M441.61 775.293L243.719 432.535L45.8271 89.7765L441.61 89.7765L837.393 89.7765L639.502 432.535L441.61 775.293Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M733.478 510.4L855.825 722.312L978.173 934.224L733.478 934.224L488.783 934.224L611.131 722.312L733.478 510.4Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+</g>
+<g clip-path="url(#ArtboardFrame)" id="Layer-4" vectornator:layerName="Layer 4" visibility="hidden">
+<use fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60" xlink:href="#Fill"/>
+<clipPath id="ClipPath">
+<use xlink:href="#Fill"/>
+</clipPath>
+<g clip-path="url(#ClipPath)">
+<path d="M165.633 1082.43L239.436 821.562L22.6009 796.045L179.504 672.184L142.464 497.288L336.407 579.862L863.565 451.183L493.31 672.184L650.214 796.045L433.379 821.562L165.633 1082.43Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30"/>
+</g>
+</g>
+<g id="Layer-4-copy" vectornator:layerName="Layer 4 copy" visibility="hidden">
+<path d="M512 51.9062C257.899 51.9062 51.9062 257.899 51.9062 512C51.9062 590.769 71.7388 664.899 106.625 729.719L179.5 672.188L142.469 497.281L336.406 579.875L863.562 451.188L493.312 672.188L650.219 796.031L433.375 821.562L321.344 930.719C379.447 957.219 443.97 972.094 512 972.094C766.101 972.094 972.094 766.101 972.094 512C972.094 257.899 766.101 51.9062 512 51.9062ZM163.906 812.656C182.498 834.161 203.019 853.94 225.25 871.688L239.438 821.562L163.906 812.656Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+<g id="Layer-3-copy" vectornator:layerName="Layer 3 copy" visibility="hidden">
+<g opacity="1">
+<path d="M441.61 775.293L243.719 432.535L45.8271 89.7765L441.61 89.7765L837.393 89.7765L639.502 432.535L441.61 775.293Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M733.478 510.4L855.825 722.312L978.173 934.224L733.478 934.224L488.783 934.224L611.131 722.312L733.478 510.4Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+</g>
+<g id="Layer-5" vectornator:layerName="Layer 5">
+<path d="M57.0571 512C57.0571 260.742 260.742 57.0571 512 57.0571C763.258 57.0571 966.943 260.742 966.943 512C966.943 763.258 763.258 966.943 512 966.943C260.742 966.943 57.0571 763.258 57.0571 512Z" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M641.972 612.19C641.972 532.221 706.8 467.393 786.769 467.393C866.738 467.393 931.566 532.221 931.566 612.19C931.566 692.159 866.738 756.987 786.769 756.987C706.8 756.987 641.972 692.159 641.972 612.19Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+<path d="M457.401 504.291L429.044 392.13L400.688 279.97L512 311.492L623.312 343.015L540.357 423.653L457.401 504.291Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+<g id="Layer-5-copy" vectornator:layerName="Layer 5 copy" visibility="hidden">
+<path d="M512 57.0625C260.742 57.0625 57.0625 260.742 57.0625 512C57.0625 763.258 260.742 966.938 512 966.938C701.049 966.937 863.124 851.624 931.812 687.5C898.669 737.958 841.667 771.344 776.781 771.344C674.345 771.344 591.281 688.312 591.281 585.875C591.281 483.438 674.345 400.406 776.781 400.406C877.045 400.406 958.486 480.008 961.906 579.438C965.178 557.427 966.938 534.921 966.938 512C966.937 260.742 763.258 57.0625 512 57.0625ZM418.625 252.688C427.605 252.393 437.531 253.674 448.281 256.719L515.625 275.812L582.969 294.875C640.306 311.112 652.137 357.932 609.406 399.469L559.219 448.25L509.062 497.031C466.332 538.568 419.825 525.399 405.219 467.625L388.094 399.781L370.938 331.938C359.07 284.996 379.713 253.964 418.625 252.688Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="60"/>
+</g>
+</svg>

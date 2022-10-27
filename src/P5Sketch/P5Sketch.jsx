@@ -2,7 +2,10 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import Sketch from "react-p5";
 import deviceType from "../utils/mobileDetection";
 import P5Cursor from "./P5Cursor";
+import BackgroundNoise from "./BackgroundNoise";
 import LandingText from "./LandingText";
+
+
 
 
 let x = 50;
@@ -14,6 +17,11 @@ let textColors = {
     pink: "#f0f",
     tankMidBlue: "#04157E",
     tankDarkBlue: "#1c1827"
+}
+
+let otherColors = {
+    bkgrdPurple: "#1c1827",
+    bkgrdGray: "#333333"
 }
 
 let nameDimens = {
@@ -36,7 +44,7 @@ export default function P5Sketch({ props }) {
     const [dimen, setDimens] = useState();
     const [devType, setDevType] = useState();
 
-    let orbCursor, landingName, landingTitle, font, fontSize;
+    let orbCursor, landingName, landingTitle, font, fontSize, backgroundNoise;
     let img;
     let input;
     let plantXPos, plantYPos, plantH, plantW;
@@ -79,8 +87,9 @@ export default function P5Sketch({ props }) {
         p5.createCanvas(p5.displayWidth, p5.displayHeight).parent(canvasParentRef);
         initTextElements(p5);
 
-        p5.frameRate(20);
+        p5.frameRate(15);
         orbCursor = new P5Cursor(p5, 11);
+        backgroundNoise = new BackgroundNoise(p5, 0.0, 0.0, p5.displayWidth, p5.displayHeight, otherColors.bkgrdPurple, otherColors.bkgrdGray);
 
     };
 
@@ -96,7 +105,7 @@ export default function P5Sketch({ props }) {
     }
 
     function draw(p5) {
-        p5.background(textColors.tankDarkBlue);
+        p5.background("#1C1827");
 
         if (devType !== "desktop") {
             // console.log(devType);
@@ -105,6 +114,9 @@ export default function P5Sketch({ props }) {
                 orbCursor.updateCursor();
             }
         }
+        // if (backgroundNoise) {
+        //     backgroundNoise.drawNoise();
+        // }
     }
 
 

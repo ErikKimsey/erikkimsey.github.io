@@ -24,15 +24,7 @@ export default function Banner(props) {
         let interval = null;
         setIconActive(props.isActive);
         setTimer(timerTime);
-        // interval = setInterval(() => {
-        //     iterateRoles();
-        // }, timer);
-        // return () => clearInterval(interval);
     }, [])
-
-    // function handleToggle() {
-    //     props.toggle();
-    // };
 
     useEffect(() => {
         changeRole();

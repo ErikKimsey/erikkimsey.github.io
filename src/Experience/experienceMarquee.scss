@@ -1,3 +1,7 @@
+@import '../styles/globals.scss';
+@import '../styles/responsive.scss';
+@import '../styles/mixins.scss';
+
 .marquee {
     position: absolute;
     max-width: 100vw;
@@ -18,12 +22,14 @@
         .marqueeDataContainer {
             display: flex;
             flex-flow: row nowrap;
+            color: $purple;
 
+            // opacity: 0.3;
             h1 {
                 margin: 20px 0;
                 padding: 0 20px;
-                font-size: 1.5rem;
-
+                font-size: 1rem;
+                font-weight: 900;
                 text-transform: uppercase;
             }
         }

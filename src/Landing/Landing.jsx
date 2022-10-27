@@ -5,6 +5,8 @@ import { faFloppyDisk, faPrint } from "@fortawesome/free-solid-svg-icons";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
 import ExperienceMarquee from "../Experience/ExperienceMarquee";
+import About from "../About/About";
+import Menu from "../Menu/Menu";
 
 
 function Landing(props) {
@@ -23,13 +25,13 @@ function Landing(props) {
         >
             <ExperienceMarquee />
             <Banner timerTime={3000} />
+            {/* <About /> */}
             <div className="landingLinksContainer">
 
                 {/* <a target="_blank" href={resume}>
                     <FontAwesomeIcon icon={faFloppyDisk} size="3x" />
                 </a>
                 <div className="resumeText">Resume</div> */}
-
             </div>
         </div>
     );

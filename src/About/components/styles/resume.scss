@@ -85,11 +85,11 @@
                 z-index: 0;
                 animation: bloopbleep 700ms ease-in-out 0s 1;
 
-                &:hover {
-                    color: $purple;
-                    transform: rotate(0deg);
-                    transform: scale(1.2);
-                }
+                // &:hover {
+                //     color: $purple;
+                //     transform: rotate(0deg);
+                //     transform: scale(1.2);
+                // }
             }
         }
     }
