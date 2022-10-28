@@ -47,7 +47,7 @@ export default function Menu(props) {
         >
             <motion.div className="background" variants={sidebar} />
             <MenuToggle toggle={() => toggleOpen()} />
-            <Navigation isOpen={isOpen} />
+            <Navigation isOpen={isOpen} toggle={toggleOpen} />
         </motion.nav>
     );
 };

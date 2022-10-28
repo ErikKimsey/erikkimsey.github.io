@@ -19,14 +19,21 @@ const variants = {
 };
 
 
-export const MenuItem = ({ tag, link }) => {
+export const MenuItem = ({ tag, link, toggle }) => {
     let [id, setId] = useState();
 
     useEffect(() => {
         setId(tag);
     }, [])
 
+    function getResume() {
+
+    }
+
     function scrollToPage() {
+        if (id === undefined) {
+
+        }
         let y, x;
         let el = document.getElementById(id);
         console.log(el.offsetTop)
@@ -35,19 +42,31 @@ export const MenuItem = ({ tag, link }) => {
             x = el.offsetLeft;
             window.scrollTo({ left: x, top: y, behavior: "smooth" });
         }
+        toggle();
     }
 
     return (
         <>
-            {id && <motion.li
-                variants={variants}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={scrollToPage}
-            >
-                {link}
-                {/* {url && <a href={`#${url}`} className="text-placeholder">{link}</a>} */}
-            </motion.li>}
+            {
+                link !== "Resume" ?
+                    <motion.li
+                        variants={variants}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={scrollToPage}
+                    >
+                        {link}
+                    </motion.li>
+                    :
+                    <motion.li
+                        variants={variants}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}>
+                        {id && <motion.a href={tag} target="_blank">
+                            {link}
+                        </motion.a>}
+                    </motion.li>
+            }
         </>
     );
 };

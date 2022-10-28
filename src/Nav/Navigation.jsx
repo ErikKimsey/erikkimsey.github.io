@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import "./menu.scss";
 
+import RESUME from "./erikkimsey_creativeEngineer_resume.pdf"
+
 
 const variants = {
     open: {
@@ -13,7 +15,7 @@ const variants = {
     }
 };
 
-export default function Navigation({ isOpen }) {
+export default function Navigation({ isOpen, toggle }) {
     let [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -22,8 +24,9 @@ export default function Navigation({ isOpen }) {
 
     return (
         <motion.ul variants={variants} style={{ display: open === true ? "flex" : "none" }}>
-            <MenuItem tag={"landing-container"} link="Home" />
-            <MenuItem tag={"experience-container"} link="Experience" />
+            <MenuItem tag={"landing-container"} link="Home" setOpen={setOpen} toggle={toggle} />
+            <MenuItem tag={"experience-container"} link="Experience" setOpen={setOpen} toggle={toggle} />
+            <MenuItem tag={RESUME} link="Resume" setOpen={setOpen} toggle={toggle} />
         </motion.ul>
     )
 }
