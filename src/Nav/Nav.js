@@ -33,8 +33,8 @@ class Nav extends Component {
         return (
             <div className="nav-container">
                 <NavLink to="/" className="nav-item">Home</NavLink>
-                <NavLink to="/playground" className="nav-item">Playground</NavLink>
                 <NavLink to="/experience" className="nav-item">Experience</NavLink>
+
             </div>
         );
     }

@@ -27,7 +27,9 @@ export default function Experience() {
 
     return (
 
-        <motion.div className='expandingParent'>
+        <motion.div className='expandingParent'
+            id="experience-container"
+        >
             <div className="experienceContainer" ref={containerRef}>
 
                 <div className='experienceHeader'>

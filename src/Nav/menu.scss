@@ -1,0 +1,94 @@
+nav {
+    z-index: 10;
+    position: fixed;
+    width: 300px;
+    min-height: 50px;
+    height: 100%;
+    top: 50px;
+    left: 25px;
+
+
+    .background {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        // border-right: solid 1px #f0f;
+
+    }
+
+    button {
+
+        outline: none;
+        border: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background: none;
+    }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+
+        padding: 25px 35px;
+        position: absolute;
+        top: 50px;
+        width: 230px;
+        overflow: hidden;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .icon-placeholder {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex: 40px 0;
+            margin-right: 20px;
+        }
+
+        .text-placeholder {
+            border-radius: 5px;
+            width: 200px;
+            height: 20px;
+            flex: 1;
+        }
+    }
+
+
+    .refresh {
+        padding: 10px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,5 @@
 @import "../styles/globals.scss";
+@import "../styles/responsive.scss";
 
 .footerContainer {
     position: fixed;
@@ -46,6 +47,18 @@
         .textItem {
             font-size: 14px;
             color: $teal;
+        }
+    }
+
+    @media only screen and (max-width: $smDevice) {
+        padding: $pagePadding_Mobile;
+    }
+
+    @media only screen and (max-width: $xsDevice) {
+        padding: $pagePadding_Mobile;
+
+        .textItemContainer {
+            display: none;
         }
     }
 }

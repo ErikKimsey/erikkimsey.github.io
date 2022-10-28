@@ -6,7 +6,6 @@ import "./landing.scss";
 import Banner from "../Banner/Banner";
 import ExperienceMarquee from "../Experience/ExperienceMarquee";
 import About from "../About/About";
-import Menu from "../Menu/Menu";
 
 
 function Landing(props) {
@@ -22,6 +21,7 @@ function Landing(props) {
     return (
         <div
             className="landing-container"
+            id="landing-container"
         >
             <ExperienceMarquee />
             <Banner timerTime={3000} />
