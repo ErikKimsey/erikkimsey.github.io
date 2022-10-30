@@ -8,6 +8,7 @@ import Landing from './Landing/Landing';
 // import Playground from './Playground/Playground';
 import Experience from './Experience/Experience';
 import Footer from "./Footer/Footer";
+import Playground from './Playground/Playground';
 
 export default function App() {
     const [toggled, setToggled] = useState(false);
@@ -24,6 +25,7 @@ export default function App() {
             <Menu />
             <Landing label={"Experience"} navTo={"experience"} />
             <Experience />
+            <Playground />
             {/* <Routes>
                 <>
                     <Route exact path="/" element={<Landing label={"Experience"} navTo={"experience"} />} />

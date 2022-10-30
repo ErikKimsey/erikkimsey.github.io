@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./banner.scss";
-import "../Nav/Nav";
 // import { Spin } from "react-burgers";
 
 const ROLES = [

@@ -1,4 +1,5 @@
-import React, { } from "react";
+import React, { useState, useEffect } from "react";
+import { useScroll, useCycle } from "framer-motion";
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +8,23 @@ import { faGithub, faSoundcloud, faLinkedin, faItchIo, faBehance } from "@fortaw
 import resume from "./erikkimsey_creativeEngineer_resume.pdf";
 
 export default function Footer() {
+
+    const { scrollY } = useScroll()
+    let [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        let l, p;
+
+        return scrollY.onChange((e) => {
+            // TODO
+        });
+    }, [])
+
+    useEffect(() => {
+        console.log(isScrolling);
+    }, [isScrolling])
+
+
     return (
         <div className="footerContainer">
 

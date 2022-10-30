@@ -3,7 +3,7 @@ export const EXPERIENCE_DATA = [
     {
         name: 'Moxie',
         role: 'Founder / Engineer / Designer',
-        dates: '2020 - 2021',
+        dates: '2021 - Current',
         stack: 'Unity3D, C#, Blender',
         url: '',
         github: '',
@@ -34,7 +34,7 @@ export const EXPERIENCE_DATA = [
         role: 'Full-Stack Engineer',
         stack: 'PostGres, Express / NodeJS, React, Sass, JavaScript / ES6, Messenger API',
         url: '',
-        github: '',
+        github: 'https://github.com/fb-chatreader',
         img: '',
         about: [
             'Using the Facebook Messenger API, Postgres, and React, I contributed to the development of a dynamic chatbot that provides a Blinkist-type product within Facebook Messenger.']
@@ -55,7 +55,7 @@ export const EXPERIENCE_DATA = [
         role: 'Mobile App Developer',
         stack: 'React-Native, Redux, Auth0, Swagger',
         url: 'https://www.connectourkids.org/',
-        github: '',
+        github: 'https://github.com/ErikKimsey/cok_connection_image',
         img: '',
         about:
             ['Contributed to planning and architecture of Connect Our Kids "Family Connections" in their React-Native application']

@@ -33,7 +33,7 @@ export default function Experience() {
             <div className="experienceContainer" ref={containerRef}>
 
                 <div className='experienceHeader'>
-                    <div className='label'>Experience In Brief</div>
+                    <div className='label'>Experience</div>
                 </div>
                 <div className='experienceContent'>
                     {

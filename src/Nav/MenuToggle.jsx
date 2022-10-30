@@ -5,9 +5,9 @@ import "./menu.scss";
 
 const Path = props => (
     <motion.path
-        fill="#f0f"
+        fill="#fff"
         strokeWidth="3"
-        stroke="#f0f"
+        stroke="#fff"
         strokeLinecap="round"
         {...props}
     />

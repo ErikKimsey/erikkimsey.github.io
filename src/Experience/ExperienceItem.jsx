@@ -12,7 +12,16 @@ export default function ExperienceItem(props) {
         <div className="expItemLabel">{name}</div>
         <div className="expItemRole">{role}</div>
         <div className="expItemStack">{stack}</div>
-        <p className="expItemDate">{dates}</p>
+
+        <>
+            <ul className="expAboutList">
+                {
+                    about.map((e) => {
+                        return <li className="expAboutListItem" key={e}>{e}</li>
+                    })
+                }
+            </ul>
+        </>
 
         <div className="expItemLinkContainer">
             <>
@@ -26,16 +35,8 @@ export default function ExperienceItem(props) {
                 </a>}
             </>
         </div>
+        <p className="expItemDate">{dates}</p>
 
-        <>
-            <ul className="expAboutList">
-                {
-                    about.map((e) => {
-                        return <li className="expAboutListItem" key={e}>{e}</li>
-                    })
-                }
-            </ul>
-        </>
 
     </div>
 }

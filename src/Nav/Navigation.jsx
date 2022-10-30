@@ -26,6 +26,7 @@ export default function Navigation({ isOpen, toggle }) {
         <motion.ul variants={variants} style={{ display: open === true ? "flex" : "none" }}>
             <MenuItem tag={"landing-container"} link="Home" setOpen={setOpen} toggle={toggle} />
             <MenuItem tag={"experience-container"} link="Experience" setOpen={setOpen} toggle={toggle} />
+            <MenuItem tag={"playgroundContainer"} link="Playground" setOpen={setOpen} toggle={toggle} />
             <MenuItem tag={RESUME} link="Resume" setOpen={setOpen} toggle={toggle} />
         </motion.ul>
     )

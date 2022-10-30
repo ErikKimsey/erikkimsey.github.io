@@ -24,7 +24,7 @@ export default function Playground() {
     }, []);
 
     return (
-        <div className="playgroundContainer" >
+        <div className="playgroundContainer" id="playgroundContainer">
             <div className='playgroundHeader'>
                 <div className='labelContainer'>
                     <div className='label'>Playground</div>
