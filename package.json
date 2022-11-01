@@ -2,7 +2,7 @@
     "name": "erik_kimsey",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://erikkimsey.com/",
+    "homepage": "https://erikkimsey.github.io",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.2.0",
         "@fortawesome/free-brands-svg-icons": "^6.2.0",
@@ -15,7 +15,6 @@
         "axios": "^0.27.2",
         "babel-plugin-macros": "^3.1.0",
         "framer-motion": "^7.5.3",
-        "gh-pages": "^4.0.0",
         "modernizr": "^3.12.0",
         "node-sass": "^7.0.3",
         "normalize.css": "^8.0.1",
@@ -49,5 +48,8 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
+    }
 }
