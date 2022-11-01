@@ -2,6 +2,14 @@
 @import './styles/globals.scss';
 @import './styles/mixins.scss';
 
+// Colors
+$bg-color: hsl(256, 33, 10);
+$dot-color: rgb(84, 64, 132);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 8px;
+
 .App {
     position: relative;
     display: flex;
@@ -15,7 +23,11 @@
     padding-top: 0;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth; // @media only screen and (max-width: $lgDevice) {}
+    -webkit-scroll-behavior: smooth;
+    @include dotBackground;
+
+
+    // @media only screen and (max-width: $lgDevice) {}
 
     // @media only screen and (max-width: $mdDevice) {}
 

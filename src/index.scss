@@ -1,13 +1,16 @@
 @import './styles/globals.scss';
 @import './styles/mixins.scss';
 
+
+// Fonts
+$comfortaa: "comfortaa";
+
 * {
     font-weight: 100;
     box-sizing: content-box;
     overflow-x: hidden;
 }
 
-$comfortaa: "comfortaa";
 
 @font-face {
     font-family: "comfortaa";
@@ -19,8 +22,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // background-color: blueviolet;
-    // background-color: #1c1827;
-    color: #fff;
+    background-color: #1c1827;
 
     div,
     h1,

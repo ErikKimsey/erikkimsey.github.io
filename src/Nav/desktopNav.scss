@@ -1,0 +1,13 @@
+.desktopNavContainer {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    .navItem {
+        border-radius: 3px;
+        padding: 10px;
+    }
+}

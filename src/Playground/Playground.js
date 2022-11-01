@@ -6,11 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
 import { Html, useProgress } from "@react-three/drei";
 import Redundancy from './Redundancy/Redundancy';
-
 import Background from '../Background/Background';
 
-export default function Playground() {
 
+export default function Playground() {
     let { progress } = useProgress();
     let [divDimens, setDivDimens] = useState();
     let [loading, setLoading] = useState(true);

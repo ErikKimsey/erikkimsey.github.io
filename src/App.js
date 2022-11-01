@@ -9,6 +9,7 @@ import Landing from './Landing/Landing';
 import Experience from './Experience/Experience';
 import Footer from "./Footer/Footer";
 import Playground from './Playground/Playground';
+import MenuHOC from './Nav/MenuHOC';
 
 export default function App() {
     const [toggled, setToggled] = useState(false);
@@ -22,7 +23,8 @@ export default function App() {
     return (
         <div className="App">
             <P5Sketch />
-            <Menu />
+            {/* <Menu /> */}
+            <MenuHOC />
             <Landing label={"Experience"} navTo={"experience"} />
             <Experience />
             <Playground />

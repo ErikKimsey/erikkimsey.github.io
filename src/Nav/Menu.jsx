@@ -3,6 +3,7 @@ import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import MenuToggle from "./MenuToggle";
 import Navigation from "./Navigation";
+import DesktopNav from './DesktopNav';
 
 import "./menu.scss";
 
@@ -32,6 +33,7 @@ export default function Menu(props) {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
+
 
     useEffect(() => {
         console.log(isOpen);
