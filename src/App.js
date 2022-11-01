@@ -27,13 +27,7 @@ export default function App() {
             <MenuHOC />
             <Landing label={"Experience"} navTo={"experience"} />
             <Experience />
-            <Playground />
-            {/* <Routes>
-                <>
-                    <Route exact path="/" element={<Landing label={"Experience"} navTo={"experience"} />} />
-                    <Route path="/experience" element={<Experience />} />
-                </>
-            </Routes> */}
+            {/* <Playground /> */}
             <Footer />
         </div>
     );
