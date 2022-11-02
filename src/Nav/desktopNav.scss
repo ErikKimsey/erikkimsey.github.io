@@ -1,9 +1,13 @@
 .desktopNavContainer {
-    padding: 10px;
+    z-index: 11;
+    position: fixed;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: flex-start;
+    padding: 10px;
+    top: 10px;
+    left: 10px;
     width: 100%;
 
     .navItem {

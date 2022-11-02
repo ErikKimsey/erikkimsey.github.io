@@ -62,3 +62,20 @@
         }
     }
 }
+
+.footerContainerInactive {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+
+    .inactiveItem {
+        width: 10px;
+        height: 10px;
+        border: solid 2px #f0f;
+        border-radius: 2px;
+        margin: 5px;
+    }
+}
