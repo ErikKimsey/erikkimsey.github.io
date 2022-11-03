@@ -1,0 +1,39 @@
+@import "../../styles/globals.scss";
+@import "../../styles/responsive.scss";
+
+.experienceContainer {
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+
+    .experienceHeader {
+        padding-top: 10px;
+
+        .label {
+            padding-bottom: 45px;
+            font-size: $componentLabelFontSize_Desktop;
+        }
+    }
+
+    .expItemListAndTargetContainer {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-flow: row nowrap;
+
+    }
+
+    .experienceItemsList {
+        position: relative;
+        width: 100%;
+        height: calc(100vh);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

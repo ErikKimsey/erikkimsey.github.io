@@ -38,7 +38,6 @@ export default function DesktopNav(props) {
         }
         let y, x;
         let el = document.getElementById(id);
-        console.log(el.offsetTop)
         if (el !== undefined) {
             y = el.offsetTop;
             x = el.offsetLeft;

@@ -10,7 +10,7 @@ export default function MenuHOC() {
 
     useEffect(() => {
         function determineMenu() {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 setIsDesktop(false);
             } else {
                 setIsDesktop(true);

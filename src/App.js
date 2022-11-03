@@ -10,6 +10,7 @@ import Experience from './Experience/Experience';
 import Footer from "./Footer/Footer";
 import Playground from './Playground/Playground';
 import MenuHOC from './Nav/MenuHOC';
+import ExperienceMarquee from './Experience/ExperienceMarquee';
 
 export default function App() {
     const [toggled, setToggled] = useState(false);

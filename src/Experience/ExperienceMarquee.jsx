@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { EXPERIENCE_DATA } from "./experience_data";
 
-import "./experienceMarquee.scss";
+import "./styles/experienceMarquee.scss";
 
 let mockData = [
     { title: "ZMFSBG." },
@@ -12,10 +12,10 @@ let mockData = [
 ]
 
 
-export default function ExperienceMarquee() {
+export default function ExperienceMarquee(props) {
+    let { customStyles, customDelay, customDur } = props;
 
     let marqueeControl = useAnimation();
-
     let [marqueeVariants, setMarqueeVariants] = useState({});
     let [mockD, setMockData] = useState();
     let [marqueePaused, setMarqueePaused] = useState(false);
@@ -29,8 +29,9 @@ export default function ExperienceMarquee() {
                 x: {
                     repeat: Infinity,
                     repeatType: "loop",
-                    duration: 20,
+                    duration: customDur,
                     ease: "linear",
+                    delay: customDelay
                 },
             },
         };
@@ -47,7 +48,9 @@ export default function ExperienceMarquee() {
     }
 
     return (
-        <div className="marquee">
+        <div className="marquee"
+            style={{ bottom: customStyles.bottom }}
+        >
             {marqueeVariants && <motion.div
                 className="track"
                 variants={marqueeVariants}
@@ -65,8 +68,8 @@ export default function ExperienceMarquee() {
                                     ease: [0, 0.71, 0.2, 1.01]
                                 }}
                                 initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-
+                                animate={{ opacity: 0.6, scale: 1 }}
+                                key={i}
                             >{e.title}</motion.h1>
                         })
                     }

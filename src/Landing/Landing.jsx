@@ -23,14 +23,19 @@ function Landing(props) {
             className="landing-container"
             id="landing-container"
         >
-            <ExperienceMarquee />
             <Banner timerTime={3000} />
             {/* <About /> */}
             <div className="landingLinksContainer">
+                <ExperienceMarquee customStyles={{ bottom: "150px" }} customDelay={1}
+                    customDur={10}
+                />
+                <ExperienceMarquee customStyles={{ bottom: "100px" }} customDelay={2}
+                    customDur={20}
+                />
 
                 {/* <a target="_blank" href={resume}>
                     <FontAwesomeIcon icon={faFloppyDisk} size="3x" />
-                </a>
+                    </a>
                 <div className="resumeText">Resume</div> */}
             </div>
         </div>

@@ -35,7 +35,7 @@ export default function Menu(props) {
 
 
     useEffect(() => {
-        console.log(isOpen);
+        // console.log(isOpen);
     }, [isOpen])
 
     return (
