@@ -5,7 +5,9 @@ import { faFloppyDisk, faPrint } from "@fortawesome/free-solid-svg-icons";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
 import ExperienceMarquee from "../Experience/ExperienceMarquee";
-import About from "../About/About";
+import Marquee from "../Marquee/Marquee";
+
+let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
 
 
 function Landing(props) {
@@ -26,12 +28,20 @@ function Landing(props) {
             <Banner timerTime={3000} />
             {/* <About /> */}
             <div className="landingLinksContainer">
-                <ExperienceMarquee customStyles={{ bottom: "150px" }} customDelay={1}
-                    customDur={10}
-                />
-                <ExperienceMarquee customStyles={{ bottom: "100px" }} customDelay={2}
-                    customDur={20}
-                />
+                <Marquee customStyles={{ bottom: "1050px" }} customDelay={0.1}
+                    customDur={5} data={d} directionLeft={false} />
+                <Marquee customStyles={{ bottom: "950px" }} customDelay={0.1}
+                    customDur={5} data={d} directionLeft={true} />
+                <Marquee customStyles={{ bottom: "350px" }} customDelay={1}
+                    customDur={10} data={d} directionLeft={false} />
+                <Marquee customStyles={{ bottom: "750px" }} customDelay={0.5}
+                    customDur={15} data={d} directionLeft={true} />
+                <Marquee customStyles={{ bottom: "150px" }} customDelay={0.9}
+                    customDur={20} data={d} directionLeft={false} />
+                <Marquee customStyles={{ bottom: "650px" }} customDelay={0.1}
+                    customDur={8} data={d} directionLeft={true} />
+                <Marquee customStyles={{ bottom: "250px" }} customDelay={1.1}
+                    customDur={10} data={d} directionLeft={true} />
 
                 {/* <a target="_blank" href={resume}>
                     <FontAwesomeIcon icon={faFloppyDisk} size="3x" />
