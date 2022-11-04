@@ -14,6 +14,10 @@ const LANGUAGES = [
 const THREE_D = [
     'Unity3D',
     'Blender',
+    'Three.js',
+    'React-Three-Fiber',
+    'Drei',
+
 ]
 
 const DESIGN_TOOLS = [
@@ -37,13 +41,9 @@ const FRONTEND = [
     'Sass',
     'Less',
     'Framer Motion',
-    'Styled Components',
     'Three.js',
     'D3.js',
     'P5.js',
-    'Axios',
-    'Apollo-Client',
-    'Tailwind',
     'Redux',
 ]
 
@@ -87,10 +87,7 @@ const THE_WHO_AM_I = [
     'Multimedia Artist',
     'Musician',
     'Half human, half coffee',
-    'Enabler of artists and creatives',
-    'Father',
-    'Sci-Fi Enthusiast',
-    'Philosopher / Critic (but, who\'s not a critic?)'
+
 ]
 
 export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I }

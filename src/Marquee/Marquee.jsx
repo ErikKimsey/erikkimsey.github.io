@@ -74,8 +74,8 @@ export default function Marquee(props) {
                                         delay: staggerMarqueeElements(i),
                                         ease: [0.1, 1, 0.75, .2]
                                     }}
-                                    initial={{ opacity: 1, scale: 1.2 }}
-                                    animate={{ opacity: 0.3, scale: 0.7 }}
+                                    initial={{ opacity: 0.9, scale: 0.9 }}
+                                    animate={{ opacity: 0.5, scale: 0.8 }}
 
                                     key={i}
                                 >{e}</motion.h1>
