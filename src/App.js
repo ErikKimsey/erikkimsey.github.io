@@ -25,10 +25,11 @@ export default function App() {
         <div className="App">
             <P5Sketch />
             {/* <Menu /> */}
-            <MenuHOC />
+            {/* <MenuHOC /> */}
             <Landing label={"Experience"} navTo={"experience"} />
             <Experience />
             {/* <Playground /> */}
+            <div style={{ height: "100px" }}></div>
             <Footer />
         </div>
     );

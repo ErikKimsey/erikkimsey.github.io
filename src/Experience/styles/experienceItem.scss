@@ -2,31 +2,35 @@
 @import "../../styles/responsive.scss";
 
 .experienceItemContainer {
-    position: absolute;
+    // display: flex;
+    // flex-flow: column;
+    // max-width: 200px;
+    // padding: 10px;
+    // background-color: rgba(0, 0, 0, 1);
+    // border-radius: 5px;
+    // overflow-y: hidden;
+    // margin: 5px;
+
     display: flex;
     flex-flow: column;
-    max-width: 250px;
-    height: 250px;
-    padding: 5px;
-    padding-left: 10px;
-    // border: solid 1px #333;
-    box-shadow: 0px 0px 2px #fff;
-    background-color: rgba(0, 0, 0, 1);
+    min-width: 250px;
+    padding: 10px;
+    background-color: black;
     border-radius: 5px;
+    // overflow-y: hidden;
+    margin: 5px;
 
     .expItemRole {
         padding-bottom: 5px;
         font-weight: 800;
         color: $pink;
-        font-size: x-large;
-        // background: $peachPuff;
+        font-size: calc(0.8rem);
     }
 
     .expItemStack {
         padding: 5px;
-        font-size: larger;
+        font-size: 0.8rem;
         font-weight: 600;
-        // background: $pink;
         color: $peachPuff;
     }
 
@@ -37,17 +41,12 @@
     }
 
     .expItemDate {
-        position: absolute;
-        bottom: 10px;
+        // position: absolute;
+        bottom: 20px;
         right: 20px;
-        padding: 5px;
-        text-indent: 10px;
         font-style: italic;
-        font-size: small;
+        font-size: 0.8rem;
+        align-self: flex-end;
+        padding: 5px;
     }
-
-    &:hover {
-        // background-color: ;
-    }
-
 }

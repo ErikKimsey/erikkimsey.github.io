@@ -17,7 +17,7 @@ export default function Footer() {
 
     const { scrollY } = useScroll()
     let [isScrolling, setIsScrolling] = useState(false);
-    let [isActive, setIsActive] = useState(false);
+    let [isActive, setIsActive] = useState(true);
 
     useEffect(() => {
 
@@ -35,13 +35,17 @@ export default function Footer() {
         return (
             <AnimatePresence exitBeforeEnter >
                 <motion.div className="footerContainer"
-                    initial={{ x: -10, opacity: 0 }}
-                    animate={{ x: 10, opacity: 1 }}
+                    initial={{ x: 0, opacity: 0, scale: 0.5 }}
+                    animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 10, opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    onClick={() => setIsActive(false)}
+                    whileHover={{}}
+                // onClick={() => setIsActive(false)}
                 >
-                    <div className="linksContainer">
+                    <motion.div className="linksContainer"
+                        initial={{ x: 0, opacity: 0, scale: 1 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        whileHover={{ scale: 2 }}>
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>
@@ -55,12 +59,12 @@ export default function Footer() {
                             <FontAwesomeIcon icon={faFileArrowDown} size="3x" />
                         </a>
                         <div className="resumeText">Resume</div>
-                    </div>
-                    <div className="textItemContainer">
+                    </motion.div>
+                    {/* <div className="textItemContainer">
                         <div className="textItem">Erik Kimsey</div>
                         <div className="textItem">Software Developer</div>
                         <div className="textItem">kimseyerik@gmail.com</div>
-                    </div>
+                    </div> */}
                 </motion.div>
             </AnimatePresence>
         )

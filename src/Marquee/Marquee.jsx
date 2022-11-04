@@ -27,7 +27,7 @@ export default function Marquee(props) {
             x: directionLeft === true ? [-left / 2, left] : [left, -left / 2],
             transition: {
                 x: {
-                    repeat: 6,
+                    repeat: Infinity,
                     repeatType: "loop",
                     duration: customDur,
                     ease: "linear",
@@ -74,8 +74,8 @@ export default function Marquee(props) {
                                         delay: staggerMarqueeElements(i),
                                         ease: [0.1, 1, 0.75, .2]
                                     }}
-                                    initial={{ opacity: 0.5, scale: 1 }}
-                                    animate={{ opacity: 0, scale: 0 }}
+                                    initial={{ opacity: 1, scale: 1.2 }}
+                                    animate={{ opacity: 0.3, scale: 0.7 }}
 
                                     key={i}
                                 >{e}</motion.h1>

@@ -2,38 +2,60 @@
 @import "../../styles/responsive.scss";
 
 .experienceContainer {
-    width: 100vw;
-    min-height: 100vh;
-    margin-top: 100px;
+    width: 100%;
+    // bottom: 150px;
+    min-height: 70vh;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    align-items: flex-start;
     justify-content: flex-start;
+    overflow: hidden;
 
     .experienceHeader {
-        padding-top: 10px;
+        rotate: -90deg;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        width: 400px;
+        background-color: blue;
+        // flex-flow: column;
+        // padding-top: 100px;
+        /* height: 200%; */
 
         .label {
-            padding-bottom: 45px;
-            font-size: $componentLabelFontSize_Desktop;
+            // position: absolute;
+            font-size: 4em;
+            // margin: 0.67em 0;
+            margin: 0;
+            padding: 0;
+            // background-color: aquamarine;
+
         }
     }
 
-    .expItemListAndTargetContainer {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        flex-flow: row nowrap;
 
-    }
+    // h1.label {
+    //     position: relative;
+    //     rotate: -90deg;
+    //     // padding-top: 100px;
+    //     font-size: $componentLabelFontSize_Desktop;
+    //     font-size: 3rem;
+    //     margin: 0;
+    // }
 
     .experienceItemsList {
-        position: relative;
         width: 100%;
-        height: calc(100vh);
         display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        overflow: visible;
     }
+}
 
+.expItemListAndTargetContainer {
+    // position: relative;
+    // height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
 }

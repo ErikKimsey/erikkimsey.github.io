@@ -31,11 +31,11 @@ export default function Experience() {
             id="experience-container"
         >
             {/*  */}
-            <div className='experienceHeader'>
-                <div className='label'>Experience</div>
-            </div>
             {/*  */}
             {/* <div className='expItemListAndTargetContainer'> */}
+            {/* <div className='experienceHeader'>
+                <h1 className='label'>Experience</h1>
+            </div> */}
 
             <div className="experienceItemsList" ref={containerRef}>
                 {
@@ -45,6 +45,7 @@ export default function Experience() {
                 }
             </div>
             {/* </div> */}
+
         </motion.div>
     );
 }

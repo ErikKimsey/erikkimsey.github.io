@@ -3,19 +3,22 @@
 
 .footerContainer {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     left: 10px;
-    width: 90vw;
+    width: 100vw;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 40px;
+    height: auto;
+    overflow: visible;
+    // padding-top: 40px;
+    // background-color: aqua;
 
     .linksContainer {
         z-index: 1000;
-        padding: 10px;
         display: flex;
+        overflow: visible;
 
         .resumeText {
             align-self: center;
