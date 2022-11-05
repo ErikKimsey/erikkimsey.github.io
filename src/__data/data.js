@@ -1,6 +1,8 @@
 // The document contains data used to populate fields throughout the site.
 // Google News API key: 670f9cd6f82643a99331cc217f30f479
 
+const SELF_STATEMENT = "Software engineer passionate about building beautiful, dynamic, and intuitive user-interfaces, for any and all platforms.";
+
 const LANGUAGES = [
     '::: MULTI-LINGUAL :::',
     'Javascript',
@@ -90,6 +92,6 @@ const THE_WHO_AM_I = [
 
 ]
 
-export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I }
+export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I, SELF_STATEMENT }
 
 

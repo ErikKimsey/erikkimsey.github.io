@@ -2,26 +2,11 @@
 @import '../styles/responsive.scss';
 
 
-// @keyframes go-dark {
-//   0% {
-
-//   }
-//   20% {
-
-//   }
-//   40% {
-
-//   }
-//   60% {
-//     background-image: url('./assets/plant.png');
-//   }
-//   80% {
-
-//   }
-//   100% {
-
-//   }
-// }
+$--color-1: purple;
+$--color-2: #dfbbb1;
+$--color-3: #373f51;
+$--color-4: #f56476;
+$--color-5: #e43f6f;
 
 @mixin dotBackground() {
     background:
@@ -33,10 +18,32 @@
         transparent 1%) center,
         $dot-color;
     background-size: $dot-space $dot-space;
-
 }
 
-// Landing onload
+@mixin dotColorMixin {
+    @keyframes dotColor {
+        0% {
+            background: $--color-1;
+        }
+
+        25% {
+            background: $--color-5;
+        }
+
+        50% {
+            background: $--color-3;
+        }
+
+        75% {
+            background: $--color-4;
+        }
+
+        100% {
+            background: $--color-2;
+        }
+    }
+}
+
 @mixin landing-bubble($max-elems) {
     @for $i from 1 through $max-elems {
         &:nth-child(#{$i}) {

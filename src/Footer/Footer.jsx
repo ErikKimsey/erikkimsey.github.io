@@ -35,7 +35,7 @@ export default function Footer() {
         return (
             <AnimatePresence exitBeforeEnter >
                 <motion.div className="footerContainer"
-                    initial={{ x: 0, opacity: 0, scale: 0.5 }}
+                    initial={{ x: 0, opacity: 0, scale: 1 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 10, opacity: 0 }}
                     transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ export default function Footer() {
                     <motion.div className="linksContainer"
                         initial={{ x: 0, opacity: 0, scale: 1 }}
                         animate={{ x: 0, opacity: 1 }}
-                        whileHover={{ scale: 2 }}>
+                        whileHover={{ scale: 1.05 }}>
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>

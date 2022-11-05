@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./banner.scss";
-// import { Spin } from "react-burgers";
+import { SELF_STATEMENT } from "../__data/data";
 
 const ROLES = [
     'Software Developer',
@@ -76,6 +76,7 @@ export default function Banner(props) {
                     }}
                     data-text={currRole}>{currRole}</motion.div>}
             </div>
+            <div className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</div>
         </div>
     );
 }
