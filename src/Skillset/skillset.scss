@@ -1,0 +1,11 @@
+@import './../styles/responsive.scss';
+@import './../styles/globals.scss';
+@import './../styles/mixins.scss';
+
+.skillsetContainer {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
