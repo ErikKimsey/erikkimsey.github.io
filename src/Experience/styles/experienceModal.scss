@@ -24,16 +24,18 @@
         border-left: solid 1px #222;
         background-color: rgba(0, 0, 0, 1);
         border-radius: 5px;
+        box-sizing: border-box;
+        padding: 10px;
 
         button {
             background-color: #222;
             color: #ddd;
             border: none;
+            padding: 10px;
 
             &:hover {
-
-                background-color: #111;
-                color: $peachPuff;
+                background-color: #222;
+                color: #ffcea7;
             }
         }
 
@@ -46,12 +48,13 @@
             padding-bottom: 5px;
             font-weight: 800;
             color: #ff9fcf;
-            font-size: 1rem;
+            font-size: 1.6rem;
         }
 
         .expItemStack {
             font-size: 1rem;
             font-weight: 800;
+            width: 90%;
             color: rgb(255, 254, 200);
         }
 
@@ -100,7 +103,7 @@
             li.expAboutListItem {
                 display: list-item;
                 list-style-type: disc;
-                padding: 5px;
+                padding: 5px 15px;
                 color: #fff;
 
             }
