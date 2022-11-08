@@ -30,15 +30,13 @@ export default function Experience() {
         <motion.div className='experienceContainer'
             id="experience-container"
         >
+            <div className='experienceHeader'>exper.__</div>
             {/*  */}
             {/*  */}
             {/* <div className='expItemListAndTargetContainer'> */}
 
 
             <div className="experienceItemsList" ref={containerRef}>
-                {/* <div className='experienceHeader'>
-                    <h1 className='label'>experi.</h1>
-                </div> */}
                 {
                     data && data.map((e, i) => {
                         return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />

@@ -23,11 +23,13 @@ export default function SkillsetItem(props) {
     return (
         <div className="skillSetItem">
             {discipline && <h4>{discipline}</h4>}
-            {
-                skills && skills.map((e) => {
-                    return <div className="skillItem">{e}</div>
-                })
-            }
+            <div className="skillItemsList">
+                {
+                    skills && skills.map((e) => {
+                        return <div className="skillItem">{e}</div>
+                    })
+                }
+            </div>
         </div>
     )
 }

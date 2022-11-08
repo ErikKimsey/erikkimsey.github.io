@@ -3,33 +3,58 @@
 @import './../styles/mixins.scss';
 
 .skillsetContainer {
-    background-color: black;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .skillsHeader {
+        width: 100%;
+        font-size: 2rem;
+        padding: 5px;
+    }
 
     .skillSetItem {
-        position: relative;
-        box-sizing: border-box;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
         width: 48%;
         padding: 5px;
         margin: 1px;
-        height: 100px;
-        overflow-y: hidden;
+        box-sizing: border-box;
 
-        .skillsetItem {
-            padding: 2px;
-            background-color: blue;
+        h4 {
+            width: 100%;
+            padding: 0;
+            margin: 0;
         }
 
-        &:hover {
-            height: 200px;
-            z-index: 11;
-            overflow-y: visible;
+        .skillItemsList {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow: hidden;
+            font-size: x-small;
+
+            .skillItem {
+                padding: 2px;
+            }
+
+            // &:hover {
+            //     height: 200px;
+            //     z-index: 11;
+            //     overflow: visible;
+            //     font-size: small;
+            // }
         }
+
+
     }
 
     // @media only screen and (max-width: $lgDevice) {}
