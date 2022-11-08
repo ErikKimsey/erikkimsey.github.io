@@ -15,10 +15,11 @@ $hover-color: #fcfa85;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 
     .text-container {
         width: 100%;
+
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -52,10 +53,11 @@ $hover-color: #fcfa85;
 
     .aboutSelfDeveloperContainer {
         position: relative;
-        padding: 40px 0;
+        padding: 42px 10px;
         width: 60%;
+        align-self: flex-end;
         text-align: end;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: powderblue;
         // color: rgba(111, 111, 111, 0.4);
     }
@@ -87,12 +89,10 @@ $hover-color: #fcfa85;
         }
 
         .aboutSelfDeveloperContainer {
-            width: 80%;
-            padding: 40px;
+            width: 100%;
+            padding: 20px 40px;
             box-sizing: border-box;
-            font-size: 0.8rem;
-            text-align: end;
-
+            font-size: 1rem;
         }
     }
 }

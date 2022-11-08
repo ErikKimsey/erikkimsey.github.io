@@ -4,7 +4,7 @@
 const SELF_STATEMENT = "Software engineer passionate about building beautiful, dynamic, and intuitive user-interfaces, for any and all platforms.";
 
 const LANGUAGES = [
-    '::: MULTI-LINGUAL :::',
+    'LANGUAGES',
     'Javascript',
     'C#',
     'Typescript',
@@ -14,6 +14,7 @@ const LANGUAGES = [
 ]
 
 const THREE_D = [
+    '3D',
     'Unity3D',
     'Blender',
     'Three.js',
@@ -23,7 +24,7 @@ const THREE_D = [
 ]
 
 const DESIGN_TOOLS = [
-    '::: GRAPHIC DESIGN :::',
+    'GRAPHIC DESIGN',
     'Adobe Illustrator',
     'Adobe Photoshop',
     'Adobe InDesign',
@@ -34,7 +35,7 @@ const DESIGN_TOOLS = [
 
 
 const FRONTEND = [
-    '::: FRONTEND ::: ',
+    'FRONTEND',
     'JavaScript',
     'Typescript',
     'React',
@@ -50,13 +51,14 @@ const FRONTEND = [
 ]
 
 const MULTIMEDIA_WEB = [
+    'WEB MULTIMEDIA',
     "Web Audio API",
     "WebGL",
 
 ]
 
 const BACKEND = [
-    '::: BACKEND ::: ',
+    'BACKEND',
     'Node.js / Express.js',
     'SQL / MySQL / SQLite',
     'Flask',
@@ -66,7 +68,7 @@ const BACKEND = [
 ]
 
 const AUDIO_VIDEO = [
-    '::: AUDIO / VIDEO :::',
+    'AUDIO / VIDEO',
     'Ableton Live',
     'Propellerhead Reason',
     'Adobe Premiere',
@@ -89,8 +91,11 @@ const THE_WHO_AM_I = [
     'Multimedia Artist',
     'Musician',
     'Half human, half coffee',
-
 ]
+
+export const SKILLS = [
+    LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, AUDIO_VIDEO, MULTIMEDIA_WEB
+];
 
 export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I, SELF_STATEMENT }
 

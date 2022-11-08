@@ -12,6 +12,7 @@ import Playground from './Playground/Playground';
 import MenuHOC from './Nav/MenuHOC';
 import ExperienceMarquee from './Experience/ExperienceMarquee';
 import Skillset from './Skillset/Skillset';
+import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 
 export default function App() {
     const [toggled, setToggled] = useState(false);
@@ -29,7 +30,8 @@ export default function App() {
             {/* <MenuHOC /> */}
             <Landing label={"Experience"} navTo={"experience"} />
             {/* <Skillset /> */}
-            <Experience />
+            <SkillsExperienceParent />
+            {/* <Experience /> */}
             {/* <Playground /> */}
             <div style={{ height: "100px" }}></div>
             <Footer />

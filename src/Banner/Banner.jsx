@@ -76,7 +76,15 @@ export default function Banner(props) {
                     }}
                     data-text={currRole}>{currRole}</motion.div>}
             </div>
-            <div className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 1,
+                    delay: 2,
+                    ease: [0, 0.71, 0.2, 1.01]
+                }}
+                className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</motion.div>
         </div>
     );
 }

@@ -3,9 +3,42 @@
 @import './../styles/mixins.scss';
 
 .skillsetContainer {
-    min-height: 100vh;
-    min-width: 100%;
     background-color: black;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .skillSetItem {
+        position: relative;
+        box-sizing: border-box;
+        width: 48%;
+        padding: 5px;
+        margin: 1px;
+        height: 100px;
+        overflow-y: hidden;
+
+        .skillsetItem {
+            padding: 2px;
+            background-color: blue;
+        }
+
+        &:hover {
+            height: 200px;
+            z-index: 11;
+            overflow-y: visible;
+        }
+    }
+
+    // @media only screen and (max-width: $lgDevice) {}
+
+    // @media only screen and (max-width: $mdDevice) {}
+
+    @media only screen and (max-width: $smDevice) {
+        width: 100%;
+    }
+
+    // @media only screen and (max-width: $xsDevice) {}
 }

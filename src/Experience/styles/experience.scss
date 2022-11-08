@@ -3,12 +3,11 @@
 
 .experienceContainer {
     position: relative;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
     overflow: visible;
 
 
@@ -21,10 +20,11 @@
         margin: 0;
 
         .label {
-            font-size: 10vh;
             margin: 0;
             color: rgba(255, 255, 255, 0.2);
             padding: 0;
+            // background-image: url("../../assets/images/pink_purp_yellow_sqr.jpeg");
+            // background-size: cover;
         }
     }
 
@@ -35,6 +35,10 @@
         justify-content: flex-end;
         align-items: flex-end;
         overflow: visible;
+    }
+
+    @media only screen and (max-width: $smDevice) {
+        width: 100%;
     }
 }
 

@@ -15,8 +15,10 @@
     flex-flow: column;
     min-width: 250px;
     padding: 10px;
-    background-color: black;
-    border-radius: 5px;
+    // border-right: solid 4px #7c7c7c;
+    border-top: solid 1px #7c7c7c;
+    // border-radius: 0 10px;
+    // border-radius: 5px;
     // overflow-y: hidden;
     margin: 5px;
 
@@ -28,7 +30,7 @@
     }
 
     .expItemStack {
-        padding: 5px;
+        padding: 2px;
         font-size: 0.8rem;
         font-weight: 600;
         color: $peachPuff;
@@ -41,12 +43,13 @@
     }
 
     .expItemDate {
-        // position: absolute;
         bottom: 20px;
-        right: 20px;
+        right: 60px;
         font-style: italic;
         font-size: 0.8rem;
+        line-height: 1.1;
         align-self: flex-end;
-        padding: 5px;
+        padding: 0;
+        padding-right: 5px;
     }
 }

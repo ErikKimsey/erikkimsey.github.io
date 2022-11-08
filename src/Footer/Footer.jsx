@@ -45,7 +45,12 @@ export default function Footer() {
                     <motion.div className="linksContainer"
                         initial={{ x: 0, opacity: 0, scale: 1 }}
                         animate={{ x: 0, opacity: 1 }}
-                        whileHover={{ scale: 1.05 }}>
+                        whileHover={{ scale: 1.05 }}
+                        transition={{
+                            duration: 1,
+                            delay: 4,
+                            ease: [0, 0.71, 0.2, 1.01]
+                        }}>
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>
