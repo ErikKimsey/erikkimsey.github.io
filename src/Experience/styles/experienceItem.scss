@@ -2,55 +2,47 @@
 @import "../../styles/responsive.scss";
 
 .experienceItemContainer {
-    // display: flex;
-    // flex-flow: column;
-    // max-width: 200px;
-    // padding: 10px;
-    // background-color: rgba(0, 0, 0, 1);
-    // border-radius: 5px;
-    // overflow-y: hidden;
-    // margin: 5px;
 
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     display: flex;
-    flex-flow: column;
-    width: 100%;
-    // min-width: 250px;
-    padding: 10px;
-    // border-right: solid 4px #7c7c7c;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
     border-top: solid 1px #7c7c7c;
-    // border-radius: 0 10px;
-    // border-radius: 5px;
-    // overflow-y: hidden;
+    padding: 10px;
     margin: 5px;
 
     .expItemRole {
-        padding-bottom: 5px;
+        color: #ff9fcf;
+        font-size: .9rem;
         font-weight: 800;
-        color: $pink;
-        font-size: calc(0.8rem);
+        padding-bottom: 5px;
     }
 
     .expItemStack {
         padding: 2px;
         font-size: 0.8rem;
         font-weight: 600;
-        color: $peachPuff;
+        // color: $peachPuff;
+        color: rgb(255, 254, 200);
     }
 
     .expItemLabel {
-        padding-bottom: 5px;
+        padding-bottom: 2px;
         font-weight: 200;
-        font-size: x-small;
+        font-size: small;
     }
 
     .expItemDate {
+        align-self: flex-end;
         bottom: 20px;
         right: 60px;
         font-style: italic;
         font-size: 0.8rem;
         line-height: 1.1;
-        align-self: flex-end;
-        padding: 0;
-        padding-right: 5px;
+        padding: 2px;
+        padding-left: 5px;
     }
 }

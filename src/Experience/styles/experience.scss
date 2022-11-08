@@ -3,20 +3,20 @@
 
 .experienceContainer {
     position: relative;
-    width: 50%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     overflow: visible;
+    margin-top: 50px;
 
 
     .experienceHeader {
         width: 100%;
         display: flex;
         flex-flow: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: flex-end;
+        align-items: flex-end;
         margin: 0;
         font-size: 2rem;
         padding: 5px;
@@ -31,12 +31,20 @@
     }
 
     .experienceItemsList {
-        width: 100%;
+        // width: 100%;
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: flex-end;
+        // align-items: flex-end;
+        // overflow: visible;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: flex-end;
         align-items: flex-end;
+        align-self: flex-end;
         overflow: visible;
+        width: 100%;
+        position: relative;
     }
 
     @media only screen and (max-width: $smDevice) {

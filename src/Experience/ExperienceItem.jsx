@@ -28,8 +28,8 @@ export default function ExperienceItem(props) {
             >
                 <div className="expItemRole">{role}</div>
                 <div className="expItemStack">{stack}</div>
-                <div className="expItemLabel">{name}</div>
-                <p className="expItemDate">{dates}</p>
+                {/* <div className="expItemLabel">{name}</div>
+                <p className="expItemDate">{dates}</p> */}
             </motion.div >
         )
     }

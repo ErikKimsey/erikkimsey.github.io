@@ -40,9 +40,9 @@ export default function ExperienceModal(props) {
                 animate="visible"
                 exit="exit"
             >
-                <div className="expItemLabel">{name}</div>
                 <div className="expItemRole">{role}</div>
                 <div className="expItemStack">{stack}</div>
+                <div className="expItemLabel">{name}</div>
 
                 <>
                     <ul className="expAboutList">
