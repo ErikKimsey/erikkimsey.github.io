@@ -22,7 +22,7 @@ export default function SkillsetItem(props) {
 
     return (
         <div className="skillSetItem">
-            {discipline && <h4>{discipline}</h4>}
+            {discipline && <h4>{discipline}__</h4>}
             <div className="skillItemsList">
                 {
                     skills && skills.map((e) => {

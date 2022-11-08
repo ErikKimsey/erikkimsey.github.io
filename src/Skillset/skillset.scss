@@ -34,8 +34,9 @@
 
         h4 {
             width: 100%;
-            padding: 0;
+            padding: 4px 0;
             margin: 0;
+            font-weight: 800;
         }
 
         .skillItemsList {
@@ -48,18 +49,9 @@
 
             .skillItem {
                 padding: 2px 6px;
-                font-size: 0.7rem;
+                font-size: 0.75rem;
             }
-
-            // &:hover {
-            //     height: 200px;
-            //     z-index: 11;
-            //     overflow: visible;
-            //     font-size: small;
-            // }
         }
-
-
     }
 
     // @media only screen and (max-width: $lgDevice) {}
