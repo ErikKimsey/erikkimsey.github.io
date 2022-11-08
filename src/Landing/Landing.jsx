@@ -43,20 +43,6 @@ function Landing(props) {
             {/* <Experience /> */}
             {/* <About /> */}
             <div className="landingLinksContainer">
-                {/* {LANGUAGES && <Marquee customStyles={{ bottom: "1050px" }} customDelay={0.1}
-                    customDur={10} data={LANGUAGES} directionLeft={false} />}
-                {FRONTEND && <Marquee customStyles={{ bottom: "950px" }} customDelay={0.5}
-                    customDur={15} data={FRONTEND} directionLeft={true} />}
-                {THREE_D && <Marquee customStyles={{ bottom: "350px" }} customDelay={0.3}
-                    customDur={20} data={THREE_D} directionLeft={false} />} */}
-                {/* {DESIGN_TOOLS && <Marquee customStyles={{ bottom: "750px" }} customDelay={0.2}
-                    customDur={15} data={DESIGN_TOOLS} directionLeft={true} />} */}
-                {/* {AUDIO_VIDEO && <Marquee customStyles={{ bottom: "150px" }} customDelay={0.9}
-                    customDur={6} data={AUDIO_VIDEO} directionLeft={false} />} */}
-                {/* {BACKEND && <Marquee customStyles={{ bottom: "650px" }} customDelay={0.1}
-                    customDur={10} data={BACKEND} directionLeft={true} />} */}
-                {/* {THE_WHO_AM_I && <Marquee customStyles={{ bottom: "250px" }} customDelay={0.9}
-                    customDur={6} data={THE_WHO_AM_I} directionLeft={true} />} */}
             </div>
         </div>
     );
