@@ -10,13 +10,10 @@ export default function SkillsetItem(props) {
     let [discipline, setDiscipline] = useState();
     let [skills, setSkills] = useState();
 
-    function handleHoverClick() {
-        console.log("handling hover click");
-    }
+    function handleHoverClick() { }
 
     useEffect(() => {
         setDiscipline(data[0]);
-        console.log(data.slice(1));
         setSkills(data.slice(1));
     }, []);
 
@@ -26,7 +23,7 @@ export default function SkillsetItem(props) {
             <div className="skillItemsList">
                 {
                     skills && skills.map((e) => {
-                        return <div className="skillItem">{e}</div>
+                        return <div className="skillItem" key={e}>{e}</div>
                     })
                 }
             </div>

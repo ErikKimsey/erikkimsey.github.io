@@ -18,6 +18,7 @@ export default function Experience() {
         }
     }, []);
 
+
     /***
      * TODO:
      * -- Initialize Experience as collapsed,
@@ -29,6 +30,7 @@ export default function Experience() {
     return (
         <motion.div className='experienceContainer'
             id="experience-container"
+            ref={containerRef}
         >
             <div className='experienceHeader'>exper.__</div>
             {/*  */}
@@ -36,7 +38,7 @@ export default function Experience() {
             {/* <div className='expItemListAndTargetContainer'> */}
 
 
-            <div className="experienceItemsList" ref={containerRef}>
+            <div className="experienceItemsList">
                 {
                     data && data.map((e, i) => {
                         return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />

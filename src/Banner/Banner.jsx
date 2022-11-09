@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import "./banner.scss";
 import { SELF_STATEMENT } from "../__data/data";
@@ -14,10 +14,13 @@ const ROLES = [
 
 export default function Banner(props) {
     let { timerTime } = props;
+
+    let bannerRef = useRef();
     let [iconActive, setIconActive] = useState(false);
     let [timer, setTimer] = useState(3000);
     let [rolesIndex, setRolesIndex] = useState(0);
     let [currRole, setCurrRole] = useState();
+    let [pos, setPos] = useState();
 
     useEffect(() => {
         let interval = null;
@@ -43,7 +46,10 @@ export default function Banner(props) {
     }
 
     return (
-        <div className="banner-container">
+        <div className="banner-container"
+            ref={bannerRef}
+        >
+
             <div className="text-container">
                 <motion.div
                     className="name banner-item"

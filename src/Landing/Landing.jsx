@@ -15,7 +15,6 @@ let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.j
 
 function SplitData(str) {
     let arr = str.split(" ");
-    console.log(arr);
     return arr;
 }
 
@@ -32,12 +31,21 @@ function Landing(props) {
         if (sketchRef.current) {
             setDimens({ w: sketchRef.current.offsetWidth, h: sketchRef.current.offsetHeight });
         }
+
+        // let dot = document.createElement("div");
+        // dot.setAttribute("class", "dot");
+        // dot.setAttribute("style", "background: #ff00ff");
+        // dot.style.position = "absolute";
+        // dot.style.height = "100px";
+        // dot.style.width = "100px";
+
     }, [])
 
     return (
         <div
             className="landing-container"
             id="landing-container"
+            ref={sketchRef}
         >
             <Banner timerTime={3000} />
             {/* <Experience /> */}
