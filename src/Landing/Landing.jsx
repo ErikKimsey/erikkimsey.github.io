@@ -9,6 +9,7 @@ import Marquee from "../Marquee/Marquee";
 import Experience from "../Experience/Experience";
 import Skillset from "../Skillset/Skillset";
 
+
 import { LANGUAGES, FRONTEND, BACKEND, THREE_D, DESIGN_TOOLS, MULTIMEDIA_WEB, THE_WHO_AM_I, CONTACT_DATA, AUDIO_VIDEO } from "../__data/data";
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
