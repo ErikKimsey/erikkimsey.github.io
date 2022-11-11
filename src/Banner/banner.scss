@@ -16,6 +16,10 @@ $hover-color: #fcfa85;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    // background-image: url('../assets/images/scribbles.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .text-container {
         width: 100%;
@@ -42,23 +46,28 @@ $hover-color: #fcfa85;
         }
 
         .underscore {
-            width: 40px;
+            width: 10px;
             color: #E80C7A;
             background-image: url('../assets/logos/droopy_e.png');
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center;
         }
 
     }
 
     .aboutSelfDeveloperContainer {
         position: relative;
-        padding: 42px 10px;
+        // padding: 42px 10px;
         width: 60%;
+        height: 200px;
         align-self: flex-end;
         text-align: end;
-        font-size: 1.5rem;
-        color: powderblue;
+        text-shadow: 0px 0px 1px #888888;
+        color: rgba(13, 0, 150, 0);
+        padding-right: 50px;
+        font-size: 1.7rem;
+
         // color: rgba(111, 111, 111, 0.4);
     }
 
@@ -93,6 +102,7 @@ $hover-color: #fcfa85;
             padding: 20px 40px;
             box-sizing: border-box;
             font-size: 1rem;
+            text-shadow: 0px 0px 1px #bebebe;
         }
     }
 }
