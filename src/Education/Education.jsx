@@ -5,8 +5,8 @@ import "./education.scss";
 export default function Education() {
 
     return (
-        <div className="educationContainer">
-            EDUCAMATION
+        <div className="educationContainer" id="education-container">
+            {/* EDUCAMATION */}
         </div>
     )
 }

@@ -11,6 +11,7 @@ import Playground from './Playground/Playground';
 import ExperienceMarquee from './Experience/ExperienceMarquee';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 import Education from './Education/Education';
+import FloatingMenu from './FloatingMenu/FloatingMenu';
 
 export default function App() {
     const [toggled, setToggled] = useState(false);
@@ -69,6 +70,7 @@ export default function App() {
 
     return (
         <div className="App">
+            {/* <FloatingMenu /> */}
             <P5Sketch />
             {/* <Menu /> */}
             {/* <MenuHOC /> */}

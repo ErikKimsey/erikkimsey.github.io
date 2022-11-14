@@ -1,0 +1,17 @@
+.bannerMenu {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    // height: 100px;
+
+    .bannerMenuItem {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 900;
+        padding: 0 30px;
+    }
+}

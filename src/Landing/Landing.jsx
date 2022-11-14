@@ -51,8 +51,8 @@ function Landing(props) {
             <Banner timerTime={3000} />
             {/* <Experience /> */}
             {/* <About /> */}
-            <div className="landingLinksContainer">
-            </div>
+            {/* <div className="landingLinksContainer">
+            </div> */}
         </div>
     );
 }
