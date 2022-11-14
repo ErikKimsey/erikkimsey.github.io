@@ -8,21 +8,15 @@ import "./bannerMenu.scss";
 // ]
 
 const variants = {
-    open: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            y: { stiffness: 1000, velocity: -100 }
-        }
-    },
-    closed: {
-        y: 50,
-        opacity: 0,
-        transition: {
-            y: { stiffness: 1000 }
-        }
+
+    transition: {
+        duration: 0.8,
+        delay: 1.4,
+        ease: [0, 0.71, 0.2, 1.01],
+        y: { stiffness: 1000 }
     }
-};
+}
+
 
 
 function BannerMenuItem(props) {
@@ -73,7 +67,15 @@ export default function BannerMenu() {
 
 
     return (
-        <div className="bannerMenu">
+        <motion.div className="bannerMenu"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.8,
+                delay: 3,
+                ease: [0, 0.71, 0.2, 1.01]
+            }}
+        >
             {menuLinks &&
                 menuLinks.map((e, i) => {
                     return (
@@ -83,6 +85,6 @@ export default function BannerMenu() {
                     )
                 })
             }
-        </div>
+        </motion.div>
     )
 }
