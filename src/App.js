@@ -80,7 +80,7 @@ export default function App() {
             {/* <Experience /> */}
             {/* <Playground /> */}
             <div style={{ height: "100px" }}></div>
-            <Education />
+            {/* <Education /> */}
             <Footer />
         </div>
     );
