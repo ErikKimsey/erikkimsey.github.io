@@ -23,47 +23,48 @@ export default function App() {
 
 
   useEffect(() => {
-    if (toggled !== false) {
-      setToggled(false);
-    }
-
-    let devType = parser.getDevice().type;
-    if (devType === "mobile") {
-      setIsMobile(true);
-
-      pointerListener = window.addEventListener('touchstart', () => {
-        console.log(lastClick);
-        let date = new Date();
-        let time = date.getTime();
-        if (time - lastClick < timeBwTaps) {
-          console.log("tap tap");
-
+      if (toggled !== false) {
+        setToggled(false);
+      }
+    
+      let devType = parser.getDevice().type;
+      if (devType === "mobile") {
+        setIsMobile(true);
+      
+        pointerListener = window.addEventListener('touchstart', () => {
+          console.log(lastClick);
+          let date = new Date();
+          let time = date.getTime();
+          if (time - lastClick < timeBwTaps) {
+            console.log("tap tap");
+          
+            /**
+             * TODO:
+             * -- dble click functionality
+             */
+          }
+          lastClick = time;
+        });
+      }
+    
+      if (devType !== "mobile") {
+        pointerListener = window.addEventListener('dblclick', () => {
+          console.log("DOUBLE CLICKS");
           /**
-           * TODO: 
+           * TODO:
            * -- dble click functionality
            */
-        }
-        lastClick = time;
-      });
-    }
-
-    if (devType !== "mobile") {
-      pointerListener = window.addEventListener('dblclick', () => {
-        console.log("DOUBLE CLICKS");
-        /**
-         * TODO: 
-         * -- dble click functionality
-         */
-      });
-    }
-
-    if (pointerListener) console.log(pointerListener);
-
-    return () => {
-      window.removeEventListener(pointerListener);
-    }
-
-  }, []);
+        });
+      }
+    
+      if (pointerListener) console.log(pointerListener);
+    
+      return () => {
+        window.removeEventListener(pointerListener);
+      }
+    
+    },
+    []);
 
 
 

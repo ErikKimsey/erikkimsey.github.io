@@ -8,9 +8,8 @@ const LANGUAGES = [
   'Javascript',
   'C#',
   'Typescript',
+  'Python',
   'C++',
-  'Java',
-  'Processing'
 ]
 
 const THREE_D = [
@@ -30,7 +29,6 @@ const DESIGN_TOOLS = [
   'Adobe InDesign',
   'Procreate',
   'Figma',
-  'Vectornator',
 ]
 
 

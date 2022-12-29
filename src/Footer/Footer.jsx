@@ -6,7 +6,7 @@ import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFloppyDisk, faDownload, faFileArrowDown, faGripHorizontal } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSoundcloud, faLinkedin, faItchIo, faBehance } from "@fortawesome/free-brands-svg-icons";
-import resume from "../assets/resume/erikkimsey_creativeEngineer_resume.pdf";
+import resume from "../assets/resume/erikkimsey_frontendEngineer_resume.pdf";
 
 
 let peach = "#ffcea7";
@@ -57,7 +57,7 @@ export default function Footer() {
             <a target="_blank" href="https://soundcloud.com/oddtreatment">
               <FontAwesomeIcon icon={faSoundcloud} size="3x" />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/erikkimsey">
+            <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
               <FontAwesomeIcon icon={faLinkedin} size="3x" />
             </a>
             <a target="_blank" href={resume}>
