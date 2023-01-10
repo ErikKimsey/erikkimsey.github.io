@@ -19,14 +19,6 @@ export default function Experience() {
   }, []);
 
 
-  /***
-   * TODO:
-   * -- Initialize Experience as collapsed,
-   * -- text "Experience" is not initially displayed,
-   * -- display graphic, if hovered-on, will display "Experience",
-   * -- if graphic or text is clicked on, then Experience list will expand/be displayed.
-   */
-
   return (
     <motion.div className='experienceContainer'
       id="experience-container"
@@ -35,7 +27,6 @@ export default function Experience() {
       <div className='experienceHeader'>exper/ience.</div>
       {/*  */}
       {/*  */}
-      {/* <div className='expItemListAndTargetContainer'> */}
 
 
       <div className="experienceItemsList">
@@ -46,7 +37,6 @@ export default function Experience() {
         }
       </div>
 
-      {/* </div> */}
 
     </motion.div>
   );
