@@ -6,7 +6,7 @@ import './Banner/banner.scss';
 import P5Sketch from './P5Sketch/P5Sketch';
 import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
-// import Playground from './Playground/Playground';
+import Playground from './Playground/Playground';
 // import ExperienceMarquee from './Experience/ExperienceMarquee';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 // import Education from './Education/Education';
@@ -23,47 +23,47 @@ export default function App() {
 
 
   useEffect(() => {
-      if (toggled !== false) {
-        setToggled(false);
-      }
-    
-      let devType = parser.getDevice().type;
-      if (devType === "mobile") {
-        setIsMobile(true);
-      
-        pointerListener = window.addEventListener('touchstart', () => {
-          console.log(lastClick);
-          let date = new Date();
-          let time = date.getTime();
-          if (time - lastClick < timeBwTaps) {
-            console.log("tap tap");
-          
-            /**
-             * TODO:
-             * -- dble click functionality
-             */
-          }
-          lastClick = time;
-        });
-      }
-    
-      if (devType !== "mobile") {
-        pointerListener = window.addEventListener('dblclick', () => {
-          console.log("DOUBLE CLICKS");
+    if (toggled !== false) {
+      setToggled(false);
+    }
+
+    let devType = parser.getDevice().type;
+    if (devType === "mobile") {
+      setIsMobile(true);
+
+      pointerListener = window.addEventListener('touchstart', () => {
+        console.log(lastClick);
+        let date = new Date();
+        let time = date.getTime();
+        if (time - lastClick < timeBwTaps) {
+          console.log("tap tap");
+
           /**
            * TODO:
            * -- dble click functionality
            */
-        });
-      }
-    
-      if (pointerListener) console.log(pointerListener);
-    
-      return () => {
-        window.removeEventListener(pointerListener);
-      }
-    
-    },
+        }
+        lastClick = time;
+      });
+    }
+
+    if (devType !== "mobile") {
+      pointerListener = window.addEventListener('dblclick', () => {
+        console.log("DOUBLE CLICKS");
+        /**
+         * TODO:
+         * -- dble click functionality
+         */
+      });
+    }
+
+    if (pointerListener) console.log(pointerListener);
+
+    return () => {
+      window.removeEventListener(pointerListener);
+    }
+
+  },
     []);
 
 
@@ -72,13 +72,11 @@ export default function App() {
     <div className="App">
       {/* <FloatingMenu /> */}
       <P5Sketch />
+      {/* <Playground /> */}
       {/* <Menu /> */}
       {/* <MenuHOC /> */}
       <Landing label={"Experience"} navTo={"experience"} />
-      {/* <Skillset /> */}
       <SkillsExperienceParent />
-      {/* <Experience /> */}
-      {/* <Playground /> */}
       <div style={{ height: "100px" }}></div>
       {/* <Education /> */}
       <Footer />

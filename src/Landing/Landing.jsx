@@ -13,7 +13,6 @@ function SplitData(str) {
   return arr;
 }
 
-
 function Landing(props) {
   const sketchRef = useRef();
   const [dimens, setDimens] = useState({ w: 0, h: 0 });

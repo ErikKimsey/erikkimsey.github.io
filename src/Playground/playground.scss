@@ -3,145 +3,149 @@
 
 
 .playgroundContainer {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  z-index: 0;
+
+  .playgroundHeader {
+    padding-top: 10px;
+    border-top: solid 1px #444;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-    .playgroundHeader {
-        padding-top: 10px;
-        border-top: solid 1px #444;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+    .labelContainer {
+      display: flex;
+      flex-flow: column;
 
-        .labelContainer {
-            display: flex;
-            flex-flow: column;
-
-            .label {
-                font-size: $componentLabelFontSize_Desktop;
-            }
-        }
-
-        .sketchesTextContainer {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            // justify-content: flex-end;
-            align-items: center;
-
-            a {
-                padding: 0 10px;
-                transition: all 500ms;
-
-                &:hover {
-                    color: $teal;
-                    transform: rotate(10deg) scale(1.1);
-                }
-            }
-        }
+      .label {
+        font-size: $componentLabelFontSize_Desktop;
+      }
     }
 
-    .playgroundContent {
-        flex: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .sketchesTextContainer {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      // justify-content: flex-end;
+      align-items: center;
+
+      a {
+        padding: 0 10px;
+        transition: all 500ms;
+
+        &:hover {
+          color: $teal;
+          transform: rotate(10deg) scale(1.1);
+        }
+      }
+    }
+  }
+
+  .playgroundContent {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes distort1 {
+    0% {
+      top: 49.5%;
+      left: 49.5%;
     }
 
-    @keyframes distort1 {
-        0% {
-            top: 49.5%;
-            left: 49.5%;
-        }
-
-        12.5% {
-            top: 49.5%;
-            left: 50%;
-        }
-
-        25% {
-            top: 49.5%;
-            left: 50.5%;
-        }
-
-        37.5% {
-            top: 50%;
-            left: 50.5%;
-        }
-
-        50% {
-            top: 50.5%;
-            left: 50.5%;
-        }
-
-        62.5% {
-            top: 50.5%;
-            left: 50%;
-        }
-
-        75% {
-            top: 50.5%;
-            left: 49.5%;
-        }
-
-        87.5% {
-            top: 50%;
-            left: 49.5%;
-        }
-
-        100% {
-            top: 49.5%;
-            left: 49.5%;
-        }
+    12.5% {
+      top: 49.5%;
+      left: 50%;
     }
 
-    @keyframes distort2 {
-        0% {
-            top: 50.5%;
-            left: 50.5%;
-        }
-
-        12.5% {
-            top: 50%;
-            left: 50.5%;
-        }
-
-        25% {
-            top: 49.5%;
-            left: 50.5%;
-        }
-
-        37.5% {
-            top: 49.5%;
-            left: 50%;
-        }
-
-        50% {
-            top: 49.5%;
-            left: 49.5%;
-        }
-
-        62.5% {
-            top: 50%;
-            left: 49.5%;
-        }
-
-        75% {
-            top: 50.5%;
-            left: 49.5%;
-        }
-
-        87.5% {
-            top: 50.5%;
-            left: 50%;
-        }
-
-        100% {
-            top: 50.5%;
-            left: 50.5%;
-        }
+    25% {
+      top: 49.5%;
+      left: 50.5%;
     }
+
+    37.5% {
+      top: 50%;
+      left: 50.5%;
+    }
+
+    50% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+
+    62.5% {
+      top: 50.5%;
+      left: 50%;
+    }
+
+    75% {
+      top: 50.5%;
+      left: 49.5%;
+    }
+
+    87.5% {
+      top: 50%;
+      left: 49.5%;
+    }
+
+    100% {
+      top: 49.5%;
+      left: 49.5%;
+    }
+  }
+
+  @keyframes distort2 {
+    0% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+
+    12.5% {
+      top: 50%;
+      left: 50.5%;
+    }
+
+    25% {
+      top: 49.5%;
+      left: 50.5%;
+    }
+
+    37.5% {
+      top: 49.5%;
+      left: 50%;
+    }
+
+    50% {
+      top: 49.5%;
+      left: 49.5%;
+    }
+
+    62.5% {
+      top: 50%;
+      left: 49.5%;
+    }
+
+    75% {
+      top: 50.5%;
+      left: 49.5%;
+    }
+
+    87.5% {
+      top: 50.5%;
+      left: 50%;
+    }
+
+    100% {
+      top: 50.5%;
+      left: 50.5%;
+    }
+  }
 }
