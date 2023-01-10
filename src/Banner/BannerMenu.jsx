@@ -80,7 +80,7 @@ export default function BannerMenu() {
         menuLinks.map((e, i) => {
           return (
             <>
-              <BannerMenuItem tag={e.tag} link={e.id} key={e.id} />
+              <BannerMenuItem tag={e.tag} link={e.id} key={i} />
             </>
           )
         })
