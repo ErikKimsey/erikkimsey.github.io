@@ -6,61 +6,65 @@
 $comfortaa: "comfortaa";
 
 * {
-    font-weight: 100;
-    box-sizing: content-box;
-    overflow-x: hidden;
+  font-weight: 100;
+  box-sizing: content-box;
+  overflow-x: hidden;
+}
+
+.experienceItemContainer:hover {
+  cursor: pointer;
 }
 
 
 @font-face {
-    font-family: "comfortaa";
-    src: url(./assets/fonts/comfortaa/Comfortaa-Light.ttf) format("truetype");
+  font-family: "comfortaa";
+  src: url(./assets/fonts/comfortaa/Comfortaa-Light.ttf) format("truetype");
 }
 
 body {
-    font-family: $comfortaa, Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    // background-color: blueviolet;
-    background-color: #1c1827;
+  font-family: $comfortaa, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background-color: blueviolet;
+  background-color: #1c1827;
 
-    div,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    i,
-    li,
-    a {
-        color: #fff;
-    }
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  i,
+  li,
+  a {
+    color: #fff;
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-button {
-    background-color: $darkGrayish;
+  background-color: $darkGrayish;
 }
 
 ::-webkit-scrollbar-button {
-    background-color: $darkGrayish;
+  background-color: $darkGrayish;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: none;
+  background: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $darkGrayish;
+  background: $darkGrayish;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $yellow;
+  background: $yellow;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import UAParser from "ua-parser-js";
 import './App.scss';
 import './Banner/banner.scss';
@@ -57,7 +57,7 @@ export default function App() {
       });
     }
 
-    if (pointerListener) console.log(pointerListener);
+    // if (pointerListener) console.log(pointerListener);
 
     return () => {
       window.removeEventListener(pointerListener);

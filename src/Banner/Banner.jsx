@@ -22,7 +22,6 @@ export default function Banner(props) {
   let [timer, setTimer] = useState(3000);
   let [rolesIndex, setRolesIndex] = useState(0);
   let [currRole, setCurrRole] = useState();
-  let [pos, setPos] = useState();
 
   useEffect(() => {
     let interval = null;

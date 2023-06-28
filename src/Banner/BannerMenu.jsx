@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "./bannerMenu.scss";
 
@@ -20,7 +20,17 @@ const variants = {
 
 
 function BannerMenuItem(props) {
-  let { tag, link } = props;
+  let { tag, link, thisRef } = props;
+  let [menuItemPos, setMenuItemPos] = useState();
+  let [targetDomPos, setTargetDomPos] = useState();
+
+
+  useEffect(() => {
+    let sk;
+    if (document.querySelector(`.${link}`) !== null) {
+      sk = document.querySelector(`.${link}`);
+    }
+  }, [])
 
   function scrollToPage() {
     if (link === undefined) {
@@ -35,9 +45,31 @@ function BannerMenuItem(props) {
     }
   }
 
-  return (
+  function drawPointer(e) {
 
+    let el = document.getElementById(link);
+    let box = el.getBoundingClientRect();
+    if (el !== null) {
+      setTargetDomPos({ x: box.left, y: box.top });
+    }
+
+    setMenuItemPos({ x: e.clientX, y: e.clientY });
+    let dot = document.createElement("div");
+    dot.style.position = "fixed";
+    dot.style.left = `${targetDomPos.x}px`;
+    dot.style.top = `${targetDomPos.y}px`;
+    dot.style.width = "100px";
+    dot.style.height = "100px";
+    dot.style.backgroundColor = "#f0f";
+    dot.style.zIndex = 10001;
+    document.body.appendChild(dot);
+
+  }
+
+  return (
     <motion.div
+      onHoverStart={drawPointer}
+      ref={thisRef}
       className="bannerMenuItem"
       variants={variants}
       whileHover={{ scale: 1.1, color: "#FFFEC8" }}
@@ -52,19 +84,17 @@ function BannerMenuItem(props) {
 
 export default function BannerMenu() {
   let itemLinks = [
-    { id: "skillset-container", tag: "exper/tise" },
-    { id: "experience-container", tag: "exper/ience" },
+    { id: "skillset-container", tag: "exper/tise", thisRef: useRef() },
+    { id: "experience-container", tag: "exper/ience", thisRef: useRef() },
   ];
 
   let [menuLinks, setMenuLinks] = useState();
-
 
   useEffect(() => {
     if (itemLinks && itemLinks.length > 0) {
       setMenuLinks(itemLinks);
     }
   }, [])
-
 
   return (
     <motion.div className="bannerMenu"
@@ -79,9 +109,7 @@ export default function BannerMenu() {
       {menuLinks &&
         menuLinks.map((e, i) => {
           return (
-            <>
-              <BannerMenuItem tag={e.tag} link={e.id} key={i} />
-            </>
+            <BannerMenuItem tag={e.tag} link={e.id} key={i} thisRef={e.thisRef} />
           )
         })
       }

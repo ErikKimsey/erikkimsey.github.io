@@ -1,15 +1,19 @@
 .bannerMenu {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
 
-    .bannerMenuItem {
-        color: #fff;
-        font-size: 2rem;
-        padding: 0 30px;
-    }
+  .bannerMenuItem {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0 30px;
+  }
+
+  .bannerMenuItem:hover {
+    cursor: pointer;
+  }
 }
