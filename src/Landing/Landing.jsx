@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-
 import "./landing.scss";
 import Banner from "../Banner/Banner";
 
