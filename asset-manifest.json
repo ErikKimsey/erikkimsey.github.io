@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.535861dd.css",
-    "main.js": "/static/js/main.31f2f073.js",
+    "main.css": "/static/css/main.1e9e2156.css",
+    "main.js": "/static/js/main.bbafb67c.js",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
     "static/media/droopy_e.png": "/static/media/droopy_e.3e17519b00f145c4a81f.png",
     "static/media/erikkimsey_frontendEngineer_resume.pdf": "/static/media/erikkimsey_frontendEngineer_resume.ba5ee2b444ee2eff72b3.pdf",
     "index.html": "/index.html",
-    "main.535861dd.css.map": "/static/css/main.535861dd.css.map",
-    "main.31f2f073.js.map": "/static/js/main.31f2f073.js.map"
+    "main.1e9e2156.css.map": "/static/css/main.1e9e2156.css.map",
+    "main.bbafb67c.js.map": "/static/js/main.bbafb67c.js.map"
   },
   "entrypoints": [
-    "static/css/main.535861dd.css",
-    "static/js/main.31f2f073.js"
+    "static/css/main.1e9e2156.css",
+    "static/js/main.bbafb67c.js"
   ]
 }
