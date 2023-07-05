@@ -4,8 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFloppyDisk, faDownload, faFileArrowDown, faGripHorizontal } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faSoundcloud, faLinkedin, faItchIo, faBehance } from "@fortawesome/free-brands-svg-icons";
+import { faFileArrowDown, faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
+
+// import {}
+import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import resume from "../assets/resume/erikkimsey_frontendEngineer_resume.pdf";
 
 
@@ -54,14 +56,14 @@ export default function Footer() {
             <a target="_blank" href="https://github.com/erikkimsey">
               <FontAwesomeIcon icon={faGithub} size="3x" />
             </a>
-            <a target="_blank" href="https://soundcloud.com/oddtreatment">
+            {/* <a target="_blank" href="https://soundcloud.com/oddtreatment">
               <FontAwesomeIcon icon={faSoundcloud} size="3x" />
-            </a>
+            </a> */}
             <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
               <FontAwesomeIcon icon={faLinkedin} size="3x" />
             </a>
             <a target="_blank" href={resume}>
-              <FontAwesomeIcon icon={faFileArrowDown} size="3x" />
+              <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
             </a>
             <div className="resumeText">Resume</div>
           </motion.div>
