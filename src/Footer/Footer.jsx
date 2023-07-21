@@ -4,16 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown, faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
+import { faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
-// import {}
-import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import resume from "../assets/resume/erikkimsey_frontendEngineer_resume.pdf";
 
 
 let peach = "#ffcea7";
-let grn = "#52ED8B"
-let inac = [{ label: "GH", color: "#f0f" }, { label: "SC", color: "#42D7A7" }, { label: "Be", color: "#AA5EF4" }, { label: "Re", color: peach }]
 
 export default function Footer() {
 
@@ -42,7 +39,6 @@ export default function Footer() {
           exit={{ x: 10, opacity: 0 }}
           transition={{ duration: 0.5 }}
           whileHover={{}}
-        // onClick={() => setIsActive(false)}
         >
           <motion.div className="linksContainer"
             initial={{ x: 0, opacity: 0, scale: 1 }}

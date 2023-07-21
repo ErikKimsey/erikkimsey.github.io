@@ -33,10 +33,6 @@ function Landing(props) {
       ref={sketchRef}
     >
       <Banner timerTime={3000} />
-      {/* <Experience /> */}
-      {/* <About /> */}
-      {/* <div className="landingLinksContainer">
-            </div> */}
     </div>
   );
 }

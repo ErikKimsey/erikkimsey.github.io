@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
-import UnderConstruction from "../__Temp/UnderConstruction";
 import "./banner.scss";
 import { SELF_STATEMENT } from "../__data/data";
 

@@ -21,7 +21,8 @@ let textColors = {
 
 let otherColors = {
   bkgrdPurple: "#1c1827",
-  bkgrdGray: "#333333"
+  bkgrdGray: "#ff33ff"
+  // bkgrdGray: "#333333"
 }
 
 let nameDimens = {
@@ -88,9 +89,8 @@ export default function P5Sketch({ props }) {
     initTextElements(p5);
 
     p5.frameRate(15);
-    orbCursor = new P5Cursor(p5, 11);
+    orbCursor = new P5Cursor(p5, 111);
     backgroundNoise = new BackgroundNoise(p5, 0.0, 0.0, p5.displayWidth, p5.displayHeight, otherColors.bkgrdPurple, otherColors.bkgrdGray);
-
   };
 
   function windowResized(p5) {

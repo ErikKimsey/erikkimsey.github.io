@@ -2,21 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import UAParser from "ua-parser-js";
 import './App.scss';
 import './Banner/banner.scss';
-// import Menu from './Nav/Menu';
 import P5Sketch from './P5Sketch/P5Sketch';
 import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
 import Playground from './Playground/Playground';
-// import ExperienceMarquee from './Experience/ExperienceMarquee';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
-// import Education from './Education/Education';
-// import FloatingMenu from './FloatingMenu/FloatingMenu';
 
 export default function App() {
   const [toggled, setToggled] = useState(false);
-  const [pointerHeld, setPointerHeld] = useState(false);
-  const [isMobile, setIsMobile] = useState();
-  const [timeBwTaps, setTimeBwTaps] = useState(200);
+  // const [pointerHeld, setPointerHeld] = useState(false);
+  // const [isMobile, setIsMobile] = useState();
+  // const [timeBwTaps, setTimeBwTaps] = useState(200);
   let parser = new UAParser();
   let lastClick = new Date().getTime();
   let pointerListener;
@@ -29,56 +25,47 @@ export default function App() {
 
     let devType = parser.getDevice().type;
     if (devType === "mobile") {
-      setIsMobile(true);
+      // setIsMobile(true);
 
       pointerListener = window.addEventListener('touchstart', () => {
-        console.log(lastClick);
         let date = new Date();
         let time = date.getTime();
-        if (time - lastClick < timeBwTaps) {
-          console.log("tap tap");
-
-          /**
-           * TODO:
-           * -- dble click functionality
-           */
-        }
+        // if (time - lastClick < timeBwTaps) {
+        //   console.log("tap tap");
+        // }
         lastClick = time;
       });
     }
 
-    if (devType !== "mobile") {
-      pointerListener = window.addEventListener('dblclick', () => {
-        console.log("DOUBLE CLICKS");
-        /**
-         * TODO:
-         * -- dble click functionality
-         */
-      });
-    }
+    const interval = setInterval(() => {
+      // console.log('This will run every second!');
+    }, 1000);
+
+
+    // if (devType !== "mobile") {
+    //   pointerListener = window.addEventListener('dblclick', () => {
+    //     console.log("DOUBLE CLICKS");
+    //   });
+    // }
 
     // if (pointerListener) console.log(pointerListener);
 
     return () => {
       window.removeEventListener(pointerListener);
+      // clearInterval(interval)
     }
 
-  },
-    []);
+  }, []);
 
 
 
   return (
     <div className="App">
-      {/* <FloatingMenu /> */}
       <P5Sketch />
       {/* <Playground /> */}
-      {/* <Menu /> */}
-      {/* <MenuHOC /> */}
       <Landing label={"Experience"} navTo={"experience"} />
       <SkillsExperienceParent />
       <div style={{ height: "100px" }}></div>
-      {/* <Education /> */}
       <Footer />
     </div>
   );

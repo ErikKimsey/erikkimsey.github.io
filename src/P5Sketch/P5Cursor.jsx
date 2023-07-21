@@ -12,7 +12,7 @@ export default class P5Cursor {
     // this.strokeColor = this.p5.color("#00ffff");
     this.strokeColor = this.p5.color("#969696");
     // this.fillColor = this.p5.color("#bfff00");
-    this.fillColor = this.p5.color("#3b3b3d");
+    this.fillColor = this.p5.color("rgba(0,0,0,0)");
   }
 
   calcOrbit(rad) {
