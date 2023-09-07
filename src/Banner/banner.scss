@@ -10,7 +10,7 @@ $hover-color: #fcfa85;
   --f: calc(var(--f-size) * var(--f-unit));
 
 
-  width: 100%;
+  width: 70%;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -20,7 +20,7 @@ $hover-color: #fcfa85;
   background-size: cover;
 
   .text-container {
-    width: 100%;
+    // width: 60%;
     display: flex;
     flex-flow: row wrap;
 
