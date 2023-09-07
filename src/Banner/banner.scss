@@ -50,7 +50,6 @@ $hover-color: #fcfa85;
       background-repeat: no-repeat;
       background-position: center;
     }
-
   }
 
   .aboutSelfDeveloperContainer {
@@ -74,12 +73,6 @@ $hover-color: #fcfa85;
       background-position: var(--bg-size) 0;
     }
   }
-
-  // @media only screen and (max-width: $xlDevice) {}
-
-  // @media only screen and (max-width: $lgDevice) {}
-
-  // @media only screen and (max-width: $mdDevice) {}
 
   @media only screen and (max-width: $smDevice) {
 
@@ -108,15 +101,22 @@ $hover-color: #fcfa85;
       padding: 10px 0;
     }
 
+
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+
     .bannerMenu {
       box-sizing: border-box;
       display: flex;
       flex-flow: row;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
 
       .bannerMenuItem {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 0;
       }
     }

@@ -21,9 +21,6 @@ const variants = {
 
 function BannerMenuItem(props) {
   let { tag, link, thisRef } = props;
-  let [menuItemPos, setMenuItemPos] = useState();
-  let [targetDomPos, setTargetDomPos] = useState();
-
 
   useEffect(() => {
     let sk;
@@ -62,8 +59,8 @@ function BannerMenuItem(props) {
 
 export default function BannerMenu() {
   let itemLinks = [
-    { id: "skillset-container", tag: "exper/tise", thisRef: useRef() },
-    { id: "experience-container", tag: "exper/ience", thisRef: useRef() },
+    { id: "skillset-container", tag: "expertise", thisRef: useRef() },
+    { id: "experience-container", tag: "experience", thisRef: useRef() },
   ];
 
   let [menuLinks, setMenuLinks] = useState();
