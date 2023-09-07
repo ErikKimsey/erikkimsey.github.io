@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "./playground.scss";
 import Traveling from '../ThreeSketches/Traveling';
-import Loading from '../Loading/Loading';
+// import Loading from '../Loading/Loading';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAirFreshener, faPaintBrush, faSprayCan, faPalette } from "@fortawesome/free-solid-svg-icons";
 import { Html, useProgress } from "@react-three/drei";

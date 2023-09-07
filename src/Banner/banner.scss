@@ -9,58 +9,50 @@ $hover-color: #fcfa85;
   --f-unit: 1vmin;
   --f: calc(var(--f-size) * var(--f-unit));
 
-
   width: 100%;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   .text-container {
     width: 100%;
-
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
 
     .banner-item {
       font-size: 4em;
       font-weight: 800;
-      padding: 5px;
     }
 
     .name {
       color: $pink;
-      padding-right: 20px;
     }
 
     .role {
       color: #fff;
-      padding-left: 20px;
       box-sizing: border-box;
     }
 
     .underscore {
-      width: 10px;
+      width: 50px;
       color: #E80C7A;
       background-image: url('../assets/logos/droopy_e.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      margin: 0 20px;
     }
 
   }
 
   .aboutSelfDeveloperContainer {
-    position: relative;
-    width: 60%;
-    align-self: center;
-    text-align: center;
-    padding: 20px 0;
+    align-self: flex-start;
     font-size: 1.7rem;
 
     --bg-size: 200%;
@@ -72,10 +64,6 @@ $hover-color: #fcfa85;
         var(--color-one)) 0 0 / var(--bg-size) 100%;
     color: transparent;
     background-clip: text;
-    border: solid 1px rgba(0, 0, 0, 0);
-    // border-left: solid 1px rgba(204, 255, 194, 0.7);
-    // border-right: solid 1px rgba(204, 255, 194, 0.7);
-    border-radius: 20px;
     animation: move-bg 8s infinite linear;
   }
 
@@ -89,12 +77,13 @@ $hover-color: #fcfa85;
 
   // @media only screen and (max-width: $lgDevice) {}
 
-  @media only screen and (max-width: $mdDevice) {}
+  // @media only screen and (max-width: $mdDevice) {}
 
   @media only screen and (max-width: $smDevice) {
 
+
     .text-container {
-      padding-left: 20px;
+      // padding-left: 20px;
 
       .banner-item {
         font-size: 2em;
@@ -109,14 +98,38 @@ $hover-color: #fcfa85;
         color: #fff;
         padding-left: 0;
       }
+
+      .underscore {
+        width: 50px;
+        color: #E80C7A;
+        background-image: url('../assets/logos/droopy_e.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 20px;
+      }
     }
 
     .aboutSelfDeveloperContainer {
+      --f-size: 15;
+      --f-unit: 1vmin;
+      --f: calc(var(--f-size) * var(--f-unit));
       width: 100%;
-      padding: 20px 40px;
+      border-radius: 0;
       box-sizing: border-box;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      text-align: start;
       text-shadow: 0px 0px 1px #bebebe;
+      --bg-size: 200%;
+      --color-one: #5372ff;
+      --color-two: #fe5bdb;
+      background: linear-gradient(90deg,
+          var(--color-one),
+          var(--color-two),
+          var(--color-one)) 0 0 / var(--bg-size) 200%;
+      color: transparent;
+      background-clip: text;
+      animation: move-bg 8s infinite linear;
     }
   }
 }

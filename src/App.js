@@ -61,12 +61,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <P5Sketch />
+      {/* <P5Sketch /> */}
       {/* <Playground /> */}
       <Landing label={"Experience"} navTo={"experience"} />
-      <SkillsExperienceParent />
-      <div style={{ height: "100px" }}></div>
-      <Footer />
+      {/* <SkillsExperienceParent /> */}
+      {/* <div style={{ height: "100px" }}></div> */}
+      {/* <Footer /> */}
     </div>
   );
 }

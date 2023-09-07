@@ -4,37 +4,37 @@
 
 
 .landing-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  .landingLinksContainer {
+    position: absolute;
+    z-index: 1000;
+    padding: 10px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: 0px;
+    bottom: 50px;
 
-    .landingLinksContainer {
-        position: absolute;
-        z-index: 1000;
-        padding: 10px;
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        right: 0px;
-        bottom: 50px;
-
-        .resumeText {
-            align-self: center;
-            text-align: center;
-            font-size: 12px;
-        }
+    .resumeText {
+      align-self: center;
+      text-align: center;
+      font-size: 12px;
     }
+  }
 
-    // @media only screen and (max-width: $lgDevice) {}
+  // @media only screen and (max-width: $lgDevice) {}
 
-    // @media only screen and (max-width: $mdDevice) {}
+  // @media only screen and (max-width: $mdDevice) {}
 
-    // @media only screen and (max-width: $smDevice) {}
+  // @media only screen and (max-width: $smDevice) {}
 
-    // @media only screen and (max-width: $xsDevice) {}
+  // @media only screen and (max-width: $xsDevice) {}
 }

@@ -4,7 +4,6 @@
 
 // Colors
 $bg-color: rgb(35, 34, 37);
-// $dot-color: rgb(100, 87, 127);
 $dot-color: rgb(11, 11, 11);
 
 // Dimensions
@@ -21,8 +20,6 @@ $highlight-color: rgb(255, 75, 255);
       var(--color-one),
       var(--color-two),
       var(--color-one)) 0 0 / var(--bg-size) 100%;
-  // color: transparent;
-  // background-clip: text;
 }
 
 .App {
@@ -34,23 +31,9 @@ $highlight-color: rgb(255, 75, 255);
   margin: 0;
   box-sizing: border-box;
   background: none;
-  padding: $pagePadding_Desktop;
-  padding-top: 0;
+  padding: 0;
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
   @include dotBackground;
-
-
-  // @media only screen and (max-width: $lgDevice) {}
-
-  // @media only screen and (max-width: $mdDevice) {}
-
-  @media only screen and (max-width: $smDevice) {
-    padding: $pagePadding_Mobile;
-  }
-
-  @media only screen and (max-width: $xsDevice) {
-    padding: $pagePadding_Mobile
-  }
 }

@@ -1,15 +1,12 @@
-// The document contains data used to populate fields throughout the site.
-// Google News API key: 670f9cd6f82643a99331cc217f30f479
 
-const SELF_STATEMENT = "Software engineer passionate about building beautiful, dynamic, and intuitive user-interfaces.";
+
+const SELF_STATEMENT = "I develop dynamic and intuitive user-interfaces.";
 
 const LANGUAGES = [
   'LANGUAGES',
-  'Javascript',
+  'Javascript / Typescript',
   'C#',
-  'Typescript',
-  'Python',
-  'C++',
+  'Swift / SwiftUI'
 ]
 
 const THREE_D = [
@@ -19,7 +16,6 @@ const THREE_D = [
   'Three.js',
   'React-Three-Fiber',
   'Drei',
-
 ]
 
 const DESIGN_TOOLS = [
@@ -33,19 +29,13 @@ const DESIGN_TOOLS = [
 
 
 const FRONTEND = [
-  'FRONTEND',
-  'JavaScript',
-  'Typescript',
+  'FRONTEND WEB',
   'React',
+  'Next.js',
   'React Native',
-  'HTML5 Canvas',
-  'Sass',
-  'Less',
+  'CSS / Sass / Less / Tailwind',
   'Framer Motion',
-  'Three.js',
-  'D3.js',
-  'P5.js',
-  'Redux',
+  'Three.js / React Three Fiber',
 ]
 
 const MULTIMEDIA_WEB = [
@@ -92,7 +82,7 @@ const THE_WHO_AM_I = [
 ]
 
 export const SKILLS = [
-  LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, AUDIO_VIDEO, MULTIMEDIA_WEB
+  LANGUAGES, FRONTEND, DESIGN_TOOLS, THREE_D, MULTIMEDIA_WEB
 ];
 
 export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I, SELF_STATEMENT }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
+import OffsiteLinks from "./BannerOffsiteLinks";
 import "./banner.scss";
 import { SELF_STATEMENT } from "../__data/data";
 
@@ -91,7 +92,8 @@ export default function Banner(props) {
           ease: [0, 0.71, 0.2, 1.01]
         }}
         className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</motion.div>
-      <BannerMenu />
+      {/* <BannerMenu /> */}
+      <OffsiteLinks />
     </div>
   );
 }

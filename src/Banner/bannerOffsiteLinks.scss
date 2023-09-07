@@ -1,0 +1,34 @@
+@import '../styles/globals.scss';
+
+.offsiteLinksContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  .linksContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: visible;
+    padding: 5px 0;
+
+    a {
+      display: flex;
+      padding: 5px 10px;
+      transition: all 500ms;
+      text-decoration: none;
+
+      &:hover {
+        color: $peachPuff;
+        transform: scale(1.2);
+        font-weight: 800;
+      }
+    }
+
+    a:first-of-type {
+      padding-left: 0px;
+    }
+  }
+}
