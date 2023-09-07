@@ -68,6 +68,19 @@ $hover-color: #fcfa85;
     animation: move-bg 8s infinite linear;
   }
 
+  .bannerMenu {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+
+    .bannerMenuItem {
+      font-size: 1.2rem;
+      padding: 0 20px;
+    }
+  }
+
   @keyframes move-bg {
     to {
       background-position: var(--bg-size) 0;
