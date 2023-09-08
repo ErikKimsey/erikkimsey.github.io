@@ -5,25 +5,22 @@ const SELF_STATEMENT = "Software engineer passionate about building beautiful, d
 
 const LANGUAGES = [
   'LANGUAGES',
-  'Javascript',
+  'Javascript / Typescript',
   'C#',
-  'Typescript',
-  'Python',
-  'C++',
+  'Swift',
+  'Python'
 ]
 
 const THREE_D = [
   '3D',
-  'Unity3D',
-  'Blender',
   'Three.js',
-  'React-Three-Fiber',
-  'Drei',
-
+  'React-Three-Fiber / Drei',
+  'Unity3D',
+  'Blender'
 ]
 
 const DESIGN_TOOLS = [
-  'GRAPHIC DESIGN',
+  'DESIGN',
   'Adobe Illustrator',
   'Adobe Photoshop',
   'Adobe InDesign',
@@ -34,35 +31,27 @@ const DESIGN_TOOLS = [
 
 const FRONTEND = [
   'FRONTEND',
-  'JavaScript',
-  'Typescript',
-  'React',
+  'JavaScript / Typescript',
+  'React / Next.js',
   'React Native',
-  'HTML5 Canvas',
-  'Sass',
-  'Less',
+  'C# / Unity',
+  'SwiftUI',
+  'CSS / Sass / Less / Tailwind / Material',
   'Framer Motion',
-  'Three.js',
-  'D3.js',
-  'P5.js',
-  'Redux',
+  'Three.js / React-Three-Fiber / Drei',
+  'P5.js'
 ]
 
 const MULTIMEDIA_WEB = [
   'WEB MULTIMEDIA',
   "Web Audio API",
   "WebGL",
-
 ]
 
 const BACKEND = [
   'BACKEND',
   'Node.js / Express.js',
   'SQL / MySQL / SQLite',
-  'Flask',
-  'Django',
-  'GraphQL',
-  'Redis',
 ]
 
 const AUDIO_VIDEO = [
@@ -92,7 +81,7 @@ const THE_WHO_AM_I = [
 ]
 
 export const SKILLS = [
-  LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, AUDIO_VIDEO, MULTIMEDIA_WEB
+  LANGUAGES, FRONTEND, THREE_D, BACKEND, DESIGN_TOOLS,
 ];
 
 export { LANGUAGES, FRONTEND, BACKEND, DESIGN_TOOLS, THREE_D, CONTACT_DATA, AUDIO_VIDEO, MULTIMEDIA_WEB, THE_WHO_AM_I, SELF_STATEMENT }

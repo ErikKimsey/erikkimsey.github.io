@@ -89,7 +89,7 @@ export default function P5Sketch({ props }) {
     initTextElements(p5);
 
     p5.frameRate(15);
-    orbCursor = new P5Cursor(p5, 111);
+    orbCursor = new P5Cursor(p5, 22);
     backgroundNoise = new BackgroundNoise(p5, 0.0, 0.0, p5.displayWidth, p5.displayHeight, otherColors.bkgrdPurple, otherColors.bkgrdGray);
   };
 
