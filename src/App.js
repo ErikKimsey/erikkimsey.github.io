@@ -8,51 +8,24 @@ import Footer from "./Footer/Footer";
 import Playground from './Playground/Playground';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 
+
 export default function App() {
   const [toggled, setToggled] = useState(false);
-  // const [pointerHeld, setPointerHeld] = useState(false);
-  // const [isMobile, setIsMobile] = useState();
-  // const [timeBwTaps, setTimeBwTaps] = useState(200);
   let parser = new UAParser();
   let lastClick = new Date().getTime();
   let pointerListener;
-
+  let [elemSpace, setElemSpace] = useState();
 
   useEffect(() => {
     if (toggled !== false) {
       setToggled(false);
     }
 
-    let devType = parser.getDevice().type;
-    if (devType === "mobile") {
-      // setIsMobile(true);
-
-      pointerListener = window.addEventListener('touchstart', () => {
-        let date = new Date();
-        let time = date.getTime();
-        // if (time - lastClick < timeBwTaps) {
-        //   console.log("tap tap");
-        // }
-        lastClick = time;
-      });
-    }
-
-    const interval = setInterval(() => {
-      // console.log('This will run every second!');
-    }, 1000);
-
-
-    // if (devType !== "mobile") {
-    //   pointerListener = window.addEventListener('dblclick', () => {
-    //     console.log("DOUBLE CLICKS");
-    //   });
-    // }
-
-    // if (pointerListener) console.log(pointerListener);
+    let space = document.body.scrollHeight / 3;
+    setElemSpace(space)
 
     return () => {
       window.removeEventListener(pointerListener);
-      // clearInterval(interval)
     }
 
   }, []);
@@ -61,6 +34,12 @@ export default function App() {
 
   return (
     <div className="App">
+      {/* {elemSpace && <>
+        <div style={{ zIndex: 11111, position: "absolute", top: `${elemSpace * 0}px`, height: "100px", width: "200px", background: "none" }} key={1}></div>
+        <div style={{ zIndex: 11111, position: "absolute", top: `${elemSpace}px`, height: "100px", width: "200px", background: "#fff" }} key={2}></div>
+        <div style={{ zIndex: 11111, position: "absolute", top: `${elemSpace * 2}px`, height: "100px", width: "200px", background: "#fff" }} key={3}></div>
+      </>
+      } */}
       <P5Sketch />
       {/* <Playground /> */}
       <Landing label={"Experience"} navTo={"experience"} />

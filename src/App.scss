@@ -39,7 +39,8 @@ $highlight-color: rgb(255, 75, 255);
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
-  @include dotBackground;
+  // background-color: #fe5bdb;
+  // @include dotBackground;
 
 
   // @media only screen and (max-width: $lgDevice) {}

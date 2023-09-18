@@ -24,6 +24,7 @@ function Landing(props) {
     if (sketchRef.current) {
       setDimens({ w: sketchRef.current.offsetWidth, h: sketchRef.current.offsetHeight });
     }
+
   }, [])
 
   return (

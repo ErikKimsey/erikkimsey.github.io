@@ -11,6 +11,8 @@ import LandingText from "./LandingText";
 let x = 50;
 let y = 50;
 let timer = 0;
+let max_distance = 66;
+let colorGradientUp = false;
 
 let textColors = {
   white: "#ffffff",
@@ -85,12 +87,14 @@ export default function P5Sketch({ props }) {
   }
 
   function setup(p5, canvasParentRef) {
+    // p5.noStroke();
     p5.createCanvas(p5.displayWidth, p5.displayHeight).parent(canvasParentRef);
     initTextElements(p5);
 
     p5.frameRate(15);
     orbCursor = new P5Cursor(p5, 22);
     backgroundNoise = new BackgroundNoise(p5, 0.0, 0.0, p5.displayWidth, p5.displayHeight, otherColors.bkgrdPurple, otherColors.bkgrdGray);
+    max_distance = p5.dist(0, 0, p5.displayWidth, p5.displayHeight);
   };
 
   function windowResized(p5) {
@@ -104,18 +108,66 @@ export default function P5Sketch({ props }) {
     p5.noStroke();
   }
 
-  function draw(p5) {
-    p5.background("#1C1827");
+  let r1 = 219;
+  let r2 = 255;
+  let b1 = 219;
+  let b2 = 114;
+  let r = 100, g = 77, b = 110;
 
-    if (devType !== "desktop") {
-      // console.log(devType);
+  function lineColor(p5) {
+
+    if (r === 111) {
+      colorGradientUp = false
+    }
+
+    if (r === 99) {
+      colorGradientUp = true
+    }
+
+    if (colorGradientUp) {
+      r++;
+      b--;
+      g++;
     } else {
-      if (orbCursor !== undefined) {
-        orbCursor.updateCursor();
+      r--;
+      b++;
+      g--;
+    }
+
+
+    return `rgba(${r}, ${g}, ${r}, 0.2)`;
+  }
+
+  function draw(p5) {
+    p5.background("rgb(1,0,1)");
+
+    // if (devType !== "desktop") {
+
+    // } else {
+    //   if (orbCursor !== undefined) {
+    //     orbCursor.updateCursor();
+    //   }
+    // }
+    // while (timer < 1000) {
+
+    for (let i = max_distance; i <= p5.displayWidth - max_distance; i += max_distance) {
+      for (let j = 0; j <= p5.displayHeight - max_distance; j += max_distance) {
+        // let size = p5.dist(p5.mouseX, p5.mouseY, i, j);
+        // size = (size / max_distance) * 22;
+        // p5.stroke(lineColor());
+        p5.point(i, j);
+        p5.strokeWeight(4);
+        let dist = p5.dist(p5.mouseX, p5.mouseY, i, j)
+        if (dist < max_distance * 6) {
+          p5.line(i, j, p5.mouseX, p5.mouseY);
+          p5.stroke("rgba(77,11,111,0.3)")
+        }
       }
     }
+    // p5.frameRate(22)
+    // }
     // if (backgroundNoise) {
-    //     backgroundNoise.drawNoise();
+    //   backgroundNoise.drawNoise();
     // }
   }
 
