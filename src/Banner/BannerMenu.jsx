@@ -8,7 +8,6 @@ import "./bannerMenu.scss";
 // ]
 
 const variants = {
-
   transition: {
     duration: 0.8,
     delay: 1.4,
@@ -59,7 +58,7 @@ function BannerMenuItem(props) {
 
 export default function BannerMenu() {
   let itemLinks = [
-    { id: "skillset-container", tag: "expertise", thisRef: useRef() },
+    { id: "skillset-container", tag: "skill set", thisRef: useRef() },
     { id: "experience-container", tag: "experience", thisRef: useRef() },
   ];
 

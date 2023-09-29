@@ -16,7 +16,7 @@ export default function Skillset() {
 
   return (
     <div className="skillsetContainer" id="skillset-container">
-      <div className="skillsHeader">exper/tise.</div>
+      <div className="skillsHeader"></div>
       <div className="itemContainer">
         {
           skillsData && skillsData.map((e) => {

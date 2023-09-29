@@ -9,8 +9,6 @@ export default function SkillsetItem(props) {
   let [discipline, setDiscipline] = useState();
   let [skills, setSkills] = useState();
 
-  function handleHoverClick() { }
-
   useEffect(() => {
     setDiscipline(data[0]);
     setSkills(data.slice(1));

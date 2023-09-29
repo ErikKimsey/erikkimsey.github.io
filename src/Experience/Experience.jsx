@@ -24,10 +24,7 @@ export default function Experience() {
       id="experience-container"
       ref={containerRef}
     >
-      <div className='experienceHeader'>exper/ience.</div>
-      {/*  */}
-      {/*  */}
-
+      <div className='experienceHeader'></div>
 
       <div className="experienceItemsList">
         {

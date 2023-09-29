@@ -2,46 +2,47 @@
 @import "../../styles/responsive.scss";
 
 .experienceContainer {
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-    margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  margin-top: 50px;
 
 
-    .experienceHeader {
-        width: 100%;
-        display: flex;
-        flex-flow: row;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin: 0;
-        font-size: 2rem;
-        padding: 5px;
-    }
-
-    .experienceItemsList {
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        align-self: flex-end;
-        overflow: visible;
-        width: 100%;
-        position: relative;
-    }
-
-    @media only screen and (max-width: $smDevice) {
-        flex-flow: column;
-        width: 100%;
-    }
-}
-
-.expItemListAndTargetContainer {
+  .experienceHeader {
+    width: 100%;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     align-items: flex-end;
+    margin: 0;
+    font-size: 2rem;
+    padding: 5px;
+    text-decoration: underline $green;
+  }
+
+  .experienceItemsList {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
+    overflow: visible;
+    width: 100%;
+    position: relative;
+  }
+
+  @media only screen and (max-width: $smDevice) {
+    flex-flow: column;
+    width: 100%;
+  }
+}
+
+.expItemListAndTargetContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
