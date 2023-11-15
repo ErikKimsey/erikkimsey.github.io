@@ -32,7 +32,7 @@ export default function Footer() {
 
   if (isActive) {
     return (
-      <AnimatePresence exitBeforeEnter >
+      <AnimatePresence mode='wait' >
         <motion.div className="footerContainer"
           initial={{ x: 0, opacity: 0, scale: 1 }}
           animate={{ x: 0, opacity: 1 }}

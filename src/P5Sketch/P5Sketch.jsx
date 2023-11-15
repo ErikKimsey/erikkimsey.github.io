@@ -11,7 +11,7 @@ import LandingText from "./LandingText";
 let x = 50;
 let y = 50;
 let timer = 0;
-let max_distance = 66;
+let max_distance = 50;
 let colorGradientUp = false;
 
 let textColors = {
@@ -46,6 +46,7 @@ export default function P5Sketch({ props }) {
 
   const [dimen, setDimens] = useState();
   const [devType, setDevType] = useState();
+  const [p5, setP5] = useState();
 
   let orbCursor, landingName, landingTitle, font, fontSize, backgroundNoise;
   let img;
@@ -88,8 +89,12 @@ export default function P5Sketch({ props }) {
 
   function setup(p5, canvasParentRef) {
     // p5.noStroke();
+
+    setP5(p5);
     p5.createCanvas(p5.displayWidth, p5.displayHeight).parent(canvasParentRef);
     initTextElements(p5);
+
+    p5.colorMode(p5.HSL);
 
     p5.frameRate(15);
     orbCursor = new P5Cursor(p5, 22);
@@ -155,13 +160,30 @@ export default function P5Sketch({ props }) {
         // let size = p5.dist(p5.mouseX, p5.mouseY, i, j);
         // size = (size / max_distance) * 22;
         // p5.stroke(lineColor());
-        p5.point(i, j);
-        p5.strokeWeight(4);
-        let dist = p5.dist(p5.mouseX, p5.mouseY, i, j)
-        if (dist < max_distance * 6) {
-          p5.line(i, j, p5.mouseX, p5.mouseY);
-          p5.stroke("rgba(77,11,111,0.3)")
+        let dist = p5.dist(p5.mouseX, p5.mouseY, i, j);
+        let distScale = p5.map(dist, 1, 3000, 2, 10);
+        distScale = p5.sin(distScale) * 10;
+        console.log(distScale);
+        if (dist < max_distance * 29) {
+          // p5.strokeWeight(p5.map(distScale, 2, 10, 0.1, 1));
+          // p5.line(i, j, p5.mouseX, p5.mouseY);
+
+          p5.point(i, j);
+          p5.strokeWeight(distScale);
+          p5.stroke(`rgb(77,77,77)`);
         }
+
+        /**
+         * WIP:
+         * ** animated, wavy ellipse... using bezierVertices
+         */
+        // p5.noFill();
+        // p5.stroke(255);
+        // p5.beginShape();
+        // p5.vertex(p5.mouseX + 100, p5.mouseY + 100); // first point
+        // p5.bezierVertex(p5.mouseX + 100, p5.mouseY, p5.mouseX + 100, p5.mouseY + 10, p5.mouseX - 100, p5.mouseY - 100);
+        // // p5.bezierVertex(p5.mouseX - 100, p5.mouseY - 30, p5.mouseX - 50, p5.mouseY - 100, p5.mouseX - 70, p5.mouseY - 70); // if first 2 numbers are p5.changed to 20, 130 it becomes continuous
+        // p5.endShape();
       }
     }
     // p5.frameRate(22)
