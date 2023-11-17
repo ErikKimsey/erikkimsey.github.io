@@ -73,7 +73,7 @@ export default function Footer() {
     )
   } else {
     return (
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         <motion.div className="footerContainerInactive"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}

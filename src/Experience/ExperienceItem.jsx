@@ -26,6 +26,7 @@ export default function ExperienceItem(props) {
         onClick={() => (modalOpen ? close() : open())}
       // style={{ zIndex: index + 4, top: `${(index * 40) + 100}px`, marginLeft: `${(index * 10) - 80}px` }}
       >
+        <div className="expItemName">{name}</div>
         <div className="expItemRole">{role}</div>
         <div className="expItemStack">{stack}</div>
         {/* <div className="expItemLabel">{name}</div>
@@ -49,16 +50,16 @@ export default function ExperienceItem(props) {
 function ModalContainer({ children, label }) {
   // Enables the animation of components that have been removed from the tree
   return (<AnimatePresence
+    mode='wait'
     // Disable any initial animations on children that
     // are present when the component is first rendered
     initial={false}
     // Only render one component at a tim
     // The exiting component will finish its exit
     // animation before entering component is rendered
-    exitBeforeEnter={true}
+
     // Fires when all exiting nodes have completed animating out
     onExitComplete={() => console.log("Exit complete")}
-    mode='wait'
   >
     {children}
   </AnimatePresence >)

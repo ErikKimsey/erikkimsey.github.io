@@ -8,11 +8,13 @@ const LANGUAGES = [
   'Javascript / Typescript',
   'C#',
   'Swift',
-  'Python'
+  'Python',
+  'C / C++',
+  'LOLCODE'
 ]
 
 const THREE_D = [
-  '3D',
+  '3D TOOLS',
   'Three.js',
   'React-Three-Fiber / Drei',
   'Unity3D',
@@ -23,22 +25,20 @@ const DESIGN_TOOLS = [
   'DESIGN',
   'Adobe Illustrator',
   'Adobe Photoshop',
-  'Adobe InDesign',
   'Procreate',
   'Figma',
 ]
 
 
 const FRONTEND = [
-  'FRONTEND',
-  'JavaScript / Typescript',
+  'FRONTEND / UI DEV',
   'React / Next.js',
   'React Native',
   'C# / Unity',
   'SwiftUI',
   'CSS / Sass / Less / Tailwind / Material',
   'Framer Motion',
-  'Three.js / React-Three-Fiber / Drei',
+  'Three.js / React-Three-Fiber',
   'P5.js'
 ]
 
@@ -52,15 +52,14 @@ const BACKEND = [
   'BACKEND',
   'Node.js / Express.js',
   'SQL / MySQL / SQLite',
+  'GraphQL / Apollo',
+  'Django'
 ]
 
 const AUDIO_VIDEO = [
   'AUDIO / VIDEO',
   'Ableton Live',
-  'Propellerhead Reason',
-  'Adobe Premiere',
-  'Adobe After Effects',
-  'Blender',
+  'Propellerhead Reason'
 ]
 
 const CONTACT_DATA = {

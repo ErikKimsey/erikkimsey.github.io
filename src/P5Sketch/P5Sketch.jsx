@@ -60,16 +60,17 @@ export default function P5Sketch({ props }) {
     setDimens(props);
     let device = deviceType();
     setDevType(device);
-    window.addEventListener('resize', windowResized);
+    // window.addEventListener('resize', windowResized);
     return () =>
-      window.removeEventListener('resize', windowResized)
+      console.log("fun time");
+    // window.removeEventListener('resize', windowResized)
   }, []);
 
   useLayoutEffect(() => {
     setDimens(props);
     let device = deviceType();
     setDevType(device);
-    window.addEventListener('resize', windowResized);
+    // window.addEventListener('resize', windowResized);
   }, []);
 
 
@@ -102,12 +103,12 @@ export default function P5Sketch({ props }) {
     max_distance = p5.dist(0, 0, p5.displayWidth, p5.displayHeight);
   };
 
-  function windowResized(p5) {
-    if (p5) {
-      p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-      initTextElements(p5);
-    }
-  }
+  // function windowResized(p5) {
+  //   if (p5) {
+  //     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+  //     initTextElements(p5);
+  //   }
+  // }
 
   function keyPressed(p5) {
     p5.noStroke();
@@ -169,8 +170,9 @@ export default function P5Sketch({ props }) {
           // p5.line(i, j, p5.mouseX, p5.mouseY);
 
           p5.point(i, j);
-          p5.strokeWeight(distScale);
+          p5.strokeWeight(distScale - 3);
           p5.stroke(`rgb(77,77,77)`);
+          //
         }
 
         /**
@@ -196,6 +198,6 @@ export default function P5Sketch({ props }) {
 
   return (
     <>
-      <Sketch preload={preload} setup={setup} draw={draw} windowResized={windowResized} keyPressed={keyPressed} style={{ position: "fixed", top: 0, left: 0, zIndex: 0 }} />
+      <Sketch preload={preload} setup={setup} draw={draw} keyPressed={keyPressed} style={{ position: "fixed", top: 0, left: 0, zIndex: 0 }} />
     </>)
 }
