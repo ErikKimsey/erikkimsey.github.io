@@ -87,9 +87,17 @@ $hover-color: #fcfa85;
     }
   }
 
+  @media only screen and (max-width: $lgDevice) {
+    width: 100%;
+    padding-left: 20px;
+  }
+
   @media only screen and (max-width: $smDevice) {
 
+    width: 100%;
+
     .text-container {
+      font-size: 1.6em;
 
       .banner-item {
         font-size: 2em;

@@ -43,15 +43,21 @@ $highlight-color: rgb(255, 75, 255);
   // @include dotBackground;
 
 
-  // @media only screen and (max-width: $lgDevice) {}
+  @media only screen and (max-width: $lgDevice) {
+    padding: 0;
 
-  // @media only screen and (max-width: $mdDevice) {}
+  }
+
+  @media only screen and (max-width: $mdDevice) {
+    padding: 0;
+
+  }
 
   @media only screen and (max-width: $smDevice) {
-    padding: $pagePadding_Mobile;
+    padding: 0;
   }
 
   @media only screen and (max-width: $xsDevice) {
-    padding: $pagePadding_Mobile
+    padding: 0;
   }
 }

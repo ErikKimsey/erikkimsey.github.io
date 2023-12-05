@@ -61,17 +61,8 @@ export default function Banner(props) {
             ease: [0, 0.71, 0.2, 1.01]
           }}
         >Erik Kimsey</motion.div>
+
         <motion.div
-          className="underscore banner-item"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4,
-            ease: [0, 0.71, 0.2, 1.01]
-          }}
-        ></motion.div>
-        {currRole && timer && <motion.div
           className="role banner-item"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -80,8 +71,10 @@ export default function Banner(props) {
             delay: 1.3,
             ease: [0, 0.71, 0.2, 1.01]
           }}
-          data-text={currRole}>{currRole}</motion.div>}
+          data-text={currRole}>{currRole}</motion.div>
+
       </div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
