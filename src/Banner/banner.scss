@@ -1,146 +1,183 @@
 @import '../styles/responsive.scss';
 @import '../styles/globals.scss';
+@import '../index.scss';
 
 $hover-color: #fcfa85;
 
 
 .banner-container {
-  --f-size: 15;
-  --f-unit: 1vmin;
-  --f: calc(var(--f-size) * var(--f-unit));
+    --f-size: 15;
+    --f-unit: 1vmin;
+    --f: calc(var(--f-size) * var(--f-unit));
 
 
-  width: 70%;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .text-container {
-    // width: 60%;
+    width: 70%;
+    height: 100vh;
     display: flex;
-    flex-flow: row wrap;
-
-    .banner-item {
-      font-size: 4em;
-      font-weight: 800;
-      padding: 5px;
-    }
-
-    .name {
-      color: $pink;
-      padding: 0;
-      padding-right: 20px;
-    }
-
-    .role {
-      color: #fff;
-      padding-left: 20px;
-      box-sizing: border-box;
-    }
-
-    .underscore {
-      width: 10px;
-      color: #E80C7A;
-      background-image: url('../assets/logos/droopy_e.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .aboutSelfDeveloperContainer {
-    position: relative;
-    width: 80%;
-    padding: 20px 0;
-    font-size: 1.7rem;
-    --bg-size: 200%;
-    --color-one: #5372ff;
-    --color-two: #fe5bdb;
-    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-animation: move-bg 8s infinite linear;
-    animation: move-bg 8s infinite linear;
-  }
-
-  .bannerMenu {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-
-    .bannerMenuItem {
-      font-size: 1.2rem;
-      padding: 0 20px;
-    }
-  }
-
-  @keyframes move-bg {
-    to {
-      background-position: var(--bg-size) 0;
-    }
-  }
-
-  @media only screen and (max-width: $lgDevice) {
-    width: 100%;
-    padding-left: 20px;
-  }
-
-  @media only screen and (max-width: $smDevice) {
-
-    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .text-container {
-      font-size: 1.6em;
+        // width: 60%;
+        display: flex;
+        flex-flow: row wrap;
 
-      .banner-item {
-        font-size: 2em;
-      }
+        .banner-item {
+            font-weight: 800;
+            font-family: $comfortaa-bold;
+            position: relative;
+            width: 80%;
+            padding: 10px 0;
+            font-size: 6em;
+            line-height: 1;
+            overflow: hidden;
+            --bg-size: 200%;
+            --color-one: #5372ff;
+            --color-two: #fe5bdb;
+            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-animation: move-bg 8s infinite linear;
+            animation: move-bg 8s infinite linear;
+        }
 
-      .name {
-        color: $pink;
-        padding-right: 20px;
-      }
+        .name {
+            // color: $pink;
+            padding: 0;
+            padding-right: 20px;
+        }
 
-      .role {
-        color: #fff;
-        padding-left: 0;
-      }
+        .role {
+            // color: #fff;
+            box-sizing: border-box;
+        }
+
+        .underscore {
+            width: 10px;
+            color: #E80C7A;
+            background-image: url('../assets/logos/droopy_e.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     .aboutSelfDeveloperContainer {
-      width: 100%;
-      box-sizing: border-box;
-      font-size: 1rem;
-      text-shadow: 0px 0px 1px #bebebe;
-      padding: 10px 0;
-    }
-
-
-    @keyframes move-bg {
-      to {
-        background-position: var(--bg-size) 0;
-      }
+        font-family: $comfortaa-bold;
+        position: relative;
+        width: 80%;
+        padding: 20px 0;
+        font-size: 1.7rem;
+        line-height: 1;
+        --bg-size: 200%;
+        --color-one: #5372ff;
+        --color-two: #fe5bdb;
+        background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-animation: move-bg 8s infinite linear;
+        animation: move-bg 8s infinite linear;
     }
 
     .bannerMenu {
-      box-sizing: border-box;
-      display: flex;
-      flex-flow: row;
-      justify-content: space-around;
-      width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
 
-      .bannerMenuItem {
-        font-size: 1.2rem;
-        padding: 0;
-      }
+        .bannerMenuItem {
+            font-size: 1.7em;
+            padding: 0 20px;
+            overflow: hidden;
+            color: $peachPuff;
+            text-shadow: none;
+        }
+
+        .bannerMenuItem:first-of-type {
+            padding: 0;
+        }
     }
 
-  }
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
+    }
+
+    @media only screen and (max-width: $lgDevice) {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    @media only screen and (max-width: $smDevice) {
+
+        width: 100%;
+
+        .text-container {
+            font-size: 1.6em;
+
+            .banner-item {
+                font-size: 2em;
+                padding: 0;
+                line-height: 1;
+                overflow: hidden;
+            }
+
+            .name {
+                color: $pink;
+                font-size: 2.2em;
+                // padding: 0 20px 0 0;
+            }
+
+            .role {
+                color: #fff;
+                padding-left: 0;
+            }
+        }
+
+        .aboutSelfDeveloperContainer {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 2em;
+            text-shadow: 0px 0px 1px #bebebe;
+            padding: 10px 0;
+        }
+
+
+
+        .name {
+            font-size: 1.3rem;
+        }
+
+        .bannerMenu {
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            padding: 0;
+
+            .bannerMenuItem {
+                font-size: 1.2rem;
+                padding: 0 10px;
+                color: $yellow;
+            }
+
+            .bannerMenuItem:first-of-type {
+                padding: 0;
+                // background-color: $bkgrdPurple;
+            }
+        }
+
+        @keyframes move-bg {
+            to {
+                background-position: var(--bg-size) 0;
+            }
+        }
+    }
 }

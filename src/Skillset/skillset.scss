@@ -3,62 +3,68 @@
 @import './../styles/mixins.scss';
 
 .skillsetContainer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  .skillsHeader {
     width: 100%;
-    font-size: 2rem;
-    padding: 5px;
-    text-decoration: underline $lighterpink;
-  }
-
-  .itemContainer {
-    width: 100%;
-  }
-
-  .skillSetItem {
-    width: 48%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 5px;
-    margin: 4px 0;
-    box-sizing: border-box;
-    background-color: $bkgrdPurple;
 
-    h4 {
-      width: 100%;
-      padding: 4px 0;
-      margin: 0;
-      font-weight: 800;
-      color: $green;
+    .skillsHeader {
+        width: 100%;
+        font-size: 2rem;
+        padding: 5px;
+        text-decoration: underline $lighterpink;
     }
 
-    .skillItemsList {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      align-items: flex-start;
-      overflow: hidden;
-      font-size: small;
-
-      .skillItem {
-        padding: 3px 6px;
-        font-size: 0.9rem;
-        background-color: $transBlack;
-        margin: 1px 5px;
-      }
+    .itemContainer {
+        width: 100%;
     }
 
-    @media only screen and (max-width: $lgDevice) {
-      width: 100%;
+    .skillSetItem {
+        display: flex;
+        width: fit-content;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5px;
+        margin: 4px 0;
+        box-sizing: border-box;
+
+        h4 {
+            font-weight: 900;
+            width: 100%;
+            padding: 10px 0 0 10px;
+            margin: 0;
+            color: $green;
+            background-color: $bkgrdPurple;
+        }
+
+        .skillItemsList {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow: hidden;
+            font-size: small;
+            padding: 5px;
+            background-color: $bkgrdPurple;
+
+            .skillItem {
+                font-size: 0.9rem;
+                // background-color: $transBlack;
+                margin: 0 10px;
+                font-weight: 900;
+            }
+
+            .skillItem:nth-child(odd) {
+                color: $peachPuff;
+            }
+        }
+
+        @media only screen and (max-width: $lgDevice) {
+            width: 100%;
+        }
     }
-  }
 }
