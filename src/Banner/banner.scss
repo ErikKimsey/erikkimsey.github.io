@@ -24,19 +24,19 @@ $hover-color: #fcfa85;
         // width: 60%;
         display: flex;
         flex-flow: row wrap;
+        width: 100%;
 
         .banner-item {
             font-weight: 800;
             font-family: $comfortaa-bold;
             position: relative;
-            width: 80%;
-            padding: 10px 0;
-            font-size: 6em;
+            padding: 10px 0 0 0;
+            font-size: 4em;
             line-height: 1;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
-            --color-two: #fe5bdb;
+            --color-two: #e64595;
             background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
             color: transparent;
             -webkit-background-clip: text;
@@ -46,14 +46,47 @@ $hover-color: #fcfa85;
         }
 
         .name {
-            // color: $pink;
             padding: 0;
             padding-right: 20px;
+            font-weight: 800;
+            font-family: $comfortaa-bold;
+            position: relative;
+            // width: 80%;
+            // padding: 10px 0;
+            // font-size: 7.1em;
+            line-height: 1;
+            overflow: hidden;
+            --bg-size: 200%;
+            --color-one: #5372ff;
+            --color-two: #e80c7a;
+            text-shadow: -2px -2px 3px --color-one, 2px 2px 3px --color-two;
+            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-animation: move-bg 8s infinite linear;
+            animation: move-bg 8s infinite linear;
         }
 
         .role {
-            // color: #fff;
-            box-sizing: border-box;
+            color: #fff;
+            padding-left: 0;
+            font-weight: 900;
+            font-family: $comfortaa-bold;
+            position: relative;
+            // width: 100%;
+            // padding: 10px 0;
+            line-height: 1;
+            overflow: hidden;
+            --bg-size: 200%;
+            --color-two: #e80c7a;
+            --color-one: #00ffea;
+            background: linear-gradient(152deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-animation: move-bg 8s infinite linear;
+            animation: move-bg 8s infinite linear;
         }
 
         .underscore {
@@ -69,13 +102,13 @@ $hover-color: #fcfa85;
     .aboutSelfDeveloperContainer {
         font-family: $comfortaa-bold;
         position: relative;
-        width: 80%;
-        padding: 20px 0;
-        font-size: 1.7rem;
+        width: 90%;
+        padding: 10px 0;
+        font-size: 2.6em;
         line-height: 1;
         --bg-size: 200%;
-        --color-one: #5372ff;
-        --color-two: #fe5bdb;
+        --color-one: #a542d7;
+        --color-two: #a7ffff;
         background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
         color: transparent;
         -webkit-background-clip: text;
@@ -90,13 +123,16 @@ $hover-color: #fcfa85;
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
+        padding: 0;
+        overflow: hidden;
+        filter: saturate(200%);
 
         .bannerMenuItem {
-            font-size: 1.7em;
+            font-size: 2.2em;
             padding: 0 20px;
             overflow: hidden;
-            color: $peachPuff;
-            text-shadow: none;
+            color: rgba(0, 0, 0, 0);
+            text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.4);
         }
 
         .bannerMenuItem:first-of-type {
@@ -125,7 +161,6 @@ $hover-color: #fcfa85;
             .banner-item {
                 font-size: 2em;
                 padding: 0;
-                line-height: 1;
                 overflow: hidden;
             }
 
@@ -133,20 +168,68 @@ $hover-color: #fcfa85;
                 color: $pink;
                 font-size: 2.2em;
                 // padding: 0 20px 0 0;
+                font-weight: 900;
+                font-family: $comfortaa-bold;
+                position: relative;
+                width: 80%;
+                padding: 3px 0;
+                font-size: 2.4em;
+                line-height: 1;
+                overflow: hidden;
+                --bg-size: 200%;
+                --color-one: #5372ff;
+                --color-two: #52ED8B;
+                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-animation: move-bg 8s infinite linear;
+                animation: move-bg 8s infinite linear;
             }
 
             .role {
                 color: #fff;
                 padding-left: 0;
+                // padding: 0 20px 0 0;
+                font-weight: 900;
+                font-family: $comfortaa-bold;
+                position: relative;
+                width: 100%;
+                padding: 10px 0;
+                line-height: 1;
+                overflow: hidden;
+                --bg-size: 200%;
+                --color-one: #ffcea7;
+                --color-two: #fe5bdb;
+                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-animation: move-bg 8s infinite linear;
+                animation: move-bg 8s infinite linear;
             }
         }
 
         .aboutSelfDeveloperContainer {
+            color: #fff;
+            padding-left: 0;
+            // padding: 0 20px 0 0;
+            font-weight: 900;
+            font-family: $comfortaa-bold;
+            position: relative;
             width: 100%;
-            box-sizing: border-box;
-            font-size: 2em;
-            text-shadow: 0px 0px 1px #bebebe;
             padding: 10px 0;
+            line-height: 1;
+            overflow: hidden;
+            --bg-size: 200%;
+            --color-one: #5372ff;
+            --color-two: #fe5bdb;
+            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-animation: move-bg 8s infinite linear;
+            animation: move-bg 8s infinite linear;
         }
 
 
@@ -156,22 +239,22 @@ $hover-color: #fcfa85;
         }
 
         .bannerMenu {
-            box-sizing: border-box;
-            display: flex;
-            flex-flow: row;
-            width: 100%;
-            padding: 0;
+            // width: 100%;
+            // box-sizing: border-box;
+            // display: flex;
+            // flex-flow: row;
+            // justify-content: flex-start;
 
-            .bannerMenuItem {
-                font-size: 1.2rem;
-                padding: 0 10px;
-                color: $yellow;
-            }
+            // .bannerMenuItem {
+            //     font-size: 1.7em;
+            //     padding: 0 20px;
+            //     overflow: hidden;
+            //     text-shadow: none;
+            // }
 
-            .bannerMenuItem:first-of-type {
-                padding: 0;
-                // background-color: $bkgrdPurple;
-            }
+            // .bannerMenuItem:first-of-type {
+            //     padding: 0;
+            // }
         }
 
         @keyframes move-bg {
