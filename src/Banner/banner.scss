@@ -10,10 +10,10 @@ $hover-color: #fcfa85;
     --f-unit: 1vmin;
     --f: calc(var(--f-size) * var(--f-unit));
 
-    height: 100vh;
+    // height: 100vh;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: column;
+    // justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,10 +142,10 @@ $hover-color: #fcfa85;
         width: 100%;
 
         .text-container {
+            width: 100%;
 
             .banner-item {
-                font-size: 3em;
-                padding: 0;
+                font-size: 3.4em;
                 overflow: hidden;
                 font-weight: 900;
             }
@@ -153,8 +153,6 @@ $hover-color: #fcfa85;
             .name {
                 color: $pink;
                 font-family: $comfortaa-bold;
-                // width: 80%;
-                padding: 3px 0;
                 overflow: hidden;
                 --bg-size: 200%;
                 --color-one: #5372ff;
@@ -171,8 +169,7 @@ $hover-color: #fcfa85;
                 color: #fff;
                 padding-left: 0;
                 font-family: $comfortaa-bold;
-                padding: 10px 0;
-                line-height: 1;
+                // padding: 10px 0;
                 overflow: hidden;
                 --bg-size: 200%;
                 --color-one: #ffcea7;
@@ -187,14 +184,10 @@ $hover-color: #fcfa85;
         }
 
         .aboutSelfDeveloperContainer {
-            color: #fff;
-            padding-left: 0;
-            font-weight: 900;
-            font-family: $comfortaa-bold;
-            position: relative;
             width: 100%;
-            padding: 10px 0;
-            line-height: 1;
+            padding-left: 0;
+            font-family: "comfortaa-bold";
+            font-size: 2em;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
@@ -210,7 +203,7 @@ $hover-color: #fcfa85;
 
 
         .name {
-            font-size: 1.3rem;
+            // font-size: 1.3rem;
         }
 
         .bannerMenu {
@@ -237,5 +230,20 @@ $hover-color: #fcfa85;
                 background-position: var(--bg-size) 0;
             }
         }
+    }
+
+    @media only screen and (max-width: $xsDevice) {
+
+        // display: flex;
+        .bannerMenu {
+            flex-flow: column;
+            align-items: flex-start;
+
+            .bannerMenuItem {
+                padding: 0;
+            }
+        }
+
+        font-size: 0.7em;
     }
 }
