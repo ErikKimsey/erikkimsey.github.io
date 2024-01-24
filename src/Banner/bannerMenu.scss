@@ -1,21 +1,21 @@
 .bannerMenu {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // padding: 5px;
 
-  .bannerMenuItem {
-    color: #fff;
-    font-size: 2rem;
-    padding: 0 30px;
-    font-weight: 900;
-    background-color: none;
-  }
+    .bannerMenuItem {
+        color: #fff;
+        font-size: 2rem;
+        padding: 0 30px;
+        font-weight: 900;
+        background-color: none;
+    }
 
-  .bannerMenuItem:hover {
-    cursor: pointer;
-  }
+    .bannerMenuItem:hover {
+        cursor: pointer;
+    }
 }

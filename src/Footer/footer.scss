@@ -2,85 +2,86 @@
 @import "../styles/responsive.scss";
 
 .footerContainer {
-  position: fixed;
-  bottom: 20px;
-  right: 1%;
-  width: 100vw;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  height: auto;
-  overflow: visible;
-  // padding-top: 40px;
-  // background-color: aqua;
-
-  .linksContainer {
-    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 1%;
+    width: 100vw;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
     overflow: visible;
+    z-index: 100;
+    // padding-top: 40px;
+    // background-color: aqua;
 
-    .resumeText {
-      align-self: center;
-      text-align: end;
-      font-weight: 800;
-      font-size: 12px;
-      -webkit-transform: rotate(-90deg);
-      transform: rotate(-90deg);
-      margin-left: -20px;
+    .linksContainer {
+        z-index: 1000;
+        display: flex;
+        overflow: visible;
+
+        .resumeText {
+            align-self: center;
+            text-align: end;
+            font-weight: 800;
+            font-size: 12px;
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            margin-left: -20px;
+        }
+
+        a {
+            display: flex;
+            padding: 0 10px;
+            transition: all 500ms;
+
+            &:hover {
+                // color: $pink;
+                transform: rotate(10deg) scale(1.1);
+            }
+        }
     }
 
-    a {
-      display: flex;
-      padding: 0 10px;
-      transition: all 500ms;
-
-      &:hover {
-        // color: $pink;
-        transform: rotate(10deg) scale(1.1);
-      }
-    }
-  }
-
-
-  .textItemContainer {
-    padding: 10px;
-
-    .textItem {
-      font-size: 14px;
-      color: $teal;
-    }
-  }
-
-  @media only screen and (max-width: $smDevice) {
-    padding: $pagePadding_Mobile;
-  }
-
-  @media only screen and (max-width: $xsDevice) {
-    padding: $pagePadding_Mobile;
 
     .textItemContainer {
-      display: none;
+        padding: 10px;
+
+        .textItem {
+            font-size: 14px;
+            color: $teal;
+        }
     }
-  }
+
+    @media only screen and (max-width: $smDevice) {
+        padding: $pagePadding_Mobile;
+    }
+
+    @media only screen and (max-width: $xsDevice) {
+        padding: $pagePadding_Mobile;
+
+        .textItemContainer {
+            display: none;
+        }
+    }
 }
 
 .footerContainerInactive {
-  position: fixed;
-  bottom: 30px;
-  right: 50px;
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-end;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
 
-  .inactiveItem {
-    // width: 10px;
-    // height: 10px;
-    font-size: smaller;
-    padding: 5px;
-    border: solid 1px #ddd;
-    border-radius: 2px;
-    margin: 5px;
-    background-color: #ddd;
-  }
+    .inactiveItem {
+        // width: 10px;
+        // height: 10px;
+        font-size: smaller;
+        padding: 5px;
+        border: solid 1px #ddd;
+        border-radius: 2px;
+        margin: 5px;
+        background-color: #ddd;
+    }
 }
