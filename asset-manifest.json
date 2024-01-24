@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.889b68b2.css",
-    "main.js": "/static/js/main.82b7d33a.js",
+    "main.js": "/static/js/main.7552a85b.js",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
     "static/media/Comfortaa-Regular.ttf": "/static/media/Comfortaa-Regular.886fcced57daea5944e7.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.c6eb380b9f8f0920f934.ttf",
@@ -9,10 +9,10 @@
     "static/media/erikkimsey_frontendEngineer_resume.pdf": "/static/media/erikkimsey_frontendEngineer_resume.07dddf367b454c0d38c4.pdf",
     "index.html": "/index.html",
     "main.889b68b2.css.map": "/static/css/main.889b68b2.css.map",
-    "main.82b7d33a.js.map": "/static/js/main.82b7d33a.js.map"
+    "main.7552a85b.js.map": "/static/js/main.7552a85b.js.map"
   },
   "entrypoints": [
     "static/css/main.889b68b2.css",
-    "static/js/main.82b7d33a.js"
+    "static/js/main.7552a85b.js"
   ]
 }
