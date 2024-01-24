@@ -24,11 +24,13 @@
 
     .skillSetItem {
         display: flex;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
-        flex-flow: column wrap;
+        flex-flow: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 5px;
+        padding: 5px 0 10px 0;
         margin: 4px 0;
         box-sizing: border-box;
 

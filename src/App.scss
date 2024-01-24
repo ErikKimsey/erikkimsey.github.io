@@ -14,50 +14,44 @@ $dot-space: 8px;
 $highlight-color: rgb(255, 75, 255);
 
 ::selection {
-  --bg-size: 200%;
-  --color-one: #5372ff;
-  --color-two: #fe5bdb;
-  background: linear-gradient(90deg,
-      var(--color-one),
-      var(--color-two),
-      var(--color-one)) 0 0 / var(--bg-size) 100%;
-  // color: transparent;
-  // background-clip: text;
+    --bg-size: 200%;
+    --color-one: #5372ff;
+    --color-two: #fe5bdb;
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)) 0 0 / var(--bg-size) 100%;
 }
 
 .App {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-flow: column;
-  margin: 0;
-  box-sizing: border-box;
-  background: none;
-  padding: $pagePadding_Desktop;
-  padding-top: 0;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  -webkit-scroll-behavior: smooth;
-  // background-color: #fe5bdb;
-  // @include dotBackground;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+    margin: 0;
+    box-sizing: border-box;
+    background: none;
+    padding: 0 100px 50px 100px;
+    padding-top: 0;
+    scroll-behavior: smooth;
 
 
-  @media only screen and (max-width: $lgDevice) {
-    padding: 0;
+    @media only screen and (max-width: $lgDevice) {
+        padding: 0 100px 50px 50px;
 
-  }
+    }
 
-  @media only screen and (max-width: $mdDevice) {
-    padding: 0;
+    @media only screen and (max-width: $mdDevice) {
+        padding: 0 0 0 10px;
 
-  }
+    }
 
-  @media only screen and (max-width: $smDevice) {
-    padding: 0;
-  }
+    @media only screen and (max-width: $smDevice) {
+        padding: 10px;
+    }
 
-  @media only screen and (max-width: $xsDevice) {
-    padding: 0;
-  }
+    // @media only screen and (max-width: $xsDevice) {
+    //     padding: 0;
+    // }
 }

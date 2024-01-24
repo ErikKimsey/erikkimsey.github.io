@@ -10,8 +10,6 @@ $hover-color: #fcfa85;
     --f-unit: 1vmin;
     --f: calc(var(--f-size) * var(--f-unit));
 
-
-    width: 70%;
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
@@ -21,18 +19,17 @@ $hover-color: #fcfa85;
     background-size: cover;
 
     .text-container {
-        // width: 60%;
         display: flex;
         flex-flow: row wrap;
         width: 100%;
+        overflow: hidden;
 
         .banner-item {
             font-weight: 800;
             font-family: $comfortaa-bold;
+            font-size: 4em;
             position: relative;
             padding: 0;
-            font-size: 4em;
-            line-height: 1;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
@@ -48,13 +45,8 @@ $hover-color: #fcfa85;
         .name {
             padding: 0;
             padding-right: 20px;
-            font-weight: 800;
             font-family: $comfortaa-bold;
             position: relative;
-            // width: 80%;
-            // padding: 10px 0;
-            // font-size: 7.1em;
-            line-height: 1;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
@@ -71,12 +63,8 @@ $hover-color: #fcfa85;
         .role {
             color: #fff;
             padding-left: 0;
-            font-weight: 900;
             font-family: $comfortaa-bold;
             position: relative;
-            // width: 100%;
-            // padding: 10px 0;
-            line-height: 1;
             overflow: hidden;
             --bg-size: 200%;
             --color-two: #e80c7a;
@@ -105,7 +93,6 @@ $hover-color: #fcfa85;
         width: 90%;
         padding: 10px 0;
         font-size: 2.6em;
-        line-height: 1;
         --bg-size: 200%;
         --color-one: #a542d7;
         --color-two: #a7ffff;
@@ -147,34 +134,27 @@ $hover-color: #fcfa85;
     }
 
     @media only screen and (max-width: $lgDevice) {
-        width: 100%;
-        padding-left: 20px;
+        // width: 100%;
+        // padding-left: 20px;
     }
 
     @media only screen and (max-width: $smDevice) {
-
         width: 100%;
 
         .text-container {
-            font-size: 1.6em;
 
             .banner-item {
-                font-size: 2em;
+                font-size: 3em;
                 padding: 0;
                 overflow: hidden;
+                font-weight: 900;
             }
 
             .name {
                 color: $pink;
-                font-size: 2.2em;
-                // padding: 0 20px 0 0;
-                font-weight: 900;
                 font-family: $comfortaa-bold;
-                position: relative;
-                width: 80%;
+                // width: 80%;
                 padding: 3px 0;
-                font-size: 2.4em;
-                line-height: 1;
                 overflow: hidden;
                 --bg-size: 200%;
                 --color-one: #5372ff;
@@ -190,11 +170,7 @@ $hover-color: #fcfa85;
             .role {
                 color: #fff;
                 padding-left: 0;
-                // padding: 0 20px 0 0;
-                font-weight: 900;
                 font-family: $comfortaa-bold;
-                position: relative;
-                width: 100%;
                 padding: 10px 0;
                 line-height: 1;
                 overflow: hidden;
@@ -213,7 +189,6 @@ $hover-color: #fcfa85;
         .aboutSelfDeveloperContainer {
             color: #fff;
             padding-left: 0;
-            // padding: 0 20px 0 0;
             font-weight: 900;
             font-family: $comfortaa-bold;
             position: relative;
