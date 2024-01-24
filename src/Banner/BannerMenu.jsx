@@ -46,12 +46,18 @@ function BannerMenuItem(props) {
             ref={thisRef}
             className="bannerMenuItem"
             variants={variants}
-            whileHover={{ scale: 1.1, color: "rgba(0,0,0,1)", textShadow: "2px 2px 3px rgba(0, 255, 255, 0.6), -2px -2px 3px rgba(255, 0, 250, 0.6)" }}
+            whileHover={{ scale: 1.05, color: "rgba(0,255,96,0.49)", textShadow: "1px 2px 2px rgba(255, 0, 149, 0.6), -3px 0px 2px rgba(0, 122, 255, 0.9)" }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToPage}
         >
             {tag}
         </motion.div>
+
+        /**
+         * color: rgb(0 255 96 / 49%);
+    text-shadow: rgb(255 0 149 / 50%) 0px 2px 3px, rgb(0 121 255 / 50%) 1px -1px 0px;
+    transform: none;
+         */
 
     )
 }
