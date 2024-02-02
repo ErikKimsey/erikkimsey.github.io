@@ -1,8 +1,7 @@
-import React, { useEffect, useState, Suspense, useMemo, useRef } from "react";
-import { EffectComposer, DepthOfField, Bloom, Noise, Vignette } from '@react-three/postprocessing'
-import { BlurPass, Resizer, KernelSize } from 'postprocessing'
-import { extend, Canvas, useFrame, useThree, useResource } from '@react-three/fiber';
-import Loading from "../Loading/Loading";
+import React, { useEffect, useState } from "react";
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
+import { } from 'postprocessing'
+import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from "three";
 import { OrbitControls, PerspectiveCamera, Sparkles, Html, useProgress } from "@react-three/drei";
 
