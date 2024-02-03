@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { } from 'postprocessing'
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import * as THREE from "three";
 import { OrbitControls, PerspectiveCamera, Sparkles, Html, useProgress } from "@react-three/drei";
 
