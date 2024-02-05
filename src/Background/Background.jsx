@@ -1,51 +1,126 @@
 import React, { useEffect, useState } from "react";
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
-import { } from 'postprocessing'
-import { Canvas } from '@react-three/fiber';
-import * as THREE from "three";
-import { OrbitControls, PerspectiveCamera, Sparkles, Html, useProgress } from "@react-three/drei";
+import "./background.scss";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
-function Box(props) {
+const BKGRD_TEXT = [
+    'erik kimsey',
+    'ui engineer',
+    'experience',
+    'expertise',
+]
 
-    let { position } = props;
-    let [isHovering, setIsHovering] = useState(false);
+
+
+export default function Background() {
+
+    const [displayed, setDisplayed] = useState(BKGRD_TEXT[0]);
+    const [count, setCount] = useState(0);
+    const [currI, setCurrI] = useState(0);
+
+    // ?
+    const [subCount, setSubCount] = useState(0);
+    const [hasLoaded, setLoaded] = useState(false);
+
+    // ?
+    const [currChars, setCurrChars] = useState([]);
+
+    // ?
+    const [splitChars, setSplitChars] = useState([]);
 
     useEffect(() => {
 
-    }, [isHovering]);
+        setLoaded(true);
+        splitStrings(BKGRD_TEXT);
+        if (currI && BKGRD_TEXT) {
+            const intervalId = setInterval(() => {
+                setCount(c => c + 1);
+            }, 2800);
+            randomChopConcat(BKGRD_TEXT[currI]);
+            return () => clearInterval(intervalId);
+        }
+    }, [])
 
-    return <mesh position={position}
-        rotation={[2, 2, 2]}
-        scale={isHovering ? 1.05 : 1}
-        onPointerOver={() => setIsHovering(true)}
-        onPointerOut={() => setIsHovering(false)}
-    >
-        <sphereGeometry attach="geometry" />
-        <meshStandardMaterial attach="material" color="rgb(255,0,255)" transparent metalness={0.5} />
-    </mesh>
-}
+    useEffect(() => {
+        // randomChopConcat()
+        // iterateDisplayedText();
+    }, [count])
 
+    function splitStrings(arr) {
+        let nu = [];
+        for (let index = 0; index < arr.length; index++) {
+            const e = arr[index].split('');
+            nu[index] = e;
+        }
+        setSplitChars(nu);
+        randomChopConcat(nu);
+        // createEmptyCharArray(nu[0]);
+    }
 
-export default function Background(props) {
-    let { w, h } = props.dimens;
+    // function createEmptyCharArray(arr) {
+    //     let t = "_";
+    //     let u = "";
+    //     let q = arr.length;
+    //     t = `${t.repeat(q)}`;
+    //     console.log(t);
+    //     let z = arr.slice();
+    //     let r = arr.map(() => {
+    //         let t = Math.random(q);
+
+    //     })
+    // }
+
+    // randomize array of chars
+    function randomChopConcat(arr) {
+        let temp = arr.slice();
+        let nuArr = [];
+
+        // 1. get length of array
+        while (temp.length > 0) {
+            // setInterval(
+            //     () => {
+            let ceil = Math.ceil(temp.length);
+            let floor = Math.floor(0);
+
+            // 2. use length as index in math.random ("randomIndex")
+            let randIndex = Math.floor(Math.random() * (floor - ceil) + ceil);
+
+            // 3. splicedChar = arr.splice(randomIndex, 1)
+            let splicedChar = temp.splice(randIndex, 1);
+
+            // 4. nuArr.push(splicedChar)
+            nuArr.push(splicedChar);
+            let disp = nuArr.concat('');
+            setDisplayed(disp);
+            // }, 1000
+            // )
+
+            // 5. <<<< repeat "1." - "4."
+        }
+    }
+
+    function iterateCurrIndex() {
+        if (currI < BKGRD_TEXT.length - 1) {
+            setCurrI(currI + 1)
+        } else {
+            setCurrI(0);
+        }
+    }
 
     return (
-        <Canvas colorManagement
-            camera={{ position: [0, 0, 3] }} style={{ width: w, height: h }} >
-            {/* <Suspense fallback={<Loading />}> */}
+        <div className="background-container">
+            {hasLoaded && <div className="text-container">
+                {displayed}
+            </div>}
+        </div>
+    )
+}
 
-            <Box position={new THREE.Vector3(0, -1, 0)} />
-            <directionalLight color="#ffffff" intensity={5} position={[-5, 0, 5]} />
-            <OrbitControls />
-            <Sparkles size={2} amount={100} scale={20} />
-            {/* <ambientLight intensity={1} color="#fff" /> */}
-            <EffectComposer>
-                <Bloom
-                    luminanceThreshold={0.4} luminanceSmoothing={0.5} height={300} opacity={3}
-                />
-
-            </EffectComposer>
-            {/* </Suspense > */}
-        </Canvas>
+/**
+ * 
+ * @returns re-shuffled characters of iterated BKGRD_TEXT
+ */
+function TheDisplayingText() {
+    return (
+        <div className="displaying-text-container"></div>
     )
 }

@@ -7,6 +7,7 @@ import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
 import Playground from './Playground/Playground';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
+import Background from './Background/Background';
 
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
             <SkillsExperienceParent />
             <div style={{ height: "100px" }}></div>
             <Footer />
+            {/* <Background /> */}
         </div>
     );
 }

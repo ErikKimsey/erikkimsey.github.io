@@ -7,6 +7,8 @@ $comfortaa: "comfortaa";
 $comfortaa-reg: "comfortaa-reg";
 $comfortaa-bold: "comfortaa-bold";
 
+$atmos: "atmos";
+
 * {
     font-weight: 100;
     box-sizing: content-box;
@@ -15,6 +17,12 @@ $comfortaa-bold: "comfortaa-bold";
 
 .experienceItemContainer:hover {
     cursor: pointer;
+}
+
+@font-face {
+    font-family: "atmos";
+    // src: url(./assets/fonts/atmos.ttf) format("truetype");
+    src: url(./assets/fonts/Atmos.ttf) format("truetype");
 }
 
 
