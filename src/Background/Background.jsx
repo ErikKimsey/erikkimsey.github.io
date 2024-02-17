@@ -13,7 +13,7 @@ const BKGRD_TEXT = [
 
 export default function Background() {
 
-    const [displayed, setDisplayed] = useState(BKGRD_TEXT[0]);
+    const [displayed, setDisplayed] = useState("____");
     const [count, setCount] = useState(0);
     const [currI, setCurrI] = useState(0);
 
@@ -28,22 +28,39 @@ export default function Background() {
     const [splitChars, setSplitChars] = useState([]);
 
     useEffect(() => {
-
         setLoaded(true);
-        splitStrings(BKGRD_TEXT);
+        // splitStrings(BKGRD_TEXT);
         if (currI && BKGRD_TEXT) {
             const intervalId = setInterval(() => {
                 setCount(c => c + 1);
-            }, 2800);
-            randomChopConcat(BKGRD_TEXT[currI]);
+            }, 1000);
+            // randomChopConcat(BKGRD_TEXT[currI]);
             return () => clearInterval(intervalId);
         }
     }, [])
 
     useEffect(() => {
-        // randomChopConcat()
-        // iterateDisplayedText();
+        displayText();
     }, [count])
+
+    function displayText() {
+        let l = displayed.length;
+        let t = new Array(l);
+        t.fill("_");
+        let joi = t.join('');
+        setDisplayed(joi);
+    }
+
+    function delay(arr1, arr2, index) {
+        console.log(arr1, arr2, index);
+        setTimeout(() => {
+            arr1[index] = arr2[index];
+            let j = arr1.join('');
+            // console.log(j);
+            setDisplayed(j);
+        }, 1000);
+
+    }
 
     function splitStrings(arr) {
         let nu = [];
@@ -53,21 +70,8 @@ export default function Background() {
         }
         setSplitChars(nu);
         randomChopConcat(nu);
-        // createEmptyCharArray(nu[0]);
     }
 
-    // function createEmptyCharArray(arr) {
-    //     let t = "_";
-    //     let u = "";
-    //     let q = arr.length;
-    //     t = `${t.repeat(q)}`;
-    //     console.log(t);
-    //     let z = arr.slice();
-    //     let r = arr.map(() => {
-    //         let t = Math.random(q);
-
-    //     })
-    // }
 
     // randomize array of chars
     function randomChopConcat(arr) {
@@ -108,9 +112,13 @@ export default function Background() {
 
     return (
         <div className="background-container">
-            {hasLoaded && <div className="text-container">
-                {displayed}
-            </div>}
+            {hasLoaded &&
+                <div className="text-container">
+                    {/* {displayed} */}
+                    <video loop autoPlay muted id="bg-video">
+                        <source src={require("../assets/videos/ek_blender.m4v")} />
+                    </video>
+                </div>}
         </div>
     )
 }

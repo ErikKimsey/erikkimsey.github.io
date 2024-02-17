@@ -20,14 +20,16 @@ $hover-color: #fcfa85;
 
     .text-container {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         width: 100%;
         overflow: hidden;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         .banner-item {
-            font-weight: 800;
-            font-family: $comfortaa-bold;
-            font-size: 4em;
+            font-weight: 900;
+            font-family: $quantify;
+            font-size: 6em;
+            line-height: 1;
             position: relative;
             padding: 0;
             overflow: hidden;
@@ -45,9 +47,9 @@ $hover-color: #fcfa85;
         .name {
             padding: 0;
             padding-right: 20px;
-            font-family: $comfortaa-bold;
             position: relative;
             overflow: hidden;
+            font-family: $quantify;
             --bg-size: 200%;
             --color-one: #5372ff;
             --color-two: #e80c7a;
@@ -63,7 +65,6 @@ $hover-color: #fcfa85;
         .role {
             color: #fff;
             padding-left: 0;
-            font-family: $comfortaa-bold;
             position: relative;
             overflow: hidden;
             --bg-size: 200%;
@@ -88,11 +89,10 @@ $hover-color: #fcfa85;
     }
 
     .aboutSelfDeveloperContainer {
-        font-family: $comfortaa-bold;
         position: relative;
-        width: 90%;
+        width: 50%;
         padding: 10px 0;
-        font-size: 2.6em;
+        font-size: 2.2em;
         --bg-size: 200%;
         --color-one: #a542d7;
         --color-two: #a7ffff;
@@ -115,11 +115,11 @@ $hover-color: #fcfa85;
         filter: saturate(200%);
 
         .bannerMenuItem {
-            font-size: 2.2em;
+            font-size: 1.4em;
             padding: 0 20px;
             overflow: hidden;
-            color: rgba(0, 0, 0, 0);
-            text-shadow: 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 rgba(255, 255, 255, 0.5);
+            color: #fff;
+            text-shadow: 0 0 0 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
 
         .bannerMenuItem:first-of-type {
@@ -152,7 +152,7 @@ $hover-color: #fcfa85;
 
             .name {
                 color: $pink;
-                font-family: $comfortaa-bold;
+                font-family: $eight1;
                 overflow: hidden;
                 --bg-size: 200%;
                 --color-one: #5372ff;
@@ -168,7 +168,7 @@ $hover-color: #fcfa85;
             .role {
                 color: #fff;
                 padding-left: 0;
-                font-family: $comfortaa-bold;
+                font-family: $eight1;
                 // padding: 10px 0;
                 overflow: hidden;
                 --bg-size: 200%;
@@ -186,7 +186,7 @@ $hover-color: #fcfa85;
         .aboutSelfDeveloperContainer {
             width: 100%;
             padding-left: 0;
-            font-family: "comfortaa-bold";
+            // font-family: $eight1;
             font-size: 2em;
             overflow: hidden;
             --bg-size: 200%;
