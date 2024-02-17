@@ -47,7 +47,7 @@ export default function App() {
             <SkillsExperienceParent />
             <div style={{ height: "100px" }}></div>
             <Footer />
-            {/* <Background /> */}
+            <Background />
         </div>
     );
 }
