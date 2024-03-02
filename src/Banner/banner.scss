@@ -11,6 +11,7 @@ $hover-color: #fcfa85;
     --f: calc(var(--f-size) * var(--f-unit));
 
     // height: 100vh;
+    width: 100vw;
     display: flex;
     flex-flow: column;
     // justify-content: center;
@@ -40,6 +41,7 @@ $hover-color: #fcfa85;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
+            // mix-blend-mode: hard-light;
             -webkit-animation: move-bg 8s infinite linear;
             animation: move-bg 8s infinite linear;
         }
@@ -146,14 +148,13 @@ $hover-color: #fcfa85;
             width: 100%;
 
             .banner-item {
-                font-size: 3.4em;
+                font-size: 4em;
                 overflow: hidden;
                 font-weight: 900;
             }
 
             .name {
                 color: $pink;
-                font-family: $eight1;
                 overflow: hidden;
                 --bg-size: 200%;
                 --color-one: #5372ff;
@@ -169,7 +170,6 @@ $hover-color: #fcfa85;
             .role {
                 color: #fff;
                 padding-left: 0;
-                font-family: $eight1;
                 // padding: 10px 0;
                 overflow: hidden;
                 --bg-size: 200%;
@@ -188,7 +188,7 @@ $hover-color: #fcfa85;
             width: 100%;
             padding-left: 0;
             // font-family: $eight1;
-            font-size: 2em;
+            font-size: 1.2em;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;

@@ -114,10 +114,11 @@ export default function Background() {
         <div className="background-container">
             {hasLoaded &&
                 <div className="text-container">
+
                     {/* {displayed} */}
-                    <video loop autoPlay muted id="bg-video">
+                    {/* <video autoPlay muted id="bg-video">
                         <source src={require("../assets/videos/ek_blender.m4v")} />
-                    </video>
+                    </video> */}
                 </div>}
         </div>
     )
