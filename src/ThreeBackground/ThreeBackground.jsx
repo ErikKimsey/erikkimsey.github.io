@@ -75,28 +75,6 @@ function DysonSphere(props) {
     )
 }
 
-function Subwoofer() {
-    const subwoofer = useLoader(FBXLoader, "./subwoofer.fbx");
-    console.log(subwoofer.position);
-
-    // let earth = nodes.landscape_earth.geometry;
-    // console.log(materials.earth);
-    // let water = nodes.landscape_water.geometry;
-
-    const ref = useRef();
-    useFrame((state, delta) => {
-        return ref.current.rotation.x += delta / 2
-    }
-    )
-    useFrame((state, delta) => {
-        return ref.current.rotation.y += delta / 2
-    })
-
-    return (
-        <primitive object={subwoofer} ref={ref} position={[0, 0, -40]} rotation={[0, 180, 0]} />
-    )
-}
-
 
 export default function ThreeBackground() {
 
@@ -122,8 +100,8 @@ export default function ThreeBackground() {
         <div className="three-bkgrd-container">
             <Canvas camera={{ position: [0, 0, 0] }}>
                 <EffectComposer>
-                    <ambientLight intensity={0.01} />
-                    <directionalLight color="white" position={[0, 20, 5]} intensity={2} rotation={[-90, 0, -90]} />
+                    <ambientLight intensity={0.005} />
+                    <directionalLight color="white" position={[0, 20, 5]} intensity={1} rotation={[-90, 0, -90]} />
                     <fog attach="fog" args={['rgb(22,0,43)', 1, 100]} />
                     <DepthOfField focusDistance={0.1} // where to focus
                         focalLength={0.5} // focal length
@@ -132,7 +110,6 @@ export default function ThreeBackground() {
                     <Suspense fallback={null}>
                         {/* {sound && <Sound url={url} />} */}
                         <DysonSphere />
-                        {/* <Subwoofer /> */}
                         <Ring />
                         {/* <Environment files={"./galaxy.jpg"} background /> */}
                     </Suspense>
