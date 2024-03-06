@@ -33,7 +33,7 @@ const Ring = (props) => {
 
     return (
         <>
-            <group ref={ref} {...props} dispose={null} scale={12} position={[10, -15, 0]} rotation={[60, 0, 0]} >
+            <group ref={ref} {...props} dispose={null} scale={[10, 40, 40]} position={[0, 0, 0]} rotation={[60, 0, 0]} >
                 <mesh castShadow receiveShadow geometry={ring} material={nodes.ring_cylinder.material} />
                 <mesh castShadow receiveShadow geometry={quad} material={nodes.ring_cut_quad.material} />
                 {/* <mesh castShadow receiveShadow geometry={nodes.ObjGrid.geometry} material={nodes.ObjGrid.material} />
@@ -63,29 +63,37 @@ function Sound({ url }) {
 }
 
 function DysonSphere(props) {
-    const lakes = useLoader(FBXLoader, "./lakes.fbx");
+    const lakes = useLoader(FBXLoader, "./ring.fbx");
+    console.log(lakes);
+
+    const ref = useRef();
+
+    useFrame((state, delta) => ref.current.rotation.x += delta / 6)
+    useFrame((state, delta) => ref.current.rotation.y += delta / 10)
+    return (
+        <primitive object={lakes} ref={ref} scale={.5} position={[0, 0, 100]} rotation={[120, 0, 0]} />
+    )
+}
+
+function Subwoofer() {
+    const subwoofer = useLoader(FBXLoader, "./subwoofer.fbx");
+    console.log(subwoofer.position);
 
     // let earth = nodes.landscape_earth.geometry;
     // console.log(materials.earth);
     // let water = nodes.landscape_water.geometry;
 
     const ref = useRef();
+    useFrame((state, delta) => {
+        return ref.current.rotation.x += delta / 2
+    }
+    )
+    useFrame((state, delta) => {
+        return ref.current.rotation.y += delta / 2
+    })
 
-
-
-
-
-
-    // useFrame((state, delta) => (ref.current.rotation.y += delta / 10))
-    // useFrame((state, delta) => (ref.current.rotation.x += delta / 10))
-
-
-    {/* <group ref={ref} dispose={null} scale={1} rotation={[0, 0, 0]} position={[0, 0, -2]}>
-        <mesh castShadow receiveShadow={false} geometry={earth} material={materials.earth} />
-        <mesh castShadow receiveShadow={false} geometry={water} material={materials.water2} />
-    </group> */}
     return (
-        <primitive object={lakes} ref={ref} scale={2} position={[0, 0, -250]} rotation={[90, 0, 0]} />
+        <primitive object={subwoofer} ref={ref} position={[0, 0, -40]} rotation={[0, 180, 0]} />
     )
 }
 
@@ -115,16 +123,17 @@ export default function ThreeBackground() {
             <Canvas camera={{ position: [0, 0, 0] }}>
                 <EffectComposer>
                     <ambientLight intensity={0.01} />
-                    <directionalLight color="white" position={[0, 12, 5]} intensity={0.5} rotation={[-90, 0, -90]} />
-                    <DepthOfField focusDistance={0.5} // where to focus
-                        focalLength={.7} // focal length
-                        bokehScale={.5} />
-                    <Bloom luminanceThreshold={0.1} luminanceSmoothing={0.5} height={480} />
-                    {/* <fog attach="fog" args={['rgb(22,0,43)', 1, 500]} /> */}
+                    <directionalLight color="white" position={[0, 20, 5]} intensity={2} rotation={[-90, 0, -90]} />
+                    <fog attach="fog" args={['rgb(22,0,43)', 1, 100]} />
+                    <DepthOfField focusDistance={0.1} // where to focus
+                        focalLength={0.5} // focal length
+                        bokehScale={5} />
+                    {/* <Bloom luminanceThreshold={0.1} luminanceSmoothing={0.4} height={480} /> */}
                     <Suspense fallback={null}>
-                        {sound && <Sound url={url} />}
+                        {/* {sound && <Sound url={url} />} */}
                         <DysonSphere />
-                        {/* <Ring /> */}
+                        {/* <Subwoofer /> */}
+                        <Ring />
                         {/* <Environment files={"./galaxy.jpg"} background /> */}
                     </Suspense>
                     <OrbitControls />
