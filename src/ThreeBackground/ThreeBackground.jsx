@@ -77,9 +77,9 @@ export default function ThreeBackground() {
                 <EffectComposer>
                     <Suspense>
                         <The3DObject />
-                        <Environment files="hdri_env.exr" />
+                        {/* <Environment files="hdri_env.exr" /> */}
                         {/* <ambientLight color="pink" intensity={0.1} /> */}
-                        <directionalLight color="rgb(50,100,90)" position={[-30, 10, -20]} intensity={60} />
+                        <directionalLight color="rgb(90,60,110)" position={[-30, 10, -20]} intensity={60} />
                         {/* <fog attach="fog" args={['rgb(22,0,43)', 1, 100]} /> */}
                         <DepthOfField focusDistance={0.09} // where to focus
                             focalLength={0.5} // focal length 

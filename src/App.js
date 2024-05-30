@@ -30,11 +30,6 @@ export default function App() {
 
         let space = document.body.scrollHeight / 3;
         setElemSpace(space)
-
-        return () => {
-            window.removeEventListener(pointerListener);
-        }
-
     }, []);
 
     return (
