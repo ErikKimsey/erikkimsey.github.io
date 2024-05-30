@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { motion } from "framer-motion";
 import "./bannerMenu.scss";
+import { Context } from "../context/Context"
 
 // let itemLinks = [
 //     { id: "experience-container", tag: "experience" },
@@ -56,6 +57,9 @@ function BannerMenuItem(props) {
 }
 
 export default function BannerMenu() {
+
+    let { headerAnimComplete, setHeaderAnimComplete } = useContext(Context);
+
     let itemLinks = [
         { id: "skillset-container", tag: "skill set", thisRef: useRef() },
         { id: "experience-container", tag: "experience", thisRef: useRef() },
@@ -71,13 +75,13 @@ export default function BannerMenu() {
 
     return (
         <motion.div className="bannerMenu"
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
                 duration: 0.8,
-                delay: 3.5,
-                ease: [0, 0.71, 0.2, 1.01]
+                // delay: 1,
             }}
+            onAnimationComplete={() => setHeaderAnimComplete(true)}
         >
             {menuLinks &&
                 menuLinks.map((e, i) => {

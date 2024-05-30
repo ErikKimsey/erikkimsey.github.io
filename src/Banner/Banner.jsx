@@ -53,35 +53,35 @@ export default function Banner(props) {
             <div className="text-container">
                 <motion.div
                     className="name banner-item"
-                    initial={{ opacity: 0, scale: 0.5 }}
+                    initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
-                        duration: 0.8,
-                        delay: 4,
-                        ease: [0, 0.71, 0.2, 1.01]
+                        duration: 0.3,
+                        delay: 0,
                     }}
                 >Erik Kimsey</motion.div>
 
                 <motion.div
                     className="role banner-item"
-                    initial={{ opacity: 0, scale: 0.5 }}
+                    initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
-                        duration: 1,
-                        delay: 4.3,
-                        ease: [0, 0.71, 0.2, 1.01]
+                        duration: 0.5,
+                        delay: 0,
                     }}
-                    data-text={currRole}>{currRole}</motion.div>
+                    data-text={currRole}
+                >
+                    {currRole}
+                </motion.div>
 
             </div>
 
             <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                    duration: 1,
-                    delay: 4,
-                    ease: [0, 0.71, 0.2, 1.01]
+                    duration: 0.4,
+                    delay: 0,
                 }}
                 className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</motion.div>
             <BannerMenu />

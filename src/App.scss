@@ -2,6 +2,10 @@
 @import './styles/globals.scss';
 @import './styles/mixins.scss';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // Colors
 $bg-color: rgb(35, 34, 37);
 // $dot-color: rgb(100, 87, 127);

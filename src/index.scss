@@ -13,6 +13,9 @@ $moon: "moon";
 $eight1: "81";
 
 * {
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
     font-weight: 100;
     box-sizing: content-box;
     overflow-x: hidden;
