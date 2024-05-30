@@ -58,7 +58,7 @@ function The3DObject() {
 
 
     return (
-        <group ref={groupRef} dispose={null} position={[2, -3, -7]} rotation={[20, 70, -210]}>
+        <group ref={groupRef} dispose={null} position={[3, -5, -5]} rotation={[20, 70, -110]}>
             <mesh castShadow receiveShadow geometry={geom} material={mat} />
             {/* <mesh castShadow receiveShadow geometry={nodes.Curve007_1.geometry} material={materials['Material.001']} />
             <mesh castShadow receiveShadow geometry={nodes.Curve007_2.geometry} material={materials['Material.002']} /> */}
@@ -76,19 +76,19 @@ export default function ThreeBackground() {
             <Canvas camera={{ position: [0, 0, 0] }} frameloop="demand">
                 <EffectComposer>
                     <Suspense>
-                        <The3DObject />
                         {/* <Environment files="hdri_env.exr" /> */}
-                        {/* <ambientLight color="pink" intensity={0.1} /> */}
-                        <directionalLight color="rgb(90,60,110)" position={[-30, 10, -20]} intensity={60} />
+                        <ambientLight color="pink" intensity={0.1} />
+                        <directionalLight color="rgb(90,60,110)" position={[-30, 0, -30]} intensity={20} />
                         {/* <fog attach="fog" args={['rgb(22,0,43)', 1, 100]} /> */}
+                        <Bloom luminanceThreshold={0.01} luminanceSmoothing={0.1} height={260} />
                         <DepthOfField focusDistance={0.09} // where to focus
-                            focalLength={0.5} // focal length 
+                            focalLength={0.05} // focal length 
                             bokehScale={10} />
                         {/* <Vignette
                             darkness={0.6} // vignette darkness
                             eskil={false} // Eskil's vignette technique
                         /> */}
-                        <Bloom luminanceThreshold={0.01} luminanceSmoothing={0.2} height={260} />
+                        <The3DObject />
                     </Suspense>
                 </EffectComposer>
             </Canvas>
