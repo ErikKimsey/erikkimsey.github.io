@@ -8,9 +8,9 @@ import Footer from "./Footer/Footer";
 import Loading from "./Loading/Loading";
 import Playground from './Playground/Playground';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
-// import Background from './Background/Background';
 import ThreeBackground from './ThreeBackground/ThreeBackground';
 import { Context } from "./context/Context"
+import { Loader } from '@react-three/drei';
 
 
 
@@ -47,10 +47,9 @@ export default function App() {
                 <SkillsExperienceParent />
                 <div style={{ height: "100px" }}></div>
                 <Footer />
-                {
-                    headerAnimComplete ? <ThreeBackground /> : <div className='absolute top-0 bg-violet-500 w-32 h-32'></div>
-                }
-                {/* <Background /> */}
+                {/* {
+                    headerAnimComplete ? <ThreeBackground /> : <Loading />
+                } */}
             </Context.Provider>
         </div >
     );

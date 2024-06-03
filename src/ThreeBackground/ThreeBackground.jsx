@@ -11,25 +11,12 @@ import './threebkgrd.css';
 
 extend({ OrbitControls })
 
-function The3DObject({ }) {
+function The3DCube({ }) {
     const groupRef = useRef();
     const { nodes, materials } = useLoader(GLTFLoader, '/cube.gltf')
 
     let cube = nodes.cube.geometry;
-    let sphere = nodes.sphere.geometry;
     let cubeMat = materials.cube;
-    let sphereMat = materials.sphere;
-
-
-    const options = useMemo(() => {
-        return {
-            x: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-            y: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-            z: { value: 0, min: 0, max: Math.PI * 2, step: 0.01 },
-            visible: true,
-            color: { value: 'lime' },
-        }
-    }, [])
 
     const ctrls = useMemo(() => {
         return {
@@ -52,6 +39,37 @@ function The3DObject({ }) {
     return (
         <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, cubeCtrls.z]} rotation={[0, 33, 11]} >
             <mesh castShadow receiveShadow geometry={cube} material={cubeMat} />
+        </group>
+    )
+}
+
+function The3DSphere({ }) {
+    const groupRef = useRef();
+    const { nodes, materials } = useLoader(GLTFLoader, '/cube.gltf')
+
+    let sphere = nodes.sphere.geometry;
+    let sphereMat = materials.sphere;
+
+    const ctrls = useMemo(() => {
+        return {
+            color: { value: 'black' },
+            x: { value: 0 },
+            y: { value: 0 },
+            z: { value: -3.0 }
+        }
+    }, []);
+
+    let cubeCtrls = useControls("Cube", ctrls);
+
+    useFrame((state) => {
+        if (groupRef.current) {
+            groupRef.current.rotation.y += 0.01
+            groupRef.current.rotation.z += 0.01
+        }
+    })
+
+    return (
+        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, cubeCtrls.z]} rotation={[0, 33, 11]} >
             <mesh geometry={sphere} material={sphereMat} />
         </group>
     )
@@ -76,7 +94,8 @@ export default function ThreeBackground() {
                             eskil={false} // Eskil's vignette technique
                         /> */}
                         <Suspense>
-                            <The3DObject />
+                            <The3DCube />
+                            <The3DSphere />
                         </Suspense>
                     </EffectComposer>
                 </Canvas>

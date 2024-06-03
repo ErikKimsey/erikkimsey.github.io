@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import "./loading.scss";
@@ -12,7 +14,7 @@ export default function Loading() {
     useEffect(() => {
         let loadStr = "LoADiNg...";
         let loadArr = loadStr.split("");
-        let loading = loadArr.map((e) => { return <div className="font-bold font-black sm:text-l md:text-l text-7xl text-blue-600">{e}</div> })
+        let loading = loadArr.map((e) => { return <div className="load-string  sm:text-l md:text-l text-7xl">{e}</div> })
         setLoading(loading)
     }, [])
 
@@ -20,7 +22,7 @@ export default function Loading() {
     const { progress } = useProgress()
 
     return (
-        <div className="absolute box-border flex justify-center content-center self-center top-5 w-9/12 h-2/6 bg-pink-500  z-10">
+        <div className="loading-container absolute flex justify-between content-center w-3/4 top-60 z-10">
             {
                 loading
             }
