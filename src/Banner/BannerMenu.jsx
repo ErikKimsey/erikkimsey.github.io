@@ -22,7 +22,10 @@ const variants = {
 function BannerMenuItem(props) {
     let { tag, link, thisRef } = props;
 
+    let [isActive, setIsActive] = useState(false);
+
     useEffect(() => {
+        setIsActive(true)
         let sk;
         if (document.querySelector(`.${link}`) !== null) {
             sk = document.querySelector(`.${link}`);
@@ -30,6 +33,7 @@ function BannerMenuItem(props) {
     }, [])
 
     function scrollToPage() {
+
         if (link === undefined) {
             return;
         }
