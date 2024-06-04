@@ -7,16 +7,29 @@
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-end;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 15px;
     padding-bottom: 10px;
     margin: 2px;
     background-color: #1d1d1d;
     border-radius: 10px;
 
+    .icon-container {
+        position: relative;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .name-role-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
     .expItemName {
+        padding-left: 10px;
         padding-right: 10px;
         color: aqua;
         // font-weight: 500;
@@ -32,9 +45,10 @@
 
     .expItemStack {
         padding: 2px;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 600;
         color: rgb(255, 254, 200);
+        padding-right: 10px;
     }
 
     .expItemLabel {

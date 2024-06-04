@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import "./styles/experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
 import ExperienceItem from './ExperienceItem';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLink, faAngleRight, faExpand } from "@fortawesome/free-solid-svg-icons";
 
 export default function Experience() {
 
@@ -28,7 +31,12 @@ export default function Experience() {
             <div className="experienceItemsList">
                 {
                     data && data.map((e, i) => {
-                        return <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />
+                        return <div className="experience-item-container">
+                            <div className="icon-container">
+                                <FontAwesomeIcon icon={faExpand} size='2x' />
+                            </div>
+                            <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />
+                        </div>
                     })
                 }
             </div>
