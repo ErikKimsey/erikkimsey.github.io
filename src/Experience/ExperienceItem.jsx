@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faLink, faAngleRight, faExpand } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faAngleRight, faExpand, faEye } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experienceItem.scss"
 
 import ExperienceModal from "./ExperienceModal";
