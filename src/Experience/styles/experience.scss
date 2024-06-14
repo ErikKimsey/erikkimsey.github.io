@@ -7,7 +7,7 @@
     flex-flow: column nowrap;
     align-items: flex-end;
     justify-content: center;
-    overflow: visible;
+    overflow: hidden;
     margin-top: 50px;
     // z-index: 2;
 
@@ -23,6 +23,7 @@
         background-size: cover;
         filter: blur(2px);
         z-index: 0;
+        overflow-y: hidden;
     }
 
     .experience-item-container {
@@ -30,6 +31,7 @@
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        overflow: hidden;
     }
 
     .experienceItemsList {
