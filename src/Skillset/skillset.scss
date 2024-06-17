@@ -75,7 +75,8 @@
             overflow: hidden;
             font-size: small;
             padding: 5px;
-            background-color: $bkgrdPurple;
+            // background-color: $bkgrdPurple;
+            background-color: rgba(0, 0, 0, 0.4);
 
             .skillItem {
                 font-size: 0.9rem;
