@@ -25,19 +25,20 @@ export default function ExperienceItem(props) {
                 transition={{ type: "spring", duration: 1 }}
                 className="experienceItemContainer"
                 onClick={() => (modalOpen ? close() : open())}
-            // style={{ zIndex: index + 4, top: `${(index * 40) + 100}px`, marginLeft: `${(index * 10) - 80}px` }}
             >
-                <div className="name-role-container">
-                    <div className="expItemName">{name}</div>
-                    <div className="expItemRole">{role}</div>
-
+                <div className="name-role-icon-container">
+                    <div className="icon-container">
+                        <FontAwesomeIcon icon={faEye} size='1x' color="rgba(255,255,255, 0.3)" />
+                    </div>
+                    <div className="name-role-container">
+                        <div className="expItemName">{name}</div>
+                        <div className="expItemRole">{role}</div>
+                    </div>
                 </div>
                 <div className="tech-stack-icon-container">
                     <div className="expItemStack">{stack}
                     </div>
                 </div>
-                {/* <div className="expItemLabel">{name}</div>
-                <p className="expItemDate">{dates}</p> */}
             </motion.div >
         )
     }

@@ -11,6 +11,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
+
     .skillset-background-image {
         position: absolute;
         transform: rotate(-6deg);
@@ -34,7 +35,6 @@
     }
 
     .skillsHeader {
-
         font-size: 2rem;
         padding: 5px;
         text-decoration: underline $lighterpink;
@@ -47,24 +47,24 @@
     }
 
     .skillSetItem {
+        // width: 100%;
         display: flex;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
         flex-flow: column;
         justify-content: flex-start;
         align-items: flex-start;
         margin: 4px 0;
         box-sizing: border-box;
         border-radius: 10px;
+        overflow: hidden;
 
         h4 {
-            font-weight: 900;
             width: 100%;
+            font-weight: 900;
             padding: 10px 0 0 10px;
             margin: 0;
             color: $green;
-            background-color: $bkgrdPurple;
+            mix-blend-mode: add;
+            // background-color: $bkgrdPurple;
         }
 
         .skillItemsList {

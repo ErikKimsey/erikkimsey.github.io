@@ -28,13 +28,10 @@ export default function Experience() {
         >
             <div className='experience-background-image'></div>
 
-            <div className="experienceItemsList">
+            <div className="experienceItemsList w-full">
                 {
                     data && data.map((e, i) => {
-                        return <div className="experience-item-container">
-                            <div className="icon-container">
-                                <FontAwesomeIcon icon={faEye} size='1x' color="#948bff" />
-                            </div>
+                        return <div className="experience-item-container w-full">
                             <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />
                         </div>
                     })

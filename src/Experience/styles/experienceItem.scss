@@ -3,9 +3,9 @@
 
 .experienceItemContainer {
 
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    // width: -webkit-fit-content;
+    // width: -moz-fit-content;
+    // width: fit-content;
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
@@ -17,10 +17,18 @@
     border-radius: 10px;
     overflow: hidden;
 
+    .name-role-icon-container {
+        display: flex;
+        flex-flow: row;
+    }
+
     .icon-container {
         position: relative;
-        left: 20px;
-        z-index: 10;
+        // align-self: flex-end;
+        // left: -90%;
+        // top: 15px;
+        z-index: 12;
+        // padding: 2px;
     }
 
     .name-role-container {

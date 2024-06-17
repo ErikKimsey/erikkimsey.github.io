@@ -4,6 +4,7 @@ import BannerMenu from "./BannerMenu";
 import "./banner.scss";
 import { SELF_STATEMENT } from "../__data/data";
 
+
 const ROLES = [
     'UI Engineer',
     'Software Developer',

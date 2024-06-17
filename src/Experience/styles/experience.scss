@@ -28,10 +28,9 @@
 
     .experience-item-container {
         position: relative;
-        width: 100%;
         display: flex;
         justify-content: flex-end;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     .experienceItemsList {
@@ -41,23 +40,15 @@
         align-items: flex-end;
         align-self: flex-end;
         overflow: visible;
-        width: 100%;
+        // width: 100%;
         position: relative;
         background: none;
         z-index: 3;
     }
 
-    .icon-container {
-        position: relative;
-        left: 15px;
-        top: 10px;
-        z-index: 12;
-    }
-
-
     @media only screen and (max-width: $smDevice) {
         flex-flow: column;
-        width: 100%;
+        // width: 100%;
     }
 }
 

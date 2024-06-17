@@ -15,7 +15,7 @@ export default function Skillset() {
     }, [])
 
     return (
-        <div className="skillsetContainer" id="skillset-container">
+        <div className="skillsetContainer w-2/3" id="skillset-container">
             {/* <div className="skillsHeader"></div> */}
             <div className="skillset-background-image"></div>
             <div className="itemContainer">
