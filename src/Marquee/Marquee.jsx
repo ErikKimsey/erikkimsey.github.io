@@ -4,13 +4,6 @@ import { motion, useAnimation } from "framer-motion";
 
 import "./marquee.scss";
 
-let mockData = [
-    { title: "ZMFSBG." },
-    { title: "asdfasdf." },
-    { title: "ZMuryjyujkFSBG." },
-    { title: "cxvcxbg." },
-]
-
 
 export default function Marquee(props) {
     let { customStyles, customDelay, customDur, data, directionLeft } = props;
@@ -70,13 +63,12 @@ export default function Marquee(props) {
                             dataset && dataset.map((e, i) => {
                                 return <motion.h1
                                     transition={{
-                                        duration: 1,
+                                        duration: 2,
                                         delay: staggerMarqueeElements(i),
                                         ease: [0.1, 1, 0.75, .2]
                                     }}
                                     initial={{ opacity: 0.9, scale: 0.9 }}
                                     animate={{ opacity: 0.5, scale: 0.8 }}
-
                                     key={i}
                                 >{e}</motion.h1>
                             })

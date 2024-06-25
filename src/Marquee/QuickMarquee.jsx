@@ -17,12 +17,12 @@ export default function QuickMarquee() {
 
     function createLines() {
         for (let i = 0; i < 40; i++) {
-            lines.push(<div style={{ backgroundColor: "#312a42", height: "80px", width: "22px", margin: "4px", transform: "skew(-15deg)" }}>  </div>)
+            lines.push(<div style={{ backgroundColor: "rgba(0,0,0,0.5)", height: "80px", width: "22px", margin: "4px", transform: "skew(-15deg)" }}>  </div>)
         }
     }
 
     return (
-        <Marquee className="absolute" gradient="true" gradientColor="rgba(0,0,0,0.2)" direction={direction} >
+        <Marquee className="absolute" gradient="true" gradientColor="rgba(0,0,0,0.2)" direction={direction} speed={60} >
             {
                 lines
             }
