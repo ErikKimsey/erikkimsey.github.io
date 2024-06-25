@@ -2,6 +2,10 @@
 @import './../styles/globals.scss';
 @import './../styles/mixins.scss';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .skillsetContainer {
     width: 100%;
     margin: 0;

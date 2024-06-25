@@ -1,13 +1,13 @@
-.skills-experience-container {
-    width: 90vw;
+@import "../styles/globals.scss";
+@import "../styles/responsive.scss";
 
-    //   min-height: 100vh;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.skills-experience-container {
     z-index: 1;
 
-    .space {
-        width: 30vw
-    }
+    .space {}
 }

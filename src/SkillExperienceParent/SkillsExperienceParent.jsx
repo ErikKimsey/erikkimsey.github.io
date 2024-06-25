@@ -10,9 +10,9 @@ export default function SkillsExperienceParent() {
     const expertiseRef = useRef();
 
     return (
-        <div className="skills-experience-container">
+        <div className="skills-experience-container flex-row flex-wrap justify-between w-full">
             {/* <Skillset /> */}
-            <div className="space"></div>
+            <div className="space w-1/3 md:w-full sm:w-full"></div>
             <Experience />
             {/* <Background /> */}
         </div>
