@@ -11,7 +11,8 @@ export default function SkillsExperienceParent() {
 
     return (
         <div className="skills-experience-container">
-            <Skillset />
+            {/* <Skillset /> */}
+            <div className="space"></div>
             <Experience />
             {/* <Background /> */}
         </div>

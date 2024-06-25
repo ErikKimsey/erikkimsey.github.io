@@ -1,7 +1,13 @@
 .skills-experience-container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  z-index: 1;
+    width: 90vw;
+
+    //   min-height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: 1;
+
+    .space {
+        width: 30vw
+    }
 }

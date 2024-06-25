@@ -26,7 +26,7 @@ export default function Experience() {
             id="experience-container"
             ref={containerRef}
         >
-            <div className='experience-background-image'></div>
+            {/* <div className='experience-background-image'></div> */}
 
             <div className="experienceItemsList w-full">
                 {

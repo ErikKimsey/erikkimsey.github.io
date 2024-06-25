@@ -6,15 +6,23 @@ import { faLink, faAngleRight, faExpand, faEye } from "@fortawesome/free-solid-s
 import "./styles/experienceItem.scss"
 
 import ExperienceModal from "./ExperienceModal";
+import { log } from "three/examples/jsm/nodes/Nodes.js";
 
 
 export default function ExperienceItem(props) {
     let { name, stack, dates, role, index, github, soundcloud, url, about } = props;
 
     const [modalOpen, setModalOpen] = useState(false);
+    const [techStackItems, setTechStackItems] = useState([]);
 
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
+
+    useEffect(() => {
+        let splitItems = stack.split(",");
+        console.log(splitItems);
+        setTechStackItems(splitItems);
+    }, []);
 
 
     if (!modalOpen) {
@@ -23,7 +31,7 @@ export default function ExperienceItem(props) {
                 whileHover={{ scale: 1.05, top: "20px" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer"
+                className="experienceItemContainer xs:w-full"
                 onClick={() => (modalOpen ? close() : open())}
             >
                 <div className="name-role-icon-container">
@@ -36,8 +44,14 @@ export default function ExperienceItem(props) {
                     </div>
                 </div>
                 <div className="tech-stack-icon-container">
-                    <div className="expItemStack">{stack}
-                    </div>
+                    {
+                        techStackItems &&
+                        techStackItems.map((e) => {
+                            return <div className="expItemStack">{e}
+                            </div>
+                        })
+                    }
+
                 </div>
             </motion.div >
         )
