@@ -30,7 +30,7 @@ $highlight-color: rgb(255, 75, 255);
 .App {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column;
     margin: 0;
@@ -39,19 +39,38 @@ $highlight-color: rgb(255, 75, 255);
     padding-top: 0;
     scroll-behavior: smooth;
 
+    .background-image {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./assets/images/1x/Asset\ 1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
 
     @media only screen and (max-width: $lgDevice) {
         padding: 0 50px 50px 50px;
     }
 
     @media only screen and (max-width: $mdDevice) {
-        padding: 0 10px;
+
+        .background-image {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("./assets/images/1x/Asset\ 2.png");
+
+        }
 
     }
 
-    @media only screen and (max-width: $smDevice) {
-        padding: 10px;
-    }
+    @media only screen and (max-width: $smDevice) {}
 
     // @media only screen and (max-width: $xsDevice) {
     //     padding: 0;

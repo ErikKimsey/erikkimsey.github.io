@@ -35,6 +35,7 @@ export default function App() {
     return (
         <div className="App">
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
+                <div className='background-image'></div>
                 {/* {elemSpace && <>
         <div style={{ zIndex: 11111, position: "absolute", top: `${elemSpace * 0}px`, height: "100px", width: "200px", background: "none" }} key={1}></div>
         <div style={{ zIndex: 11111, position: "absolute", top: `${elemSpace}px`, height: "100px", width: "200px", background: "#fff" }} key={2}></div>
