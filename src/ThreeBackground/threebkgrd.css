@@ -14,5 +14,23 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    z-index: -2;
+    z-index: 100;
+
+    .ctrls {
+        position: fixed;
+        right: 300px;
+        top: 50px;
+        display: flex;
+        flex-flow: column;
+        width: 300px;
+        height: 200px;
+        justify-content: space-between;
+        z-index: 1000;
+        
+
+        section {
+            display: flex;
+            flex-flow: column;
+        }
+    }
 }
