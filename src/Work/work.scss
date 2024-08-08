@@ -1,7 +1,5 @@
 @import '../styles/globals.scss';
 @import '../styles/responsive.scss';
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 @import '../styles/mixins.scss';
 
 // $dope: 'dope';
@@ -14,50 +12,52 @@
 
 .work-container {
     z-index: 1;
-    height: calc(100vh - 220px);
+    // height: calc(100vh - 220px);
     max-width: 1250px;
-    width: 70%;
+    width: 100%;
     color: #fff;
     margin: 0 auto;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
+    background-color: aqua;
+    overflow-y: scroll;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
     @include fade-load-mixin;
 
-    .slick-slider {
-        height: calc(100vh - 380px);
-        border: none;
-        align-content: center;
-        padding: 20px;
-
-        .slick-arrow {
-            color: $grayish;
-            background-color: $lighterpink;
-            padding: 5px;
-            width: 30px;
-            height: 44px;
-            padding-top: 7px;
-            padding-left: 5px;
-            border-radius: 4px;
-            z-index: 1;
-        }
-    }
-
-    .work-data-list-contaner {
-        margin: 5%;
-        margin-left: 10%;
-        background-color: rgba(255, 255, 255, 0.9);
-        display: flex;
-        flex-flow: column;
+    .carousel-item {
+        width: 400px;
+        height: fit-content;
+        flex-flow: row;
         justify-content: center;
+
+        .carousel-button {
+
+            font-size: 36em;
+            color: black;
+
+            .prev {}
+
+            .next {}
+        }
 
         .data-item-container {
             font-size: 1em;
-            overflow: hidden;
             display: flex;
             flex-flow: column;
             justify-content: center;
             align-items: center;
+            background-color: blueviolet;
+            // background-image: url("/Users/erikkimsey/Desktop/erik_kimsey_portfolio_playground/src/assets/images/blackpill.png");
+
+            .image {
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
 
             .data-item-general {
                 display: flex;
@@ -96,7 +96,7 @@
                 font-size: 1.5em;
                 padding: 0 20px;
                 text-align: center;
-                color: $purple;
+                color: $pink;
             }
 
             .item-description {}
@@ -108,85 +108,29 @@
         }
     }
 
+
+    .work-data-list-contaner {
+        margin: 5%;
+        margin-left: 10%;
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+    }
+
     @media only screen and (max-width: $lgDevice) {
         max-width: $lgDevice;
-        width: 80%;
+        // width: 80%;
         margin-top: 10px;
-        width: 87%;
+        // width: 87%;
         height: 53vh;
     }
 
     @media only screen and (max-width: $mdDevice) {
         margin-top: 42px;
-        width: 87%;
+        // width: 87%;
         height: 70vh;
-
-        .slick-slider {
-            border: none;
-            align-content: center;
-
-            .slick-arrow {
-                color: black;
-            }
-
-            // .slick-dots {
-            //   display: none;
-            //   padding:0;
-            //   padding-bottom: 5px;
-            //   box-sizing: border-box;
-            //   li button:before {
-            //     color: $yellow;
-            //     font-size: 20px;
-            //   }
-            // }
-        }
-
-        .work-data-list-contaner {
-            display: flex;
-            flex-flow: column;
-            height: 98%;
-
-            .data-item-container {
-                font-size: 1em;
-
-                a {
-                    text-decoration: none;
-                    color: $pink;
-                    font-size: 1em;
-                    overflow-wrap: break-word;
-
-                    &:hover {
-                        color: $lighterpink;
-                    }
-                }
-
-                .item-name {
-                    font-size: 1.5em;
-                }
-
-                .item-description {}
-
-                .item-url {
-                    overflow-wrap: hyphens;
-                }
-
-                .item-github {
-                    overflow-wrap: hyphens;
-                }
-
-                .url-and-github-styles {
-                    padding: 0;
-                    // padding: 5px 0 5px 0;
-                }
-
-                .item-stack {
-                    font-size: 1em;
-                    padding: 0 5px;
-                    text-align: center;
-                    color: $purple;
-                }
-            }
-        }
     }
 
     @media only screen and (max-width: $smDevice) {

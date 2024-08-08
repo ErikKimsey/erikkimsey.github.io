@@ -17,8 +17,9 @@
     padding: 15px;
     padding-bottom: 10px;
     margin: 2px;
-    background-color: $bkgrdPurple;
-    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    // background-color: $bkgrdPurple;
+    border-radius: 10px;
     overflow: hidden;
 
     .name-role-icon-container {
@@ -31,7 +32,7 @@
         // align-self: flex-end;
         // left: -90%;
         // top: 15px;
-        z-index: 12;
+        // z-index: 12;
         // padding: 2px;
     }
 
@@ -44,12 +45,15 @@
     .expItemName {
         padding-left: 10px;
         padding-right: 10px;
-        color: aqua;
+
+        color: black;
+        // text-shadow: 0 0 2px aqua;
         // font-weight: 500;
     }
 
     .expItemRole {
-        color: #ff76bb;
+        color: black;
+        // text-shadow: 0 0 2px $pink;
         font-size: .9rem;
         font-weight: 700;
         // padding-bottom: 5px;
@@ -68,10 +72,12 @@
         padding-right: 10px;
         font-size: 0.7rem;
         font-weight: 600;
-        color: #fffec8;
+        color: black;
+        // color: #fffec8;
         padding-right: 10px;
-        border: solid 1px $purple;
-        border-radius: 20px;
+        // border: solid 1px $purple;
+        border: solid 0.5px $peachPuff;
+        border-radius: 5px;
         margin: 2px;
 
     }

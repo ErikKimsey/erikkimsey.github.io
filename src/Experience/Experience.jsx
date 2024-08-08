@@ -3,15 +3,11 @@ import { motion } from "framer-motion";
 import "./styles/experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
 import ExperienceItem from './ExperienceItem';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faLink, faAngleRight, faExpand, faEye } from "@fortawesome/free-solid-svg-icons";
 
 export default function Experience() {
 
     const containerRef = useRef();
     const [data, setData] = useState();
-    let [collapsed, setCollapsed] = useState(true);
 
     useEffect(() => {
         if (EXPERIENCE_DATA && EXPERIENCE_DATA.length > 0) {
@@ -26,13 +22,12 @@ export default function Experience() {
             id="experience-container"
             ref={containerRef}
         >
-            {/* <div className='experience-background-image'></div> */}
 
             <div className="experienceItemsList w-full">
                 {
                     data && data.map((e, i) => {
-                        return <div className="experience-item-container w-full">
-                            <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} key={e.stack} index={i} />
+                        return <div key={i} className="experience-item-container w-full">
+                            <ExperienceItem name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} />
                         </div>
                     })
                 }

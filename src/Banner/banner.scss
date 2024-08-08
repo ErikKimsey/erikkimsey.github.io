@@ -5,10 +5,17 @@
 $hover-color: #fcfa85;
 
 
+
 .banner-container {
     --f-size: 15;
     --f-unit: 1vmin;
     --f: calc(var(--f-size) * var(--f-unit));
+
+    --color-two: #000;
+    --color-one: #fff;
+    // --color-two: #e9e9ff;
+    // --color-one: #ffeaf7;
+    --font-type: $atmos;
 
     // height: 100vh;
     width: 100vw;
@@ -29,15 +36,13 @@ $hover-color: #fcfa85;
 
         .banner-item {
             font-weight: 900;
-            font-family: $quantify;
+            font-family: $eight1;
             font-size: 6em;
             line-height: 1.2;
             position: relative;
             padding: 0;
             overflow: hidden;
             --bg-size: 200%;
-            --color-one: #5372ff;
-            --color-two: #e64595;
             background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
             color: transparent;
             -webkit-background-clip: text;
@@ -52,11 +57,9 @@ $hover-color: #fcfa85;
             padding-right: 20px;
             position: relative;
             overflow: hidden;
-            font-family: $quantify;
-            line-height: 0.8;
+            // font-family: $comfortaa;
+            line-height: 1;
             --bg-size: 200%;
-            --color-one: #5372ff;
-            --color-two: #e80c7a;
             text-shadow: -2px -2px 3px --color-one, 2px 2px 3px --color-two;
             background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
             color: transparent;
@@ -72,8 +75,6 @@ $hover-color: #fcfa85;
             position: relative;
             overflow: hidden;
             --bg-size: 200%;
-            --color-two: #e80c7a;
-            --color-one: #00ffea;
             background: linear-gradient(152deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
             color: transparent;
             -webkit-background-clip: text;
@@ -98,8 +99,6 @@ $hover-color: #fcfa85;
         padding: 10px 0;
         font-size: 2.2em;
         --bg-size: 200%;
-        --color-one: #a542d7;
-        --color-two: #a7ffff;
         background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
         color: transparent;
         -webkit-background-clip: text;
@@ -122,8 +121,11 @@ $hover-color: #fcfa85;
             font-size: 1.4em;
             padding: 0 20px;
             overflow: hidden;
-            color: #fff;
-            text-shadow: 0 0 0 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
+            // color: #fff;
+            // color: "rgba(70,255,166,0.5)";
+            color: #b5b4ae;
+            text-shadow: "2px 2px 3px rgba(255, 0, 149, 0.6), 3px 1px 3px rgba(0, 122, 255, 0.9)";
+            // text-shadow: 0 0 0 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
 
         .bannerMenuItem:first-of-type {
@@ -138,8 +140,20 @@ $hover-color: #fcfa85;
     }
 
     @media only screen and (max-width: $lgDevice) {
+
         // width: 100%;
         // padding-left: 20px;
+        .bannerMenu {
+            flex-flow: column;
+            align-items: flex-start;
+            position: fixed;
+            bottom: 100px;
+            // z-index: 1;
+
+            .bannerMenuItem {
+                font-size: 2.2em;
+            }
+        }
     }
 
     @media only screen and (max-width: $smDevice) {
@@ -154,52 +168,53 @@ $hover-color: #fcfa85;
                 font-weight: 900;
             }
 
-            .name {
-                color: $pink;
-                overflow: hidden;
-                --bg-size: 200%;
-                --color-one: #5372ff;
-                --color-two: #52ED8B;
-                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-animation: move-bg 8s infinite linear;
-                animation: move-bg 8s infinite linear;
-            }
+            // .name {
+            //     color: $pink;
+            //     overflow: hidden;
+            //     --bg-size: 200%;
+            //     --color-one: #5372ff;
+            //     --color-two: #52ED8B;
+            //     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            //     color: transparent;
+            //     -webkit-background-clip: text;
+            //     background-clip: text;
+            //     -webkit-animation: move-bg 8s infinite linear;
+            //     animation: move-bg 8s infinite linear;
+            // }
 
-            .role {
-                color: #fff;
-                padding-left: 0;
-                // padding: 10px 0;
-                overflow: hidden;
-                --bg-size: 200%;
-                --color-one: #ffcea7;
-                --color-two: #fe5bdb;
-                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-animation: move-bg 8s infinite linear;
-                animation: move-bg 8s infinite linear;
-            }
+            // .role {
+            //     color: #fff;
+            //     padding-left: 0;
+            //     // padding: 10px 0;
+            //     overflow: hidden;
+            //     --bg-size: 200%;
+            //     --color-one: #ffcea7;
+            //     --color-two: #fe5bdb;
+            //     background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            //     color: transparent;
+            //     -webkit-background-clip: text;
+            //     background-clip: text;
+            //     -webkit-animation: move-bg 8s infinite linear;
+            //     animation: move-bg 8s infinite linear;
+            // }
         }
 
         .aboutSelfDeveloperContainer {
             width: 100%;
             padding-left: 0;
             // font-family: $eight1;
-            font-size: 1.2em;
-            overflow: hidden;
-            --bg-size: 200%;
-            --color-one: #5372ff;
-            --color-two: #fe5bdb;
-            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-animation: move-bg 8s infinite linear;
-            animation: move-bg 8s infinite linear;
+            font-size: 1.6em;
+            font-weight: 900;
+            // overflow: hidden;
+            // --bg-size: 200%;
+            // --color-one: #5372ff;
+            // --color-two: #fe5bdb;
+            // background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+            // color: transparent;
+            // -webkit-background-clip: text;
+            // background-clip: text;
+            // -webkit-animation: move-bg 8s infinite linear;
+            // animation: move-bg 8s infinite linear;
         }
 
 

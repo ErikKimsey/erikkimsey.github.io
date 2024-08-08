@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 .skillsetContainer {
-    width: 100%;
+    // width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,13 +18,13 @@
 
     .skillset-background-image {
         position: absolute;
-        transform: rotate(-6deg);
+        // transform: rotate(-6deg);
         left: 0;
         width: 100%;
         // height: 440px;
-        height: 30%;
+        height: 10%;
 
-        background-image: url("../assets/images/code.jpeg");
+        // background-image: url("../assets/images/code.jpeg");
 
         /* Add the blur effect */
         filter: blur(6px);
@@ -35,13 +35,16 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1;
+        z-index: 0;
     }
 
     .skillsHeader {
-        font-size: 2rem;
+        font-size: 1.1rem;
+        font-weight: 700;
         padding: 5px;
-        text-decoration: underline $lighterpink;
+        padding-bottom: 10px;
+        // text-decoration: underline $lighterpink;
+        // text-decoration: underline $peachPuff;
     }
 
     .itemContainer {
@@ -51,7 +54,7 @@
     }
 
     .skillSetItem {
-        // width: 100%;
+        width: fit-content;
         display: flex;
         flex-flow: column;
         justify-content: flex-start;
@@ -60,15 +63,16 @@
         box-sizing: border-box;
         border-radius: 10px;
         overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.7);
 
         h4 {
-            width: 100%;
-            font-weight: 900;
+            // width: 100%;
+            // font-weight: 900;
             padding: 10px 0 0 10px;
             margin: 0;
-            color: $green;
+            // color: $green;
+            color: $grayish;
             mix-blend-mode: add;
-            // background-color: $bkgrdPurple;
         }
 
         .skillItemsList {
@@ -80,22 +84,24 @@
             font-size: small;
             padding: 5px;
             // background-color: $bkgrdPurple;
-            background-color: rgba(0, 0, 0, 0.4);
+            // background-color: rgba(0, 0, 0, 0.4);
 
             .skillItem {
-                font-size: 0.9rem;
+                font-size: 1rem;
                 // background-color: $transBlack;
                 margin: 0 10px;
                 font-weight: 900;
+                color: black;
             }
 
             .skillItem:nth-child(odd) {
-                color: $peachPuff;
+                // color: $peachPuff;
+                color: $bkgrdPurple
             }
         }
 
         @media only screen and (max-width: $lgDevice) {
-            width: 100%;
+            // width: 100%;
         }
     }
 }

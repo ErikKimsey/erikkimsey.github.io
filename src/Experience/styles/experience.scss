@@ -9,7 +9,8 @@
     justify-content: center;
     overflow: hidden;
     margin-top: 50px;
-    // z-index: 2;
+    padding: 10px;
+    border-radius: 10px;
 
 
     .experience-background-image {
@@ -22,10 +23,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        opacity: 0.6;
         filter: blur(2px);
         z-index: 0;
         overflow-y: hidden;
-        padding: 0;
         margin: 0;
     }
 
@@ -33,7 +34,6 @@
         position: relative;
         display: flex;
         justify-content: flex-end;
-        // overflow: hidden;
     }
 
     .experienceItemsList {
@@ -43,10 +43,13 @@
         align-items: flex-end;
         align-self: flex-end;
         overflow: visible;
-        // width: 100%;
         position: relative;
         background: none;
         z-index: 3;
+    }
+
+    @media only screen and (max-width: $lgDevice) {
+        padding: 0;
     }
 
     @media only screen and (max-width: $smDevice) {

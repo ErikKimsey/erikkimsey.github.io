@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
 import "./banner.scss";
@@ -22,6 +22,8 @@ export default function Banner(props) {
     let [timer, setTimer] = useState(3000);
     let [rolesIndex, setRolesIndex] = useState(0);
     let [currRole, setCurrRole] = useState();
+
+
 
     useEffect(() => {
         let interval = null;

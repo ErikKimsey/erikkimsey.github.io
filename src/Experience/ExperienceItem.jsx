@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faLink, faAngleRight, faExpand, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experienceItem.scss"
 
 import ExperienceModal from "./ExperienceModal";
-import { log } from "three/examples/jsm/nodes/Nodes.js";
 
 
 export default function ExperienceItem(props) {
-    let { name, stack, dates, role, index, github, soundcloud, url, about } = props;
+    let { name, stack, dates, role, github, url, about } = props;
 
     const [modalOpen, setModalOpen] = useState(false);
     const [techStackItems, setTechStackItems] = useState([]);
@@ -20,7 +18,6 @@ export default function ExperienceItem(props) {
 
     useEffect(() => {
         let splitItems = stack.split(",");
-        console.log(splitItems);
         setTechStackItems(splitItems);
     }, []);
 
@@ -47,7 +44,7 @@ export default function ExperienceItem(props) {
                     {
                         techStackItems &&
                         techStackItems.map((e) => {
-                            return <div className="expItemStack">{e}
+                            return <div key={e} className="expItemStack">{e}
                             </div>
                         })
                     }

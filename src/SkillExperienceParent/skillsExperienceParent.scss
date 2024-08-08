@@ -6,8 +6,44 @@
 @tailwind utilities;
 
 
-.skills-experience-container {
-    z-index: 1;
+@property --x {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
 
-    .space {}
+@property --y {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 100%;
+}
+
+.skills-experience-container {
+    // background-image: url("../assets/images/plasma.jpeg");
+    background: rgb(238, 174, 202);
+    border-radius: 10px;
+    padding: 20px;
+    transition: --x 1s, --y 1s;
+    background: radial-gradient(circle, #eeaeca var(--x), #94bbe9 var(--y));
+    scrollbar-width: none;
+    box-shadow: inset rgba(213, 188, 204, 0.6) 0 4px 2px;
+    // animation: animGrad 5s infinite;
+
+
+    @keyframes animGrad {
+        0% {
+            --x: 0%;
+            --y: 100%;
+        }
+
+        50% {
+            --x: 100%;
+            --y: 0%;
+        }
+
+        100% {
+            --x: 0%;
+            --y: 100%;
+        }
+    }
 }

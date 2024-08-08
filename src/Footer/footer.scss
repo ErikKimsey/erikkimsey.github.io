@@ -34,10 +34,11 @@
         a {
             display: flex;
             padding: 0 10px;
+            color: rgb(186, 186, 186);
             transition: all 500ms;
 
             &:hover {
-                // color: $pink;
+                color: $pink;
                 transform: rotate(10deg) scale(1.1);
             }
         }

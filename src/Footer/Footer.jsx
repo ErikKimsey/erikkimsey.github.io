@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useScroll } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion";
-import resumeLogo from "../assets/icons/resume.svg";
 import "./footer.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,24 +10,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import resume from "../assets/resume/erikkimsey_frontendEngineer_resume.pdf";
 
 
-let peach = "#ffcea7";
 
 export default function Footer() {
-
-    const { scrollY } = useScroll()
-    let [isScrolling, setIsScrolling] = useState(false);
     let [isActive, setIsActive] = useState(true);
-
-    useEffect(() => {
-
-        return scrollY.onChange((e) => {
-            // TODO
-        });
-    }, [])
-
-    useEffect(() => {
-        // console.log(isScrolling);
-    }, [isScrolling])
 
 
     if (isActive) {
@@ -53,22 +37,13 @@ export default function Footer() {
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>
-                        {/* <a target="_blank" href="https://soundcloud.com/oddtreatment">
-              <FontAwesomeIcon icon={faSoundcloud} size="3x" />
-            </a> */}
                         <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
                             <FontAwesomeIcon icon={faLinkedin} size="3x" />
                         </a>
                         <a target="_blank" href={resume}>
                             <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
                         </a>
-                        {/* <div className="resumeText">Resume</div> */}
                     </motion.div>
-                    {/* <div className="textItemContainer">
-                        <div className="textItem">Erik Kimsey</div>
-                        <div className="textItem">Software Developer</div>
-                        <div className="textItem">kimseyerik@gmail.com</div>
-                    </div> */}
                 </motion.div>
             </AnimatePresence>
         )
