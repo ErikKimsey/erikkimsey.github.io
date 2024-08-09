@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d102e7d.css",
-    "main.js": "/static/js/main.3a67d963.js",
+    "main.css": "/static/css/main.cfaae3f0.css",
+    "main.js": "/static/js/main.7bf650ee.js",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
     "static/media/Comfortaa-Regular.ttf": "/static/media/Comfortaa-Regular.886fcced57daea5944e7.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.c6eb380b9f8f0920f934.ttf",
@@ -13,11 +13,11 @@
     "static/media/eightone.ttf": "/static/media/eightone.3bce835f1c0be0dae993.ttf",
     "static/media/Atmos.ttf": "/static/media/Atmos.827c6d5342769c740479.ttf",
     "index.html": "/index.html",
-    "main.4d102e7d.css.map": "/static/css/main.4d102e7d.css.map",
-    "main.3a67d963.js.map": "/static/js/main.3a67d963.js.map"
+    "main.cfaae3f0.css.map": "/static/css/main.cfaae3f0.css.map",
+    "main.7bf650ee.js.map": "/static/js/main.7bf650ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d102e7d.css",
-    "static/js/main.3a67d963.js"
+    "static/css/main.cfaae3f0.css",
+    "static/js/main.7bf650ee.js"
   ]
 }
