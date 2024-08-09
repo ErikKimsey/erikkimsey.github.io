@@ -11,131 +11,86 @@
 
 
 .work-container {
-    z-index: 1;
-    // height: calc(100vh - 220px);
-    max-width: 1250px;
-    width: 100%;
-    color: #fff;
-    margin: 0 auto;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    background-color: aqua;
-    overflow-y: scroll;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    @include fade-load-mixin;
+    align-items: center;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
 
-    .carousel-item {
-        width: 400px;
-        height: fit-content;
-        flex-flow: row;
-        justify-content: center;
-
-        .carousel-button {
-
-            font-size: 36em;
-            color: black;
-
-            .prev {}
-
-            .next {}
-        }
-
-        .data-item-container {
-            font-size: 1em;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            background-color: blueviolet;
-            // background-image: url("/Users/erikkimsey/Desktop/erik_kimsey_portfolio_playground/src/assets/images/blackpill.png");
-
-            .image {
-                height: 400px;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .data-item-general {
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                align-items: center;
-
-            }
-
-            a {
-                text-decoration: none;
-                color: $pink;
-                font-size: 1.2em;
-                overflow: hidden;
-            }
-
-            .url-and-github-styles {
-                transition: all 500ms;
-
-                &:hover {
-                    transform: scale(1.2);
-                    color: darken($pink, 20%);
-                }
-            }
-
-            .item-name {
-                font-size: 2em;
-                letter-spacing: 2px;
-                text-align: center;
-                padding-top: 10px;
-                font-weight: 100;
-                color: $darkGrayish;
-            }
-
-            .item-stack {
-                font-size: 1.5em;
-                padding: 0 20px;
-                text-align: center;
-                color: $pink;
-            }
-
-            .item-description {}
-
-            .item-url {}
-
-            .item-github {}
-
-        }
-    }
-
-
-    .work-data-list-contaner {
-        margin: 5%;
-        margin-left: 10%;
-        background-color: rgba(255, 255, 255, 0.9);
+    .coming-soon-container {
+        // position: absolute;
+        height: 100%;
         display: flex;
         flex-flow: column;
         justify-content: center;
+        align-items: center;
+
+        img {
+            border-radius: 20px;
+            // width: 50%;
+            // height: 100%;
+            // object-fit: contain;
+            // border-radius: 20px;
+            // padding: 100px;
+            // border-radius: 20px;
+        }
 
     }
 
+
+    // .coming-soon-container {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     left: 0;
+    //     top: 10rem;
+    //     display: flex;
+    //     flex-flow: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     transform: rotate(-70deg);
+
+    //     h1 {
+    //         // position: absolute;
+    //         font-size: 8em;
+    //         // width: 100%;
+    //         height: fit-content;
+    //     }
+
+    //     .coming {
+    //         color: gray;
+    //         top: 100px;
+    //     }
+
+    //     .soon {
+    //         bottom: 100px;
+    //         color: white;
+    //         transform: rotate(180deg);
+    //     }
+    // }
+
+
+
     @media only screen and (max-width: $lgDevice) {
-        max-width: $lgDevice;
+        // max-width: $lgDevice;
         // width: 80%;
-        margin-top: 10px;
+        // margin-top: 10px;
         // width: 87%;
-        height: 53vh;
+        // height: 53vh;
     }
 
     @media only screen and (max-width: $mdDevice) {
-        margin-top: 42px;
+        // margin-top: 42px;
         // width: 87%;
-        height: 70vh;
+        // height: 70vh;
     }
 
     @media only screen and (max-width: $smDevice) {
-        margin-top: 35px;
-        width: 95%;
-        height: 70vh;
+        // margin-top: 35px;
+        // width: 95%;
+        // height: 70vh;
     }
 }

@@ -13,35 +13,21 @@ export default function Work() {
     };
 
     const goToPrev = () => {
+        console.log(currentIndex);
+
         setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
     };
 
     return (
         <div className="work-container">
-            {data.map((e, i) => {
-                return (
-                    <div
-                        className={`carousel-item ${i === currentIndex ? 'active' : ''}`}
-                        key={i}
-                    >
-                        <div key={e.title} className="data-item-container">
+            <div className='coming-soon-container'>
+
+                <img src={"https://i.imgur.com/7yDJwj1.png"} />
+            </div>
+            {/* <div className='coming-soon-container'>
 
 
-                            <img src={e.img} className='image' />
-
-                            <div className="item-name data-item-general" style={{ fontSize: '2rem' }}>
-                                {e.title}
-                            </div>
-                            <div className="item-stack data-item-general">{e.role}</div>
-                            <div className="">{e.technology}</div>
-                        </div>
-                    </div>
-                );
-
-            }
-            )}
-            <button onClick={goToPrev} className="carousel-button prev">‹</button>
-            <button onClick={goToNext} className="carousel-button next">›</button>
+            </div> */}
         </div>
     );
 }
