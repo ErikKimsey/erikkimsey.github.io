@@ -10,7 +10,7 @@ import { Context } from "../context/Context"
 
 const variants = {
     transition: {
-        duration: 0.8,
+        duration: 1,
         delay: 1.4,
         ease: [0, 0.71, 0.2, 1.01],
         y: { stiffness: 1000 }
@@ -51,7 +51,7 @@ function BannerMenuItem(props) {
             ref={thisRef}
             className="bannerMenuItem"
             variants={variants}
-            whileHover={{ scale: 1.05, color: "rgba(70,255,166,0.5)", textShadow: "2px 2px 3px rgba(255, 0, 149, 0.6), 3px 1px 3px rgba(0, 122, 255, 0.9)" }}
+            whileHover={{ scale: 1.05, color: "#ffceaf" }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToPage}
         >

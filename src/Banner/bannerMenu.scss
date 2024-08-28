@@ -1,3 +1,5 @@
+@import './../styles/globals.scss';
+
 .bannerMenu {
     box-sizing: border-box;
     display: flex;
@@ -5,7 +7,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    // padding: 5px;
 
     .bannerMenuItem {
         color: #fff;

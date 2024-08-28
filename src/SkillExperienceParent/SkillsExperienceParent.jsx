@@ -11,7 +11,7 @@ export default function SkillsExperienceParent() {
 
     return (
         <div className="skills-experience-container flex-row flex-wrap justify-between w-full">
-            {/* <Skillset /> */}
+            <Skillset />
             <div className="space w-1/3 md:w-full sm:w-full"></div>
             <Experience />
             {/* <Background /> */}

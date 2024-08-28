@@ -18,8 +18,8 @@ export default function SkillsetItem(props) {
 
     return (
         <div className="skillSetItem relative">
-            <QuickMarquee />
-            {discipline && <h4 className="z-10">{discipline}__</h4>}
+            {/* <QuickMarquee /> */}
+            {discipline && <p className="z-10 skillset-label">{discipline}__</p>}
             <div className="skillItemsList z-10">
                 {
                     skills && skills.map((e) => {
