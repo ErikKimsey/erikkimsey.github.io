@@ -12,7 +12,7 @@ export default function Loading() {
 
 
     useEffect(() => {
-        let loadStr = "LoADiNg...";
+        let loadStr = "";
         let loadArr = loadStr.split("");
         let loading = loadArr.map((e) => { return <div className="load-string  sm:text-l md:text-l text-7xl">{e}</div> })
         setLoading(loading)

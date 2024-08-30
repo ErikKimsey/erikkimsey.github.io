@@ -31,7 +31,7 @@ export default function ExperienceItem(props) {
                 whileHover={{ scale: 1.05, top: "20px" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer xl:w-fit lg:w-fit md:w-full sm:w-full xs:w-full"
+                className="experienceItemContainer w-fit  xs:w-full"
                 onClick={() => (modalOpen ? close() : open())}
             >
                 <div className="name-role-icon-container">
