@@ -2,16 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import UAParser from "ua-parser-js";
 import './App.scss';
 import './Banner/banner.scss';
-import P5Sketch from './P5Sketch/P5Sketch';
+// import P5Sketch from './P5Sketch/P5Sketch';
 import Bubbling from "./P5Sketch/Bubbling";
 import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
-import Loading from "./Loading/Loading";
 import Playground from './Playground/Playground';
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
-import ThreeBackground from './ThreeBackground/ThreeBackground';
+// import ThreeBackground from './ThreeBackground/ThreeBackground';
 import { Context } from "./context/Context"
-import { Loader } from '@react-three/drei';
+// import { Loader } from '@react-three/drei';
 
 
 
@@ -46,7 +45,7 @@ export default function App() {
       </>
       } */}
                 {/* <P5Sketch /> */}
-                <Bubbling />
+                {/* <Bubbling /> */}
                 {/* <Playground /> */}
                 <Landing label={"Experience"} navTo={"experience"} />
                 <SkillsExperienceParent />

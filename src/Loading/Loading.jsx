@@ -24,7 +24,7 @@ export default function Loading() {
     return (
         <div className="loading-container absolute flex justify-between content-center w-3/4 top-60 z-10">
             {
-                loading
+                // loading
             }
         </div>
     )

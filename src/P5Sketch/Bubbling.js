@@ -36,7 +36,6 @@ export default function Bubbling({ props }) {
     }
 
     function setup(p5, canvasParentRef) {
-        console.log("canvasParentRef: " + canvasParentRef);
 
         p5.createCanvas(p5.displayWidth, p5.displayHeight).parent(canvasParentRef);
 
