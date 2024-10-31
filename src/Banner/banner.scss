@@ -98,7 +98,7 @@ $hover-color: #fcfa85;
 
     .aboutSelfDeveloperContainer {
         position: relative;
-        width: 50%;
+        width: 60%;
         padding: 10px 0;
         font-size: 4em;
         line-height: 1;
@@ -220,30 +220,6 @@ $hover-color: #fcfa85;
             animation: move-bg 8s infinite linear;
         }
 
-
-
-        .name {
-            // font-size: 1.3rem;
-        }
-
-        .bannerMenu {
-            // width: 100%;
-            // box-sizing: border-box;
-            // display: flex;
-            // flex-flow: row;
-            // justify-content: flex-start;
-
-            // .bannerMenuItem {
-            //     font-size: 1.7em;
-            //     padding: 0 20px;
-            //     overflow: hidden;
-            //     text-shadow: none;
-            // }
-
-            // .bannerMenuItem:first-of-type {
-            //     padding: 0;
-            // }
-        }
 
         @keyframes move-bg {
             to {
