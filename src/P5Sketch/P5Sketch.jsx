@@ -172,7 +172,7 @@ export default function P5Sketch({ props }) {
                 // console.log(dist);
 
 
-                let distScale = p5.map(dist, 1, 3000, 2, 12);
+                let distScale = p5.map(dist, 1, 3000, 8, 22);
 
                 distScale = p5.sin(distScale) * 10;
                 if (dist < max_distance * 29) {

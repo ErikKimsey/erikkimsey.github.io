@@ -36,7 +36,7 @@ export default function Traveling(props) {
             {/* <Box position={new THREE.Vector3(0, -1, 0)} /> */}
             <directionalLight color="#ffffff" intensity={5} position={[-5, 0, 5]} />
             <OrbitControls />
-            <Sparkles size={2} amount={100} scale={20} />
+            <Sparkles size={10} amount={100} scale={20} color={"#241e32"} speed={0.3} />
             {/* <ambientLight intensity={1} color="#fff" /> */}
             <EffectComposer>
                 <Bloom
