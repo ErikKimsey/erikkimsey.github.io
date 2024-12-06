@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import UAParser from "ua-parser-js";
 import './App.scss';
 import './Banner/banner.scss';
-// import P5Sketch from './P5Sketch/P5Sketch';
+import P5Sketch from './P5Sketch/P5Sketch';
 import Bubbling from "./P5Sketch/Bubbling";
 import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
@@ -45,7 +45,6 @@ export default function App() {
       </>
       } */}
                 {/* <P5Sketch /> */}
-                {/* <Bubbling /> */}
                 {/* <Playground /> */}
                 <Landing label={"Experience"} navTo={"experience"} />
                 <SkillsExperienceParent />

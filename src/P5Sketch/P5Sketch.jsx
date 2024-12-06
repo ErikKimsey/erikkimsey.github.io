@@ -4,6 +4,7 @@ import deviceType from "../utils/mobileDetection";
 import P5Cursor from "./P5Cursor";
 import BackgroundNoise from "./BackgroundNoise";
 import LandingText from "./LandingText";
+import { log } from "three/examples/jsm/nodes/Nodes.js";
 
 
 
@@ -52,6 +53,8 @@ export default function P5Sketch({ props }) {
     let img;
     let input;
     let plantXPos, plantYPos, plantH, plantW;
+    let currDotColorHSV = 180;
+    let hsvGoingUp = true;
 
     let landingTextInstances = [];
 
@@ -60,18 +63,22 @@ export default function P5Sketch({ props }) {
         setDimens(props);
         let device = deviceType();
         setDevType(device);
-        // window.addEventListener('resize', windowResized);
+        window.addEventListener('resize', windowResized);
         return () =>
-            console.log("fun time");
-        // window.removeEventListener('resize', windowResized)
+            // console.log("fun time");
+            window.removeEventListener('resize', windowResized)
     }, []);
 
     useLayoutEffect(() => {
         setDimens(props);
         let device = deviceType();
         setDevType(device);
-        // window.addEventListener('resize', windowResized);
+        window.addEventListener('resize', windowResized);
     }, []);
+
+    function windowResized() {
+        console.log("wundow windowResized");
+    }
 
 
     function initTextElements(p5) {
@@ -92,11 +99,12 @@ export default function P5Sketch({ props }) {
         // p5.noStroke();
 
         setP5(p5);
+
+
         p5.createCanvas(p5.displayWidth, p5.displayHeight).parent(canvasParentRef);
         initTextElements(p5);
-
         p5.colorMode(p5.HSL);
-
+        p5.angleMode(p5.DEGREES);
         p5.frameRate(15);
         orbCursor = new P5Cursor(p5, 22);
         backgroundNoise = new BackgroundNoise(p5, 0.0, 0.0, p5.displayWidth, p5.displayHeight, otherColors.bkgrdPurple, otherColors.bkgrdGray);
@@ -158,20 +166,39 @@ export default function P5Sketch({ props }) {
 
         for (let i = max_distance; i <= p5.displayWidth - max_distance; i += max_distance) {
             for (let j = 0; j <= p5.displayHeight - max_distance; j += max_distance) {
-                // let size = p5.dist(p5.mouseX, p5.mouseY, i, j);
-                // size = (size / max_distance) * 22;
-                // p5.stroke(lineColor());
-                let dist = p5.dist(p5.mouseX, p5.mouseY, i, j);
-                let distScale = p5.map(dist, 1, 3000, 2, 10);
-                distScale = p5.sin(distScale) * 10;
-                console.log(distScale);
-                if (dist < max_distance * 29) {
-                    // p5.strokeWeight(p5.map(distScale, 2, 10, 0.1, 1));
-                    // p5.line(i, j, p5.mouseX, p5.mouseY);
 
-                    p5.point(i, j);
-                    p5.strokeWeight(distScale - 3);
-                    p5.stroke(`rgb(77,77,77)`);
+                // "radius" from mouse
+                let dist = p5.dist(p5.mouseX, p5.mouseY, i, j);
+                // console.log(dist);
+
+
+                let distScale = p5.map(dist, 1, 3000, 2, 12);
+
+                distScale = p5.sin(distScale) * 10;
+                if (dist < max_distance * 29) {
+
+                    // 𝑥=𝑟cos𝜃, 𝑦=𝑟sin𝜃.
+                    let xAngle =
+                        //  
+
+                        p5.point(i, j);
+                    p5.strokeWeight(distScale);
+                    p5.stroke(currDotColorHSV, 100, 50);
+
+                    if (currDotColorHSV >= 320) {
+                        hsvGoingUp = false;
+                    }
+
+                    if (currDotColorHSV <= 160) {
+                        hsvGoingUp = true;
+                    }
+
+                    if (currDotColorHSV < 320 && hsvGoingUp) {
+                        currDotColorHSV += 0.005;
+                    }
+                    if (currDotColorHSV > 160 && !hsvGoingUp) {
+                        currDotColorHSV -= 0.005;
+                    }
                     //
                 }
 
