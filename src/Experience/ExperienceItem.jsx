@@ -20,7 +20,6 @@ export default function ExperienceItem(props) {
 
     useEffect(() => {
         let splitItems = stack.split(",");
-        console.log(splitItems);
         setTechStackItems(splitItems);
     }, []);
 

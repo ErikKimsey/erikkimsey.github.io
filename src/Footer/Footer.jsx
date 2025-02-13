@@ -27,7 +27,6 @@ export default function Footer() {
     }, [])
 
     useEffect(() => {
-        // console.log(isScrolling);
     }, [isScrolling])
 
 

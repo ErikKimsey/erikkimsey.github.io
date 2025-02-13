@@ -1,7 +1,7 @@
 // The document contains data used to populate fields throughout the site.
 // Google News API key: 670f9cd6f82643a99331cc217f30f479
 
-const SELF_STATEMENT = "Software engineer.  Beautiful, dynamic, and intuitive user-interfaces.";
+const SELF_STATEMENT = "Dynamic, intuitive, and beautiful innovative technologies.";
 
 const LANGUAGES = [
     'LANGUAGES',

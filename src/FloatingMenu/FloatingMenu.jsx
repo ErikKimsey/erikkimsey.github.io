@@ -14,7 +14,6 @@ export default function FloatingMenu() {
 
     function updateMousePos(e) {
         let { clientX, clientY, screenX, screenY } = e;
-        console.log(e);
         setMousePos({
             mX: clientX,
             mY: clientY
@@ -24,8 +23,6 @@ export default function FloatingMenu() {
     }
 
     useEffect(() => {
-        console.log("FLLOATIG MENNPU");
-
         document.addEventListener("mousemove", updateMousePos);
         return () => document.removeEventListener("mousemove", updateMousePos);
     }, [])

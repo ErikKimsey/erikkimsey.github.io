@@ -30,6 +30,18 @@ const dropIn = {
 export default function ExperienceModal(props) {
     let { name, about, stack, dates, role, url, github, handleClose } = props;
 
+    let [footer, setFooter] = useState();
+
+    useEffect(() => {
+        let foot = document.querySelector(".footerContainer");
+        foot.style.zIndex = -10;
+
+        return () => {
+            let foot = document.querySelector(".footerContainer");
+            foot.style.zIndex = 100;
+        }
+    }, [])
+
     return (
         <ModalBackdrop onClick={handleClose}>
             <motion.div
@@ -40,9 +52,11 @@ export default function ExperienceModal(props) {
                 animate="visible"
                 exit="exit"
             >
-                <div className="expItemRole">{role}</div>
-                <div className="expItemStack">{stack}</div>
-                <div className="expItemLabel">{name}</div>
+                <div className="headerContainer">
+                    <div className="expItemRole">{role}</div>
+                    <div className="expItemStack">{stack}</div>
+                    <div className="expItemLabel">{name}</div>
+                </div>
 
                 <>
                     <ul className="expAboutList">

@@ -7,7 +7,6 @@ function letterCasing(params) {
     if (params !== '' && typeof params === 'string') {
         params.toLowerCase();
     }
-    // console.log(params);
 }
 
 export default letterCasing;

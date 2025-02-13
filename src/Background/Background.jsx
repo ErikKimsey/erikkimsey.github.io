@@ -52,11 +52,9 @@ export default function Background() {
     }
 
     function delay(arr1, arr2, index) {
-        console.log(arr1, arr2, index);
         setTimeout(() => {
             arr1[index] = arr2[index];
             let j = arr1.join('');
-            // console.log(j);
             setDisplayed(j);
         }, 1000);
 

@@ -33,11 +33,6 @@ export default function Menu(props) {
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
 
-
-    useEffect(() => {
-        // console.log(isOpen);
-    }, [isOpen])
-
     return (
         <motion.nav
             className='navContainer'
