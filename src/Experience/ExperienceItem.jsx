@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experienceItem.scss"
 
+
+
 import ExperienceModal from "./ExperienceModal";
 
 export default function ExperienceItem(props) {
@@ -43,7 +45,7 @@ export default function ExperienceItem(props) {
                     {
                         techStackItems &&
                         techStackItems.map((e) => {
-                            return <div className="expItemStack">{e}
+                            return <div className="expItemStack" key={e}>{e}
                             </div>
                         })
                     }
@@ -56,8 +58,8 @@ export default function ExperienceItem(props) {
         return (
             <ModalContainer>
                 {modalOpen && (
-                    <ExperienceModal modalOpen={modalOpen} handleClose={close}
-                        name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github} key={stack}
+                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close}
+                        name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github}
                     />
                 )}
             </ModalContainer>
