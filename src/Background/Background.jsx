@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./background.scss";
 import { faL } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,7 +18,6 @@ export default function Background() {
     const [currI, setCurrI] = useState(0);
 
     // ?
-    const [subCount, setSubCount] = useState(0);
     const [hasLoaded, setLoaded] = useState(false);
 
     // ?

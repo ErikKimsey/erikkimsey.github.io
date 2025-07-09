@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faSoundcloud, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ModalBackdrop from "./ModalBackdrop";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experienceModal.scss"
@@ -30,7 +30,6 @@ const dropIn = {
 export default function ExperienceModal(props) {
     let { name, about, stack, dates, role, url, github, handleClose } = props;
 
-    let [footer, setFooter] = useState();
 
     useEffect(() => {
         let foot = document.querySelector(".footerContainer");

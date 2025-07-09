@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import QuickMarquee from "../Marquee/QuickMarquee";
 
 import "./skillset.scss";
 
@@ -18,7 +17,6 @@ export default function SkillsetItem(props) {
 
     return (
         <div className="skillSetItem relative">
-            {/* <QuickMarquee /> */}
             {discipline && <p className="z-10 skillset-label">{discipline}__</p>}
             <div className="skillItemsList z-10">
                 {

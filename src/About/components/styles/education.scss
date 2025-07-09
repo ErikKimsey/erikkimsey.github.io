@@ -15,12 +15,6 @@ $education: $purple;
         font-weight: 400;
     }
 
-    ul {
-        list-style-type: square;
-
-        li {}
-    }
-
     .major {
         color: $lighterpink;
         font-weight: 100;
@@ -37,13 +31,13 @@ $education: $purple;
         color: $teal;
     }
 
-    .curriculum-container {
-        .curriculum-header {}
+    // .curriculum-container {
+    //     .curriculum-header {}
 
-        ul {
-            li {}
-        }
-    }
+    //     ul {
+    //         li {}
+    //     }
+    // }
 
     .tech-container {
         .tech-header {}
@@ -60,12 +54,4 @@ $education: $purple;
             li {}
         }
     }
-
-    @media only screen and (max-width: $lgDevice) {}
-
-    @media only screen and (max-width: $mdDevice) {}
-
-    @media only screen and (max-width: $smDevice) {}
-
-    @media only screen and (max-width: $xsDevice) {}
 }
