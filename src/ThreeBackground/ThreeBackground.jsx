@@ -29,15 +29,15 @@ function The3DCube({ }) {
 
     let cubeCtrls = useControls("Cube", ctrls);
 
-    useFrame((state) => {
-        if (groupRef.current) {
-            groupRef.current.rotation.y += 0.01
-            groupRef.current.rotation.z += 0.01
-        }
-    })
+    // useFrame((state) => {
+    //     if (groupRef.current) {
+    //         groupRef.current.rotation.y += 0.01
+    //         groupRef.current.rotation.z += 0.01
+    //     }
+    // })
 
     return (
-        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, cubeCtrls.z]} rotation={[0, 33, 11]} >
+        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, -10]} rotation={[40, 110, 11]} >
             <mesh castShadow receiveShadow geometry={cube} material={cubeMat} />
         </group>
     )
@@ -61,15 +61,15 @@ function The3DSphere({ }) {
 
     let cubeCtrls = useControls("Cube", ctrls);
 
-    useFrame((state) => {
-        if (groupRef.current) {
-            groupRef.current.rotation.y += 0.01
-            groupRef.current.rotation.z += 0.01
-        }
-    })
+    // useFrame((state) => {
+    //     if (groupRef.current) {
+    //         groupRef.current.rotation.y += 0.01
+    //         groupRef.current.rotation.z += 0.01
+    //     }
+    // })
 
     return (
-        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, cubeCtrls.z]} rotation={[0, 33, 11]} >
+        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, 4, -10]} rotation={[45, 33, 11]} >
             <mesh geometry={sphere} material={sphereMat} />
         </group>
     )
@@ -85,7 +85,7 @@ export default function ThreeBackground() {
                     <EffectComposer>
                         {/* <Environment files="public/hubble.png" /> */}
                         {/* <ambientLight color="black" intensity={0.1} /> */}
-                        <directionalLight color="rgb(90,90,90)" position={[-30, 20, -10]} intensity={10} />
+                        <directionalLight color="rgb(90,90,90)" position={[40, 30, 0]} rotation={[90, 0, 0]} intensity={100} />
                         {/* <fog attach="fog" args={['rgb(22,0,43)', 1, 100]} /> */}
                         <Bloom luminanceThreshold={0.01} luminanceSmoothing={0.01} height={260} />
                         {/* <DepthOfField focusDistance={0.01} focalLength={0.01} bokehScale={10} /> */}

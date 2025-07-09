@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
+import ThreeBackground from "../ThreeBackground/ThreeBackground";
 
 
 import { LANGUAGES, FRONTEND, BACKEND, THREE_D, DESIGN_TOOLS, MULTIMEDIA_WEB, THE_WHO_AM_I, CONTACT_DATA, AUDIO_VIDEO } from "../__data/data";
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
+
 
 function SplitData(str) {
     let arr = str.split(" ");
@@ -33,6 +35,7 @@ function Landing(props) {
             id="landing-container"
             ref={sketchRef}
         >
+            {/* <ThreeBackground /> */}
             <Banner timerTime={3000} />
         </div>
     );

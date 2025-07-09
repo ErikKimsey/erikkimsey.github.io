@@ -4,6 +4,7 @@
     "private": true,
     "homepage": "https://erikkimsey.github.io",
     "dependencies": {
+        "@babylonjs/core": "^7.52.3",
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
         "@fortawesome/free-brands-svg-icons": "^6.5.2",
         "@fortawesome/free-solid-svg-icons": "^6.5.2",
@@ -20,7 +21,6 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-fast-marquee": "^1.6.4",
-        "react-p5": "^1.3.30",
         "react-router-dom": "^6.23.1",
         "react-router-hash-link": "^2.4.3",
         "react-scripts": "^5.0.1",
