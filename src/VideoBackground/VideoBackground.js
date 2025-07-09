@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from "react";
-
-
-import posterImage from "../assets/images/blackpill.png";
-import videoUrl from "/Users/erikkimsey/Desktop/erik_kimsey_portfolio_playground/src/assets/images/erikkimsey_blender_render.mp4";
-
+import { useEffect, useState } from "react";
+import videoUrl from "../assets/videos/ek_dot_com_bkgrd_video.webm";
 import "./videobackground.css";
 
 
 
 export default function VideoBackground() {
 
-    let [poster, setPoster] = useState()
     let [video, setVideo] = useState()
 
     useEffect(() => {
-        setPoster(posterImage);
         setVideo(videoUrl)
     })
 
     return (
         <div className="video-background-container">
             {
-                video && <video autoPlay muted loop poster={poster}>
+                video && <video autoPlay muted loop>
                     <source src={video} type="video/mp4" />
                 </video>
 
