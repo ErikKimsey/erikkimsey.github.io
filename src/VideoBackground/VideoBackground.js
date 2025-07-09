@@ -28,7 +28,7 @@ export default function VideoBackground() {
                     <img src={posterImg} alt="Gem Ring" />
                     :
 
-                    <video className="video-background-video" src={video} type="video/mp4" autoPlay muted />
+                    <video className="video-background-video" src={video} type="video/mp4" autoPlay muted loop />
 
             }
         </div>
