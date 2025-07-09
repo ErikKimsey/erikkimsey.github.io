@@ -33,7 +33,6 @@ function Landing(props) {
             id="landing-container"
             ref={sketchRef}
         >
-            <ThreeBackground />
             <Banner timerTime={3000} />
         </div>
     );

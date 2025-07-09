@@ -8,7 +8,6 @@
 
 // Colors
 $bg-color: rgb(35, 34, 37);
-// $dot-color: rgb(100, 87, 127);
 $dot-color: rgb(11, 11, 11);
 
 // Dimensions
@@ -35,7 +34,6 @@ $highlight-color: rgb(255, 75, 255);
     flex-flow: column;
     margin: 0;
     box-sizing: border-box;
-    // padding: 0 100px 50px 100px;
     padding-top: 0;
     scroll-behavior: smooth;
 
@@ -45,7 +43,6 @@ $highlight-color: rgb(255, 75, 255);
         top: 0;
         width: 100vw;
         height: 100vh;
-        // background-image: url("./assets/images/1x/Asset\ 1.png");
         background-size: cover;
         background-repeat: no-repeat;
         z-index: -1;

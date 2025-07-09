@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { useRef, Suspense, useMemo } from 'react';
-import { Canvas, useLoader, useFrame, extend, useThree } from '@react-three/fiber'
-import { OrbitControls, Environment } from '@react-three/drei';
-import { EffectComposer, DepthOfField, Bloom } from '@react-three/postprocessing'
+import { Canvas, useLoader, extend } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei';
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { GLTFLoader } from '../../node_modules/three/examples/jsm/loaders/GLTFLoader';
-import { useControls } from 'leva'
+
 
 
 import './threebkgrd.css';
@@ -27,7 +27,7 @@ function The3DCube({ }) {
         }
     }, []);
 
-    let cubeCtrls = useControls("Cube", ctrls);
+    // let cubeCtrls = useControls("Cube", ctrls);
 
     // useFrame((state) => {
     //     if (groupRef.current) {
@@ -37,7 +37,7 @@ function The3DCube({ }) {
     // })
 
     return (
-        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, cubeCtrls.y, -10]} rotation={[40, 110, 11]} >
+        <group dispose={null} ref={groupRef} rotation={[40, 110, 11]} >
             <mesh castShadow receiveShadow geometry={cube} material={cubeMat} />
         </group>
     )
@@ -59,7 +59,7 @@ function The3DSphere({ }) {
         }
     }, []);
 
-    let cubeCtrls = useControls("Cube", ctrls);
+    // let cubeCtrls = useControls("Cube", ctrls);
 
     // useFrame((state) => {
     //     if (groupRef.current) {
@@ -69,7 +69,7 @@ function The3DSphere({ }) {
     // })
 
     return (
-        <group dispose={null} ref={groupRef} position={[cubeCtrls.x, 4, -10]} rotation={[45, 33, 11]} >
+        <group dispose={null} ref={groupRef} rotation={[45, 33, 11]} >
             <mesh geometry={sphere} material={sphereMat} />
         </group>
     )
