@@ -34,7 +34,7 @@ $hover-color: #fcfa85;
         .banner-item {
             font-weight: 900;
             font-family: $quantify;
-            font-size: 6em;
+            font-size: 2rem;
             line-height: 1.2;
             position: relative;
             padding: 0;
@@ -97,10 +97,11 @@ $hover-color: #fcfa85;
     }
 
     .aboutSelfDeveloperContainer {
+        word-break: keep-all;
         position: relative;
         width: 60%;
         padding: 10px 0;
-        font-size: 2em;
+        font-size: 1.5rem;
         line-height: 1;
         --bg-size: 200%;
         --color-one: #a542d7;
@@ -124,7 +125,7 @@ $hover-color: #fcfa85;
         filter: saturate(200%);
 
         .bannerMenuItem {
-            font-size: 1.4em;
+            font-size: 1.4rem;
             padding: 0 20px;
             overflow: hidden;
             color: #fff;
@@ -146,7 +147,7 @@ $hover-color: #fcfa85;
         .aboutSelfDeveloperContainer {
             width: 90%;
             padding-left: 0;
-            font-size: 2em;
+            font-size: 1.5rem;
             // overflow: hidden;
             hyphens: none;
             --bg-size: 200%;
@@ -168,7 +169,7 @@ $hover-color: #fcfa85;
             width: 100%;
 
             .banner-item {
-                font-size: 4em;
+                font-size: 2rem;
                 overflow: hidden;
                 font-weight: 900;
             }
@@ -207,7 +208,7 @@ $hover-color: #fcfa85;
         .aboutSelfDeveloperContainer {
             width: 100%;
             padding-left: 0;
-            font-size: 2em;
+            font-size: 1.5rem;
             overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
@@ -240,6 +241,6 @@ $hover-color: #fcfa85;
             }
         }
 
-        font-size: 0.7em;
+        font-size: 0.7rem;
     }
 }

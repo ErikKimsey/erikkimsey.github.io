@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./videobackground.css";
 import videoUrl from "../assets/videos/ek_dot_com_bkgrd_video.webm";
-import posterImg from "../assets/images/1x/Asset 2.png";
+import posterImg from "../assets/images/gem_ring_mobile.png";
 
 
 export default function VideoBackground() {

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import "./menu.scss";
 
-import RESUME from "./erikkimsey_frontendEngineer_resume.pdf"
+// import RESUME from "./erikkimsey_frontendEngineer_resume.pdf";
+import RESUME from "./erik_kimsey_resume_software_dev_design.pdf";
 
 const variants = {
     open: {
