@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e8eff7b3.css",
-    "main.js": "/static/js/main.28cb88cc.js",
+    "main.css": "/static/css/main.09da581f.css",
+    "main.js": "/static/js/main.631ff23c.js",
     "static/media/ek_dot_com_bkgrd_video.webm": "/static/media/ek_dot_com_bkgrd_video.eb61f15a00b9c7c1a554.webm",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
     "static/media/Comfortaa-Regular.ttf": "/static/media/Comfortaa-Regular.886fcced57daea5944e7.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.c6eb380b9f8f0920f934.ttf",
-    "static/media/erikkimsey_frontendEngineer_resume.pdf": "/static/media/erikkimsey_frontendEngineer_resume.2ff996c29065d5ed549a.pdf",
+    "static/media/gem_ring_mobile.png": "/static/media/gem_ring_mobile.3da48942ec823dcc5628.png",
+    "static/media/erik_kimsey_resume_software_dev_design.pdf": "/static/media/erik_kimsey_resume_software_dev_design.1d47588166f88ccbf597.pdf",
     "static/media/droopy_e.png": "/static/media/droopy_e.3e17519b00f145c4a81f.png",
     "static/media/quantify.ttf": "/static/media/quantify.e44a16dadd185f5bcdae.ttf",
     "static/media/Atmos.ttf": "/static/media/Atmos.827c6d5342769c740479.ttf",
-    "static/media/Asset 2.png": "/static/media/Asset 2.175666afc84832e90419.png",
     "index.html": "/index.html",
-    "main.e8eff7b3.css.map": "/static/css/main.e8eff7b3.css.map",
-    "main.28cb88cc.js.map": "/static/js/main.28cb88cc.js.map"
+    "main.09da581f.css.map": "/static/css/main.09da581f.css.map",
+    "main.631ff23c.js.map": "/static/js/main.631ff23c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8eff7b3.css",
-    "static/js/main.28cb88cc.js"
+    "static/css/main.09da581f.css",
+    "static/js/main.631ff23c.js"
   ]
 }
