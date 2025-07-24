@@ -11,9 +11,14 @@
     .bannerMenuItem {
         color: #fff;
         font-size: 2rem;
-        padding: 0 30px;
+        padding: 20px;
+        padding-right: 20px;
         font-weight: 900;
-        background-color: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .bannerMenuItem:first-of-type {
+        margin-right: 10px;
     }
 
     .bannerMenuItem:hover {

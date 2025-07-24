@@ -34,7 +34,7 @@ $hover-color: #fcfa85;
         .banner-item {
             font-weight: 900;
             font-family: $quantify;
-            font-size: 2rem;
+            font-size: 10rem;
             line-height: 1.2;
             position: relative;
             padding: 0;
@@ -100,8 +100,10 @@ $hover-color: #fcfa85;
         word-break: keep-all;
         position: relative;
         width: 60%;
-        padding: 10px 0;
-        font-size: 1.5rem;
+        padding: 10px 0 40px 0;
+        padding-right: 20px;
+        font-size: 3rem;
+        font-weight: 900;
         line-height: 1;
         --bg-size: 200%;
         --color-one: #a542d7;
@@ -110,8 +112,8 @@ $hover-color: #fcfa85;
         color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
-        -webkit-animation: move-bg 8s infinite linear;
         animation: move-bg 8s infinite linear;
+        animation-delay: 5s;
     }
 
     .bannerMenu {
@@ -125,15 +127,17 @@ $hover-color: #fcfa85;
         filter: saturate(200%);
 
         .bannerMenuItem {
-            font-size: 1.4rem;
+            font-size: 3rem;
             padding: 0 20px;
             overflow: hidden;
             color: #fff;
+            border-radius: 10px;
             text-shadow: 0 0 0 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
 
         .bannerMenuItem:first-of-type {
-            padding: 0;
+            padding-right: 20px;
+            margin-right: 20px;
         }
     }
 
@@ -159,6 +163,7 @@ $hover-color: #fcfa85;
             background-clip: text;
             -webkit-animation: move-bg 8s infinite linear;
             animation: move-bg 8s infinite linear;
+            animation: move-bg 8s infinite linear;
         }
     }
 
@@ -169,7 +174,7 @@ $hover-color: #fcfa85;
             width: 100%;
 
             .banner-item {
-                font-size: 2rem;
+                font-size: 3rem;
                 overflow: hidden;
                 font-weight: 900;
             }
@@ -203,6 +208,10 @@ $hover-color: #fcfa85;
                 -webkit-animation: move-bg 8s infinite linear;
                 animation: move-bg 8s infinite linear;
             }
+
+            .bannerMenuItem {
+                font-size: 2rem;
+            }
         }
 
         .aboutSelfDeveloperContainer {
@@ -227,20 +236,28 @@ $hover-color: #fcfa85;
                 background-position: var(--bg-size) 0;
             }
         }
-    }
 
-    @media only screen and (max-width: $xsDevice) {
 
-        // display: flex;
-        .bannerMenu {
-            flex-flow: column;
-            align-items: flex-start;
+        @media only screen and (max-width: $xsDevice) {
 
-            .bannerMenuItem {
-                padding: 0;
+            padding: 10px 20px;
+
+            // display: flex;
+            .bannerMenu {
+                flex-flow: column;
+                align-items: flex-end;
+
+                .bannerMenuItem {
+                    padding: 5px 20px 5px 0;
+                    border-radius: 10px;
+                    font-size: 2rem;
+                }
+            }
+
+            .aboutSelfDeveloperContainer {
+                font-size: 2rem;
             }
         }
-
-        font-size: 0.7rem;
     }
+
 }

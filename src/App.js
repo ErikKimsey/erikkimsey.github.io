@@ -22,7 +22,7 @@ export default function App() {
     }, []);
 
     return (
-        <div className="App lg:px-20 px-5">
+        <div className="App">
             <VideoBackground />
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <Landing label={"Experience"} navTo={"experience"} />
