@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./videobackground.css";
-import videoUrl from "../assets/videos/ek_dot_com_bkgrd_video.webm";
+import videoUrl from "../assets/videos/07_29_25v2.webm";
 import posterImg from "../assets/images/gem_ring_mobile.png";
 
 
@@ -27,10 +27,30 @@ export default function VideoBackground() {
                 isMobile ?
                     <img src={posterImg} alt="Gem Ring" />
                     :
+                    <VideoComponent video={video} />
 
-                    <video className="video-background-video" src={video} type="video/mp4" autoPlay muted loop />
 
             }
         </div>
     )
+}
+
+function VideoComponent(props) {
+    let { video } = props;
+
+    let [shouldPlay, setShouldPlay] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShouldPlay(true);
+        }, 1000);
+    }, []);
+
+    return (
+        <>
+            {shouldPlay &&
+                <video className="video-background-video" src={video} type="video/mp4" autoPlay muted loop />
+            }
+        </>
+    );
 }

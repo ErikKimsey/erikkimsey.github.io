@@ -49,9 +49,9 @@ export default function Footer() {
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
+                        {/* <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
                             <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                        </a>
+                        </a> */}
                         <a target="_blank" href={resume}>
                             <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
                         </a>
