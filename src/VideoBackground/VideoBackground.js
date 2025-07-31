@@ -13,7 +13,7 @@ export default function VideoBackground() {
         setVideo(videoUrl);
 
 
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 960) {
             setIsMobile(true);
         }
         else {
@@ -28,8 +28,6 @@ export default function VideoBackground() {
                     <img src={posterImg} alt="Gem Ring" />
                     :
                     <VideoComponent video={video} />
-
-
             }
         </div>
     )

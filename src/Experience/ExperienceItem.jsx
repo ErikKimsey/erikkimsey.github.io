@@ -26,7 +26,7 @@ export default function ExperienceItem(props) {
     if (!modalOpen) {
         return (
             <motion.div
-                whileHover={{ scale: 1.05, top: "20px" }}
+                whileHover={{ scale: 1.02, top: "20px" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
                 className="experienceItemContainer w-fit  xs:w-full"
