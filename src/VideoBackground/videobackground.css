@@ -1,6 +1,6 @@
 .video-background-container {
     position: fixed;
-    width: 80vw;
+    width: 50vw;
     /* height: 100vh; */
     z-index: -1;
     top: 50%;

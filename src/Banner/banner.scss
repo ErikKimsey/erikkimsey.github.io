@@ -242,11 +242,12 @@ $hover-color: #fcfa85;
 
         @media only screen and (max-width: $xsDevice) {
 
-            padding: 10px 20px;
+            padding: 0px 10px;
+            margin-top: 20px;
 
             // display: flex;
             .bannerMenu {
-                flex-flow: column;
+                flex-flow: row;
                 align-items: flex-start;
 
                 .bannerMenuItem {
@@ -257,7 +258,7 @@ $hover-color: #fcfa85;
             }
 
             .aboutSelfDeveloperContainer {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }

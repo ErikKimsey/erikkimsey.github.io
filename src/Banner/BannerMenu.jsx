@@ -85,7 +85,7 @@ export default function BannerMenu() {
                 duration: 0.8,
                 // delay: 1,
             }}
-            onAnimationComplete={() => setHeaderAnimComplete(true)}
+        // onAnimationComplete={() => setHeaderAnimComplete(true)}
         >
             {menuLinks &&
                 menuLinks.map((e, i) => {

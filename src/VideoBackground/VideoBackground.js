@@ -14,7 +14,7 @@ export default function VideoBackground() {
 
 
         if (window.innerWidth <= 960) {
-            setIsMobile(true);
+            setIsMobile(false);
         }
         else {
             setIsMobile(false);

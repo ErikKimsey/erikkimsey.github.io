@@ -49,19 +49,13 @@ export default function Footer() {
                         <a target="_blank" href="https://github.com/erikkimsey">
                             <FontAwesomeIcon icon={faGithub} size="3x" />
                         </a>
-                        {/* <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey-softbodysocial/">
+                        <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
                             <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                        </a> */}
+                        </a>
                         <a target="_blank" href={resume}>
                             <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
                         </a>
-                        {/* <div className="resumeText">Resume</div> */}
                     </motion.div>
-                    {/* <div className="textItemContainer">
-                        <div className="textItem">Erik Kimsey</div>
-                        <div className="textItem">Software Developer</div>
-                        <div className="textItem">kimseyerik@gmail.com</div>
-                    </div> */}
                 </motion.div>
             </AnimatePresence>
         )
