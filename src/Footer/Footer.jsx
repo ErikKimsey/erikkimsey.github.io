@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import resume from "../assets/resume/erik_kimsey_resume_software_dev_design.pdf";
+import resume from "../assets/resume/erik_kimsey_software_engineer.pdf";
 
 
 export default function Footer() {

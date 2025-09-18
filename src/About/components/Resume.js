@@ -1,6 +1,6 @@
 import "./styles/resume.scss";
 import resumeShot from "../../assets/resume/resume_shot_small.png";
-import resumePDF from "../../assets/erik_kimsey_resume_software_dev_design.pdf";
+import resumePDF from "../../assets/resume/erik_kimsey_resume_general_0916.pdf";
 
 export default function Resume() {
     return (
