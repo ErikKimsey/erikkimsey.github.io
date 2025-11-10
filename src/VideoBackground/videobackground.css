@@ -1,6 +1,6 @@
 .video-background-container {
     position: fixed;
-    width: 50vw;
+    width: 40vw;
     /* height: 100vh; */
     z-index: -1;
     top: 50%;
@@ -17,9 +17,6 @@
 
     @media only screen and (max-width:980px) {
         width: 100%;
-        top: 20%;
-        left: 0%;
-        transform: translate(0%, -50%);
         /* right: 0%;
         transform: translate(0%, -50%); */
     }
