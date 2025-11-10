@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import ThreeBackground from "../ThreeBackground/ThreeBackground";
 
 
+
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
 
 
@@ -33,6 +34,7 @@ function Landing(props) {
             id="landing-container"
             ref={sketchRef}
         >
+
             <Banner timerTime={3000} />
         </div>
     );

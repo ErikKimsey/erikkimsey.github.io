@@ -6,6 +6,7 @@ import Footer from "./Footer/Footer";
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
+import LandingImageGallery from './ImageGallery/LandingImageGallery';
 
 
 
@@ -26,7 +27,10 @@ export default function App() {
             <VideoBackground />
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <Landing label={"Experience"} navTo={"experience"} />
-                <div className='background-image'></div>
+                <div className='background-image'>
+                    <LandingImageGallery />
+                </div>
+
                 <SkillsExperienceParent />
                 <div style={{ height: "100px" }}></div>
                 <Footer />
