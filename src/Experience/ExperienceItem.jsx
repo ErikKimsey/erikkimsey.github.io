@@ -22,7 +22,6 @@ export default function ExperienceItem(props) {
         setTechStackItems(splitItems);
     }, []);
 
-
     if (!modalOpen) {
         return (
             <motion.div
@@ -45,7 +44,8 @@ export default function ExperienceItem(props) {
                     {
                         techStackItems &&
                         techStackItems.map((e) => {
-                            return <div className="expItemStack" key={e}>{e}
+                            return <div className="expItemStack" key={e}>
+                                {e}
                             </div>
                         })
                     }

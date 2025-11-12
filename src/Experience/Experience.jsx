@@ -13,7 +13,6 @@ export default function Experience() {
 
     useEffect(() => {
         if (EXPERIENCE_DATA && EXPERIENCE_DATA.length > 0) {
-
             setData(EXPERIENCE_DATA);
         }
     }, []);

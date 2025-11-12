@@ -7,8 +7,13 @@ import SkillsExperienceParent from './SkillExperienceParent/SkillsExperiencePare
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
 import LandingImageGallery from './ImageGallery/LandingImageGallery';
+import Grid from './Grid/Grid';
 
-
+/** */
+/**
+ * https://codesandbox.io/p/sandbox/github/benhowell/react-grid-gallery/tree/master/examples/with-react-image-lightbox
+ * */
+/** */
 
 
 export default function App() {
@@ -28,7 +33,8 @@ export default function App() {
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <Landing label={"Experience"} navTo={"experience"} />
                 <div className='background-image'>
-                    <LandingImageGallery />
+                    {/* <LandingImageGallery /> */}
+                    <Grid />
                 </div>
 
                 <SkillsExperienceParent />

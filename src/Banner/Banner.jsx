@@ -60,7 +60,9 @@ export default function Banner(props) {
                         duration: 0.3,
                         delay: 0,
                     }}
-                >Erik Kimsey</motion.div>
+                >
+                    Erik Kimsey
+                </motion.div>
 
                 <motion.div
                     className="role banner-item"
