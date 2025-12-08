@@ -30,7 +30,7 @@ function Landing(props) {
 
     return (
         <div
-            className="landing-container"
+            className="landing-container h-auto"
             id="landing-container"
             ref={sketchRef}
         >

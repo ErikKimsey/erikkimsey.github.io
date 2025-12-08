@@ -31,9 +31,9 @@ export default function App() {
             {/* <VideoBackground /> */}
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <Landing label={"Experience"} navTo={"experience"} />
-                <div className='background-image'>
-                    {/* <LandingImageGallery /> */}
-                </div>
+                {/* <div className='background-image'> */}
+                {/* <LandingImageGallery /> */}
+                {/* </div> */}
 
                 <SkillsExperienceParent />
                 <div style={{ height: "100px" }}></div>

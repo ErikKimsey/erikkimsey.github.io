@@ -87,7 +87,7 @@ export default function Banner(props) {
                     delay: 0.2,
                 }}
                 className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</motion.div>
-            <BannerMenu />
+            {/* <BannerMenu /> */}
         </div>
     );
 }
