@@ -14,7 +14,6 @@ import LandingImageGallery from './ImageGallery/LandingImageGallery';
  * */
 /** */
 
-
 export default function App() {
 
     const [toggled, setToggled] = useState(false);
@@ -35,7 +34,7 @@ export default function App() {
                 {/* <LandingImageGallery /> */}
                 {/* </div> */}
 
-                <SkillsExperienceParent />
+                {/* <SkillsExperienceParent /> */}
                 <div style={{ height: "100px" }}></div>
                 <Footer />
             </Context.Provider>

@@ -5,7 +5,9 @@ module.exports = {
     ],
     theme: {
         textColor: {
-            'peach': "#ffceaf"
+            'peach': "#ffceaf",
+            'purps': "#AA5EF4",
+            'bluez': "#7f47ff"
         },
         extend: {},
     },

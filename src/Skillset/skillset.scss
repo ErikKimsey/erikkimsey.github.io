@@ -11,9 +11,9 @@
     margin: 0;
     padding: 0;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    // flex-flow: row wrap;
+    // justify-content: flex-start;
+    // align-items: flex-start;
 
 
     .skillset-background-image {
@@ -52,8 +52,8 @@
         // width: 100%;
         display: flex;
         flex-flow: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        // justify-content: flex-start;
+        // align-items: flex-start;
         margin: 4px 0;
         box-sizing: border-box;
         border-radius: 10px;
@@ -73,13 +73,13 @@
         .skillItemsList {
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+            // justify-content: flex-start;
+            // align-items: flex-start;
             overflow: hidden;
             font-size: small;
             padding: 5px;
             // background-color: $bkgrdPurple;
-            background-color: rgba(0, 0, 0, 0.7);
+            // background-color: rgba(0, 0, 0, 0.7);
 
             .skillItem {
                 font-size: 0.9rem;

@@ -11,7 +11,7 @@ export default function Skillset() {
     }, [])
 
     return (
-        <div className="skillsetContainer w-full lg:w-2/3 md:w-full sm:w-full xs:w-full" id="skillset-container">
+        <div className="skillsetContainer flex justify-center content-center items-center w-full lg:w-2/3 md:w-full sm:w-full xs:w-full" id="skillset-container">
             <div className="skillset-background-image"></div>
             <div className="itemContainer">
                 {

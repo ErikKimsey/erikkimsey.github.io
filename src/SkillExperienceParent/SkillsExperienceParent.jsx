@@ -13,22 +13,22 @@ export default function SkillsExperienceParent() {
     const closeModal = () => setOpenModal(null);
 
     return (
-        <div className="skills-experience-container  w-full flex flex-row justify-start content-start text-l  items-start">
+        <div className="skills-experience-container  w-full flex flex-row justify-start content-start text-xl  items-start">
             {/* Triggers */}
             <button
                 onClick={openSkillset}
-                className="px-4 py-2 mx-2 rounded border-gray-600 text-white hover:bg-gray-700 text-peach font-black transition duration-500"
+                className="px-4  py-2 mx-2 ml-0 rounded border-gray-600 text-white hover:bg-gray-700 text-purps font-black transition duration-500"
             >
-                View Skillset
+                Skillset
             </button>
 
             <div className="space  w-1 h-1 "></div>
 
             <button
                 onClick={openExperience}
-                className="px-4 py-2 mx-2  rounded  border-white text-white hover:bg-gray-700 text-peach font-bold transition duration-500"
+                className="px-4 py-2 mx-2  rounded  border-white text-white hover:bg-gray-700 text-purps font-bold transition duration-500"
             >
-                View Experience
+                Experience
             </button>
 
             {/* Modal Overlay with framer-motion */}
@@ -52,7 +52,7 @@ export default function SkillsExperienceParent() {
 
                         {/* Modal Panel */}
                         <motion.div
-                            className="relative z-50 max-h-[85vh] w-[90vw] max-w-5xl overflow-auto rounded-lg bg-white shadow-2xl dark:bg-neutral-900 border border-white/10"
+                            className="relative z-50 max-h-[85vh] w-[90vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-50  border border-white/10 overflow-x-clip"
                             role="dialog"
                             aria-modal="true"
                             initial={{ y: 24, scale: 0.98, opacity: 0 }}
@@ -73,7 +73,7 @@ export default function SkillsExperienceParent() {
                                 </button>
                             </div>
 
-                            <div className="p-4">
+                            <div className="p-4 flex justify-center content-center">
                                 {openModal === 'skillset' ? (
                                     <Skillset />
                                 ) : (
