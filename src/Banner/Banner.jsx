@@ -48,13 +48,13 @@ export default function Banner(props) {
     }
 
     return (
-        <div className="banner-container"
+        <div className="banner-container w-auto text-8xl m-0 p-0"
             ref={bannerRef}
         >
             {/* <UnderConstruction /> */}
             <div className="text-container">
                 <motion.div
-                    className="name banner-item"
+                    className=" banner-item "
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -92,4 +92,3 @@ export default function Banner(props) {
         </div>
     );
 }
-

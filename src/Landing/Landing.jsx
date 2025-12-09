@@ -30,12 +30,17 @@ function Landing(props) {
 
     return (
         <div
-            className="landing-container h-auto flex flex-col justify-center content-center"
-            id="landing-container"
+            className="landing-container fixed top-1/4 left-12 h-auto flex flex-row justify-center content-center p-10"
             ref={sketchRef}
         >
-            <Banner timerTime={3000} />
-            <SkillsExperienceParent />
+
+            <div className="flex flex-col content-start">
+                <Banner timerTime={3000} />
+                <SkillsExperienceParent />
+            </div>
+            <div className=" w-auto h-full bg-cyan-300 flex flex-col justify-center items-center content-center">
+                farts
+            </div>
         </div>
     );
 }

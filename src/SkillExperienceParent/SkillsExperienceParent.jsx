@@ -13,20 +13,20 @@ export default function SkillsExperienceParent() {
     const closeModal = () => setOpenModal(null);
 
     return (
-        <div className="skills-experience-container  w-full flex flex-row justify-start content-start text-xl  items-start">
+        <div className=" w-auto flex flex-row items-start justify-start text-2xl">
             {/* Triggers */}
             <button
                 onClick={openSkillset}
-                className="px-4  py-2 mx-2 ml-0 rounded border-gray-600 text-white hover:bg-gray-700 text-purps font-black transition duration-500"
+                className="rounded border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps font-black transition duration-500"
             >
                 Skillset
             </button>
 
-            <div className="space  w-1 h-1 "></div>
+            <div className="space w-10 h-1 "></div>
 
             <button
                 onClick={openExperience}
-                className="px-4 py-2 mx-2  rounded  border-white text-white hover:bg-gray-700 text-purps font-bold transition duration-500"
+                    className=" rounded border-white text-white border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps font-black transition duration-500"
             >
                 Experience
             </button>
