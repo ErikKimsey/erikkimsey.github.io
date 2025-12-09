@@ -22,14 +22,17 @@ export default function VideoBackground() {
     }, [])
 
     return (
-        <div className="video-background-container">
-            {
-                isMobile ?
-                    <img src={posterImg} alt="Gem Ring" />
-                    :
-                    <VideoComponent video={video} />
-            }
+        <div className="w-auto">
+                    <VideoComponent video={video}/>
         </div>
+        // <div className="w-full ">
+        //     {
+        //         isMobile ?
+        //             <img src={posterImg} alt="Gem Ring" />
+        //             :
+        //             <VideoComponent video={video} />
+        //     }
+        // </div>
     )
 }
 
@@ -47,7 +50,7 @@ function VideoComponent(props) {
     return (
         <>
             {shouldPlay &&
-                <video className="video-background-video" src={video} type="video/mp4" autoPlay muted loop />
+                <video className="w-auto" src={video} type="video/mp4" autoPlay muted loop />
             }
         </>
     );

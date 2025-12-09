@@ -13,7 +13,14 @@ export default function SkillsExperienceParent() {
     const closeModal = () => setOpenModal(null);
 
     return (
-        <div className=" w-auto flex flex-row items-start justify-start text-2xl">
+        <motion.div 
+            className="w-auto flex flex-row items-start justify-start text-2xl"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{
+                duration: 2,
+                delay: 1.4,
+            }}>
             {/* Triggers */}
             <button
                 onClick={openSkillset}
@@ -84,6 +91,6 @@ export default function SkillsExperienceParent() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </motion.div>
     );
 }

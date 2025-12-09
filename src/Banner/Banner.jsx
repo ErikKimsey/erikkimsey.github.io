@@ -48,18 +48,25 @@ export default function Banner(props) {
     }
 
     return (
-        <div className="banner-container w-auto text-8xl m-0 p-0"
+        <motion.div 
+            className="banner-container w-full text-8xl sm:text-4xl lg:text-8xl m-0 p-0 flex-col overflow-hidden"
             ref={bannerRef}
+            initial={{opacity: 0, scale: 2, width:"60vw"}}
+            animate={{opacity: 1, scale: 1, width: "60vw"}}
+            transition={{
+                duration: 2,
+                delay: 0,
+            }}
         >
             {/* <UnderConstruction /> */}
-            <div className="text-container">
+            <div className="text-container flex flex-col flex-nowrap overflow-clip">
                 <motion.div
-                    className=" banner-item "
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    className="banner-item"
+                    initial={{ opacity: 0, fontSize: "0rem" }}
+                    animate={{ opacity: 1,  fontSize: "5rem" }}
                     transition={{
-                        duration: 0.3,
-                        delay: 0,
+                        duration: 1,
+                        delay: 0.3,
                     }}
                 >
                     Erik Kimsey
@@ -67,11 +74,12 @@ export default function Banner(props) {
 
                 <motion.div
                     className="role banner-item"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{opacity: 0, scale: 0, fontSize: "0rem"}}
+                    animate={{opacity: 1, scale: 1, fontSize: "5rem"}}
+
                     transition={{
-                        duration: 0.5,
-                        delay: 0,
+                        duration: 1,
+                        delay: 0.3,
                     }}
                     data-text={currRole}
                 >
@@ -81,14 +89,14 @@ export default function Banner(props) {
             </div>
 
             <motion.div
-                initial={{ opacity: 0, scale: 0, lineHeight: 5 }}
+                initial={{ opacity: 0, scale: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, scale: 1, lineHeight: 1 }}
                 transition={{
                     duration: 1,
-                    delay: 0.2,
+                    delay:1,
                 }}
-                className="aboutSelfDeveloperContainer">{SELF_STATEMENT}</motion.div>
+                className="aboutSelfDeveloperContainer overflow-clip">{SELF_STATEMENT}</motion.div>
             {/* <BannerMenu /> */}
-        </div>
+        </motion.div>
     );
 }

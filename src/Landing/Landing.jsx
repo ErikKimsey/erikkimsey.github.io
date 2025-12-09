@@ -3,6 +3,7 @@ import "./landing.scss";
 import Banner from "../Banner/Banner";
 import ThreeBackground from "../ThreeBackground/ThreeBackground";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
+import VideoBackground from "../VideoBackground/VideoBackground";
 
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
@@ -30,16 +31,16 @@ function Landing(props) {
 
     return (
         <div
-            className="landing-container fixed top-1/4 left-12 h-auto flex flex-row justify-center content-center p-10"
+            className="fixed  top-1/4 left-1 lg:left-10 flex flex-row flex-wrap p-2 sm:p-2 lg:p-8 "
             ref={sketchRef}
         >
 
-            <div className="flex flex-col content-start">
+            <div className="w-auto sm:w-full md:w-1/2 lg:w-1/2 flex flex-col overflow-clip">
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent />
             </div>
-            <div className=" w-auto h-full bg-cyan-300 flex flex-col justify-center items-center content-center">
-                farts
+            <div className="w-auto sm:w-11/12 md:w-1/2 lg:w-1/2 flex">
+                <VideoBackground/>
             </div>
         </div>
     );

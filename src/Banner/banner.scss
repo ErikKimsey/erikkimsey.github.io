@@ -15,20 +15,19 @@ $hover-color: #fcfa85;
     --f: calc(var(--f-size) * var(--f-unit));
 
     // height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: column;
-    margin-top: 50px;
+    //width: 100vw;
+    //display: flex;
+    //flex-flow: column;
+    //margin-top: 50px;
     // justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     .text-container {
-        display: flex;
-        flex-flow: column wrap;
-        width: 100%;
-        overflow: hidden;
+        //display: flex;
+        //flex-flow: column wrap;
+        //width: 100%;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         .banner-item {
@@ -36,9 +35,8 @@ $hover-color: #fcfa85;
             font-family: $quantify;
             // font-size: 3rem;
             line-height: 1.2;
-            position: relative;
+            //position: relative;
             padding: 0;
-            overflow: hidden;
             --bg-size: 200%;
             --color-one: #5372ff;
             --color-two: #e64595;
@@ -55,7 +53,7 @@ $hover-color: #fcfa85;
             padding: 0;
             padding-right: 20px;
             position: relative;
-            overflow: hidden;
+            //overflow: hidden;
             font-family: $quantify;
             line-height: 0.8;
             --bg-size: 200%;
@@ -74,7 +72,7 @@ $hover-color: #fcfa85;
             color: #fff;
             padding-left: 0;
             position: relative;
-            overflow: hidden;
+            //overflow: hidden;
             --bg-size: 200%;
             --color-two: #e80c7a;
             --color-one: #00ffea;
@@ -99,7 +97,7 @@ $hover-color: #fcfa85;
     .aboutSelfDeveloperContainer {
         word-break: keep-all;
         position: relative;
-        width: 60%;
+        //width: 60%;
         padding: 10px 0 10px 0;
         padding-right: 20px;
         font-size: 1.5rem;
@@ -123,13 +121,13 @@ $hover-color: #fcfa85;
         flex-flow: row;
         justify-content: flex-start;
         padding: 0;
-        overflow: hidden;
+        //overflow: hidden;
         filter: saturate(200%);
 
         .bannerMenuItem {
-            font-size: 1.5rem;
+            //font-size: 1.5rem;
             // padding: 0 20px;
-            overflow: hidden;
+            //overflow: hidden;
             color: #fff;
             text-shadow: 0 0 5 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
@@ -150,9 +148,9 @@ $hover-color: #fcfa85;
         padding-left: 10px;
 
         .aboutSelfDeveloperContainer {
-            width: 90%;
+            //width: 90%;
             padding-left: 0;
-            font-size: 1.5rem;
+            //font-size: 1.5rem;
             // overflow: hidden;
             hyphens: none;
             --bg-size: 200%;
