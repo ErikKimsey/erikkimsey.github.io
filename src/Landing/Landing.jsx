@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import ThreeBackground from "../ThreeBackground/ThreeBackground";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
 import VideoBackground from "../VideoBackground/VideoBackground";
+import {LandingContentBannerTemplate} from "./LandingContentBannerTemplate";
 
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
@@ -30,19 +31,16 @@ function Landing(props) {
     }, [])
 
     return (
-        <div
-            className="fixed  top-1/4 left-1 lg:left-10 flex flex-row flex-wrap p-2 sm:p-2 lg:p-8 "
-            ref={sketchRef}
-        >
+        <LandingContentBannerTemplate>
 
-            <div className="w-auto sm:w-full md:w-1/2 lg:w-1/2 flex flex-col overflow-clip">
+            <div className="w-11/12 lg:w-1/2 flex flex-col flex-wrap overflow-clip">
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent />
             </div>
-            <div className="w-auto sm:w-11/12 md:w-1/2 lg:w-1/2 flex">
+            <div className="w-11/12 lg:w-1/2 flex">
                 <VideoBackground/>
             </div>
-        </div>
+        </LandingContentBannerTemplate> 
     );
 }
 

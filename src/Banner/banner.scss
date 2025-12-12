@@ -115,7 +115,7 @@ $hover-color: #fcfa85;
     }
 
     .bannerMenu {
-        width: 100%;
+        //width: 100%;
         box-sizing: border-box;
         display: flex;
         flex-flow: row;
@@ -166,98 +166,98 @@ $hover-color: #fcfa85;
         }
     }
 
-    @media only screen and (max-width: $smDevice) {
-        width: 100%;
-
-        .text-container {
-            width: 100%;
-
-            .banner-item {
-                font-size: 3rem;
-                overflow: hidden;
-                font-weight: 900;
-            }
-
-            .name {
-                color: $pink;
-                overflow: hidden;
-                --bg-size: 200%;
-                --color-one: #5372ff;
-                --color-two: #52ED8B;
-                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-animation: move-bg 8s infinite linear;
-                animation: move-bg 8s infinite linear;
-            }
-
-            .role {
-                color: #fff;
-                padding-left: 0;
-                // padding: 10px 0;
-                overflow: hidden;
-                --bg-size: 200%;
-                --color-one: #ffcea7;
-                --color-two: #fe5bdb;
-                background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-                color: transparent;
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-animation: move-bg 8s infinite linear;
-                animation: move-bg 8s infinite linear;
-            }
-
-            .bannerMenuItem {
-                font-size: 1.5rem;
-            }
-        }
-
-        .aboutSelfDeveloperContainer {
-            width: 100%;
-            padding-left: 0;
-            font-size: 1.5rem;
-            overflow: hidden;
-            --bg-size: 200%;
-            --color-one: #5372ff;
-            --color-two: #fe5bdb;
-            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-animation: move-bg 8s infinite linear;
-            animation: move-bg 8s infinite linear;
-        }
-
-
-        @keyframes move-bg {
-            to {
-                background-position: var(--bg-size) 0;
-            }
-        }
-
-
-        @media only screen and (max-width: $xsDevice) {
-
-            padding: 0px 10px;
-            margin-top: 20px;
-
-            // display: flex;
-            .bannerMenu {
-                flex-flow: row;
-                align-items: flex-start;
-
-                .bannerMenuItem {
-                    padding: 0px 20px 5px 0;
-                    border-radius: 10px;
-                    font-size: 1.5rem;
-                }
-            }
-
-            .aboutSelfDeveloperContainer {
-                font-size: 1.5rem;
-            }
-        }
-    }
+    //@media only screen and (max-width: $smDevice) {
+    //    width: 100%;
+    //
+    //    .text-container {
+    //        //width: 100%;
+    //
+    //        .banner-item {
+    //            font-size: 3rem;
+    //            overflow: hidden;
+    //            font-weight: 900;
+    //        }
+    //
+    //        .name {
+    //            color: $pink;
+    //            overflow: hidden;
+    //            --bg-size: 200%;
+    //            --color-one: #5372ff;
+    //            --color-two: #52ED8B;
+    //            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+    //            color: transparent;
+    //            -webkit-background-clip: text;
+    //            background-clip: text;
+    //            -webkit-animation: move-bg 8s infinite linear;
+    //            animation: move-bg 8s infinite linear;
+    //        }
+    //
+    //        .role {
+    //            color: #fff;
+    //            padding-left: 0;
+    //            // padding: 10px 0;
+    //            overflow: hidden;
+    //            --bg-size: 200%;
+    //            --color-one: #ffcea7;
+    //            --color-two: #fe5bdb;
+    //            background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+    //            color: transparent;
+    //            -webkit-background-clip: text;
+    //            background-clip: text;
+    //            -webkit-animation: move-bg 8s infinite linear;
+    //            animation: move-bg 8s infinite linear;
+    //        }
+    //
+    //        .bannerMenuItem {
+    //            font-size: 1.5rem;
+    //        }
+    //    }
+    //
+    //    .aboutSelfDeveloperContainer {
+    //        //width: 100%;
+    //        padding-left: 0;
+    //        font-size: 1.5rem;
+    //        overflow: hidden;
+    //        --bg-size: 200%;
+    //        --color-one: #5372ff;
+    //        --color-two: #fe5bdb;
+    //        background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+    //        color: transparent;
+    //        -webkit-background-clip: text;
+    //        background-clip: text;
+    //        -webkit-animation: move-bg 8s infinite linear;
+    //        animation: move-bg 8s infinite linear;
+    //    }
+    //
+    //
+    //    @keyframes move-bg {
+    //        to {
+    //            background-position: var(--bg-size) 0;
+    //        }
+    //    }
+    //
+    //
+    //    @media only screen and (max-width: $xsDevice) {
+    //
+    //        padding: 0px 10px;
+    //        margin-top: 20px;
+    //
+    //        // display: flex;
+    //        .bannerMenu {
+    //            flex-flow: row;
+    //            align-items: flex-start;
+    //
+    //            .bannerMenuItem {
+    //                padding: 0px 20px 5px 0;
+    //                border-radius: 10px;
+    //                font-size: 1.5rem;
+    //            }
+    //        }
+    //
+    //        .aboutSelfDeveloperContainer {
+    //            font-size: 1.5rem;
+    //        }
+    //    }
+    //}
 
 }

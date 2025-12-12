@@ -49,10 +49,10 @@ export default function Banner(props) {
 
     return (
         <motion.div 
-            className="banner-container w-full text-8xl sm:text-4xl lg:text-8xl m-0 p-0 flex-col overflow-hidden"
+            className="banner-container w-full text-5xl sm:text-5xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden"
             ref={bannerRef}
-            initial={{opacity: 0, scale: 2, width:"60vw"}}
-            animate={{opacity: 1, scale: 1, width: "60vw"}}
+            initial={{opacity: 0, scale: 2}}
+            animate={{opacity: 1, scale: 1}}
             transition={{
                 duration: 2,
                 delay: 0,
@@ -62,8 +62,8 @@ export default function Banner(props) {
             <div className="text-container flex flex-col flex-nowrap overflow-clip">
                 <motion.div
                     className="banner-item"
-                    initial={{ opacity: 0, fontSize: "0rem" }}
-                    animate={{ opacity: 1,  fontSize: "5rem" }}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1 }}
                     transition={{
                         duration: 1,
                         delay: 0.3,
@@ -74,8 +74,8 @@ export default function Banner(props) {
 
                 <motion.div
                     className="role banner-item"
-                    initial={{opacity: 0, scale: 0, fontSize: "0rem"}}
-                    animate={{opacity: 1, scale: 1, fontSize: "5rem"}}
+                    initial={{opacity: 0, scale: 0}}
+                    animate={{opacity: 1, scale: 1}}
 
                     transition={{
                         duration: 1,

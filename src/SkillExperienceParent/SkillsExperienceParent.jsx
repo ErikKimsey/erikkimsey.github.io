@@ -62,9 +62,9 @@ export default function SkillsExperienceParent() {
                             className="relative z-50 max-h-[85vh] w-[90vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-50  border border-white/10 overflow-x-clip"
                             role="dialog"
                             aria-modal="true"
-                            initial={{ y: 24, scale: 0.98, opacity: 0 }}
+                            initial={{ y: 24, scale: 0.1, opacity: 0 }}
                             animate={{ y: 0, scale: 1, opacity: 1 }}
-                            exit={{ y: 24, scale: 0.98, opacity: 0 }}
+                            exit={{ y: 24, scale: 0.1, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         >
                             <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
