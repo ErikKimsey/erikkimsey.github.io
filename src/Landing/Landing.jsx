@@ -4,7 +4,8 @@ import Banner from "../Banner/Banner";
 import ThreeBackground from "../ThreeBackground/ThreeBackground";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
 import VideoBackground from "../VideoBackground/VideoBackground";
-import {LandingContentBannerTemplate} from "./LandingContentBannerTemplate";
+import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
+import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
 
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
@@ -23,12 +24,14 @@ function Landing(props) {
     let [sD, setSubD] = useState();
     let [core, setCore] = useState();
 
+
     useEffect(() => {
         if (sketchRef.current) {
             setDimens({ w: sketchRef.current.offsetWidth, h: sketchRef.current.offsetHeight });
         }
 
     }, [])
+
 
     return (
         <LandingContentBannerTemplate>
@@ -38,9 +41,13 @@ function Landing(props) {
                 <SkillsExperienceParent />
             </div>
             <div className="w-11/12 lg:w-1/2 flex">
-                <VideoBackground/>
+                <VideoBackground />
             </div>
-        </LandingContentBannerTemplate> 
+
+
+            <FreelanceComponentAndModal />
+
+        </LandingContentBannerTemplate>
     );
 }
 
