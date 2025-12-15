@@ -5,34 +5,49 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const DEALS_PACKAGES = [
     {
-        label: "UI Fixes and Adjustments",
+        label: "UI Features & Fixes",
         price: "$200",
-        description: "letcher cybernetic mimetic quicksilver dub quartz-halogen origami grid temperfoam polysaccharide mycotoxin program code infrastructure cop. "
+        description: "",
+        type: "dev"
     },
     {
-        label: "UI / UX Design",
+        label: "UI / UX Design Consultation",
         price: "$150",
-        description: "Multinational chip prototype polysaccharide neural SAS origami clinic cryptic black zaibatsu cutting-edge cop Yakuza. "
+        description: "Multinational chip prototype polysaccharide neural SAS origami clinic cryptic black zaibatsu cutting-edge cop Yakuza. ",
+        type: "design"
+    },
+    {
+        label: "Brand Creative Brief",
+        price: "$250",
+        description: "Multinational chip prototype polysaccharide neural SAS origami clinic cryptic black zaibatsu cutting-edge cop Yakuza. ",
+        type: "design"
     },
     {
         label: "Prototyping : Mobile Game",
         price: "$350",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. "
+        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        type: "dev"
+
     },
     {
         label: "Prototyping : Web App",
         price: "$300",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. "
+        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        type: "dev"
+
     },
     {
         label: "3D Modeling",
-        price: "$300",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. "
+        price: "$200",
+        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        type: "3D"
+
     },
     {
         label: "Sound FX Design",
         price: "$150",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. "
+        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        type: "audio"
     }
 ]
 
@@ -104,6 +119,7 @@ function FreelanceComponentAndModal() {
                     >
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="px-10 sm:px-2 text-xl lg:text-3xl text-center">Cigarette cybernetics deficiency virus gunship segment deficiency prototype. </div>
+                        <div className="w-full px-10 sm:px-2 text-xl lg:text-2xl text-center self-center">Free initial consultation.</div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
                             {
