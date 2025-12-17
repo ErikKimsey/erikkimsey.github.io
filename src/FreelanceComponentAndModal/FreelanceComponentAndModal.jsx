@@ -1,52 +1,61 @@
-import React, { useState } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { formatTodayMMDDYYYY } from '../utils/temporalDate';
+import "../Banner/banner.scss";
 
 
 
 const DEALS_PACKAGES = [
     {
-        label: "UI Features & Fixes",
+        label: "Single-Page Web App",
+        price: "$960",
+        description: "A simple, early version of a website or online application used to demonstrate how it will look and function, before it is fully built. This helps future designers, developers, and stakeholders test ideas, gather feedback, and make improvements without investing a lot of time or money. E.g., clickable mockup, a basic dashboard displaying sample charts of data, or wireframe of a mobile-friendly booking app that lets users step through making a reservation.",
+        type: "dev"
+
+    },
+    {
+        label: "Single-Page Mobile App",
+        price: "$960",
+        description: "A simple, early version of a website or online application used to demonstrate how it will look and function, before it is fully built. This helps future designers, developers, and stakeholders test ideas, gather feedback, and make improvements without investing a lot of time or money. E.g., clickable mockup, a basic dashboard displaying sample charts of data, or wireframe of a mobile-friendly booking app that lets users step through making a reservation.",
+        type: "dev"
+
+    },
+    {
+        label: "Web / mobile UI Features & Bug Extermination",
         price: "$200",
-        description: "",
+        description: "New features added to improve usability, functionality, or visual appeal, such as better navigation, faster performance, or modern design updates.  I will add new features or new functionality to your website / mobile app.  Modernize and freshen your site or app's appearance.  Update your site or app with a professional user-experience.",
         type: "dev"
     },
     {
         label: "UI / UX Design Consultation",
         price: "$150",
-        description: "Multinational chip prototype polysaccharide neural SAS origami clinic cryptic black zaibatsu cutting-edge cop Yakuza. ",
+        description: "Appear fresh and confident, and know using your website or app won't require guess-work to navigate.  Whether you like it or not, the success of your business or organization hinges on the quality of your digital presence.  The 'UI' presents important content beautifully.  The 'UX' makes sure the content is easily accessible.",
         type: "design"
     },
     {
         label: "Brand Creative Brief",
         price: "$250",
-        description: "Multinational chip prototype polysaccharide neural SAS origami clinic cryptic black zaibatsu cutting-edge cop Yakuza. ",
+        description: "The public is greatly influenced by the colors, the shapes, and the fonts associated with your business or organization.  A design brief is document of identity.  Something to hand to future designers, to save time and money.  It's the outcome of exploring: what appeals to your target demographic and your aesthetic preferences vis-a-vis evidence-based marketing psychology.",
         type: "design"
     },
     {
-        label: "Prototyping : Mobile Game",
-        price: "$350",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
-        type: "dev"
-
-    },
-    {
-        label: "Prototyping : Web App",
-        price: "$300",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        label: "Video Game prototype (single scene)",
+        price: "$1048",
+        description: "A 'prototype' or 'proof of concept' is an inexpensive functional example of your idea.  A  tangible simulacrum that will allow you to assess a product's viability.  Further, it's what investors want to put in their hands, for the same purpose. I.e., the 'proof-of-concept.",
         type: "dev"
 
     },
     {
         label: "3D Modeling",
-        price: "$200",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        price: "$150",
+        description: "3D models aren't just for video games.  They are also very practical.  Used daily in fields from e-commerce to architecture, from scientific research to hands-on educational tools.  Have you ever used the 'See in your room' feature of an e-commerce app?  Or, had a walk-through of your home before it was built?  Whether on a computer screen, in VR goggles, or through the screen of your iPhone, you were looking at a 3D model.",
         type: "3D"
 
     },
     {
         label: "Sound FX Design",
-        price: "$150",
-        description: "Helsinki Sprawl factory blue trace quicksilver ICE shattered military. Ninja socket temperfoam samurai ICE implant laser-scrawled software trace cabal Chinese chrome. ",
+        price: "$100",
+        description: "You need sounds that help tell a story, or set a mood, or make actions feel more realistic in a  digital product (e.g., website, video game, film project).  Add life to your visual product, utilizing your customer's auditory senses.",
         type: "audio"
     }
 ]
@@ -55,16 +64,72 @@ function DealPackage({ index, pack }) {
 
     const { label, price, description } = pack;
 
+    const containerRef = useRef(null);
+    const descRef = useRef(null);
+    const priceRef = useRef(null);
+    const [expanded, setExpanded] = useState(false);
+    const [needsClamp, setNeedsClamp] = useState(false);
+    const [clampHeight, setClampHeight] = useState(null); // px
+
+    useLayoutEffect(() => {
+        const measure = () => {
+            const descEl = descRef.current;
+            const priceEl = priceRef.current;
+            if (!descEl || !priceEl) return;
+
+            // Ensure we measure the natural content height
+            const prevMax = descEl.style.maxHeight;
+            descEl.style.maxHeight = 'none';
+
+            const descRect = descEl.getBoundingClientRect();
+            const priceRect = priceEl.getBoundingClientRect();
+
+            // If the description bottom would cross into price top, we clamp.
+            const overlap = descRect.bottom > (priceRect.top - 8);
+            if (!expanded && overlap) {
+                const maxH = Math.max(priceRect.top - descRect.top - 12, 0);
+                setClampHeight(maxH);
+                setNeedsClamp(true);
+            } else {
+                setClampHeight(null);
+                setNeedsClamp(false);
+            }
+
+            // Restore previous style if needed
+            descEl.style.maxHeight = prevMax;
+        };
+
+        measure();
+        window.addEventListener('resize', measure);
+        return () => window.removeEventListener('resize', measure);
+    }, [expanded, label, description]);
+
     return (
         // index % 2 !== 0 ?
-        (<div className="relative flex flex-wrap justify-between black p-2 m-4 h-72 sm:w-96 md:w-96 lg:w-96 min-w-70
-             border-2 rounded-md  border-stone-400">
+        (<div ref={containerRef} className={`relative flex flex-wrap justify-between black p-2 m-4 ${expanded ? 'h-auto min-h-72' : 'h-72'} sm:w-96 md:w-96 lg:w-96 min-w-70
+             border-2 rounded-md  border-stone-400 backdrop-blur-lg">
             <div className="flex flex-col">
                 <h1 className=" text-peach text-2xl font-quantify font-bold">{label}</h1>
-                <div className="text-black">{description}</div>
+                <div className="relative text-black overflow-hidden" ref={descRef}
+                    style={{ maxHeight: !expanded && needsClamp && clampHeight ? `${clampHeight}px` : 'none' }}
+                >
+                    {description}
+                    {/* Fade indicator when clamped */}
+                    {!expanded && needsClamp && (
+                        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white/90 to-transparent dark:from-black/70" />
+                    )}
+                </div>
+                {needsClamp && (
+                    <button
+                        className="mt-2 self-start text-sm text-blue-600 hover:underline"
+                        onClick={() => setExpanded(v => !v)}
+                    >
+                        {expanded ? 'Show less' : 'Show more'}
+                    </button>
+                )}
             </div>
             <div className="flex flex-col w-full sm:w-full md:w-1/2 lg:w-1/2 p-0 m-0 ">
-                <div className="text-black font-bold absolute bottom-2 right-4 font-quantify">{price}</div>
+                <div ref={priceRef} className="text-black font-bold absolute bottom-2 right-4 font-quantify">{price}</div>
             </div>
         </div>)
     )
@@ -74,6 +139,11 @@ function DealPackage({ index, pack }) {
 function FreelanceComponentAndModal() {
 
     let [freelance, setFreelance] = useState(false);
+    let [date, setDate] = useState()
+
+    useEffect(() => {
+        setDate(formatTodayMMDDYYYY());
+    }, [])
 
     function FreelanceTabClick() {
         setFreelance(!freelance);
@@ -82,6 +152,8 @@ function FreelanceComponentAndModal() {
     function closeModal() {
         setFreelance(false);
     }
+
+
 
     return (
         <div>
@@ -101,7 +173,7 @@ function FreelanceComponentAndModal() {
 
 
                     <motion.div
-                        className="absolute inset-0 bg-white/20 backdrop-blur-md "
+                        className="absolute inset-0 bg-white/20 backdrop-blur-sm "
                         onClick={closeModal}
                         aria-hidden="true"
                         initial={{ opacity: 0 }}
@@ -118,8 +190,8 @@ function FreelanceComponentAndModal() {
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
-                        <div className="px-10 sm:px-2 text-xl lg:text-3xl text-center">Cigarette cybernetics deficiency virus gunship segment deficiency prototype. </div>
-                        <div className="w-full px-10 sm:px-2 text-xl lg:text-2xl text-center self-center">Free initial consultation.</div>
+
+                        <div className="w-full p-2 px-10 sm:px-2 text-sm sm:text-sm lg:text-sm text-center self-center">...available 'til 01/12/2026</div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
                             {

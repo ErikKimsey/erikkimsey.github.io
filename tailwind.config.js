@@ -9,7 +9,9 @@ module.exports = {
             'peach': "#ffceaf",
             'purps': "#AA5EF4",
             'bluez': "#7f47ff",
-            'blaq': "#000"
+            'blaq': "#000",
+            'pinkz': "#e64595",
+            'tealz': "#1fffad"
         },
 
         extend: {
