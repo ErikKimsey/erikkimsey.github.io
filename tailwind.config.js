@@ -10,7 +10,7 @@ module.exports = {
             'purps': "#AA5EF4",
             'bluez': "#7f47ff",
             'blaq': "#000",
-            'pinkz': "#e64595",
+            'pinkz': "#ff45dd",
             'tealz': "#1fffad"
         },
 

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { formatTodayMMDDYYYY } from '../utils/temporalDate';
 import "../Banner/banner.scss";
@@ -6,6 +6,12 @@ import "../Banner/banner.scss";
 
 
 const DEALS_PACKAGES = [
+    {
+        label: "Web / mobile UI Features & Bug Extermination",
+        price: "$200",
+        description: "New features added to improve usability, functionality, or visual appeal, such as better navigation, faster performance, or modern design updates.  I will add new features or new functionality to your website / mobile app.  Modernize and freshen your site appearance.  Update your site or app with a professional user-experience.",
+        type: "dev"
+    },
     {
         label: "Single-Page Web App",
         price: "$960",
@@ -19,12 +25,6 @@ const DEALS_PACKAGES = [
         description: "A simple, early version of a website or online application used to demonstrate how it will look and function, before it is fully built. This helps future designers, developers, and stakeholders test ideas, gather feedback, and make improvements without investing a lot of time or money. E.g., clickable mockup, a basic dashboard displaying sample charts of data, or wireframe of a mobile-friendly booking app that lets users step through making a reservation.",
         type: "dev"
 
-    },
-    {
-        label: "Web / mobile UI Features & Bug Extermination",
-        price: "$200",
-        description: "New features added to improve usability, functionality, or visual appeal, such as better navigation, faster performance, or modern design updates.  I will add new features or new functionality to your website / mobile app.  Modernize and freshen your site or app's appearance.  Update your site or app with a professional user-experience.",
-        type: "dev"
     },
     {
         label: "UI / UX Design Consultation",
@@ -64,72 +64,16 @@ function DealPackage({ index, pack }) {
 
     const { label, price, description } = pack;
 
-    const containerRef = useRef(null);
-    const descRef = useRef(null);
-    const priceRef = useRef(null);
-    const [expanded, setExpanded] = useState(false);
-    const [needsClamp, setNeedsClamp] = useState(false);
-    const [clampHeight, setClampHeight] = useState(null); // px
-
-    useLayoutEffect(() => {
-        const measure = () => {
-            const descEl = descRef.current;
-            const priceEl = priceRef.current;
-            if (!descEl || !priceEl) return;
-
-            // Ensure we measure the natural content height
-            const prevMax = descEl.style.maxHeight;
-            descEl.style.maxHeight = 'none';
-
-            const descRect = descEl.getBoundingClientRect();
-            const priceRect = priceEl.getBoundingClientRect();
-
-            // If the description bottom would cross into price top, we clamp.
-            const overlap = descRect.bottom > (priceRect.top - 8);
-            if (!expanded && overlap) {
-                const maxH = Math.max(priceRect.top - descRect.top - 12, 0);
-                setClampHeight(maxH);
-                setNeedsClamp(true);
-            } else {
-                setClampHeight(null);
-                setNeedsClamp(false);
-            }
-
-            // Restore previous style if needed
-            descEl.style.maxHeight = prevMax;
-        };
-
-        measure();
-        window.addEventListener('resize', measure);
-        return () => window.removeEventListener('resize', measure);
-    }, [expanded, label, description]);
-
     return (
         // index % 2 !== 0 ?
-        (<div ref={containerRef} className={`relative flex flex-wrap justify-between black p-2 m-4 ${expanded ? 'h-auto min-h-72' : 'h-72'} sm:w-96 md:w-96 lg:w-96 min-w-70
+        (<div className="relative flex flex-wrap justify-start content-start black p-2 m-4 h-72 sm:w-96 md:w-96 lg:w-96 min-w-70
              border-2 rounded-md  border-stone-400 backdrop-blur-lg">
-            <div className="flex flex-col">
-                <h1 className=" text-peach text-2xl font-quantify font-bold">{label}</h1>
-                <div className="relative text-black overflow-hidden" ref={descRef}
-                    style={{ maxHeight: !expanded && needsClamp && clampHeight ? `${clampHeight}px` : 'none' }}
-                >
-                    {description}
-                    {/* Fade indicator when clamped */}
-                    {!expanded && needsClamp && (
-                        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white/90 to-transparent dark:from-black/70" />
-                    )}
-                </div>
-                {needsClamp && (
-                    <button
-                        className="mt-2 self-start text-sm text-blue-600 hover:underline"
-                        onClick={() => setExpanded(v => !v)}
-                    >
-                        {expanded ? 'Show less' : 'Show more'}
-                    </button>
-                )}
+            <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-black bg-opacity-70 backdrop-blur-4xl">
+                <h1 className=" w-full text-pinkz text-xl font-quantify font-bold pb-1 text-left">{label}</h1>
+                <div className="w-full text-peach font-bold font-quantify text-lg">{price}</div>
             </div>
-            <div className="flex flex-col w-full sm:w-full md:w-1/2 lg:w-1/2 p-0 m-0 ">
-                <div ref={priceRef} className="text-black font-bold absolute bottom-2 right-4 font-quantify">{price}</div>
+            <div className="flex flex-col content-start justify-start w-full sm:w-full md:w-1/2 lg:w-full p-0 m-0 ">
+                <div className="text-black overflow-scroll text-sm">{description}</div>
             </div>
         </div>)
     )
@@ -173,7 +117,7 @@ function FreelanceComponentAndModal() {
 
 
                     <motion.div
-                        className="absolute inset-0 bg-white/20 backdrop-blur-sm "
+                        className="absolute inset-0 bg-white/50 backdrop-blur-sm "
                         onClick={closeModal}
                         aria-hidden="true"
                         initial={{ opacity: 0 }}
@@ -181,7 +125,7 @@ function FreelanceComponentAndModal() {
                         exit={{ opacity: 0 }}
                     />
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-70 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-90 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -190,8 +134,10 @@ function FreelanceComponentAndModal() {
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
-
-                        <div className="w-full p-2 px-10 sm:px-2 text-sm sm:text-sm lg:text-sm text-center self-center">...available 'til 01/12/2026</div>
+                        <div className="w-full flex flex-col justify-center content-center ">
+                            <div className="text-4xl font-black text-center">Packages</div>
+                            <div className="w-full p-2 font-extrabold px-10 sm:px-2 text-md sm:text-md lg:text-md text-center self-center">Available to a limited time.</div>
+                        </div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
                             {
