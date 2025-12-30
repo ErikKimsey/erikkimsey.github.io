@@ -9,52 +9,44 @@ import mobile from "../assets/images/mobile_dev.png";
 const DEALS_PACKAGES = [
     {
         label: "Website and Mobile UI Features",
-        price: "$240",
-        description: "New features added to improve usability, functionality, or visual appeal, such as better navigation, faster performance, or modern design updates.",
+        price: "$600",
+        description: "Design and implement a new feature for your website or mobile app (e.g., adding a user settings page, a contact form with validation, or a basic dashboard view), fully integrated, responsive, and ready to deploy.",
         image: mobile,
         type: "dev"
     },
     {
-        label: "Single Page Web App Mockup",
-        price: "$520",
-        description: "A simple, early version of a website or online application used to demonstrate how it will look and function, before it is fully built. This helps future designers, developers, and stakeholders test ideas, gather feedback, and make improvements without investing a lot of time or money. E.g., clickable mockup, a basic dashboard displaying sample charts of data, or wireframe of a mobile-friendly booking app that lets users step through making a reservation.",
-        image: "../assets/images/game_dev.PNG",
-        type: "dev"
-
-    },
-    {
-        label: "Single Page Mobile App Mockup",
-        price: "$520",
-        description: "A simple, early version of a website or online application used to demonstrate how it will look and function, before it is fully built. This helps future designers, developers, and stakeholders test ideas, gather feedback, and make improvements without investing a lot of time or money. E.g., clickable mockup, a basic dashboard displaying sample charts of data, or wireframe of a mobile-friendly booking app that lets users step through making a reservation.",
+        label: "UI Mockup: Web or Mobile app",
+        price: "$800",
+        description: "A high-fidelity single-page web app mockup, that demonstrates: layout, UI components, and basic interactions.  Ideal for pitching, user testing, or stakeholder review.  Delivered as a clickable prototype or lightweight live demo.",
         image: "../assets/images/game_dev.PNG",
         type: "dev"
 
     },
     {
         label: "UI / UX Design Consultation",
-        price: "$280",
-        description: "Appear fresh and confident, and know using your website or app won't require guess-work to navigate.  Whether you like it or not, the success of your business or organization hinges on the quality of your digital presence.  The 'UI' presents important content beautifully.  The 'UX' makes sure the content is easily accessible.",
+        price: "$300",
+        description: "Review your website or app’s UI/UX, and provide a concise set of actionable recommendations—covering usability, visual hierarchy, and user flow—along with annotated screenshots or wireframes, delivered within 48 hours after a 60-minute consultation.",
         image: "../assets/images/game_dev.PNG",
         type: "design"
     },
     {
-        label: "Brand Creative Brief",
-        price: "$320",
-        description: "The public is greatly influenced by the colors, the shapes, and the fonts associated with your business or organization.  A design brief is document of identity.  Something to hand to future designers, to save time and money.  It's the outcome of exploring: what appeals to your target demographic and your aesthetic preferences vis-a-vis evidence-based marketing psychology.",
+        label: "Brand Guidelines",
+        price: "$700",
+        description: "For a flat $700, I’ll create a concise brand guidelines document defining your core visual identity—including color palette, typography, logo usage, and UI styling examples—so your website, app, and marketing assets stay consistent and professional, delivered within 5–7 days.",
         image: "../assets/images/game_dev.PNG",
         type: "design"
     },
     {
         label: "2D / 3D Game Mockup",
-        price: "$948",
-        description: "A 'prototype' or 'proof of concept' is an inexpensive functional example of your idea.  A  tangible simulacrum that will allow you to assess a product's viability.  Further, it's what investors want to put in their hands, for the same purpose. I.e., the 'proof-of-concept.",
+        price: "$1200",
+        description: "A 2D or 3D game mockup demonstrating core visuals, basic gameplay flow, and camera perspective—using placeholder or custom assets as needed—ideal for pitching or early validation, delivered as a playable or video demo.",
         image: "../assets/images/game_dev.PNG",
         type: "dev"
 
     },
     {
         label: "3D Modeling",
-        price: "$180",
+        price: "$240",
         description: "3D models aren't just for video games.  They are also very practical.  Used daily in fields from e-commerce to architecture, from scientific research to hands-on educational tools.  Have you ever used the 'See in your room' feature of an e-commerce app?  Or, had a walk-through of your home before it was built?  Whether on a computer screen, in VR goggles, or through the screen of your iPhone, you were looking at a 3D model.",
         image: "../assets/images/game_dev.PNG",
         type: "3D"
@@ -82,13 +74,25 @@ function DealPackage({ index, pack }) {
     return (
         (<motion.div
             onHoverStart={() => hovering()}
-            whileHover={{ scale: 1.1 }}
-            className="relative flex flex-wrap justify-start content-start black p-4 m-4 h-56 w-full min-w-70 border-2 rounded-md border-stone-800 backdrop-blur-lg overflow-hidden" >
+            // whileHover={{ scale: 1.05 }}
+            className="relative flex flex-col flex-wrap justify-start content-start black p-4 m-4 w-full min-w-70 border-2 rounded-md border-stone-800 backdrop-blur-lg overflow-hidden" >
             {/* <img src={image} className="absolute -z-10 -top-10 opacity-20"></img> */}
-            < div className="flex flex-row w-full pb-2 my-0 pt-0 mt-0  bg-black bg-opacity-70 backdrop-blur-4xl overflow-hidden " >
-                <h1 className=" text-pinkz text-3xl font-quantify font-bold pb-1 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 bg-transparent border-spacing-x-12">{label}</h1>
-                <div className=" absolute  w-full text-tealz font-bold font-quantify text-8xl lg:text-9xl text-right overflow-hidden right-1 bottom-1 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
-                <div className=" absolute  w-full text-purps font-bold font-quantify text-9xl text-right overflow-hidden top-1/4 -left-5 -z-10 opacity-20 -rotate-12">{price}</div>
+            <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-black bg-opacity-70 backdrop-blur-4xl overflow-hidden">
+                <div className="label-and-price flex flex-row content-start">
+                    <div className=" text-pinkz text-xl font-comfortBold font-black pb-1 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 bg-transparent border-spacing-x-12">{label}</div>
+
+                </div>
+                <div className="service-description">
+                    {description}
+                </div>
+                <div className="  w-full text-tealz font-comfortBold font-black text-xl text-right overflow-hidden right-1 bottom-1 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
+                <div className="contact-container">
+                    {/* 
+                    - button to send message.
+                    - 
+                    */}
+                </div>
+                {/* <div className=" absolute  w-full text-purps font-bold font-quantify text-9xl text-right overflow-hidden top-1/4 -left-5 -z-10 opacity-20 -rotate-12">{price}</div> */}
             </div >
         </motion.div >)
     )
@@ -110,7 +114,7 @@ function FreelanceComponentAndModal() {
     return (
         <div>
             <motion.div
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.05 }}
                 className="freelance-button-tab fixed flex flex-row justify-around items-center p-0 m-0 top-0 left-0 w-full h-12" >
                 <div
 
