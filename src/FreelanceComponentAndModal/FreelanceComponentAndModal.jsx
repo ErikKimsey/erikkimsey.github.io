@@ -8,26 +8,33 @@ import mobile from "../assets/images/mobile_dev.png";
 
 const DEALS_PACKAGES = [
     {
-        label: "Website and Mobile UI Features",
+        label: "UI Features: Web & Mobile",
         price: "$600",
         description: "Design and implement a new feature for your website or mobile app (e.g., adding a user settings page, a contact form with validation, or a basic dashboard view), fully integrated, responsive, and ready to deploy.",
         image: mobile,
         type: "dev"
     },
     {
-        label: "UI Mockup: Web or Mobile app",
-        price: "$800",
+        label: "UI Mockup: Web & Mobile",
+        price: "$1200",
         description: "A high-fidelity single-page web app mockup, that demonstrates: layout, UI components, and basic interactions.  Ideal for pitching, user testing, or stakeholder review.  Delivered as a clickable prototype or lightweight live demo.",
         image: "../assets/images/game_dev.PNG",
         type: "dev"
-
     },
     {
         label: "UI / UX Design Consultation",
-        price: "$300",
+        price: "$400",
         description: "Review your website or app’s UI/UX, and provide a concise set of actionable recommendations—covering usability, visual hierarchy, and user flow—along with annotated screenshots or wireframes, delivered within 48 hours after a 60-minute consultation.",
         image: "../assets/images/game_dev.PNG",
         type: "design"
+    },
+    {
+        label: "2D / 3D Game Mockup",
+        price: "$1100",
+        description: "A 2D or 3D game mockup demonstrating core visuals, basic gameplay flow, and camera perspective—using placeholder or custom assets as needed—ideal for pitching or early validation, delivered as a playable or video demo.",
+        image: "../assets/images/game_dev.PNG",
+        type: "dev"
+
     },
     {
         label: "Brand Guidelines",
@@ -35,14 +42,6 @@ const DEALS_PACKAGES = [
         description: "For a flat $700, I’ll create a concise brand guidelines document defining your core visual identity—including color palette, typography, logo usage, and UI styling examples—so your website, app, and marketing assets stay consistent and professional, delivered within 5–7 days.",
         image: "../assets/images/game_dev.PNG",
         type: "design"
-    },
-    {
-        label: "2D / 3D Game Mockup",
-        price: "$1200",
-        description: "A 2D or 3D game mockup demonstrating core visuals, basic gameplay flow, and camera perspective—using placeholder or custom assets as needed—ideal for pitching or early validation, delivered as a playable or video demo.",
-        image: "../assets/images/game_dev.PNG",
-        type: "dev"
-
     },
     {
         label: "3D Modeling",
@@ -75,17 +74,17 @@ function DealPackage({ index, pack }) {
         (<motion.div
             onHoverStart={() => hovering()}
             // whileHover={{ scale: 1.05 }}
-            className="relative flex flex-col flex-wrap justify-start content-start black p-4 m-4 w-full min-w-70 border-2 rounded-md border-stone-800 backdrop-blur-lg overflow-hidden" >
+            className="relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-stone-900 backdrop-blur-lg overflow-hidden">
             {/* <img src={image} className="absolute -z-10 -top-10 opacity-20"></img> */}
-            <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-black bg-opacity-70 backdrop-blur-4xl overflow-hidden">
+            <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-opacity-70 backdrop-blur-4xl overflow-hidden">
                 <div className="label-and-price flex flex-row content-start">
-                    <div className=" text-pinkz text-xl font-comfortBold font-black pb-1 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 bg-transparent border-spacing-x-12">{label}</div>
+                    <div className=" text-pinkz text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12">{label}</div>
 
                 </div>
-                <div className="service-description">
+                <div className="service-description font-black">
                     {description}
                 </div>
-                <div className="  w-full text-tealz font-comfortBold font-black text-xl text-right overflow-hidden right-1 bottom-1 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
+                <div className=" w-full text-tealz font-quantify font-black text-4xl text-right overflow-hidden right-1 bottom-1 px-4 pb-0 pt-2 mb-0 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
                 <div className="contact-container">
                     {/* 
                     - button to send message.
@@ -116,10 +115,8 @@ function FreelanceComponentAndModal() {
             <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="freelance-button-tab fixed flex flex-row justify-around items-center p-0 m-0 top-0 left-0 w-full h-12" >
-                <div
-
-                    className="w-3/5 sm:w-3/5 lg:w-1/3 h-full bg-lime-300 rounded-br-3xl rounded-bl-3xl" onClick={FreelanceTabClick
-                    }>
+                <div className="w-3/5 sm:w-3/5 lg:w-1/3 h-full bg-lime-300 rounded-br-3xl rounded-bl-3xl" onClick={FreelanceTabClick
+                }>
 
                 </div>
             </motion.div>
@@ -141,7 +138,7 @@ function FreelanceComponentAndModal() {
                         exit={{ opacity: 0 }}
                     />
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-90 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -151,8 +148,8 @@ function FreelanceComponentAndModal() {
                     >
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
-                            <div className="w-full p-2 font-extrabold px-10 sm:px-2 pb-1 text-4xl text-center self-center font-quantify text-peach">limited time</div>
-                            <div className="text-4xl font-black text-center font-quantify text-6xl">Packages</div>
+                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. 01/26</div>
+                            <div className="text-4xl px-4 font-black text-sm">limited time ; starting prices are green.</div>
                         </div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">

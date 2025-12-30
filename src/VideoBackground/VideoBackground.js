@@ -23,7 +23,7 @@ export default function VideoBackground() {
 
     return (
         <div className="w-auto">
-                    <VideoComponent video={video}/>
+            <VideoComponent video={video} />
         </div>
         // <div className="w-full ">
         //     {
@@ -50,7 +50,7 @@ function VideoComponent(props) {
     return (
         <>
             {shouldPlay &&
-                <video className="w-auto" src={video} type="video/mp4" autoPlay muted loop />
+                <video className="w-auto" src={video} type="video/mp4" autoPlay muted />
             }
         </>
     );
