@@ -40,6 +40,7 @@ function VideoComponent(props) {
     let { video } = props;
 
     let [shouldPlay, setShouldPlay] = useState(false);
+    let [videoCompleted, setVideoCompleted] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -47,10 +48,22 @@ function VideoComponent(props) {
         }, 1000);
     }, []);
 
+    const handleVideoEnded = () => {
+        setVideoCompleted(true);
+        console.log("Video playback completed");
+    };
+
     return (
         <>
             {shouldPlay &&
-                <video className="w-auto" src={video} type="video/mp4" autoPlay muted />
+                <video
+                    className="w-auto"
+                    src={video}
+                    type="video/mp4"
+                    autoPlay
+                    muted
+                    onEnded={handleVideoEnded}
+                />
             }
         </>
     );

@@ -49,11 +49,11 @@ function BannerMenuItem(props) {
     return (
         <motion.div
             ref={thisRef}
-            className="bannerMenuItem"
             variants={variants}
             whileHover={{ scale: 1.05, color: "#ffceaf" }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToPage}
+            className="overflow-clip"
         >
             {tag}
         </motion.div>
@@ -78,7 +78,7 @@ export default function BannerMenu() {
     }, [])
 
     return (
-        <motion.div className="bannerMenu"
+        <motion.div className="bannerMenu font-quantify overflow-clip overflow-hidden overflow-y-clip"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{

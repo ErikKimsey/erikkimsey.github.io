@@ -36,11 +36,11 @@ function Landing(props) {
     return (
         <LandingContentBannerTemplate>
 
-            <div className="w-11/12 lg:w-1/2 flex flex-col flex-wrap overflow-clip">
+            <div className="w-full lg:w-1/2 flex flex-col flex-wrap overflow-clip">
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent />
             </div>
-            <div className="w-11/12 lg:w-1/2 flex">
+            <div className="w-full lg:w-1/2 flex">
                 <VideoBackground />
             </div>
 

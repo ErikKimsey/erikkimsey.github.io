@@ -13,10 +13,10 @@ export default function SkillsExperienceParent() {
     const closeModal = () => setOpenModal(null);
 
     return (
-        <motion.div 
-            className="w-auto flex flex-row items-start justify-start text-2xl"
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
+        <motion.div
+            className="w-auto flex flex-row items-start justify-start text-2xl pt-10 overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
                 duration: 2,
                 delay: 1.4,
@@ -24,7 +24,7 @@ export default function SkillsExperienceParent() {
             {/* Triggers */}
             <button
                 onClick={openSkillset}
-                className="rounded border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps font-black transition duration-500"
+                className="rounded font-quantify border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps  transition duration-500"
             >
                 Skillset
             </button>
@@ -33,7 +33,7 @@ export default function SkillsExperienceParent() {
 
             <button
                 onClick={openExperience}
-                    className=" rounded border-white text-white border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps font-black transition duration-500"
+                className="rounded font-quantify border-white text-white border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps transition duration-500"
             >
                 Experience
             </button>
