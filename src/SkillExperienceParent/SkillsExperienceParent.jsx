@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Experience from "../Experience/Experience";
 import Skillset from "../Skillset/Skillset";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAstronaut, faKitchenSet } from '@fortawesome/free-solid-svg-icons'
 
 import "./skillsExperienceParent.scss";
 
@@ -24,18 +26,19 @@ export default function SkillsExperienceParent() {
             {/* Triggers */}
             <button
                 onClick={openSkillset}
-                className="rounded font-quantify border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps  transition duration-500"
+                className="rounded font-quantify border-gray-600 bg-transparent hover:text-peach hover:scale-110 text-purps transition duration-200 pl-2"
             >
-                Skillset
+                <FontAwesomeIcon icon={faKitchenSet} className="h-10" />
+
             </button>
 
-            <div className="space w-10 h-1 "></div>
+            <div className="space w-10 h-1"></div>
 
             <button
                 onClick={openExperience}
-                className="rounded font-quantify border-white text-white border-gray-600 text-white hover:bg-bluez bg-transparent hover:text-bluez hover:scale-110 text-purps transition duration-500"
+                className="rounded font-quantify border-gray-600 bg-transparent hover:text-peach hover:scale-110 text-purps transition duration-200"
             >
-                Experience
+                <FontAwesomeIcon icon={faUserAstronaut} className="h-10" />
             </button>
 
             {/* Modal Overlay with framer-motion */}

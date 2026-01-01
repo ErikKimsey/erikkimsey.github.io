@@ -1,10 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
-
 import mobile from "../assets/images/mobile_dev.png";
-
-
 
 const DEALS_PACKAGES = [
     {
@@ -97,7 +94,6 @@ function DealPackage({ index, pack }) {
     )
 }
 
-
 function FreelanceComponentAndModal() {
 
     let [freelance, setFreelance] = useState(true);
@@ -137,6 +133,7 @@ function FreelanceComponentAndModal() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     />
+
                     <motion.div
                         className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                         role="dialog"
@@ -146,6 +143,17 @@ function FreelanceComponentAndModal() {
                         exit={{ y: 24, scale: 0.1, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
+
+                            <button
+                                onClick={closeModal}
+                                className="px-3 py-1 rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                                aria-label="Close"
+                            >
+                                X
+                            </button>
+                        </div>
+
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
                             <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. 01/26</div>
