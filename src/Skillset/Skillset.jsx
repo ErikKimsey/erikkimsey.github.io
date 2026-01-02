@@ -11,7 +11,7 @@ export default function Skillset() {
     }, [])
 
     return (
-        <div className=" flex flex-col justify-center content-center items-center w-full overflow-scroll" id="">
+        <div className="flex flex-col justify-center content-center items-center w-full overflow-scroll" id="">
             {/* <div className="skillset-background-image"></div> */}
             <div className="itemContainer">
                 {

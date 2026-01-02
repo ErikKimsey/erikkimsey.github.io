@@ -62,7 +62,7 @@ export default function SkillsExperienceParent() {
 
                         {/* Modal Panel */}
                         <motion.div
-                            className="relative z-50 max-h-[85vh] w-1/2 rounded-lg shadow-2xl bg-black bg-opacity-50 border border-white/10"
+                            className="relative z-50 max-h-[85vh] w-full lg:w-1/2 rounded-lg shadow-2xl bg-black bg-opacity-50 "
                             role="dialog"
                             aria-modal="true"
                             initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -70,21 +70,21 @@ export default function SkillsExperienceParent() {
                             exit={{ y: 24, scale: 0.1, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         >
-                            <div className=" flex flex-row z-50 content-between justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
-                                <h2 className=" font-semibold  font-extrabold px-1 sm:px-2 pb-1 text-7xl self-center font-quantify overflow-clip">
-                                    {openModal === 'skillset' ? 'Skillset' : 'Experience'}
-                                </h2>
+                            <div className=" flex flex-col z-50 content-between justify-between px-3">
                                 <button
                                     onClick={closeModal}
                                     className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white w-12 h-12"
                                     aria-label="Close"
                                 >
-                                    <FontAwesomeIcon icon={faXmark} className=" text-white w-12 h-12" />
+                                    <FontAwesomeIcon icon={faXmark} className=" text-white w-8 h-8" />
                                 </button>
+                                <h2 className="font-extrabold pb-1 text-7xl lg:text-9xl font-quantify overflow-clip">
+                                    {openModal === 'skillset' ? 'Skillset' : 'Experience'}
+                                </h2>
                             </div>
 
 
-                            <div className="p-4 flex justify-center content-center">
+                            <div className="p-1 flex justify-center content-center">
                                 {openModal === 'skillset' ? (
                                     <Skillset />
                                 ) : (

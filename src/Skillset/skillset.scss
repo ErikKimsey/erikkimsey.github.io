@@ -7,10 +7,7 @@
 @tailwind utilities;
 
 .skillsetContainer {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
+
     // flex-flow: row wrap;
     // justify-content: flex-start;
     // align-items: flex-start;
@@ -34,18 +31,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 1;
-    }
-
-    .skillsHeader {
-        font-size: 2rem;
-        padding: 5px;
-        text-decoration: underline $lighterpink;
-    }
-
-    .itemContainer {
-        // width: 100%;
-        z-index: 3;
-
     }
 
     .skillSetItem {

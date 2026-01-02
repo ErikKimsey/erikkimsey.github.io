@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
 import mobile from "../assets/images/mobile_dev.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const DEALS_PACKAGES = [
     {
@@ -71,7 +73,7 @@ function DealPackage({ index, pack }) {
         (<motion.div
             onHoverStart={() => hovering()}
             // whileHover={{ scale: 1.05 }}
-            className="relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-stone-900 backdrop-blur-lg overflow-hidden">
+            className="relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
             {/* <img src={image} className="absolute -z-10 -top-10 opacity-20"></img> */}
             <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-opacity-70 backdrop-blur-4xl overflow-hidden">
                 <div className="label-and-price flex flex-row content-start">
@@ -110,8 +112,8 @@ function FreelanceComponentAndModal() {
         <div>
             <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="freelance-button-tab fixed flex flex-row justify-around items-center p-0 m-0 top-0 left-0 w-full h-12" >
-                <div className="w-3/5 sm:w-3/5 lg:w-1/3 h-full bg-lime-300 rounded-br-3xl rounded-bl-3xl" onClick={FreelanceTabClick
+                className="freelance-button-tab fixed flex flex-row justify-around items-center p-0 m-0 top-0 left-0 w-full h-12 " >
+                <div className="bg-peach w-3/5 sm:w-3/5 lg:w-1/3 h-full bg-lime-300 rounded-br-3xl rounded-bl-3xl" onClick={FreelanceTabClick
                 }>
 
                 </div>
@@ -143,14 +145,14 @@ function FreelanceComponentAndModal() {
                         exit={{ y: 24, scale: 0.1, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
-                        <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
+                        <div className="flex flex-row items-end p-2 w-full">
 
                             <button
                                 onClick={closeModal}
-                                className="px-3 py-1 rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                                className="p-2 rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300"
                                 aria-label="Close"
                             >
-                                X
+                                <FontAwesomeIcon icon={faXmark} className="w-8 h-8 text-xl" />
                             </button>
                         </div>
 
