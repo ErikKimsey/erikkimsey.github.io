@@ -11,8 +11,8 @@ export default function Skillset() {
     }, [])
 
     return (
-        <div className="skillsetContainer flex justify-center content-center items-center w-full lg:w-2/3 md:w-full sm:w-full xs:w-full" id="skillset-container">
-            <div className="skillset-background-image"></div>
+        <div className=" flex flex-col justify-center content-center items-center w-full overflow-scroll" id="">
+            {/* <div className="skillset-background-image"></div> */}
             <div className="itemContainer">
                 {
                     skillsData && skillsData.map((e) => {

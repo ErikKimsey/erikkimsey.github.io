@@ -11,7 +11,32 @@ module.exports = {
             'bluez': "#7f47ff",
             'blaq': "#000",
             'pinkz': "#ff45dd",
-            'tealz': "#1fffad"
+            'tealz': "#1fffad",
+            'grayz': "#aaaaaa",
+            'grayzDark': "#444444",
+            'offWhitez': "#fffec8"
+        },
+        borderColor: {
+            'peach': "#ffceaf",
+            'purps': "#AA5EF4",
+            'bluez': "#7f47ff",
+            'blaq': "#000",
+            'pinkz': "#ff45dd",
+            'tealz': "#1fffad",
+            'grayz': "#aaaaaa",
+            'grayzDark': "#444444",
+            'offWhitez': "#fffec8"
+        },
+        backgroundColor: {
+            'peach': "#ffceaf",
+            'purps': "#AA5EF4",
+            'bluez': "#7f47ff",
+            'blaq': "#000",
+            'pinkz': "#ff45dd",
+            'tealz': "#1fffad",
+            'grayz': "#aaaaaa",
+            'grayzDark': "#444444",
+            'offWhitez': "#fffec8"
         },
 
         extend: {

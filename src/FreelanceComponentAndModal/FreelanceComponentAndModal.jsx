@@ -96,7 +96,7 @@ function DealPackage({ index, pack }) {
 
 function FreelanceComponentAndModal() {
 
-    let [freelance, setFreelance] = useState(true);
+    let [freelance, setFreelance] = useState(false);
 
     function FreelanceTabClick() {
         setFreelance(!freelance);

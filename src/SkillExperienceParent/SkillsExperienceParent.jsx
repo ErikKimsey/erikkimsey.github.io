@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Experience from "../Experience/Experience";
 import Skillset from "../Skillset/Skillset";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAstronaut, faKitchenSet } from '@fortawesome/free-solid-svg-icons'
+import { faUserAstronaut, faRoad, faXmark, faToolbox, faTimeline } from '@fortawesome/free-solid-svg-icons'
 
 import "./skillsExperienceParent.scss";
 
 export default function SkillsExperienceParent() {
-    const [openModal, setOpenModal] = useState(null); // 'skillset' | 'experience' | null
+    const [openModal, setOpenModal] = useState('experience'); // 'skillset' | 'experience' | null
 
     const openSkillset = () => setOpenModal('skillset');
     const openExperience = () => setOpenModal('experience');
@@ -26,9 +26,9 @@ export default function SkillsExperienceParent() {
             {/* Triggers */}
             <button
                 onClick={openSkillset}
-                className="rounded font-quantify border-gray-600 bg-transparent hover:text-peach hover:scale-110 text-purps transition duration-200 pl-2"
+                className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-transition duration-200 pl-2"
             >
-                <FontAwesomeIcon icon={faKitchenSet} className="h-10" />
+                <FontAwesomeIcon icon={faTimeline} className="h-8" />
 
             </button>
 
@@ -36,16 +36,16 @@ export default function SkillsExperienceParent() {
 
             <button
                 onClick={openExperience}
-                className="rounded font-quantify border-gray-600 bg-transparent hover:text-peach hover:scale-110 text-purps transition duration-200"
+                className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-purps transition duration-200"
             >
-                <FontAwesomeIcon icon={faUserAstronaut} className="h-10" />
+                <FontAwesomeIcon icon={faRoad} className="h-8" />
             </button>
 
             {/* Modal Overlay with framer-motion */}
             <AnimatePresence>
                 {openModal && (
                     <motion.div
-                        className="fixed inset-0 z-50 flex items-center justify-center"
+                        className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 right-0 bottom-0 h-full "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -62,7 +62,7 @@ export default function SkillsExperienceParent() {
 
                         {/* Modal Panel */}
                         <motion.div
-                            className="relative z-50 max-h-[85vh] w-[90vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-50  border border-white/10 overflow-x-clip"
+                            className="relative z-50 max-h-[85vh] w-1/2 rounded-lg shadow-2xl bg-black bg-opacity-50 border border-white/10"
                             role="dialog"
                             aria-modal="true"
                             initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -70,18 +70,19 @@ export default function SkillsExperienceParent() {
                             exit={{ y: 24, scale: 0.1, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         >
-                            <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
-                                <h2 className="text-lg font-semibold capitalize">
+                            <div className=" flex flex-row z-50 content-between justify-between px-4 py-3 border-b border-neutral-200 dark:border-neutral-800">
+                                <h2 className=" font-semibold  font-extrabold px-1 sm:px-2 pb-1 text-7xl self-center font-quantify overflow-clip">
                                     {openModal === 'skillset' ? 'Skillset' : 'Experience'}
                                 </h2>
                                 <button
                                     onClick={closeModal}
-                                    className="px-3 py-1 rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white w-12 h-12"
                                     aria-label="Close"
                                 >
-                                    Close
+                                    <FontAwesomeIcon icon={faXmark} className=" text-white w-12 h-12" />
                                 </button>
                             </div>
+
 
                             <div className="p-4 flex justify-center content-center">
                                 {openModal === 'skillset' ? (

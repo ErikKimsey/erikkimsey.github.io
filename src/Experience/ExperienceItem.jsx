@@ -25,26 +25,26 @@ export default function ExperienceItem(props) {
     if (!modalOpen) {
         return (
             <motion.div
-                whileHover={{ scale: 1.02, top: "20px" }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer w-fit  xs:w-full"
+                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-grayzDark bg-blaq bg-opacity-20 backdrop-blur-xl overflow-hidden"
                 onClick={() => (modalOpen ? close() : open())}
             >
-                <div className="name-role-icon-container">
-                    <div className="icon-container">
-                        <FontAwesomeIcon icon={faEye} size='1x' color="rgba(255,255,255, 0.3)" />
+                <div className="name-role-icon-container backdrop-blur-xl ">
+                    <div className="text-md flex flex-col flex-wrap content-between p-2">
+                        <div className="text-tealz pb-1 text-md font-comfortBold">{role}</div>
+                        <div className="text-pinkz py-2 text-sm font-comfortBold">{name}</div>
                     </div>
-                    <div className="name-role-container">
-                        <div className="expItemName">{name}</div>
-                        <div className="expItemRole">{role}</div>
+                    <div className="icon-container text-sm">
+                        <FontAwesomeIcon icon={faEye} color="rgba(255,255,255, 0.3)" />
                     </div>
                 </div>
-                <div className="tech-stack-icon-container">
+                <div className="tech-stack-icon-container flex flex-row flex-wrap ">
                     {
                         techStackItems &&
                         techStackItems.map((e) => {
-                            return <div className="expItemStack" key={e}>
+                            return <div className="text-offWhitez py-1 px-5 m-2 text-sm text-center  font-medium  rounded-xl border-grayzDark border-2" key={e}>
                                 {e}
                             </div>
                         })

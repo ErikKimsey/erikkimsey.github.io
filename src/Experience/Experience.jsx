@@ -20,7 +20,7 @@ export default function Experience() {
 
     return (
         <motion.div className='experienceContainer'
-            id="experience-container"
+            id="experience-container "
             ref={containerRef}
         >
             <div className="experienceItemsList w-full">
