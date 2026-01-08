@@ -72,18 +72,17 @@ export default function SkillsExperienceParent() {
                             exit={{ y: 24, scale: 0.1, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         >
-                            <div className="w-full flex flex-row z-50 content-between justify-between px-3">
+                            <div className="w-full flex flex-col z-50 content-between justify-between px-3">
                                 <button
                                     onClick={closeModal}
-                                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white h-12"
+                                    className="rounded self-end bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white h-12"
                                     aria-label="Close"
                                 >
-                                    <div className=" text-peach text-6xl">CV</div>
                                     <FontAwesomeIcon icon={faXmark} className=" text-white w-8 h-8" />
 
                                 </button>
 
-                                <h2 className="font-extrabold pb-1 text-7xl lg:text-9xl font-quantify overflow-clip">
+                                <h2 className="font-extrabold pb-1 text-7xl lg:text-7xl font-quantify overflow-clip">
                                     {openModal === 'skillset' ? 'Skillset' : 'Experience'}
                                 </h2>
                             </div>
