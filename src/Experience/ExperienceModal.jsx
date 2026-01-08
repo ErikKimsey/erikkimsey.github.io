@@ -60,7 +60,7 @@ export default function ExperienceModal(props) {
                 />
 
                 <motion.div
-                    className="relative flex flex-col flex-wrap z-1000 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-100 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
+                    className="relative flex flex-col flex-wrap z-1000 h-full max-h-[85vh] w-[60vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-blaq inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                     role="dialog"
                     aria-modal="true"
                     initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -68,29 +68,30 @@ export default function ExperienceModal(props) {
                     exit={{ y: 24, scale: 0.1, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 >
-                    <div className="flex flex-row items-end p-2 w-full">
+                    <div className="flex flex-row items-end w-full justify-end ">
                         <button
                             onClick={handleClose}
-                            className="p-2 rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300"
+                            className="rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300 w-12 h-12"
                             aria-label="Close"
                         >
-                            <FontAwesomeIcon icon={faXmark} className="w-8 h-8 text-xl" />
+                            <FontAwesomeIcon icon={faXmark} className="h-full text-xl" />
                         </button>
                     </div>
                     <div className="flex flex-col">
-                        <div className="w-full flex flex-col justify-center content-center ">
-                            <div className="text-purps text-2xl">{role}</div>
-                            <div className="text-pinkz text-2xl">{name}</div>
+                        <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl pb-2">
+                            <div className="text-purps">{role}</div>
+                            <div className="text-pinkz">{name}</div>
                         </div>
 
-                        <div className="flex flex-row">
+                        <div className="flex flex-row py-2 font-comfortBold">
                             <div className="text-2xl">{stack}</div>
                         </div>
+
                         <>
-                            <ul className="expAboutList">
+                            <ul className="list-inside list-disc text-offWhitez text-sm font-comfortBold overflow-scroll pt-4" role="list">
                                 {
                                     about.map((e) => {
-                                        return <li className="text-sm" key={e}>{e}</li>
+                                        return <li className="text-offWhitez list-item py-1" key={e}>{e}</li>
                                     })
                                 }
                             </ul>
