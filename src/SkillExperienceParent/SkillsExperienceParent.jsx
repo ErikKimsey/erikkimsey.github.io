@@ -8,7 +8,7 @@ import { faUserAstronaut, faRoad, faXmark, faToolbox, faTimeline } from '@fortaw
 import "./skillsExperienceParent.scss";
 
 export default function SkillsExperienceParent() {
-    const [openModal, setOpenModal] = useState(null); // 'skillset' | 'experience' | null
+    const [openModal, setOpenModal] = useState(true); // 'skillset' | 'experience' | null
 
     const openSkillset = () => setOpenModal('skillset');
     const openExperience = () => setOpenModal('experience');
