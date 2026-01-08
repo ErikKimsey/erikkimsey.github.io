@@ -23,11 +23,21 @@ export default function Banner(props) {
     let [timer, setTimer] = useState(3000);
     let [rolesIndex, setRolesIndex] = useState(0);
     let [currRole, setCurrRole] = useState();
+    let [isGrayscale, setIsGrayscale] = useState(true);
 
     useEffect(() => {
         let interval = null;
         setIconActive(props.isActive);
         setTimer(timerTime);
+    }, [])
+
+    useEffect(() => {
+        // Remove grayscale after 3 seconds
+        const timer = setTimeout(() => {
+            setIsGrayscale(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
     }, [])
 
     useEffect(() => {
@@ -57,6 +67,7 @@ export default function Banner(props) {
                 duration: 2,
                 delay: 0,
             }}
+            // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap overflow-clip">

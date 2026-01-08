@@ -71,10 +71,10 @@ function DealPackage({ index, pack }) {
 
     return (
         (<motion.div
-            onHoverStart={() => hovering()}
-            // whileHover={{ scale: 1.05 }}
+            // onHoverStart={() => hovering()}
+            // whileHover={{ scale: 1.01 }}
             className="relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
-            {/* <img src={image} className="absolute -z-10 -top-10 opacity-20"></img> */}
+
             <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-opacity-70 backdrop-blur-4xl overflow-hidden">
                 <div className="label-and-price flex flex-row content-start">
                     <div className=" text-pinkz text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12">{label}</div>
@@ -112,6 +112,7 @@ function FreelanceComponentAndModal() {
         <div>
             <motion.div
                 whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
                 className="freelance-button-tab fixed flex flex-row justify-around items-center p-0 m-0 top-0 left-0 w-full h-12 " >
                 <div className="bg-peach w-3/5 sm:w-3/5 lg:w-1/3 h-full bg-lime-300 rounded-br-3xl rounded-bl-3xl" onClick={FreelanceTabClick
                 }>
@@ -128,7 +129,7 @@ function FreelanceComponentAndModal() {
 
 
                     <motion.div
-                        className="absolute inset-0 backdrop-blur-sm "
+                        className="absolute inset-0 backdrop-blur-md "
                         onClick={closeModal}
                         aria-hidden="true"
                         initial={{ opacity: 0 }}

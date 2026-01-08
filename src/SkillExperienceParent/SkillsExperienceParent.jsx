@@ -8,7 +8,7 @@ import { faUserAstronaut, faRoad, faXmark, faToolbox, faTimeline } from '@fortaw
 import "./skillsExperienceParent.scss";
 
 export default function SkillsExperienceParent() {
-    const [openModal, setOpenModal] = useState('experience'); // 'skillset' | 'experience' | null
+    const [openModal, setOpenModal] = useState(null); // 'skillset' | 'experience' | null
 
     const openSkillset = () => setOpenModal('skillset');
     const openExperience = () => setOpenModal('experience');
@@ -24,21 +24,23 @@ export default function SkillsExperienceParent() {
                 delay: 1.4,
             }}>
             {/* Triggers */}
-            <button
+            {/* <button
                 onClick={openSkillset}
                 className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-transition duration-200 pl-2"
             >
                 <FontAwesomeIcon icon={faTimeline} className="h-8" />
 
-            </button>
+            </button> */}
 
-            <div className="space w-10 h-1"></div>
 
             <button
                 onClick={openExperience}
-                className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-purps transition duration-200"
+                className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-purps transition duration-300 flex flex-row items-start justify-center"
             >
-                <FontAwesomeIcon icon={faRoad} className="h-8" />
+
+                {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
+                {/* <div className="text-purps text-3xl"> </div> */}
+                <div className="text-purps text-3xl">CV</div>
             </button>
 
             {/* Modal Overlay with framer-motion */}
@@ -52,7 +54,7 @@ export default function SkillsExperienceParent() {
                     >
                         {/* Backdrop */}
                         <motion.div
-                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                            className="absolute inset-0 bg-black/60 backdrop-blur-md"
                             onClick={closeModal}
                             aria-hidden="true"
                             initial={{ opacity: 0 }}
@@ -70,14 +72,17 @@ export default function SkillsExperienceParent() {
                             exit={{ y: 24, scale: 0.1, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         >
-                            <div className=" flex flex-col z-50 content-between justify-between px-3">
+                            <div className="w-full flex flex-row z-50 content-between justify-between px-3">
                                 <button
                                     onClick={closeModal}
-                                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white w-12 h-12"
+                                    className="rounded bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white h-12"
                                     aria-label="Close"
                                 >
+                                    <div className=" text-peach text-6xl">CV</div>
                                     <FontAwesomeIcon icon={faXmark} className=" text-white w-8 h-8" />
+
                                 </button>
+
                                 <h2 className="font-extrabold pb-1 text-7xl lg:text-9xl font-quantify overflow-clip">
                                     {openModal === 'skillset' ? 'Skillset' : 'Experience'}
                                 </h2>

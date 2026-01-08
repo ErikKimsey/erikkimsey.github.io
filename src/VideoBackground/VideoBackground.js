@@ -60,7 +60,7 @@ function VideoComponent(props) {
                     className="w-auto"
                     src={video}
                     type="video/mp4"
-                    autoPlay
+                    // autoPlay
                     muted
                     onEnded={handleVideoEnded}
                 />
