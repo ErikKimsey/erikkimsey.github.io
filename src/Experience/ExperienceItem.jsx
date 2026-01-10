@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experienceItem.scss"
-
-
-
 import ExperienceModal from "./ExperienceModal";
 
+
+
 export default function ExperienceItem(props) {
-    let { name, stack, dates, role, index, github, soundcloud, url, about } = props;
+    let { name, stack, dates, role, index, github, soundcloud, url, img, about } = props;
+    console.log(img);
 
     const [modalOpen, setModalOpen] = useState(false);
     const [techStackItems, setTechStackItems] = useState([]);
@@ -44,7 +44,7 @@ export default function ExperienceItem(props) {
                     {
                         techStackItems &&
                         techStackItems.map((e) => {
-                            return <div className="text-offWhitez py-1 px-5 m-2 text-sm text-center  font-medium  rounded-xl border-grayzDark border-2" key={e}>
+                            return <div className="text-offWhitez py-1 px-5 m-2 text-sm text-center font-medium  rounded-xl border-grayzDark border-2" key={e}>
                                 {e}
                             </div>
                         })
@@ -58,7 +58,7 @@ export default function ExperienceItem(props) {
         return (
             <ModalContainer>
                 {modalOpen && (
-                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close}
+                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close} img={img}
                         name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github}
                     />
                 )}

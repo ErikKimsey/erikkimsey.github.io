@@ -27,7 +27,7 @@ export default function Experience() {
                 {
                     data && data.map((e, i) => {
                         return <div className="experience-item-container w-full" key={i} >
-                            <ExperienceItem key={e.name} name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} />
+                            <ExperienceItem key={e.name} name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} img={e.img} />
                         </div>
                     })
                 }
