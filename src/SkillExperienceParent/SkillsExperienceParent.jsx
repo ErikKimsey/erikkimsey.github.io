@@ -40,7 +40,7 @@ export default function SkillsExperienceParent() {
 
                 {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
                 {/* <div className="text-purps text-3xl"> </div> */}
-                <div className="text-purps text-3xl">CV</div>
+                <div className="w-full text-purps text-5xl pl-4 text-center">CV</div>
             </button>
 
             {/* Modal Overlay with framer-motion */}
@@ -82,7 +82,7 @@ export default function SkillsExperienceParent() {
 
                                 </button>
 
-                                <h2 className="font-extrabold pb-1 text-7xl lg:text-7xl font-quantify overflow-clip">
+                                <h2 className="font-extrabold pb-1 text-5xl lg:text-7xl font-quantify overflow-clip pl-4">
                                     {openModal === 'skillset' ? 'Skillset' : 'Experience'}
                                 </h2>
                             </div>
