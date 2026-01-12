@@ -48,6 +48,8 @@ function ExperienceImages(props) {
 export default function ExperienceModal(props) {
     let { name, about, stack, dates, role, url, github, img, handleClose } = props;
 
+    const PLACEHOLDER_IMAGE = "https://res.cloudinary.com/dfez8ez2g/image/upload/v1768229678/addamms_shrug_w_text_er6glv.png";
+
     useEffect(() => {
         let foot = document.querySelector(".footerContainer");
         foot.style.zIndex = -10;
@@ -95,7 +97,7 @@ export default function ExperienceModal(props) {
                         </button>
                     </div>
                     <div className="flex flex-col h-full py-4 overflow-clip">
-                        <img src={img} className="w-full h-72 object-cover" />
+                        <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" />
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-pinkz overflow-clip">{name}</div>
