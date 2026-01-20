@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Experience from "../Experience/Experience";
 import Skillset from "../Skillset/Skillset";
@@ -8,9 +9,10 @@ import { faUserAstronaut, faRoad, faXmark, faToolbox, faTimeline } from '@fortaw
 import "./skillsExperienceParent.scss";
 
 export default function SkillsExperienceParent() {
-    const [openModal, setOpenModal] = useState(true); // 'skillset' | 'experience' | null
+    const [openModal, setOpenModal] = useState(); // 'skillset' | 'experience' | null
+    const navigate = useNavigate();
 
-    const openSkillset = () => setOpenModal('skillset');
+    const openSkillset = () => navigate('/skillset');
     const openExperience = () => setOpenModal('experience');
     const closeModal = () => setOpenModal(null);
 

@@ -4,6 +4,8 @@ import './Banner/banner.scss';
 import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
+import Skillset from './Skillset/Skillset';
+import { Routes, Route } from 'react-router-dom';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
 import LandingImageGallery from './ImageGallery/LandingImageGallery';
@@ -29,14 +31,33 @@ export default function App() {
         <div className="App">
             {/* <VideoBackground /> */}
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
-                <Landing label={"Experience"} navTo={"experience"} />
-                {/* <div className='background-image'> */}
-                {/* <LandingImageGallery /> */}
-                {/* </div> */}
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <Landing label={"Experience"} navTo={"experience"} />
+                                {/* <div className='background-image'> */}
+                                {/* <LandingImageGallery /> */}
+                                {/* </div> */}
 
-                {/* <SkillsExperienceParent /> */}
-                <div style={{ height: "100px" }}></div>
-                <Footer />
+                                {/* <SkillsExperienceParent /> */}
+                                <div style={{ height: "100px" }}></div>
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/skillset"
+                        element={
+                            <>
+                                <Skillset />
+                                <div style={{ height: "100px" }}></div>
+                                <Footer />
+                            </>
+                        }
+                    />
+                </Routes>
             </Context.Provider>
         </div >
     );
