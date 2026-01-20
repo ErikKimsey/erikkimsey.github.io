@@ -9,6 +9,7 @@ import "./styles/experienceModal.scss"
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { IMAGES_IMGUR } from "./IMAGES";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const dropIn = {
     hidden: {
@@ -46,7 +47,7 @@ function ExperienceImages(props) {
 }
 
 export default function ExperienceModal(props) {
-    let { name, about, stack, dates, role, url, github, img, handleClose } = props;
+    let { name, about, stack, dates, role, url, github, imgs, handleClose } = props;
 
     const PLACEHOLDER_IMAGE = "https://res.cloudinary.com/dfez8ez2g/image/upload/v1768229678/addamms_shrug_w_text_er6glv.png";
 
@@ -87,7 +88,7 @@ export default function ExperienceModal(props) {
                     exit={{ y: 24, scale: 0.1, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 >
-                    <div className="flex flex-row items-end w-full justify-end overflow-clip">
+                    <div className="flex flex-row items-end w-full justify-end ">
                         <button
                             onClick={handleClose}
                             className="rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300 w-12 h-12"
@@ -96,8 +97,9 @@ export default function ExperienceModal(props) {
                             <FontAwesomeIcon icon={faXmark} className="h-full text-xl" />
                         </button>
                     </div>
-                    <div className="flex flex-col h-full py-4 overflow-clip">
-                        <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" />
+                    <div className="flex flex-col h-full py-4">
+                        {/* <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" /> */}
+                        <ImageCarousel imgs={imgs} />
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-pinkz overflow-clip">{name}</div>

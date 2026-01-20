@@ -1,20 +1,13 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import Experience from "../Experience/Experience";
-import Skillset from "../Skillset/Skillset";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAstronaut, faRoad, faXmark, faToolbox, faTimeline } from '@fortawesome/free-solid-svg-icons'
+import { motion } from "framer-motion";
 
 import "./skillsExperienceParent.scss";
 
 export default function SkillsExperienceParent() {
-    const [openModal, setOpenModal] = useState(); // 'skillset' | 'experience' | null
     const navigate = useNavigate();
 
     const openSkillset = () => navigate('/skillset');
-    const openExperience = () => setOpenModal('experience');
-    const closeModal = () => setOpenModal(null);
+    const openExperience = () => navigate('/experience');
 
     return (
         <motion.div
@@ -45,62 +38,7 @@ export default function SkillsExperienceParent() {
                 <div className="w-full text-purps text-5xl pl-4 text-center">CV</div>
             </button>
 
-            {/* Modal Overlay with framer-motion */}
-            <AnimatePresence>
-                {openModal && (
-                    <motion.div
-                        className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 right-0 bottom-0 h-full "
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
-                        {/* Backdrop */}
-                        <motion.div
-                            className="absolute inset-0 bg-black/60 backdrop-blur-md"
-                            onClick={closeModal}
-                            aria-hidden="true"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                        />
-
-                        {/* Modal Panel */}
-                        <motion.div
-                            className="relative z-50 max-h-[85vh] w-full lg:w-1/2 rounded-lg shadow-2xl bg-black bg-opacity-50 "
-                            role="dialog"
-                            aria-modal="true"
-                            initial={{ y: 24, scale: 0.1, opacity: 0 }}
-                            animate={{ y: 0, scale: 1, opacity: 1 }}
-                            exit={{ y: 24, scale: 0.1, opacity: 0 }}
-                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                        >
-                            <div className="w-full flex flex-col z-50 content-between justify-between px-3">
-                                <button
-                                    onClick={closeModal}
-                                    className="rounded self-end bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-white h-12"
-                                    aria-label="Close"
-                                >
-                                    <FontAwesomeIcon icon={faXmark} className=" text-white w-8 h-8" />
-
-                                </button>
-
-                                <h2 className="font-extrabold pb-1 text-5xl lg:text-7xl font-quantify overflow-clip pl-4">
-                                    {openModal === 'skillset' ? 'Skillset' : 'Experience'}
-                                </h2>
-                            </div>
-
-
-                            <div className="p-1 flex justify-center content-center">
-                                {openModal === 'skillset' ? (
-                                    <Skillset />
-                                ) : (
-                                    <Experience />
-                                )}
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {/* Modal removed; navigation now handled via routes */}
         </motion.div>
     );
 }

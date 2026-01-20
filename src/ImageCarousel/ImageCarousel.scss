@@ -1,0 +1,25 @@
+.carousel-container {
+  // Ensure arrows/dots are visible on dark backgrounds
+  .slick-prev:before,
+  .slick-next:before {
+    color: #fff;
+    font-size: 28px;
+    opacity: 0.9;
+  }
+
+  .slick-dots li button:before {
+    color: #fff;
+    opacity: 0.5;
+  }
+  .slick-dots li.slick-active button:before {
+    color: #fff;
+    opacity: 0.95;
+  }
+
+  // Avoid arrows/dots being clipped by parents
+  .slick-slider,
+  .slick-list,
+  .slick-track {
+    overflow: visible;
+  }
+}

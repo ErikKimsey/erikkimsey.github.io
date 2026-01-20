@@ -5,10 +5,13 @@ import Landing from './Landing/Landing';
 import Footer from "./Footer/Footer";
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 import Skillset from './Skillset/Skillset';
+import Experience from './Experience/Experience';
 import { Routes, Route } from 'react-router-dom';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
 import LandingImageGallery from './ImageGallery/LandingImageGallery';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 /** */
 /**
@@ -52,6 +55,16 @@ export default function App() {
                         element={
                             <>
                                 <Skillset />
+                                <div style={{ height: "100px" }}></div>
+                                <Footer />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/experience"
+                        element={
+                            <>
+                                <Experience />
                                 <div style={{ height: "100px" }}></div>
                                 <Footer />
                             </>

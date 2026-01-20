@@ -8,8 +8,7 @@ import ExperienceModal from "./ExperienceModal";
 
 
 export default function ExperienceItem(props) {
-    let { name, stack, dates, role, index, github, soundcloud, url, img, about } = props;
-    console.log(img);
+    let { name, stack, dates, role, index, github, soundcloud, url, imgs, about } = props;
 
     const [modalOpen, setModalOpen] = useState(false);
     const [techStackItems, setTechStackItems] = useState([]);
@@ -58,7 +57,7 @@ export default function ExperienceItem(props) {
         return (
             <ModalContainer>
                 {modalOpen && (
-                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close} img={img}
+                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close} imgs={imgs}
                         name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github}
                     />
                 )}

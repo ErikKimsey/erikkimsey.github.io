@@ -7,7 +7,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Unity3D, C#, Blender',
         url: '',
         github: '(private)',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499698/Bebop/bebop_thunder_grid_and_chasingentity1_jvak4t.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499698/Bebop/bebop_thunder_grid_and_chasingentity1_jvak4t.png'],
         about: [
             'An interactive, multi-sensorial application that is simulatneously: 1.) An interactive artistic representation of the process of creativity. \n 2.) An aid to the process of creativity (utilizing contemporary psychological techniques, neuroscience, and metaphysical models in Western Philosophy.',
             'Performance & Aesthetic: I optimized performance, targeting mobile operating systems, without sacrificing aesthetic.',
@@ -24,7 +24,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Figma, Adobe Illustrator, Svelte.js, Tailwind',
         url: 'https://markets.shenandoahagtech.com/',
         github: '',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763565868/ek-portfolio/agconnect_1.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763565868/ek-portfolio/agconnect_1.png'],
         about: [
             'Worked with AgConnect administration to create AgConnect brand guidelines.',
             'Provided a granular assessment of AgConnect\'s UI and usability.',
@@ -40,7 +40,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Swift / SwiftUI',
         url: '',
         github: '(private)',
-        img: '',
+        imgs: [''],
         about: [
             'Develop the entirety of Moxie\'s core functionality, desired interactivity, and environmental aesthetic traits,',
             'Where needed, create Moxie\'s 2D assets (i.e., sprites, icons) and 3D assets (i.e., 3D models, shaders, and VFX),',
@@ -55,7 +55,7 @@ export const EXPERIENCE_DATA = [
         stack: 'React Native, TypeScript, React-Navigation, Jest, Context API',
         url: '',
         github: 'https://github.com/sartography/SkillSTAR',
-        img: '',
+        imgs: [''],
         about: [
             'Designed and Developed the UI and UX for SkillSTAR mobile app,',
             'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
@@ -68,7 +68,7 @@ export const EXPERIENCE_DATA = [
         stack: 'PostGres, Express / NodeJS, React, Sass, JavaScript / ES6, Messenger API',
         url: '',
         github: 'https://github.com/fb-chatreader',
-        img: '',
+        imgs: [''],
         about: [
             'Using the Facebook Messenger API, Postgres, and React, I contributed to the development of a dynamic chatbot that provides a Blinkist-type product within Facebook Messenger.']
     },
@@ -79,7 +79,7 @@ export const EXPERIENCE_DATA = [
         stack: 'React-Native,Redux, Styled-Components, JavaScript / ES6, Expo, Figma',
         url: 'https://www.therealm.gg/',
         github: '',
-        img: '',
+        imgs: [''],
         about: ['Within React-Native, I contributed to architecting and developing the Realm gamer-focused social-media app.']
     },
     {
@@ -89,7 +89,7 @@ export const EXPERIENCE_DATA = [
         stack: 'React-Native, Redux, Auth0, Swagger',
         url: 'https://www.connectourkids.org/',
         github: 'https://github.com/ErikKimsey/cok_connection_image',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763647023/ek-portfolio/cok_mobile.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763647023/ek-portfolio/cok_mobile.png'],
         about:
             ['Contributed to planning and architecture of Connect Our Kids "Family Connections" in their React-Native application']
     },
@@ -100,7 +100,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Angular, D3.js, Typescript, Boostrap 4, Sass',
         url: 'http://www.kardion.de/',
         github: 'https://www.npmjs.com/package/nls-guilloche',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499727/ek-portfolio/guilloche.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499727/ek-portfolio/guilloche.png'],
         about: ['Developed a D3.js module to procedurally generate a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website,', ' Developed Kardion\'s landing site, in which the guilloche was implemeneted.']
     },
     {
@@ -110,7 +110,7 @@ export const EXPERIENCE_DATA = [
         stack: 'JavaScript (ES6), NodeJS, Redis, Python / Pandas',
         url: 'https://play.google.com/store/apps/details?id=com.raincrow.covens&hl=en_US',
         github: '',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png'],
         about: ['Node/Redis database, which cached real-time, international geospatial user-data, and in-app communication, required for Covens\'s gameplay.']
     },
     {
@@ -120,7 +120,7 @@ export const EXPERIENCE_DATA = [
         stack: 'JavaScript, AngularJS, HTML5 Canvas API, CSS3',
         url: 'https://www.chartiq.com/html5-charting-library/',
         github: '',
-        img: 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691556/chartiq/chartiq_blkaci.png',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691556/chartiq/chartiq_blkaci.png'],
         about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature,', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability,', 'Contributed to ChartIQ library\s public-facing developer documentation.']
     },
 ];
