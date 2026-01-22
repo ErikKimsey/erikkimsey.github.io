@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 import "./styles/experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
@@ -9,6 +10,7 @@ export default function Experience() {
 
     const containerRef = useRef();
     const [data, setData] = useState();
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -20,9 +22,19 @@ export default function Experience() {
 
     return (
         <motion.div className='experienceContainer'
-            id="experience-container "
+            // id="experience-container"
             ref={containerRef}
         >
+            <div className='w-full flex items-center justify-between px-6 py-4'>
+                <div className='h-full flex justify-start size-9 text-6xl overflow-visible font-quantify'>Experience</div>
+                <button
+                    type="button"
+                    className='px-4 py-2 rounded-md border border-slate-400 text-slate-100 hover:bg-slate-700 transition-colors'
+                    onClick={() => navigate('/')}
+                >
+                    Back to Home
+                </button>
+            </div>
             <div className="experienceItemsList w-full">
                 {
                     data && data.map((e, i) => {
