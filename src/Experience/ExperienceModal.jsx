@@ -71,7 +71,7 @@ export default function ExperienceModal(props) {
                 exit={{ opacity: 0 }}>
 
                 <motion.div
-                    className="absolute inset-0 backdrop-blur-md"
+                    className="absolute inset-0 backdrop-blur-md overflow-clip"
                     onClick={handleClose}
                     aria-hidden="true"
                     initial={{ opacity: 0 }}
@@ -91,13 +91,13 @@ export default function ExperienceModal(props) {
                     <div className="flex flex-row items-end w-full justify-end ">
                         <button
                             onClick={handleClose}
-                            className="rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300 w-12 h-12"
+                            className="rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300 w-12 h-12 overflow-clip"
                             aria-label="Close"
                         >
                             <FontAwesomeIcon icon={faXmark} className="h-full text-xl" />
                         </button>
                     </div>
-                    <div className="flex flex-col h-full py-4">
+                    <div className="flex flex-col h-full py-4 overflow-clip">
                         {/* <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" /> */}
                         <ImageCarousel imgs={imgs} />
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">

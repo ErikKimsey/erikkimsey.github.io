@@ -44,11 +44,11 @@ const ImageCarousel = ({ imgs = [] }) => {
     const PLACEHOLDER_IMAGE = "https://res.cloudinary.com/dfez8ez2g/image/upload/v1768229678/addamms_shrug_w_text_er6glv.png";
 
     return (
-        <div className="carousel-container">
+        <div className="carousel-container overflow-clip">
             <Slider {...settings}>
                 {imgs.map((img, index) => (
                     <div key={index}>
-                        <img src={img === '' ? PLACEHOLDER_IMAGE : img} alt={''} style={{ width: "100%", maxHeight: "400px", objectFit: "contain" }} />
+                        <img src={img === '' ? PLACEHOLDER_IMAGE : img} alt={''} style={{ width: "100%", maxHeight: "400px", objectFit: "contain", overflow: "clip" }} />
                         {/* {slide.caption && <p style={{ textAlign: 'center' }}>{img.caption}</p>} */}
                     </div>
                 ))}
