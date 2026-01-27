@@ -21,9 +21,13 @@ export default function Experience() {
 
 
     return (
-        <motion.div className='experienceContainer pl-2 lg:pl-20'
-            // id="experience-container"
+        <motion.div
+            className='experienceContainer pl-2 lg:pl-20'
             ref={containerRef}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
         >
             <div className='w-full flex items-center justify-between px-6  py-4 '>
                 <div className='h-full flex justify-start size-9 text-6xl overflow-visible font-quantify'>Experience</div>

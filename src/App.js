@@ -6,7 +6,8 @@ import Footer from "./Footer/Footer";
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 import Skillset from './Skillset/Skillset';
 import Experience from './Experience/Experience';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
 import LandingImageGallery from './ImageGallery/LandingImageGallery';
@@ -23,6 +24,7 @@ export default function App() {
 
     const [toggled, setToggled] = useState(false);
     let [headerAnimComplete, setHeaderAnimComplete] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         if (toggled !== false) {
@@ -34,43 +36,45 @@ export default function App() {
         <div className="App">
             {/* <VideoBackground /> */}
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <Landing label={"Experience"} navTo={"experience"} />
-                                {/* <div className='background-image'> */}
-                                {/* <LandingImageGallery /> */}
-                                {/* </div> */}
+                <AnimatePresence mode="wait">
+                    <Routes location={location} key={location.pathname}>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <Landing label={"Experience"} navTo={"experience"} />
+                                    {/* <div className='background-image'> */}
+                                    {/* <LandingImageGallery /> */}
+                                    {/* </div> */}
 
-                                {/* <SkillsExperienceParent /> */}
-                                <div style={{ height: "100px" }}></div>
-                                <Footer />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/skillset"
-                        element={
-                            <>
-                                <Skillset />
-                                <div style={{ height: "100px" }}></div>
-                                <Footer />
-                            </>
-                        }
-                    />
-                    <Route
-                        path="/experience"
-                        element={
-                            <>
-                                <Experience />
-                                <div style={{ height: "100px" }}></div>
-                                <Footer />
-                            </>
-                        }
-                    />
-                </Routes>
+                                    {/* <SkillsExperienceParent /> */}
+                                    <div style={{ height: "100px" }}></div>
+                                    <Footer />
+                                </>
+                            }
+                        />
+                        <Route
+                            path="/skillset"
+                            element={
+                                <>
+                                    <Skillset />
+                                    <div style={{ height: "100px" }}></div>
+                                    <Footer />
+                                </>
+                            }
+                        />
+                        <Route
+                            path="/experience"
+                            element={
+                                <>
+                                    <Experience />
+                                    <div style={{ height: "100px" }}></div>
+                                    <Footer />
+                                </>
+                            }
+                        />
+                    </Routes>
+                </AnimatePresence>
             </Context.Provider>
         </div >
     );
