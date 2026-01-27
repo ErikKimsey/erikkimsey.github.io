@@ -21,11 +21,11 @@ export default function Experience() {
 
 
     return (
-        <motion.div className='experienceContainer'
+        <motion.div className='experienceContainer pl-2 lg:pl-20'
             // id="experience-container"
             ref={containerRef}
         >
-            <div className='w-full flex items-center justify-between px-6 py-4'>
+            <div className='w-full flex items-center justify-between px-6  py-4 '>
                 <div className='h-full flex justify-start size-9 text-6xl overflow-visible font-quantify'>Experience</div>
                 <button
                     type="button"

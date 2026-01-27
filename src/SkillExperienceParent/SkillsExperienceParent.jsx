@@ -30,12 +30,12 @@ export default function SkillsExperienceParent() {
 
             <button
                 onClick={openExperience}
-                className="rounded font-quantify border-gray-600 bg-transparent text-grayz hover:text-peach hover:scale-110 text-purps transition duration-300 flex flex-row items-start justify-center"
+                className="rounded font-quantify border-gray-600 bg-transparent hover:scale-110 transition duration-300 flex flex-row items-start justify-center"
             >
 
                 {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
                 {/* <div className="text-purps text-3xl"> </div> */}
-                <div className="w-full text-purps text-5xl pl-4 text-center overflow-clip">CV</div>
+                <div className="w-full h-12 text-purps hover:text-grayzDark text-5xl text-center overflow-clip pl-2">CV</div>
             </button>
 
             {/* Modal removed; navigation now handled via routes */}

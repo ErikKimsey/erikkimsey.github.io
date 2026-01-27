@@ -67,7 +67,7 @@ export default function Banner(props) {
                 duration: 2,
                 delay: 0,
             }}
-            // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
+        // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap overflow-clip">
