@@ -1,6 +1,16 @@
 
 export const EXPERIENCE_DATA = [
     {
+        name: 'Personal project : "Game of Life"',
+        dates: '2019',
+        role: 'Developer, Designer',
+        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
+        url: 'https://wizardly-lewin-048675.netlify.app/',
+        github: 'https://github.com/ErikKimsey/Conways-Life',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
+        about: ["Implementation of mathematician John Conway's 'Game of 'Life', which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
+    },
+    {
         name: 'Bebop Boutique',
         role: 'Creative Director / Engineer / Designer / 3D Artist',
         dates: '2022 - Current',
@@ -24,7 +34,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Figma, Adobe Illustrator, Svelte.js, Tailwind',
         url: 'https://markets.shenandoahagtech.com/',
         github: '',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763565868/ek-portfolio/agconnect_1.png'],
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763565868/ek-portfolio/agconnect_1.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1769530280/AgConnect_in_Figma_yn9lhe.png'],
         about: [
             'Worked with AgConnect administration to create AgConnect brand guidelines.',
             'Provided a granular assessment of AgConnect\'s UI and usability.',
@@ -110,7 +120,7 @@ export const EXPERIENCE_DATA = [
         stack: 'JavaScript (ES6), NodeJS, Redis, Python / Pandas',
         url: 'https://play.google.com/store/apps/details?id=com.raincrow.covens&hl=en_US',
         github: '',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png'],
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763648043/ek-portfolio/raincrow_2.png'],
         about: ['Node/Redis database, which cached real-time, international geospatial user-data, and in-app communication, required for Covens\'s gameplay.']
     },
     {
@@ -120,7 +130,20 @@ export const EXPERIENCE_DATA = [
         stack: 'JavaScript, AngularJS, HTML5 Canvas API, CSS3',
         url: 'https://www.chartiq.com/html5-charting-library/',
         github: '',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691556/chartiq/chartiq_blkaci.png'],
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691557/chartiq/chartiq2_yv2mnk.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691556/chartiq/chartiq_blkaci.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764691558/chartiq/chartiq3_sv7is7.png'],
         about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature,', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability,', 'Contributed to ChartIQ library\s public-facing developer documentation.']
     },
 ];
+
+export const FUN_CREATIONS = [
+    {
+        name: 'John Conway : Game of Life simulation',
+        dates: '2019',
+        role: 'Developer, Designer',
+        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
+        url: 'https://wizardly-lewin-048675.netlify.app/',
+        github: 'https://github.com/ErikKimsey/Conways-Life',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
+        about: ["Implementation of mathematician John Conway's <a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Examples_of_patterns'>'Game of 'Life'</a>, which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
+    },
+]

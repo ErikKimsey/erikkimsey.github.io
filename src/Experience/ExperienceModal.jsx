@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ModalBackdrop from "./ModalBackdrop";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -103,6 +103,12 @@ export default function ExperienceModal(props) {
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-pinkz overflow-clip">{name}</div>
+                            <div className="flex flex-row content-between">
+                                <a className="p-4" href={url} target="_blank"><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faRocket} />
+                                </a>
+                                <a className="p-4" href={github} target="_blank"><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faGithub} />
+                                </a>
+                            </div>
                         </div>
                         <div className="flex flex-row py-2 font-comfortBold">
                             <div className="text-2xl">{stack}</div>
