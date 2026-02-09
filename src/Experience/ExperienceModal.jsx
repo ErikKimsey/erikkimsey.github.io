@@ -47,20 +47,34 @@ function ExperienceImages(props) {
 }
 
 export default function ExperienceModal(props) {
-    let { name, about, stack, dates, role, url, github, imgs, handleClose } = props;
+    let { name, about, stack, dates, role, url, github, imgs, handleClose, video } = props;
 
     const PLACEHOLDER_IMAGE = "https://res.cloudinary.com/dfez8ez2g/image/upload/v1768229678/addamms_shrug_w_text_er6glv.png";
+
+    const [hasVideoFile, setHasVideoFile] = useState(false);
 
     useEffect(() => {
         let foot = document.querySelector(".footerContainer");
         foot.style.zIndex = -10;
 
+        if (typeof video === "string" && video.length > 0) {
+
+            console.log(typeof video === "string");
+            setHasVideoFile(true);
+        }
 
         return () => {
             let foot = document.querySelector(".footerContainer");
             foot.style.zIndex = 100;
         }
-    }, [])
+    }, []);
+
+    function isVideoFile(filename) {
+        const videoExtensions = [".mpg", ".mp2", ".mpeg", ".mpe", ".mpv", ".mp4", ".m4a", ".f4v", ".m4b", ".mov", ".webm"]; // Add more as needed
+        const extension = filename.toLowerCase().substring(filename.lastIndexOf("."));
+        return videoExtensions.includes(extension);
+    }
+
 
     return (
         <AnimatePresence>
@@ -99,7 +113,11 @@ export default function ExperienceModal(props) {
                     </div>
                     <div className="flex flex-col h-full py-4 overflow-clip">
                         {/* <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" /> */}
-                        <ImageCarousel imgs={imgs} />
+                        {
+                            hasVideoFile ? <video src={video} type="video/mp4" autoPlay muted controls /> : <ImageCarousel imgs={imgs} />
+                        }
+
+
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-pinkz overflow-clip">{name}</div>
