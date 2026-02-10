@@ -15,19 +15,18 @@ export const EXPERIENCE_DATA = [
         name: 'Bebop Boutique',
         role: 'Creative Director / Engineer / Designer / 3D Artist',
         dates: '2022 - Current',
-        stack: 'Unity3D, C#, Blender',
+        stack: 'Unity3D, C#, Blender, Git/Github, HLSL (C language), XCode, Copilot, Jetbrains Rider, VSCode.',
         url: '',
         github: '(private)',
         imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499698/Bebop/bebop_thunder_grid_and_chasingentity1_jvak4t.png'],
         // video: 'https://res.cloudinary.com/dfez8ez2g/video/upload/v1770647413/bebop_trailer_owevvt.mp4',
         video: 'https://res.cloudinary.com/dfez8ez2g/video/upload/v1770647413/bebop_trailer_owevvt.mp4',
         about: [
-            'An interactive, multi-sensorial application that is simulatneously: 1.) An interactive artistic representation of the process of creativity. \n 2.) An aid to the process of creativity (utilizing contemporary psychological techniques, neuroscience, and metaphysical models in Western Philosophy.',
-            'Performance & Aesthetic: I optimized performance, targeting mobile operating systems, without sacrificing aesthetic.',
-            'Engineering: I developed all core logic, interactivity, bespoke physics-mechanics, and Unity-related functionality.',
-            'Design: I designed and implemented all aspects of the 3D environment and UI elements.',
-            'UX / Interactivity: I implemented smooth UX standards, of intuitive interaction and interface, behind a facade of UX anti-patterns.  In that, the application\'s psychological/philosophical purpose required an immediately obtuse and unintuitive interactivity.',
-            'Assets: I created all 3D models, materials/textures, audio, and UI elements.'
+            'An interactive, multi-sensorial application that is simulatneously: 1.) An interactive representation of the conscious and unconscious process of the concept of a cognitive "Idea" and the process of creativity. Utilizing contemporary evidence-base psychological techniques, aspects of neuroscience pertaining to creativity, and even metaphysical models from Western Philosophy.',
+            'Performance without sacrificing Aesthetic: the aesthetics and idiosyncratic experience is core to Bebop Boutique.  So, targeting performance on mobile devices, required strict architecture and implementation of software design patterns, and creating lean assets, lean lighting practices, and project structure.',
+            'Engineering: developed all core logic, interactivity, and bespoke physics and functionality that were not not inherent to the Unity engine.',
+            'Design: in order to realize the purpose of Bebop Boutique (see above), an I realized an aesthetic that was pleasing and engaging to balance the sometimes awkward experience.',
+            'UX / Interactivity: I implemented smooth UX standards of intuitive interaction and interface.  But, therein, also intentionally broke standards and utilized what could be considered anti-patterns.  In that, the application\'s psychological/philosophical purpose required an immediately obtuseness and unintuitive user-experience.'
         ]
     },
     {
