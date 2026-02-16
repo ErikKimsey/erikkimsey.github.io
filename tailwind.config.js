@@ -44,8 +44,11 @@ module.exports = {
                 atmos: ['atmos'],
                 comfortBold: ["comfortaa-bold"],
                 quantify: ["quantify"],
+                neon: ["neon"],
+                liquidsky: ["liquidsky"]
             }
         },
+
     },
     plugins: [],
 }

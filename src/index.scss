@@ -8,6 +8,8 @@ $comfortaa-reg: "comfortaa-reg";
 $comfortaa-bold: "comfortaa-bold";
 
 $atmos: "atmos";
+$neon: "neon";
+$liquidsky: "liquidsky";
 $quantify: "quantify";
 $moon: "moon";
 $eight1: "81";
@@ -23,6 +25,16 @@ $eight1: "81";
 
 .experienceItemContainer:hover {
     cursor: pointer;
+}
+
+@font-face {
+    font-family: "neon";
+    src: url(./assets/fonts/NEON.TTF) format("truetype");
+}
+
+@font-face {
+    font-family: "liquidsky";
+    src: url(./assets/fonts/liquidsky.ttf) format("truetype");
 }
 
 @font-face {

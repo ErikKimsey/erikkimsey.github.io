@@ -24,6 +24,10 @@ $hover-color: #fcfa85;
     background-repeat: no-repeat;
     background-size: cover;
 
+    .textGlow {
+        text-shadow: 2px 2px #67ffb0;
+    }
+
     .text-container {
         //display: flex;
         //flex-flow: column wrap;
@@ -114,6 +118,8 @@ $hover-color: #fcfa85;
         animation: move-bg 8s infinite linear;
         animation-delay: 5s;
     }
+
+
 
     .bannerMenu {
         //width: 100%;
