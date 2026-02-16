@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2a93bd0.css",
-    "main.js": "/static/js/main.6ce81d82.js",
+    "main.css": "/static/css/main.08983135.css",
+    "main.js": "/static/js/main.1e436883.js",
     "static/media/07_29_25v2.webm": "/static/media/07_29_25v2.d387221b2e5317dfbf34.webm",
     "static/media/liquidsky.ttf": "/static/media/liquidsky.3276050a4d9ebce66fdc.ttf",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
@@ -9,6 +9,7 @@
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.c6eb380b9f8f0920f934.ttf",
     "static/media/gem_ring_mobile.png": "/static/media/gem_ring_mobile.3da48942ec823dcc5628.png",
     "static/media/erik_kimsey_software_engineer.pdf": "/static/media/erik_kimsey_software_engineer.15b1d73d36dfc787d9c3.pdf",
+    "static/media/TumsMelted.ttf": "/static/media/TumsMelted.c46863315503f2710486.ttf",
     "static/media/droopy_e.png": "/static/media/droopy_e.3e17519b00f145c4a81f.png",
     "static/media/quantify.ttf": "/static/media/quantify.e44a16dadd185f5bcdae.ttf",
     "static/media/mobile_dev.png": "/static/media/mobile_dev.4b223863219b02da3b65.png",
@@ -19,11 +20,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.c2a93bd0.css.map": "/static/css/main.c2a93bd0.css.map",
-    "main.6ce81d82.js.map": "/static/js/main.6ce81d82.js.map"
+    "main.08983135.css.map": "/static/css/main.08983135.css.map",
+    "main.1e436883.js.map": "/static/js/main.1e436883.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2a93bd0.css",
-    "static/js/main.6ce81d82.js"
+    "static/css/main.08983135.css",
+    "static/js/main.1e436883.js"
   ]
 }
