@@ -48,13 +48,14 @@ export default function Footer() {
                         }}>
                         <a target="_blank" href={resume}>
                             <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
-                            <a target="_blank" href="https://github.com/erikkimsey">
-                                <FontAwesomeIcon icon={faGithub} size="3x" />
-                            </a>
-                            <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
-                                <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                            </a>
-                        </a>                        <a target="_blank" href="https://soundcloud.com/etaether">
+                        </a>
+                        <a target="_blank" href="https://github.com/erikkimsey">
+                            <FontAwesomeIcon icon={faGithub} size="3x" />
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
+                            <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                        </a>
+                        <a target="_blank" href="https://soundcloud.com/etaether">
                             <FontAwesomeIcon icon={faSoundcloud} size="3x" />
                         </a>
                     </motion.div>
