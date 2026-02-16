@@ -45,7 +45,8 @@ module.exports = {
                 comfortBold: ["comfortaa-bold"],
                 quantify: ["quantify"],
                 neon: ["neon"],
-                liquidsky: ["liquidsky"]
+                liquidsky: ["liquidsky"],
+                tumsmelted: ["tumsmelted"]
             }
         },
 
