@@ -1,15 +1,22 @@
 import './about.scss';
-import { SKILLSET_OVERVIEW } from '../__data/data';
+import { SKILLS } from '../__data/data';
 
 export default function About() {
-
+    SKILLS.forEach((e) => {
+        console.log(e);
+    })
     return (
         <div className="about-container">
             {
-                SKILLSET_OVERVIEW && SKILLSET_OVERVIEW.map((e) => {
-                    return <div key={e}>{e}</div>
+                SKILLS && SKILLS.map((e) => {
+                    return e.map((e) => {
+                        <h1 style={{ fontSize: "5rem", color: "#f0f" }}>{e[0]}</h1>
+                        return <div>
+                            {e}
+                        </div>
+                    })
                 })
             }
-        </div>
+        </div >
     );
 }

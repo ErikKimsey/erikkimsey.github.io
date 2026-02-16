@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
+import About from "../About/About";
 import ThreeBackground from "../ThreeBackground/ThreeBackground";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
 import VideoBackground from "../VideoBackground/VideoBackground";
@@ -38,6 +39,7 @@ function Landing(props) {
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent />
+                <About />
             </div>
             <div className="w-full lg:w-1/2 flex">
                 <VideoBackground />

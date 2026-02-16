@@ -6,7 +6,7 @@ import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faSoundcloud, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import resume from "../assets/resume/erik_kimsey_software_engineer.pdf";
 
 
@@ -46,14 +46,16 @@ export default function Footer() {
                             delay: 4,
                             ease: [0, 0.71, 0.2, 1.01]
                         }}>
-                        <a target="_blank" href="https://github.com/erikkimsey">
-                            <FontAwesomeIcon icon={faGithub} size="3x" />
-                        </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
-                            <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                        </a>
                         <a target="_blank" href={resume}>
                             <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
+                            <a target="_blank" href="https://github.com/erikkimsey">
+                                <FontAwesomeIcon icon={faGithub} size="3x" />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
+                                <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                            </a>
+                        </a>                        <a target="_blank" href="https://soundcloud.com/etaether">
+                            <FontAwesomeIcon icon={faSoundcloud} size="3x" />
                         </a>
                     </motion.div>
                 </motion.div>
