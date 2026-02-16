@@ -12,7 +12,7 @@ module.exports = {
             'blaq': "#000",
             'pinkz': "#ff45dd",
             'tealz': "#1fffad",
-            'grayz': "#aaaaaa",
+            'grayz': "#ddd",
             'grayzDark': "#444444",
             'offWhitez': "#fffec8"
         },

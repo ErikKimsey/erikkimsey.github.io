@@ -115,7 +115,7 @@ function FreelanceComponentAndModal() {
                 whileHover={{ scale: 2.45, rotate: -6.9 }}
                 transition={{ duration: 0.3 }}
                 className="freelance-button-tab fixed flex flex-row p-0 pl-20 pt-1 m-0 top-3 left-0 w-full" >
-                <div className="textGlow font-neon text-center text-4xl w-2/3 sm:w-3/5 lg:w-2/3 h-full rounded-br-3xl rounded-bl-3xl py-8" style={{ textShadow: "-2px 2px 8px #f0f, -2px -2px 8px #ff45ee" }} onClick={FreelanceTabClick}>
+                <div className="textGlow font-neon text-center text-4xl w-2/3 sm:w-3/5 lg:w-2/3 h-full rounded-br-3xl text-grayz rounded-bl-3xl py-8" style={{ textShadow: "-2px 2px 8px #f0f, -2px -2px 8px #ff45ee" }} onClick={FreelanceTabClick}>
                     Monthly<br></br> Dealz
                 </div>
 
