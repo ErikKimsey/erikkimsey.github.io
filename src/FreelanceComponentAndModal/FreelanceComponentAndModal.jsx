@@ -110,20 +110,20 @@ function FreelanceComponentAndModal() {
 
     return (
         <div>
-            <div className="freelance-button-tab fixed flex flex-row justify-center p-2 top-2 left-1 w-full h-full -rotate-3" >
+            {/* <div className="freelance-button-tab fixed flex flex-row justify-center p-20 top-2 left-1 w-full h-48" > */}
 
-                <motion.div
-                    initial={{ scale: 1, color: "#ffffff" }}
-                    whileHover={{ scale: 1.02, color: "#fff" }}
-                    transition={{ duration: 0.3 }} className="absolute right-18 top-6 lg:right-48 lg:top-10 textGlow font-neon text-center text-5xl lg:text-7xl text-grayz " style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #c0e", lineHeight: 1.1 }} onClick={FreelanceTabClick}>
+            <motion.div
+                initial={{ scale: 1, color: "#fcf", rotate: "-3deg" }}
+                whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
+                transition={{ duration: 0.3 }} className="fixed right-4 lg:right-18 top-1 lg:right-48 lg:top-10 textGlow font-neon text-center text-5xl lg:text-7xl text-grayz rotate-3" style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }} onClick={FreelanceTabClick}>
 
-                    sales<br></br>monthly
+                sales<br></br>monthly
 
-                </motion.div >
+            </motion.div >
 
 
 
-            </div >
+            {/* </div > */}
             <AnimatePresence>{
                 freelance &&
                 <motion.div
