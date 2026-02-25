@@ -2,60 +2,57 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
 import mobile from "../assets/images/mobile_dev.png";
+import gamedev from "../assets/images/game_dev.PNG";
+import uimockup from "../assets/images/web_proto.WEBP"
+import uiconsult from "../assets/images/ui_ux_consult.WEBP"
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const DEALS_PACKAGES = [
     {
-        label: "UI Features: Web & Mobile",
+        label: "New UI features / UI fixes.",
         price: "$600",
-        description: "Design and implement a new feature for your website or mobile app (e.g., adding a user settings page, a contact form with validation, or a basic dashboard view), fully integrated, responsive, and ready to deploy.",
+        description: "Design and implement a new feature for your website or mobile app (e.g., adding a user settings page, a contact form with validation, a basic dashboard view), fully integrated, responsive, and ready to deploy.",
         image: mobile,
         type: "dev"
     },
     {
-        label: "UI Mockup: Web & Mobile",
+        label: "UI Mockup (demonstrating core functionality)",
         price: "$1200",
-        description: "A high-fidelity single-page web app mockup, that demonstrates: layout, UI components, and basic interactions.  Ideal for pitching, user testing, or stakeholder review.  Delivered as a clickable prototype or lightweight live demo.",
-        image: "../assets/images/game_dev.PNG",
+        description: "A UI mockup translates your ideas into a clean, realistic interface design that mirrors the intended final product. It serves as a visual and functional blueprint for further development and a decision-making tool for your team.",
+        image: uimockup,
         type: "dev"
     },
     {
-        label: "UI / UX Design Consultation",
-        price: "$400",
-        description: "Review your website or app’s UI/UX, and provide a concise set of actionable recommendations—covering usability, visual hierarchy, and user flow—along with annotated screenshots or wireframes, delivered within 48 hours after a 60-minute consultation.",
-        image: "../assets/images/game_dev.PNG",
-        type: "design"
-    },
-    {
-        label: "2D / 3D Game Mockup",
+        label: "2D / 3D Video Game Mockup",
         price: "$1100",
         description: "A 2D or 3D game mockup demonstrating core visuals, basic gameplay flow, and camera perspective—using placeholder or custom assets as needed—ideal for pitching or early validation, delivered as a playable or video demo.",
-        image: "../assets/images/game_dev.PNG",
+        image: gamedev,
         type: "dev"
 
     },
     {
+        label: "UI / UX Design Consultation",
+        price: "$400",
+        description: "Review your website or app’s UI/UX, and provide a concise set of actionable recommendations—covering usability, visual hierarchy, and user flow, along with annotated screenshots or wireframes, delivered within 48 hours after an initial consultation.",
+        image: uiconsult,
+        type: "design"
+    },
+    {
         label: "Brand Guidelines",
         price: "$700",
-        description: "For a flat $700, I’ll create a concise brand guidelines document defining your core visual identity—including color palette, typography, logo usage, and UI styling examples—so your website, app, and marketing assets stay consistent and professional, delivered within 5–7 days.",
+        description: "Create a concise brand guidelines document defining your core visual identity. Including color palette, typography, logo usage, and UI styling examples —so that your website, app, and marketing assets stay consistent and professional, delivered within 5–7 days.",
         image: "../assets/images/game_dev.PNG",
         type: "design"
     },
     {
         label: "3D Modeling",
         price: "$240",
-        description: "3D models aren't just for video games.  They are also very practical.  Used daily in fields from e-commerce to architecture, from scientific research to hands-on educational tools.  Have you ever used the 'See in your room' feature of an e-commerce app?  Or, had a walk-through of your home before it was built?  Whether on a computer screen, in VR goggles, or through the screen of your iPhone, you were looking at a 3D model.",
+        description: "3D models aren't just for video games.  They are also very practical.  Used daily in fields from e-commerce to architecture, from scientific research to hands-on educational tools.",
         image: "../assets/images/game_dev.PNG",
         type: "3D"
-
-    },
-    {
-        label: "Sound FX Design",
-        price: "$120",
-        description: "You need sounds that help tell a story, or set a mood, or make actions feel more realistic in a  digital product (e.g., website, video game, film project).  Add life to your visual product, utilizing your customer's auditory senses.",
-        image: "../assets/images/game_dev.PNG",
-        type: "audio"
     }
 ]
 
@@ -73,12 +70,14 @@ function DealPackage({ index, pack }) {
         (<motion.div
             // onHoverStart={() => hovering()}
             // whileHover={{ scale: 1.01 }}
-            className="relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 border-2 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
+            className="relative flex flex-col flex-wrap justify-start content-end p-4 m-2 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
+            {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
+                <img src={image} className="w-72 pt-12" />
+            </div> */}
 
-            <div className="flex flex-col w-full pb-2 my-0 pt-0 mt-0 bg-opacity-70 backdrop-blur-4xl overflow-hidden">
+            <div className="flex flex-col w-full  p-4 m-2 bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-hidden rounded-md">
                 <div className="label-and-price flex flex-row content-start">
                     <div className=" text-pinkz text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12">{label}</div>
-
                 </div>
                 <div className="service-description font-black">
                     {description}
@@ -165,7 +164,7 @@ function FreelanceComponentAndModal() {
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
                             <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. 01/26</div>
-                            <div className="text-4xl px-4 font-black text-sm">limited time ; starting prices are green.</div>
+                            <div className="text-2xl px-4 font-black">limited time</div>
                         </div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
