@@ -6,9 +6,9 @@ import gamedev from "../assets/images/game_dev.PNG";
 import uimockup from "../assets/images/web_proto.WEBP"
 import uiconsult from "../assets/images/ui_ux_consult.WEBP"
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import EmailJS from "../EmailJS/EmailJS";
 
 const DEALS_PACKAGES = [
     {
@@ -57,7 +57,7 @@ const DEALS_PACKAGES = [
 ]
 
 
-function DealPackage({ index, pack }) {
+function DealPackage({ index, pack, onSelectPackage, isSelected }) {
 
     const { label, price, description, image } = pack;
     let i = 0;
@@ -71,6 +71,7 @@ function DealPackage({ index, pack }) {
             // onHoverStart={() => hovering()}
             // whileHover={{ scale: 1.01 }}
             className="relative flex flex-col flex-wrap justify-start content-end p-4 m-2 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
+
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
                 <img src={image} className="w-72 pt-12" />
             </div> */}
@@ -83,11 +84,20 @@ function DealPackage({ index, pack }) {
                     {description}
                 </div>
                 <div className=" w-full text-tealz font-quantify font-black text-4xl text-right overflow-hidden right-1 bottom-1 px-4 pb-0 pt-2 mb-0 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
-                <div className="contact-container">
+                <div className="contact-container h-10 flex justify-end pr-4 bg-bluez">
                     {/* 
                     - button to send message.
                     - 
                     */}
+
+                    <input
+                        className="w-8"
+                        type="radio"
+                        name="deal-package"
+                        value={label}
+                        checked={isSelected}
+                        onChange={() => onSelectPackage(label)}
+                    />
                 </div>
                 {/* <div className=" absolute  w-full text-purps font-bold font-quantify text-9xl text-right overflow-hidden top-1/4 -left-5 -z-10 opacity-20 -rotate-12">{price}</div> */}
             </div >
@@ -98,6 +108,7 @@ function DealPackage({ index, pack }) {
 function FreelanceComponentAndModal() {
 
     let [freelance, setFreelance] = useState(false);
+    const [selectedPackageLabel, setSelectedPackageLabel] = useState("");
 
     function FreelanceTabClick() {
         setFreelance(!freelance);
@@ -105,6 +116,10 @@ function FreelanceComponentAndModal() {
 
     function closeModal() {
         setFreelance(false);
+    }
+
+    function handleSelectPackage(label) {
+        setSelectedPackageLabel(label);
     }
 
     return (
@@ -170,10 +185,22 @@ function FreelanceComponentAndModal() {
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
                             {
                                 DEALS_PACKAGES.map((e, i) => {
-                                    return <DealPackage index={i} pack={e} />
+                                    return (
+                                        <DealPackage
+                                            key={e.label}
+                                            index={i}
+                                            pack={e}
+                                            onSelectPackage={handleSelectPackage}
+                                            isSelected={selectedPackageLabel === e.label}
+                                        />
+                                    )
                                 })
                             }
                         </div>
+
+                        {/* EmailJS component */}
+                        <EmailJS selectedPackageLabel={selectedPackageLabel} />
+
                     </motion.div>
                 </motion.div>}
             </AnimatePresence>
