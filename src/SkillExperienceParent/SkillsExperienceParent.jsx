@@ -35,7 +35,7 @@ export default function SkillsExperienceParent() {
 
                 {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
                 {/* <div className="text-purps text-3xl"> </div> */}
-                <div className="w-full h-12 text-purps hover:text-grayzDark text-5xl text-center overflow-clip pl-2">CV</div>
+                <div className="w-full h-12 text-purps hover:text-grayzDark text-5xl text-center overflow-clip pl-2">WORK</div>
             </button>
 
             {/* Modal removed; navigation now handled via routes */}

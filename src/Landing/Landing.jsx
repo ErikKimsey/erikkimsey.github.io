@@ -36,7 +36,9 @@ function Landing(props) {
 
     return (
         <LandingContentBannerTemplate>
+
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
+
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent />
                 {/* <About /> */}

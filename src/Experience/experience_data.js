@@ -84,31 +84,31 @@ export const EXPERIENCE_DATA = [
             'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
         ]
     },
-    {
-        name: 'Chatwise',
-        dates: '2019 - 2020',
-        role: 'Full-Stack Engineer',
-        stack: 'PostGres, Express / NodeJS, React, Sass, JavaScript / ES6, Messenger API',
-        url: '',
-        github: 'https://github.com/fb-chatreader',
-        imgs: [''],
-        video: '',
+    // {
+    //     name: 'Chatwise',
+    //     dates: '2019 - 2020',
+    //     role: 'Full-Stack Engineer',
+    //     stack: 'PostGres, Express / NodeJS, React, Sass, JavaScript / ES6, Messenger API',
+    //     url: '',
+    //     github: 'https://github.com/fb-chatreader',
+    //     imgs: [''],
+    //     video: '',
 
-        about: [
-            'Using the Facebook Messenger API, Postgres, and React, I contributed to the development of a dynamic chatbot that provides a Blinkist-type product within Facebook Messenger.']
-    },
-    {
-        name: 'Realm',
-        dates: '2019',
-        role: 'Mobile App Developer',
-        stack: 'React-Native,Redux, Styled-Components, JavaScript / ES6, Expo, Figma',
-        url: 'https://www.therealm.gg/',
-        github: '',
-        imgs: [''],
-        video: '',
+    //     about: [
+    //         'Using the Facebook Messenger API, Postgres, and React, I contributed to the development of a dynamic chatbot that provides a Blinkist-type product within Facebook Messenger.']
+    // },
+    // {
+    //     name: 'Realm',
+    //     dates: '2019',
+    //     role: 'Mobile App Developer',
+    //     stack: 'React-Native,Redux, Styled-Components, JavaScript / ES6, Expo, Figma',
+    //     url: 'https://www.therealm.gg/',
+    //     github: '',
+    //     imgs: [''],
+    //     video: '',
 
-        about: ['Within React-Native, I contributed to architecting and developing the Realm gamer-focused social-media app.']
-    },
+    //     about: ['Within React-Native, I contributed to architecting and developing the Realm gamer-focused social-media app.']
+    // },
     {
         name: 'Connect Our Kids',
         dates: '2019',

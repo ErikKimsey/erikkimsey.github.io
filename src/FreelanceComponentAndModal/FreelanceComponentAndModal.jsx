@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
 import mobile from "../assets/images/mobile_dev.png";
@@ -9,6 +9,7 @@ import uiconsult from "../assets/images/ui_ux_consult.WEBP"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import EmailJS from "../EmailJS/EmailJS";
+
 
 const DEALS_PACKAGES = [
     {
@@ -62,6 +63,7 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
     const { label, price, description, image } = pack;
     let i = 0;
 
+
     function hovering() {
         // play sound
     }
@@ -69,7 +71,7 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
     return (
         (<motion.div
             // onHoverStart={() => hovering()}
-            // whileHover={{ scale: 1.01 }}
+            whileHover={{ scale: 1.02 }}
             className="relative flex flex-col flex-wrap justify-start content-end p-4 m-2 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
 
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
@@ -84,20 +86,21 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                     {description}
                 </div>
                 <div className=" w-full text-tealz font-quantify font-black text-4xl text-right overflow-hidden right-1 bottom-1 px-4 pb-0 pt-2 mb-0 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
-                <div className="contact-container h-10 flex justify-end pr-4 bg-bluez">
+                <div className="contact-container h-10 flex justify-end pr-4 ">
                     {/* 
                     - button to send message.
                     - 
                     */}
-
-                    <input
-                        className="w-8"
-                        type="radio"
-                        name="deal-package"
-                        value={label}
-                        checked={isSelected}
-                        onChange={() => onSelectPackage(label)}
-                    />
+                    <label className="w-full h-14 flex flex-row justify-end p-1">
+                        <input
+                            className="w-8 h-8"
+                            type="radio"
+                            name="deal-package"
+                            value={label}
+                            checked={isSelected}
+                            onChange={() => onSelectPackage(label)}
+                        />
+                    </label>
                 </div>
                 {/* <div className=" absolute  w-full text-purps font-bold font-quantify text-9xl text-right overflow-hidden top-1/4 -left-5 -z-10 opacity-20 -rotate-12">{price}</div> */}
             </div >
@@ -129,9 +132,10 @@ function FreelanceComponentAndModal() {
             <motion.div
                 initial={{ scale: 1, color: "#fcf", rotate: "-3deg" }}
                 whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
-                transition={{ duration: 0.3 }} className="fixed right-4 lg:right-18 top-1 lg:right-48 lg:top-10 textGlow font-neon text-center text-5xl lg:text-7xl text-grayz rotate-3" style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }} onClick={FreelanceTabClick}>
+                transition={{ duration: 0.3 }} className="fixed  right-4 lg:right-18 top-1 lg:right-48 lg:top-10 textGlow font-neon text-center text-5xl lg:text-5xl text-grayz rotate-3 " style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
+                onClick={FreelanceTabClick}>
 
-                sales<br></br>monthly
+                Flat Fee<br></br>Contracts
 
             </motion.div >
 
@@ -179,7 +183,7 @@ function FreelanceComponentAndModal() {
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
                             <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. 01/26</div>
-                            <div className="text-2xl px-4 font-black">limited time</div>
+                            <div className="text-xl px-4 font-black">Click an item below, to make contact.</div>
                         </div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
