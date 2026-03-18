@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
 import mobile from "../assets/images/mobile_dev.png";
