@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export default function LandingBlurb() {
+export default function LandingImageGallery() {
 
     const containerRef = useRef();
     const [] = useState();
@@ -9,7 +9,7 @@ export default function LandingBlurb() {
         // 
     }, [])
 
-    return (<div className="landingBlurbContainer" ref={containerRef}>
+    return (<div className="" ref={containerRef}>
 
     </div>)
 }

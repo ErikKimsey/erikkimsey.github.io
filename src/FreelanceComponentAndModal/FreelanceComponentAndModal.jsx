@@ -108,17 +108,15 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
     )
 }
 
-function FreelanceComponentAndModal() {
-
-    let [freelance, setFreelance] = useState(false);
+function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () => { }, onCloseFreelance = () => { } }) {
     const [selectedPackageLabel, setSelectedPackageLabel] = useState("");
 
     function FreelanceTabClick() {
-        setFreelance(!freelance);
+        onToggleFreelance();
     }
 
     function closeModal() {
-        setFreelance(false);
+        onCloseFreelance();
     }
 
     function handleSelectPackage(label) {
@@ -130,12 +128,12 @@ function FreelanceComponentAndModal() {
             {/* <div className="freelance-button-tab fixed flex flex-row justify-center p-20 top-2 left-1 w-full h-48" > */}
 
             <motion.div
-                initial={{ scale: 1, color: "#fcf", rotate: "-3deg" }}
+                initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
                 whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
-                transition={{ duration: 0.3 }} className="fixed  right-4 lg:right-18 top-1 lg:right-48 lg:top-10 textGlow font-neon text-center text-5xl lg:text-5xl text-grayz rotate-3 " style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
+                transition={{ duration: 0.3 }} className="fixed flex justify-start content-start w-auto top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
                 onClick={FreelanceTabClick}>
 
-                Flat Fee<br></br>Contracts
+                {/* Flat-Fee<br></br>Contracts<br></br>(lmt. time) */}
 
             </motion.div >
 

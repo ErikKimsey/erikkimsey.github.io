@@ -20,6 +20,7 @@ function SplitData(str) {
 function Landing(props) {
     const sketchRef = useRef();
     const [dimens, setDimens] = useState({ w: 0, h: 0 });
+    const [isFreelanceOpen, setIsFreelanceOpen] = useState(false);
 
     let [d, setD] = useState();
     let [sD, setSubD] = useState();
@@ -33,6 +34,18 @@ function Landing(props) {
 
     }, [])
 
+    function openFreelanceModal() {
+        setIsFreelanceOpen(true);
+    }
+
+    function toggleFreelanceModal() {
+        setIsFreelanceOpen((prev) => !prev);
+    }
+
+    function closeFreelanceModal() {
+        setIsFreelanceOpen(false);
+    }
+
 
     return (
         <LandingContentBannerTemplate>
@@ -40,14 +53,18 @@ function Landing(props) {
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
 
                 <Banner timerTime={3000} />
-                <SkillsExperienceParent />
+                <SkillsExperienceParent onOpenFreelance={openFreelanceModal} />
                 {/* <About /> */}
             </div>
             <div className="w-full lg:w-1/2 flex">
                 <VideoBackground />
             </div>
 
-            <FreelanceComponentAndModal />
+            <FreelanceComponentAndModal
+                freelance={isFreelanceOpen}
+                onToggleFreelance={toggleFreelanceModal}
+                onCloseFreelance={closeFreelanceModal}
+            />
         </LandingContentBannerTemplate>
     );
 }
