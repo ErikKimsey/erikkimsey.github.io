@@ -91,7 +91,7 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                     - button to send message.
                     - 
                     */}
-                    <label className="w-full h-14 flex flex-row justify-end p-1">
+                    {/* <label className="w-full h-14 flex flex-row justify-end p-1">
                         <input
                             className="w-8 h-8"
                             type="radio"
@@ -100,7 +100,7 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                             checked={isSelected}
                             onChange={() => onSelectPackage(label)}
                         />
-                    </label>
+                    </label> */}
                 </div>
                 {/* <div className=" absolute  w-full text-purps font-bold font-quantify text-9xl text-right overflow-hidden top-1/4 -left-5 -z-10 opacity-20 -rotate-12">{price}</div> */}
             </div >
@@ -180,8 +180,9 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
-                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. 01/26</div>
-                            <div className="text-xl px-4 font-black">Click an item below, to make contact.</div>
+                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. time</div>
+                            <div className="text-xl px-4 font-black">Here are examples of some flat-fee services, that I provide.  </div>
+                            {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
                         {/* </div> */}
                         <div className="relative w-full flex flex-row flex-wrap justify-center ">
@@ -201,7 +202,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                         </div>
 
                         {/* EmailJS component */}
-                        <EmailJS selectedPackageLabel={selectedPackageLabel} />
+                        {/* <EmailJS selectedPackageLabel={selectedPackageLabel} /> */}
 
                     </motion.div>
                 </motion.div>}

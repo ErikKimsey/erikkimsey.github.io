@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
 import "./banner.scss";
+import LandingImageGallery from "../Landing/LandingImageGallery";
 
 import { SELF_STATEMENT } from "../__data/data";
 
@@ -69,6 +70,7 @@ export default function Banner(props) {
             }}
         // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
+
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap overflow-clip">
                 <motion.div
@@ -108,6 +110,8 @@ export default function Banner(props) {
                 }}
                 className="aboutSelfDeveloperContainer overflow-clip">{SELF_STATEMENT}</motion.div>
             {/* <BannerMenu /> */}
+
+
         </motion.div>
     );
 }

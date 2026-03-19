@@ -11,7 +11,7 @@ export default function SkillsExperienceParent({ onOpenFreelance }) {
 
     return (
         <motion.div
-            className="box-content contain-content w-auto h-32 flex flex-row flex-wrap items-start justify-start text-2xl mt-10 overflow-hidden"
+            className="box-content w-full h-96 flex flex-col items-start justify-start text-2xl mt-5 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -30,25 +30,25 @@ export default function SkillsExperienceParent({ onOpenFreelance }) {
 
             <button
                 onClick={openExperience}
-                className="rounded font-quantify border-gray-600 bg-transparent hover:scale-105 transition duration-300 flex flex-row items-start justify-center pl-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
             >
 
                 {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
                 {/* <div className="text-purps text-3xl"> </div> */}
-                <div className=" text-peach hover:text-tealz text-5xl text-center overflow-clip pr-2">XP.</div>
+                <div className=" text-peach hover:text-tealz text-3xl overflow-clip">CV</div>
             </button>
 
-            <div className="h-12 text-grayzDark text-8xl text-center overflow-clip pr-2">  / </div>
+            {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
 
             <motion.button
                 onClick={onOpenFreelance}
                 initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
-                whileHover={{ scale: 1.02, color: "#faf", rotate: "0deg" }}
+                whileHover={{ scale: 1.1, color: "#faf", rotate: "0deg" }}
                 transition={{ duration: 0 }}
-                className="rounded bg-transparent transition duration-300 textGlow pl-0"
+                className="fixed bottom-20 rounded bg-transparent transition duration-300 textGlow overflow-clip flex "
                 style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
             >
-                <div className="w-full h-12 font-quantify text-grayz text-5xl text-left pl-6overflow-clip pl-2">     FLAT-FEE CONTRACTS</div>
+                <div className="h-12 font-quantify text-grayz text-center text-2xl overflow-clip">FLAT-FEE SERVICES</div>
             </motion.button>
 
             {/* Modal removed; navigation now handled via routes */}
