@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./skillsExperienceParent.scss";
 
-export default function SkillsExperienceParent({ onOpenFreelance }) {
+export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = () => { } }) {
     const navigate = useNavigate();
 
     const openSkillset = () => navigate('/skillset');
@@ -28,15 +28,24 @@ export default function SkillsExperienceParent({ onOpenFreelance }) {
             </button> */}
 
 
-            <button
-                onClick={openExperience}
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
-            >
+            <div className="flex items-center gap-4">
+                <button
+                    onClick={openExperience}
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
+                >
 
-                {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
-                {/* <div className="text-purps text-3xl"> </div> */}
-                <div className=" text-peach hover:text-tealz text-3xl overflow-clip">CV</div>
-            </button>
+                    {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
+                    {/* <div className="text-purps text-3xl"> </div> */}
+                    <div className=" text-peach hover:text-tealz text-3xl overflow-clip">CV</div>
+                </button>
+
+                <button
+                    onClick={onOpenEmail}
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
+                >
+                    <div className="text-grayz hover:text-pinkz text-3xl overflow-clip">CONTACT</div>
+                </button>
+            </div>
 
             {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
 
