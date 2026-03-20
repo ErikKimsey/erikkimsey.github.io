@@ -28,22 +28,22 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             </button> */}
 
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 overflow-visible py-1">
                 <button
                     onClick={openExperience}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
 
                     {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
                     {/* <div className="text-purps text-3xl"> </div> */}
-                    <div className=" text-peach hover:text-tealz text-3xl overflow-clip">CV</div>
+                    <div className="text-peach hover:text-tealz text-3xl overflow-visible">CV</div>
                 </button>
 
                 <button
                     onClick={onOpenEmail}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-125 hover:pl-2 transition-all duration-500 flex content-start justify-start"
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110  transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
-                    <div className="text-grayz hover:text-pinkz text-3xl overflow-clip">CONTACT</div>
+                    <div className="text-grayz hover:text-pinkz text-3xl overflow-visible">CONTACT</div>
                 </button>
             </div>
 
@@ -51,13 +51,12 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
             <motion.button
                 onClick={onOpenFreelance}
-                initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
-                whileHover={{ scale: 1.1, color: "#faf", rotate: "0deg" }}
-                transition={{ duration: 0 }}
-                className="fixed bottom-20 rounded bg-transparent transition duration-300 textGlow overflow-clip flex "
+
+                transition={{ duration: 2 }}
+                className="fixed bottom-20 rounded bg-transparent transition duration-500 hover:scale-110  textGlow"
                 style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
             >
-                <div className="h-12 font-quantify text-grayz text-center text-2xl overflow-clip">FLAT-FEE SERVICES</div>
+                <div className="h-12 font-quantify text-grayz text-2xl overflow-visible">FLAT-FEE SERVICES</div>
             </motion.button>
 
             {/* Modal removed; navigation now handled via routes */}
