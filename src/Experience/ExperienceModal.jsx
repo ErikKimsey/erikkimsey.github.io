@@ -9,7 +9,7 @@ import "./styles/experienceModal.scss"
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { IMAGES_IMGUR } from "./IMAGES";
-import ImageCarousel from "../ImageCarousel/ImageCarousel";
+// import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const dropIn = {
     hidden: {
@@ -83,7 +83,6 @@ export default function ExperienceModal(props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>
-
                 <motion.div
                     className="absolute inset-0 backdrop-blur-md overflow-clip"
                     onClick={handleClose}
@@ -102,6 +101,7 @@ export default function ExperienceModal(props) {
                     exit={{ y: 24, scale: 0.1, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 >
+
                     <div className="flex flex-row items-end w-full justify-end ">
                         <button
                             onClick={handleClose}
@@ -112,10 +112,11 @@ export default function ExperienceModal(props) {
                         </button>
                     </div>
                     <div className="flex flex-col h-full py-4 overflow-clip">
+
                         {/* <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" /> */}
-                        {
+                        {/* {
                             hasVideoFile ? <video src={video} type="video/mp4" autoPlay muted controls /> : <ImageCarousel imgs={imgs} />
-                        }
+                            } */}
 
 
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">

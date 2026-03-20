@@ -20,8 +20,6 @@ const images = [
 
 export default function LandingImageGallery() {
 
-
-
     return (
         <ImageGallery
             items={images}

@@ -6,7 +6,7 @@ import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperiencePar
 import VideoBackground from "../VideoBackground/VideoBackground";
 import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
 import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
-import LandingImageGallery from "./LandingImageGallery";
+
 
 
 let d = ["React", "React Native", "Unity3D", "C#", "Blender", "Next.js", "Node.js"];
@@ -21,6 +21,8 @@ function Landing(props) {
     const sketchRef = useRef();
     const [dimens, setDimens] = useState({ w: 0, h: 0 });
     const [isFreelanceOpen, setIsFreelanceOpen] = useState(false);
+
+    const backgroundGeometry = "/Users/erikkimsey/Desktop/erik_kimsey_portfolio_playground/src/assets/images/hemisphere_gray_purple.png";
 
     let [d, setD] = useState();
     let [sD, setSubD] = useState();
@@ -49,9 +51,10 @@ function Landing(props) {
 
     return (
         <LandingContentBannerTemplate>
+            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover bottom-0 lg:top-0 lg:right-0 rotate-270 lg:rotate-0 -z-2"></img>
+
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
 
-                {/* <LandingImageGallery /> */}
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent onOpenFreelance={openFreelanceModal} />
                 {/* <About /> */}

@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
 import "./banner.scss";
-import LandingImageGallery from "../Landing/LandingImageGallery";
 
 import { SELF_STATEMENT } from "../__data/data";
 

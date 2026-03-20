@@ -31,10 +31,11 @@ export default function Experience() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
         >
+            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover left-0 bottom-0 lg:top-0 rotate-180 "></img>
             <div className='w-full flex flex-col items-start justify-between flex-wrap pl-2 py-4'>
                 <button
                     type="button"
-                    className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors'
+                    className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50'
                     onClick={() => navigate('/')}
                 >
                     <FontAwesomeIcon icon={faAngleLeft} className="h-full text-xl text-offWhitez hover:text-purps" />

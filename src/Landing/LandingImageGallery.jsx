@@ -21,7 +21,6 @@ export default function LandingImageGallery() {
             })
             setXpImgs(imgAr)
             console.log("is this being called soidgjbosdkfg times?");
-
         }
     }, []);
 
@@ -52,38 +51,17 @@ export default function LandingImageGallery() {
 
     return (
         <>
-            {xpImgs.length > 0 &&
-                <Carousel
-                    // className="h-48"
-                    swipeable={false}
-                    draggable={false}
-                    showDots={true}
-                    responsive={responsive}
-                    autoPlay={false}
-                    // ssr={true} // means to render carousel on server-side.
-                    infinite={true}
-                    autoPlaySpeed={10000}
-                    keyBoardControl={true}
-                    customTransition="all .5"
-                    transitionDuration={500}
-                    containerClass="carousel-container"
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
-                    dotListClass="custom-dot-list-style"
-                    itemClass="carousel-item-padding-40-px"
-                >
-                    {
-                        xpImgs.map((e) => {
-                            if (isVideoFile(e)) {
-                                return <div>video</div>
-                                // return <video src={e} type="video/mp4" autoPlay muted controls />
-                            } else {
-                                return <img src={e} />
-                            }
-                        })
-                    }
-                </Carousel>
+            {/* {xpImgs.length > 0 &&
+                <ImageCarousel imgs={xpImgs} />
 
-            }
+            } */}
         </>
     )
 }
+
+// const LANDING_IMG_GALLERY_LINKS = [
+//     "https://res.cloudinary.com/dfez8ez2g/video/upload/v1770647413/bebop_trailer_owevvt.mp4",
+//     "https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690941/cok/cok_mobile_app_1080_m3bedx.png",
+//     "https://res.cloudinary.com/dfez8ez2g/image/upload/v1763598610/chartiq/chartiq_etor.png",
+
+// ]

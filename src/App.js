@@ -10,7 +10,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
-import LandingImageGallery from './ImageGallery/LandingImageGallery';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -35,6 +34,7 @@ export default function App() {
     return (
         <div className="App">
             {/* <VideoBackground /> */}
+
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>
@@ -44,7 +44,6 @@ export default function App() {
                                 <>
                                     <Landing label={"Experience"} navTo={"experience"} />
                                     {/* <div className='background-image'> */}
-                                    {/* <LandingImageGallery /> */}
                                     {/* </div> */}
 
                                     {/* <SkillsExperienceParent /> */}
