@@ -14,7 +14,8 @@ module.exports = {
             'tealz': "#1fffad",
             'grayz': "#ddd",
             'grayzDark': "#444444",
-            'offWhitez': "#fffec8"
+            'offWhitez': "#fffec8",
+            'yellowz': "#d6ff21"
         },
         borderColor: {
             'peach': "#ffceaf",
@@ -25,7 +26,8 @@ module.exports = {
             'tealz': "#1fffad",
             'grayz': "#aaaaaa",
             'grayzDark': "#444444",
-            'offWhitez': "#fffec8"
+            'offWhitez': "#fffec8",
+            'yellowz': "#d6ff21"
         },
         backgroundColor: {
             'peach': "#ffceaf",
@@ -36,7 +38,8 @@ module.exports = {
             'tealz': "#1fffad",
             'grayz': "#aaaaaa",
             'grayzDark': "#444444",
-            'offWhitez': "#fffec8"
+            'offWhitez': "#fffec8",
+            'yellowz': "#d6ff21"
         },
 
         extend: {

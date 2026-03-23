@@ -71,7 +71,11 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
     return (
         (<motion.div
             // onHoverStart={() => hovering()}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{
+                scale: 1.01,
+                transition: { duration: 0.2 }
+            }}
+
             className="relative flex flex-col flex-wrap justify-start content-end p-4 m-2 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
 
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
@@ -80,8 +84,9 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
 
             <div className="flex flex-col w-full  p-4 m-2 bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-hidden rounded-md">
                 <div className="label-and-price flex flex-row content-start">
-                    <div className=" text-pinkz text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12">{label}</div>
+                    <div className=" text-white text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
+                <div className="border-b-2 border-grayzDark mb-4"></div>
                 <div className="service-description font-black">
                     {description}
                 </div>
@@ -180,7 +185,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center ">
-                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip">ltd. time</div>
+                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip bg-yellowz text-blaq">ltd. time</div>
                             <div className="text-xl px-4 font-black">Here are examples of some flat-fee services, that I provide.  </div>
                             {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
