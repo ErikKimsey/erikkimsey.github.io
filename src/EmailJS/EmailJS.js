@@ -40,7 +40,7 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
     };
 
     const formClassName = modalStyle
-        ? "flex flex-col h-auto box-content p-5 bg-blaq bg-opacity-70 backdrop-blur-4xl text-offWhitez font-bold rounded-lg border border-grayzDark m-0"
+        ? "flex flex-col h-auto box-content p-5 bg-blaq bg-opacity-70 backdrop-blur-4xl text-offWhitez font-bold rounded-sm border border-grayzDark m-0"
         : "flex flex-col w-full h-auto box-content p-5 bg-peach text-blaq font-bold rounded-lg";
 
     const inputClassName = modalStyle
@@ -48,11 +48,11 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
         : "border-s-pinkz p-2 rounded-md";
 
     const labelClassName = modalStyle
-        ? "p-1 px-1 pt-4 text-sm text-tealz font-black"
+        ? "p-1 px-1 pt-4 text-sm text-yellowz font-black"
         : "border-s-pinkz p-1 px-1 pt-4 text-sm text-grayzDark font-black";
 
     const submitButtonClassName = modalStyle
-        ? "mt-6 p-3 rounded-md border border-white bg-blaq text-white font-black hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+        ? "mt-6 p-3 rounded-sm border border-yellowz bg-blaq text-yellowz font-black hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
         : "mt-4";
 
     const successContainerClassName = modalStyle

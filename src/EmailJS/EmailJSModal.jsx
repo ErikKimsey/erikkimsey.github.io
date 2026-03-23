@@ -23,7 +23,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                     />
 
                     <motion.div
-                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[99vw] lg:w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 overflow-x-clip p-2 lg:p-8"
+                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[99vw] lg:w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 overflow-x-clip py-2 lg:p-8"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Contact form"
@@ -32,26 +32,26 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                         exit={{ y: 24, scale: 0.1, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
-                        <div className="flex flex-row items-end p-2 w-full">
+                        <div className="flex flex-row items-end p-2 pl-0 ml-0 w-full">
                             <button
                                 onClick={onClose}
-                                className="p-2 rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300"
+                                className="p-2 pl-0 rounded-sm text-yellowz hover:text-blaq duration-300"
                                 aria-label="Close"
                             >
-                                <FontAwesomeIcon icon={faXmark} className="w-8 h-8 text-xl" />
+                                <FontAwesomeIcon icon={faXmark} className="w-10 h-10 text-2xl" />
                             </button>
                         </div>
 
-                        <div className="w-full flex flex-col justify-center content-center pb-4">
-                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-6xl lg:text-8xl self-center font-quantify overflow-clip">
+                        <div className="w-full flex flex-col justify-center content-start pb-4">
+                            <div className=" w-full font-extrabold text-6xl lg:text-8xl self-start font-quantify overflow-clip bg-yellowz text-blaq">
                                 contact
                             </div>
-                            <div className="text-lg lg:text-xl px-4 font-black">
+                            <div className="text-xl lg:text-xl pb-4 mt-4 font-black">
                                 Tell me about your project and I will follow up soon.
                             </div>
                         </div>
 
-                        <div className="w-full px-2 lg:px-4 pb-4">
+                        <div className="w-full pb-4 ">
                             <EmailJS modalStyle onSuccessAcknowledge={onClose} />
                         </div>
                     </motion.div>
