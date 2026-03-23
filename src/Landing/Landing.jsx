@@ -61,7 +61,7 @@ function Landing(props) {
 
     return (
         <LandingContentBannerTemplate>
-            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover bottom-0 lg:top-0 lg:right-0 rotate-270 lg:rotate-0 -z-2"></img>
+            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover bottom-0 lg:top-0 lg:right-0 rotate-270 lg:rotate-0 -z-10"></img>
 
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
 

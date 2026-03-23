@@ -53,10 +53,10 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 onClick={onOpenFreelance}
 
                 transition={{ duration: 2 }}
-                className="fixed bottom-20 rounded bg-transparent transition duration-500 hover:scale-110  textGlow"
+                className="fixed bottom-20 rounded bg-transparent transition duration-500 hover:scale-110 textGlow"
                 style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
             >
-                <div className="h-12 font-quantify text-grayz text-2xl overflow-visible">FLAT-FEE SERVICES</div>
+                <div className="h-12 font-quantify text-grayz text-3xl overflow-visible">FLAT-FEE SERVICES</div>
             </motion.button>
 
             {/* Modal removed; navigation now handled via routes */}

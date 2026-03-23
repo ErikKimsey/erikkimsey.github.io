@@ -23,7 +23,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                     />
 
                     <motion.div
-                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 overflow-x-clip p-4 lg:p-8"
+                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[99vw] lg:w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 overflow-x-clip p-2 lg:p-8"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Contact form"
@@ -52,7 +52,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                         </div>
 
                         <div className="w-full px-2 lg:px-4 pb-4">
-                            <EmailJS modalStyle />
+                            <EmailJS modalStyle onSuccessAcknowledge={onClose} />
                         </div>
                     </motion.div>
                 </motion.div>
