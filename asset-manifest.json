@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c247166e.css",
-    "main.js": "/static/js/main.23ae3255.js",
+    "main.css": "/static/css/main.e8de7e2a.css",
+    "main.js": "/static/js/main.c7660ba8.js",
     "static/media/07_29_25v2.webm": "/static/media/07_29_25v2.d387221b2e5317dfbf34.webm",
     "static/media/liquidsky.ttf": "/static/media/liquidsky.3276050a4d9ebce66fdc.ttf",
+    "static/media/game_dev.PNG": "/static/media/game_dev.0ed0a13ac8c9be96f890.PNG",
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.3aa1a958b3fc7c3318c7.ttf",
     "static/media/Comfortaa-Regular.ttf": "/static/media/Comfortaa-Regular.886fcced57daea5944e7.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.c6eb380b9f8f0920f934.ttf",
     "static/media/gem_ring_mobile.png": "/static/media/gem_ring_mobile.3da48942ec823dcc5628.png",
     "static/media/erik_kimsey_software_engineer.pdf": "/static/media/erik_kimsey_software_engineer.15b1d73d36dfc787d9c3.pdf",
+    "static/media/ui_ux_consult.WEBP": "/static/media/ui_ux_consult.bfdfff0d2a7fbea3599f.WEBP",
     "static/media/TumsMelted.ttf": "/static/media/TumsMelted.c46863315503f2710486.ttf",
     "static/media/droopy_e.png": "/static/media/droopy_e.3e17519b00f145c4a81f.png",
     "static/media/quantify.ttf": "/static/media/quantify.e44a16dadd185f5bcdae.ttf",
+    "static/media/web_proto.WEBP": "/static/media/web_proto.95c5c96be6d021d635fb.WEBP",
     "static/media/mobile_dev.png": "/static/media/mobile_dev.4b223863219b02da3b65.png",
     "static/media/NEON.TTF": "/static/media/NEON.b0f581c427424c101e20.TTF",
     "static/media/Atmos.ttf": "/static/media/Atmos.827c6d5342769c740479.ttf",
@@ -20,11 +23,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.c247166e.css.map": "/static/css/main.c247166e.css.map",
-    "main.23ae3255.js.map": "/static/js/main.23ae3255.js.map"
+    "main.e8de7e2a.css.map": "/static/css/main.e8de7e2a.css.map",
+    "main.c7660ba8.js.map": "/static/js/main.c7660ba8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c247166e.css",
-    "static/js/main.23ae3255.js"
+    "static/css/main.e8de7e2a.css",
+    "static/js/main.c7660ba8.js"
   ]
 }
