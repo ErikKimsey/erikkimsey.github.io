@@ -31,17 +31,15 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             <div className="flex items-center gap-4 overflow-visible py-1">
                 <button
                     onClick={openExperience}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
 
-                    {/* <FontAwesomeIcon icon={faRoad} className="h-8" /> */}
-                    {/* <div className="text-purps text-3xl"> </div> */}
-                    <div className="text-peach hover:text-tealz text-3xl overflow-visible">CV</div>
+                    <div className="text-yellowz hover:text-pinkz text-3xl overflow-visible">CV</div>
                 </button>
 
                 <button
                     onClick={onOpenEmail}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110  transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105  transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
                     <div className="text-grayz hover:text-pinkz text-3xl overflow-visible">CONTACT</div>
                 </button>

@@ -121,7 +121,7 @@ export default function ExperienceModal(props) {
 
                         <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
-                            <div className="text-pinkz overflow-clip">{name}</div>
+                            <div className="text-tealz overflow-clip">{name}</div>
                             <div className="flex flex-row content-between">
                                 <a className="p-4" href={url} target="_blank"><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faRocket} />
                                 </a>

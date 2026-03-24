@@ -35,7 +35,7 @@ export default function ExperienceItem(props) {
                         <div className="text-yellowz pb-1 text-md font-comfortBold">{role}</div>
                         <div className="text-pinkz text-sm font-comfortBold">{name}</div>
                     </div>
-                    <div className="absolute icon-container text-4xl ">
+                    <div className=" absolute icon-container text-2xl">
                         <FontAwesomeIcon icon={faEye} color="rgba(255,255,255, 0.3)" />
                     </div>
                 </div>
