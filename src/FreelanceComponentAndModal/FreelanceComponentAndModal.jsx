@@ -76,13 +76,13 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                 transition: { duration: 0.2 }
             }}
 
-            className="relative flex flex-col flex-wrap justify-start content-end p-4 m-2 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
+            className="relative flex flex-col flex-wrap justify-start content-end py-4 m-0 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg overflow-hidden">
 
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className="flex flex-col w-full  p-4 m-2 bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-hidden rounded-md">
+            <div className="flex flex-col w-full bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-hidden rounded-md">
                 <div className="label-and-price flex flex-row content-start">
                     <div className=" text-white text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
