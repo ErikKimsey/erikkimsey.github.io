@@ -1,16 +1,6 @@
 
 export const EXPERIENCE_DATA = [
-    {
-        name: 'Personal project : "Game of Life"',
-        dates: '2019',
-        role: 'Developer, Designer',
-        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
-        url: 'https://wizardly-lewin-048675.netlify.app/',
-        github: 'https://github.com/ErikKimsey/Conways-Life',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
-        video: '',
-        about: ["Implementation of mathematician John Conway's 'Game of 'Life', which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
-    },
+
     {
         name: 'Bebop Boutique',
         role: 'Creative Director / Engineer / Designer / 3D Artist',
@@ -52,23 +42,23 @@ export const EXPERIENCE_DATA = [
             'Using Adobe Illustrator and Photoshop, I designed UI assets (i.e., logo concepts and icons).',
         ]
     },
-    {
-        name: 'Moxie',
-        role: 'Engineer / Designer',
-        dates: '2021 - Current',
-        stack: 'Swift / SwiftUI',
-        url: '',
-        github: '(private)',
-        imgs: [''],
-        video: '',
+    // {
+    //     name: 'Moxie',
+    //     role: 'Engineer / Designer',
+    //     dates: '2021 - Current',
+    //     stack: 'Swift / SwiftUI',
+    //     url: '',
+    //     github: '(private)',
+    //     imgs: [''],
+    //     video: '',
 
-        about: [
-            'Develop the entirety of Moxie\'s core functionality, desired interactivity, and environmental aesthetic traits,',
-            'Where needed, create Moxie\'s 2D assets (i.e., sprites, icons) and 3D assets (i.e., 3D models, shaders, and VFX),',
-            'Design and build Moxie\'s core backend,',
-            'Draft marketing plans and branding.'
-        ]
-    },
+    //     about: [
+    //         'Develop the entirety of Moxie\'s core functionality, desired interactivity, and environmental aesthetic traits,',
+    //         'Where needed, create Moxie\'s 2D assets (i.e., sprites, icons) and 3D assets (i.e., 3D models, shaders, and VFX),',
+    //         'Design and build Moxie\'s core backend,',
+    //         'Draft marketing plans and branding.'
+    //     ]
+    // },
     {
         name: 'University of Virginia - Curry School of Education',
         role: 'Principal Engineer (mobile app)',
@@ -76,13 +66,24 @@ export const EXPERIENCE_DATA = [
         stack: 'React Native, TypeScript, React-Navigation, Jest, Context API',
         url: '',
         github: 'https://github.com/sartography/SkillSTAR',
-        imgs: [''],
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1774364583/skillstar-mock-ui_rpsf1i.jpg', '', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764598942/skillstar/SKILLSTAR_star_g2iuar.png'],
         video: '',
 
         about: [
             'Designed and Developed the UI and UX for SkillSTAR mobile app,',
             'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
         ]
+    },
+    {
+        name: 'Personal project : "Game of Life"',
+        dates: '2019',
+        role: 'Developer, Designer',
+        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
+        url: 'https://wizardly-lewin-048675.netlify.app/',
+        github: 'https://github.com/ErikKimsey/Conways-Life',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
+        video: '',
+        about: ["Implementation of mathematician John Conway's 'Game of 'Life', which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
     },
     // {
     //     name: 'Chatwise',
