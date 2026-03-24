@@ -32,7 +32,7 @@ export default function Experience() {
             transition={{ duration: 0.25, ease: 'easeInOut' }}
         >
             <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover left-0 bottom-0 lg:top-0 rotate-180 "></img>
-            <div className='w-full flex flex-col items-start justify-between flex-wrap pl-2 py-4'>
+            <div className='w-full flex flex-col content-between  flex-wrap py-4'>
                 <button
                     type="button"
                     className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50'
@@ -40,7 +40,7 @@ export default function Experience() {
                 >
                     <FontAwesomeIcon icon={faAngleLeft} className="h-full text-xl text-offWhitez hover:text-purps" />
                 </button>
-                <div className='h-full flex justify-start size-9 text-6xl overflow-visible font-quantify'>Experience</div>
+                <div className='h-full flex  content-end size-9 text-6xl overflow-visible font-quantify text-yellowz z-20'>Experience</div>
             </div>
             <div className="experienceItemsList w-full">
                 {

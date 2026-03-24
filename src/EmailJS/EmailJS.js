@@ -44,8 +44,8 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
         : "flex flex-col w-full h-auto box-content p-5 bg-peach text-blaq font-bold rounded-lg";
 
     const inputClassName = modalStyle
-        ? "border border-grayzDark bg-black bg-opacity-30 text-blaq p-2 rounded-md"
-        : "border-s-pinkz p-2 rounded-md";
+        ? "border border-grayzDark bg-black bg-opacity-30 text-blaq p-2 "
+        : "border-s-pinkz p-2 rounded-sm";
 
     const labelClassName = modalStyle
         ? "p-1 px-1 pt-4 text-sm text-yellowz font-black"

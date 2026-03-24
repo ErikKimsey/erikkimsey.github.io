@@ -27,15 +27,15 @@ export default function ExperienceItem(props) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 rounded-md border-grayzDark bg-blaq bg-opacity-20 backdrop-blur-xl overflow-hidden"
+                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full lg:w-5/6 min-w-70 rounded-md border-grayzDark bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-hidden"
                 onClick={() => (modalOpen ? close() : open())}
             >
-                <div className="name-role-icon-container backdrop-blur-xl ">
-                    <div className="text-md flex flex-col flex-wrap content-between p-2">
-                        <div className="text-tealz pb-1 text-md font-comfortBold">{role}</div>
-                        <div className="text-pinkz py-2 text-sm font-comfortBold">{name}</div>
+                <div className="name-role-icon-container flex justify-between backdrop-blur-xl bg-[rgba(132, 132, 132, 0.2)] p-2 w-full">
+                    <div className="text-md flex flex-col flex-wrap content-betweenp-2">
+                        <div className="text-yellowz pb-1 text-md font-comfortBold">{role}</div>
+                        <div className="text-pinkz text-sm font-comfortBold">{name}</div>
                     </div>
-                    <div className="icon-container text-sm">
+                    <div className="absolute icon-container text-4xl ">
                         <FontAwesomeIcon icon={faEye} color="rgba(255,255,255, 0.3)" />
                     </div>
                 </div>
