@@ -4,6 +4,7 @@ import { Canvas, useLoader, extend } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { GLTFLoader } from '../../node_modules/three/examples/jsm/loaders/GLTFLoader';
+import { EXPERIENCE_DATA } from "../Experience/experience_data";
 
 
 
@@ -77,6 +78,17 @@ function The3DSphere({ }) {
 
 export default function ThreeBackground() {
 
+
+    let [experienceImgs, setExperienceImages] = useState([]);
+
+
+    useEffect(() => {
+        if (EXPERIENCE_DATA && EXPERIENCE_DATA.length > 0) {
+            let imgs = EXPERIENCE_DATA.map(e => {
+                return e.imgs[0];
+            });
+        }
+    }, []);
 
     return (
         <div className="three-bkgrd-container">
