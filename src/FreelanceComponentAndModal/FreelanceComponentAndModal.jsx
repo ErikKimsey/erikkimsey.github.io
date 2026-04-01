@@ -164,7 +164,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                     />
 
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full max-h-[85vh] w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full  w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}

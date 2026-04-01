@@ -11,7 +11,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
     return (
         <motion.div
-            className="box-content w-full h-auto flex flex-col items-start justify-start text-2xl mt-5 "
+            className="box-content w-full h-auto flex flex-col items-start justify-start text-2xl mt-5 overflow-clip "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -54,7 +54,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 className=" bottom-20 rounded bg-transparent transition duration-500 hover:scale-105 overflow-visible origin-left textGlow"
                 style={{ lineHeight: 1.1 }}
             >
-                <div className="h-12 font-quantify text-grayz text-3xl overflow-visible">FLAT-FEE SERVICES</div>
+                <div className="h-12 font-quantify text-grayz text-3xl overflow-hidden">FLAT-FEE SERVICES</div>
             </motion.button>
 
             {/* Modal removed; navigation now handled via routes */}
