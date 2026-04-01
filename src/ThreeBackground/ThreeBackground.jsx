@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { useRef, Suspense, useMemo } from 'react';
+import { useRef, Suspense, useMemo, useEffect, useState } from 'react';
 import { Canvas, useLoader, extend } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
@@ -91,9 +91,9 @@ export default function ThreeBackground() {
     }, []);
 
     return (
-        <div className="three-bkgrd-container">
+        <div className="three-bkgrd-container fixed left-0 top-0 w-full h-full -z-10">
             <Suspense>
-                <Canvas camera={{ position: [0, 0, 0] }} frameloop="always">
+                <Canvas camera={{ position: [0, 0, -10] }} frameloop="always">
                     <EffectComposer>
                         {/* <Environment files="public/hubble.png" /> */}
                         {/* <ambientLight color="black" intensity={0.1} /> */}

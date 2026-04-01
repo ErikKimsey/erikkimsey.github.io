@@ -25,8 +25,10 @@ export default function LandingImageGallery() {
     }, []);
 
     function isVideoFile(filename) {
-        const videoExtensions = [".mpg", ".mp2", ".mpeg", ".mpe", ".mpv", ".mp4", ".m4a", ".f4v", ".m4b", ".mov", ".webm"]; // Add more as needed
+        const videoExtensions = [".mpg", ".mp2", ".mpeg", ".mpe", ".mpv", ".mp4", ".m4a", ".f4v", ".m4b", ".mov", ".webm"];
+        // Add more as needed
         const extension = filename.toLowerCase().substring(filename.lastIndexOf("."));
+
         return videoExtensions.includes(extension);
     }
 

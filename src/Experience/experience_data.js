@@ -66,7 +66,7 @@ export const EXPERIENCE_DATA = [
         stack: 'React Native, TypeScript, React-Navigation, Jest, Context API',
         url: '',
         github: 'https://github.com/sartography/SkillSTAR',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1774364583/skillstar-mock-ui_rpsf1i.jpg', '', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764598942/skillstar/SKILLSTAR_star_g2iuar.png'],
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1774364583/skillstar-mock-ui_rpsf1i.jpg', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1764598942/skillstar/SKILLSTAR_star_g2iuar.png'],
         video: '',
 
         about: [
@@ -74,17 +74,7 @@ export const EXPERIENCE_DATA = [
             'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
         ]
     },
-    {
-        name: 'Personal project : "Game of Life"',
-        dates: '2019',
-        role: 'Developer, Designer',
-        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
-        url: 'https://wizardly-lewin-048675.netlify.app/',
-        github: 'https://github.com/ErikKimsey/Conways-Life',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
-        video: '',
-        about: ["Implementation of mathematician John Conway's 'Game of 'Life', which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
-    },
+
     // {
     //     name: 'Chatwise',
     //     dates: '2019 - 2020',
@@ -124,18 +114,6 @@ export const EXPERIENCE_DATA = [
             ['Contributed to planning and architecture of Connect Our Kids "Family Connections" in their React-Native application']
     },
     {
-        name: 'NextLevel - Kardion Dynamic Guilloche and landing site',
-        dates: '2018',
-        role: 'Frontend Developer',
-        stack: 'Angular, D3.js, Typescript, Boostrap 4, Sass',
-        url: 'http://www.kardion.de/',
-        github: 'https://www.npmjs.com/package/nls-guilloche',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499727/ek-portfolio/guilloche.png'],
-        video: '',
-
-        about: ['Developed a D3.js module to procedurally generate a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website,', ' Developed Kardion\'s landing site, in which the guilloche was implemeneted.']
-    },
-    {
         name: 'Raincrow Studios - Covens (mobile game)',
         dates: '2017 - 2018',
         role: 'Node.js Developer',
@@ -159,6 +137,30 @@ export const EXPERIENCE_DATA = [
 
         about: ['Implemented ChartIQ\'s flagship charting application into eToro.com\'s ProCharts feature,', 'Performed fixes and debugging which optimized ChartIQ\'s performance and reliability,', 'Contributed to ChartIQ library\s public-facing developer documentation.']
     },
+    {
+        name: 'Personal project : "Game of Life"',
+        dates: '2019',
+        role: 'Developer, Designer',
+        stack: 'Javascript, P5.js, CSS3, HTML5 Canvas, Git/Github, DaFont',
+        url: 'https://wizardly-lewin-048675.netlify.app/',
+        github: 'https://github.com/ErikKimsey/Conways-Life',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1764690694/small_projs/Screenshot_2025-11-28_at_9.27.30_AM_ikcg4z.png'],
+        video: '',
+        about: ["Implementation of mathematician John Conway's 'Game of 'Life', which uses cellular automata to simulate the evolution of living systems based on that system's initial form and resources."]
+    },
+    {
+        name: 'NextLevel - Kardion Dynamic Guilloche and landing site',
+        dates: '2018',
+        role: 'Frontend Developer',
+        stack: 'Angular, D3.js, Typescript, Boostrap 4, Sass',
+        url: 'http://www.kardion.de/',
+        github: 'https://www.npmjs.com/package/nls-guilloche',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499727/ek-portfolio/guilloche.png'],
+        video: '',
+
+        about: ['Developed a D3.js module to procedurally generate a guilloche graphic asset, used on Kardion.de letterhead, business cards, and website,', ' Developed Kardion\'s landing site, in which the guilloche was implemeneted.']
+    },
+
 ];
 
 export const FUN_CREATIONS = [

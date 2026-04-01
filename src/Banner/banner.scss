@@ -25,7 +25,12 @@ $hover-color: #fcfa85;
     background-size: cover;
 
     .textGlow {
-        text-shadow: 2px 2px #67ffb0;
+        text-shadow: none;
+        transition: text-shadow 0.3s ease;
+    }
+
+    .textGlow:hover {
+        text-shadow: -2px -2px 10px #e0c, 3px 3px 10px #a0e;
     }
 
     .text-container {

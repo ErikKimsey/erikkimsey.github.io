@@ -82,12 +82,12 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className="flex flex-col w-full bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-hidden rounded-md">
-                <div className="label-and-price flex flex-row content-start">
+            <div className="flex flex-col w-full bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-visible rounded-md">
+                <div className="label-and-price flex flex-row content-start px-8">
                     <div className=" text-white text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
                 <div className="border-b-2 border-grayzDark mb-4"></div>
-                <div className="service-description font-black">
+                <div className="service-description font-black px-8">
                     {description}
                 </div>
                 <div className=" w-full text-tealz font-quantify font-black text-4xl text-right overflow-hidden right-1 bottom-1 px-4 pb-0 pt-2 mb-0 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
@@ -135,7 +135,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
             <motion.div
                 initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
                 whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
-                transition={{ duration: 0.3 }} className="fixed flex justify-start content-start w-auto top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
+                transition={{ duration: 0.3 }} className="fixed flex justify-start content-start w-auto top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ lineHeight: 1.1 }}
                 onClick={FreelanceTabClick}>
 
                 {/* Flat-Fee<br></br>Contracts<br></br>(lmt. time) */}
@@ -148,7 +148,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
             <AnimatePresence>{
                 freelance &&
                 <motion.div
-                    className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 w-full h-full "
+                    className="fixed flex flex-row flex-wrap justify-center items-start z-[10] top-0 left-0 w-full h-full"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}>
@@ -176,21 +176,21 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                             <button
                                 onClick={closeModal}
-                                className="p-2 rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300"
+                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300 text-2xl"
                                 aria-label="Close"
                             >
-                                <FontAwesomeIcon icon={faXmark} className="w-8 h-8 text-xl" />
+                                <FontAwesomeIcon icon={faXmark} className=" h-12 text-2xl" />
                             </button>
                         </div>
 
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
-                        <div className="w-full flex flex-col justify-center content-center ">
-                            <div className="w-full p-2 font-extrabold px-1 sm:px-2 pb-1 text-9xl self-center font-quantify overflow-clip bg-yellowz text-blaq">ltd. time</div>
-                            <div className="text-xl px-4 font-black">Here are examples of some flat-fee services, that I provide.  </div>
+                        <div className="w-full flex flex-col justify-center content-center">
+                            <div className="w-full p-2 pb-0 mb-5 font-extrabold px-1 sm:px-2 text-8xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
+                            <div className="text-2xl px-4 text-white bg-blaq">Here are examples of some flat-fee services, that I provide.  </div>
                             {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
                         {/* </div> */}
-                        <div className="relative w-full flex flex-row flex-wrap justify-center ">
+                        <div className="relative w-full flex flex-col justify-center items-center">
                             {
                                 DEALS_PACKAGES.map((e, i) => {
                                     return (

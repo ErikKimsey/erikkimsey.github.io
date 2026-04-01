@@ -7,6 +7,8 @@ import VideoBackground from "../VideoBackground/VideoBackground";
 import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
 import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
 import EmailJSModal from "../EmailJS/EmailJSModal";
+import ThreeBackground from "../ThreeBackground/ThreeBackground";
+import LandingImageGallery from "../ImageGallery/LandingImageGallery";
 
 
 
@@ -62,22 +64,27 @@ function Landing(props) {
     return (
         <LandingContentBannerTemplate>
             <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover bottom-0 lg:top-0 lg:right-0 rotate-270 lg:rotate-0 -z-10"></img>
+            {/* <ThreeBackground /> */}
 
             <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
 
+
+                {/* <LandingImageGallery /> */}
                 <Banner timerTime={3000} />
                 <SkillsExperienceParent onOpenFreelance={openFreelanceModal} onOpenEmail={openEmailModal} />
+                <FreelanceComponentAndModal
+                    freelance={isFreelanceOpen}
+                    onToggleFreelance={toggleFreelanceModal}
+                    onCloseFreelance={closeFreelanceModal}
+                />
+
+
                 {/* <About /> */}
             </div>
             {/* <div className="w-full lg:w-1/2 flex">
                 <VideoBackground />
-            </div> */}
+                </div> */}
 
-            <FreelanceComponentAndModal
-                freelance={isFreelanceOpen}
-                onToggleFreelance={toggleFreelanceModal}
-                onCloseFreelance={closeFreelanceModal}
-            />
 
             <EmailJSModal isOpen={isEmailOpen} onClose={closeEmailModal} />
         </LandingContentBannerTemplate>

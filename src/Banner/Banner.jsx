@@ -4,6 +4,7 @@ import BannerMenu from "./BannerMenu";
 import "./banner.scss";
 
 import { SELF_STATEMENT } from "../__data/data";
+import LandingImageGallery from "../ImageGallery/LandingImageGallery";
 
 
 const ROLES = [
@@ -59,7 +60,7 @@ export default function Banner(props) {
 
     return (
         <motion.div
-            className="banner-container w-full text-5xl sm:text-5xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10"
+            className="banner-container w-full text-5xl sm:text-5xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-"
             ref={bannerRef}
             initial={{ opacity: 0, scale: 2 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -110,6 +111,8 @@ export default function Banner(props) {
                 className="aboutSelfDeveloperContainer overflow-clip">{SELF_STATEMENT}</motion.div>
             {/* <BannerMenu /> */}
 
+            {/* <div className="absolute right-12 top-9 w-[800px] h-[640px] "> */}
+            {/* </div> */}
 
         </motion.div>
     );

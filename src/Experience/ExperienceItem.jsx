@@ -27,7 +27,7 @@ export default function ExperienceItem(props) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full lg:w-5/6 min-w-70 rounded-md border-grayzDark bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-hidden"
+                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 m-2 w-full min-w-70 rounded-md border-grayzDark bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-hidden"
                 onClick={() => (modalOpen ? close() : open())}
             >
                 <div className="name-role-icon-container flex justify-between backdrop-blur-xl bg-[rgba(132, 132, 132, 0.2)] p-2 w-full">

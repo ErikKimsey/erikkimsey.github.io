@@ -11,7 +11,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
     return (
         <motion.div
-            className="box-content w-full h-96 flex flex-col items-start justify-start text-2xl mt-5 "
+            className="box-content w-full h-auto flex flex-col items-start justify-start text-2xl mt-5 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -28,13 +28,13 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             </button> */}
 
 
-            <div className="flex items-center gap-4 overflow-visible py-1">
+            <div className="flex flex-col items-start justify-between overflow-visible py-0">
                 <button
                     onClick={openExperience}
                     className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
 
-                    <div className="text-yellowz hover:text-pinkz text-3xl overflow-visible">CV</div>
+                    <div className="text-start  hover:text-yellowz text-3xl overflow-visible">CV</div>
                 </button>
 
                 <button
@@ -51,8 +51,8 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 onClick={onOpenFreelance}
 
                 transition={{ duration: 2 }}
-                className="fixed bottom-20 rounded bg-transparent transition duration-500 hover:scale-110 textGlow"
-                style={{ textShadow: "-2px -2px 10px #e0c, 3px 3px 10px #a0e", lineHeight: 1.1 }}
+                className=" bottom-20 rounded bg-transparent transition duration-500 hover:scale-105 overflow-visible origin-left textGlow"
+                style={{ lineHeight: 1.1 }}
             >
                 <div className="h-12 font-quantify text-grayz text-3xl overflow-visible">FLAT-FEE SERVICES</div>
             </motion.button>
