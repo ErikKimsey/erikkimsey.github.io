@@ -43,7 +43,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                         </div>
 
                         <div className="w-full flex flex-col justify-center content-start pb-4">
-                            <div className=" w-full font-extrabold text-6xl lg:text-8xl self-start font-quantify overflow-clip bg-yellowz text-blaq">
+                            <div className="w-full font-extrabold text-6xl lg:text-6xl self-start font-quantify overflow-clip h-24 pt-11 bg-yellowz text-blaq">
                                 contact
                             </div>
                             <div className="text-xl lg:text-xl pb-4 mt-4 font-black">
