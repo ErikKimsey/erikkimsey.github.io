@@ -39,7 +39,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
                 <button
                     onClick={onOpenEmail}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105  transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
+                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
                     <div className="text-grayz hover:text-pinkz text-3xl overflow-visible">CONTACT</div>
                 </button>

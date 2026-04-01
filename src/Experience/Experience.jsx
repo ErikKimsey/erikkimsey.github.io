@@ -24,7 +24,7 @@ export default function Experience() {
 
     return (
         <motion.div
-            className=' pl-2 lg:pl-20  flex flex-col justify-center items-center'
+            className='px-2 lg:pl-20 w-full flex flex-col justify-center items-center'
             ref={containerRef}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -32,7 +32,9 @@ export default function Experience() {
             transition={{ duration: 0.25, ease: 'easeInOut' }}
         >
             <div className='w-full lg:w-9/12'>
+
                 <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover left-0 bottom-0 lg:top-0 rotate-180 "></img>
+
                 <div className='flex flex-col content-between flex-wrap py-4 '>
                     <button
                         type="button"
@@ -41,9 +43,10 @@ export default function Experience() {
                     >
                         <FontAwesomeIcon icon={faAngleLeft} className="h-full text-xl text-offWhitez hover:text-purps" />
                     </button>
-                    <div className='h-full w-full flex content-start size-9 text-8xl font-quantify text-blaq bg-yellowz z-10'>Experience</div>
+                    <div className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-yellowz overflow-clip z-10 box-content'>Experience</div>
                 </div>
-                <div className="experienceItemsList w-full">
+
+                <div className="experienceItemsList w-full flex flex-col">
                     {
                         data && data.map((e, i) => {
                             return <div className="w-full" key={i} >
