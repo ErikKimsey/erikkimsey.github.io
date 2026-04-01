@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../Banner/banner.scss";
 import mobile from "../assets/images/mobile_dev.png";
@@ -61,30 +61,25 @@ const DEALS_PACKAGES = [
 function DealPackage({ index, pack, onSelectPackage, isSelected }) {
 
     const { label, price, description, image } = pack;
-    let i = 0;
 
-
-    function hovering() {
-        // play sound
-    }
 
     return (
         (<motion.div
             // onHoverStart={() => hovering()}
             whileHover={{
-                scale: 1.01,
+                // scale: 1.01,
                 transition: { duration: 0.2 }
             }}
 
-            className="relative flex flex-col flex-wrap justify-start content-end py-4 m-0 w-full min-w-70 border-1 rounded-md bg-opacity-35 border-grayzDark backdrop-blur-lg overflow-hidden">
+            className="relative flex flex-col flex-wrap justify-start content-end py-1 m-0 w-full min-w-70 border-1 rounded-md bg-opacity-35 border-grayzDark backdrop-blur-lg  overflow-hidden">
 
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className="flex flex-col w-full bg-blaq bg-opacity-70 backdrop-blur-4xl overflow-visible ">
-                <div className="label-and-price flex flex-row content-start px-8 pt-10">
-                    <div className=" text-white text-4xl font-quantify font-black pb-4 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20  border-spacing-x-12 text-yellowz">{label}</div>
+            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-70 backdrop-blur-4xl overflow-visible`}>
+                <div className="label-and-price flex flex-row content-start px-8 pt-8">
+                    <div className=" text-white text-4xl font-quantify font-black pb-2 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
                 <div className="border-b-2 border-grayzDark mb-4"></div>
                 <div className="service-description font-black px-8">
@@ -185,7 +180,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center">
-                            <div className="w-full p-2 pb-0 mb-5 h-36 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
+                            <div className="w-full pb-0 mb-5 h-24 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
                             <div className="text-2xl px-4 text-white bg-blaq">Here are examples of some flat-fee services, that I provide.  </div>
                             {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
