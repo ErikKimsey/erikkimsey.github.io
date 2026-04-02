@@ -77,7 +77,7 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-70 backdrop-blur-4xl overflow-visible`}>
+            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-75 backdrop-blur-4xl overflow-visible mix-blend-screen`}>
                 <div className="label-and-price flex flex-row content-start px-8 pt-8">
                     <div className=" text-white text-4xl font-quantify font-black pb-2 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
@@ -180,8 +180,8 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                         {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
                         <div className="w-full flex flex-col justify-center content-center">
-                            <div className="w-full pb-0 mb-5 h-24 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
-                            <div className="text-2xl px-4 text-white bg-blaq">Here are examples of some flat-fee services, that I provide.  </div>
+                            <div className="w-full pb-0 mb-0 h-24 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
+                            <div className="text-2xl px-4 mb-5 font-quantify bg-blaq text-yellowz border-t-[1px] border-grayz">Here are examples of some flat-fee services, that I provide.  </div>
                             {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
                         {/* </div> */}

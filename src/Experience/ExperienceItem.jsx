@@ -24,10 +24,10 @@ export default function ExperienceItem(props) {
     if (!modalOpen) {
         return (
             <motion.div
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.01, mixBlendMode: "screen" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 w-full min-w-70 border-grayzDark my-2 bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-hidden"
+                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 w-full min-w-70 border-grayzDark my-2 bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-visible"
                 onClick={() => (modalOpen ? close() : open())}
             >
                 <div className="name-role-icon-container flex justify-between backdrop-blur-xl bg-[rgba(132, 132, 132, 0.2)] p-2 w-full">

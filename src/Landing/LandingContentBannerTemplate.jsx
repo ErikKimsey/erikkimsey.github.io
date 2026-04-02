@@ -1,5 +1,3 @@
-import { useRef, useState, useEffect } from "react";
-import VideoBackground from "../VideoBackground/VideoBackground";
 import "./landingContentBannerTemplate.scss";
 
 

@@ -2,14 +2,10 @@ import { useRef, useState, useEffect } from "react";
 import "./landing.scss";
 import Banner from "../Banner/Banner";
 import { motion } from "framer-motion";
-import About from "../About/About";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
-import VideoBackground from "../VideoBackground/VideoBackground";
 import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
 import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
 import EmailJSModal from "../EmailJS/EmailJSModal";
-import ThreeBackground from "../ThreeBackground/ThreeBackground";
-import LandingImageGallery from "../ImageGallery/LandingImageGallery";
 
 
 
@@ -87,25 +83,61 @@ function Landing(props) {
 
 function LandingRightArea() {
 
+    let [p1Array, setP1Array] = useState([]);
+    let [p2Array, setP2Array] = useState([]);
+    let [finalString, setFinalString] = useState("");
+
+    const paragraph2 = "The world evolves quickly.  And I enjoy evolving with it, keeping current to design trends and  technologies."
+    const paragraph1 = "  I have over 7 years of professional experience weaving UX best-practices, UI & graphic design, and software engineering.  The results are the creation of engaging and intutive user-experiences which are specific to each product's target-market."
+    const paragraphAnimation = {
+        initial: { x: "120%", opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        transition: { duration: 0.6, ease: "easeOut" },
+    };
+
+
     let ref = useRef();
 
     return (
-        <motion.div
-            className="w-full lg:w-1/2 h-72 lg:h-[50vh] text-6xl md:text-6xl lg:text-9xl m-0 p-0 flex-col overflow-hidden z-10 border-0  lg:border-l-[1px] border-grayzDark px-2 pt-6 lg:pt-0 lg:pl-10"
-            ref={ref}
-            initial={{ opacity: 0, scale: 2 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-                duration: 2,
-                delay: 0,
-            }}
+        <div
+            className="w-full lg:w-1/2 h-72 lg:h-[50vh] text-6xl md:text-6xl lg:text-9xl m-0 mt-2  p-0 pt-10 flex-col overflow-hidden z-10 border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-grayzDark px-2 pt-6 lg:pt-0 lg:pl-10"
+
         >
-            <div className="flex flex-col justify-around w-full h-full text-lg">
-                <div> Professional Tokyo Shinjuku ROM virus access link man ICE shattered geodesic implant blue AI misinformation corporate-grade. </div>
+            <div className="flex flex-col justify-center w-full h-full text-lg">
+                {paragraph1 &&
+                    <motion.p
+                        className="text-sm lg:text-base py-2"
+                        initial={paragraphAnimation.initial}
+                        animate={paragraphAnimation.animate}
+                        transition={{ ...paragraphAnimation.transition, delay: 1 }}
+                    >
+                        {paragraph1}
+                        {/* I have over 7 years of professional experience weaving UX best-practices, UI & graphic design, and software engineering.  The results are the creation of engaging and intutive user-experiences which are specific to each product's target-market. */}
+                    </motion.p>
+                }
                 <br />
-                <div>  Software deck jack in dub ganja steel AI Russian Night City dub scan prosthetic cryptic Harajuku.</div>
+                <br />
+                <motion.p
+                    className="text-sm lg:text-base py-2"
+                    initial={paragraphAnimation.initial}
+                    animate={paragraphAnimation.animate}
+                    transition={{ ...paragraphAnimation.transition, delay: 1.1 }}
+                >
+                    {paragraph2 &&
+                        paragraph2
+                    }
+                    <br />
+                    <br />
+                    {/* Further, Imagine tactility, visual and auditory feedback to provide user guidance and confidence. Pushing the possibilities of a successful user-experience.  Be it by:
+
+                        <ul role="list" style={{ listStyle: "inside", listStyleType: "disc" }} className="list-disc">
+                            <li >engaging in rapid prototyping, experimentation, and R&D.</li>
+                            <li>Utilizing under-used APIs native to any platform, and elements of multimedia. </li>
+                        </ul> */}
+                </motion.p>
             </div>
-        </motion.div>
+
+        </div >
     )
 }
 
