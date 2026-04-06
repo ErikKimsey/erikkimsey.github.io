@@ -76,19 +76,22 @@ function Landing(props) {
 
             <EmailJSModal isOpen={isEmailOpen} onClose={closeEmailModal} />
 
-            <LandingRightArea />
+            <LandingRightArea openEmail={openEmailModal} />
         </LandingContentBannerTemplate>
     );
 }
 
-function LandingRightArea() {
+function LandingRightArea({ openEmail }) {
 
     let [p1Array, setP1Array] = useState([]);
     let [p2Array, setP2Array] = useState([]);
     let [finalString, setFinalString] = useState("");
 
-    const paragraph2 = "The world evolves quickly.  And I enjoy evolving with it, keeping current to design trends and  technologies."
+
     const paragraph1 = "  I have over 7 years of professional experience weaving UX best-practices, UI & graphic design, and software engineering.  The results are the creation of engaging and intutive user-experiences which are specific to each product's target-market."
+    const paragraph2 = "The world evolves quickly.  And I enjoy evolving with it, keeping current to design trends and  technologies."
+    const paragraph3Before = "If you're looking for an experienced UI developer, who has a keen sense of aesthetic and usability, ";
+    const paragraph3Click = "please reach out!";
     // const paragraph3 = "I like pushing the possibilities of a successful user-experience. Incorporating tactility, visual and auditory feedback, to provide user guidance and confidence.   Be it by engaging in rapid prototyping, experimentation, and R&D. Utilizing under-used APIs native to any platform, and elements of multimedia."
     // const paragraph4 = "Be it by engaging in current research in HCI rapid prototyping and experimentation, and R&DUtilizing under-used APIs native to any platform, and elements of multimedia.", I enjoy utilizing overlooked APIs that are native to platforms.  E.g., Javascript's Web Audio API, Web MIDI API, "
     const paragraphAnimation = {
@@ -136,6 +139,14 @@ function LandingRightArea() {
                             <li >engaging in rapid prototyping, experimentation, and R&D.</li>
                             <li>Utilizing under-used APIs native to any platform, and elements of multimedia. </li>
                         </ul> */}
+                </motion.p>
+                <motion.p
+                    className=" py-2 text-pinkz"
+                    initial={paragraphAnimation.initial}
+                    animate={paragraphAnimation.animate}
+                    transition={{ ...paragraphAnimation.transition, delay: 1.1 }}
+                >
+                    {paragraph3Before}<span onClick={openEmail} className="cursor-pointer hover:text-yellowz text-tealz hover:scale-125 transition-all duration-500">{paragraph3Click}</span>
                 </motion.p>
             </div>
 
