@@ -89,6 +89,8 @@ function LandingRightArea() {
 
     const paragraph2 = "The world evolves quickly.  And I enjoy evolving with it, keeping current to design trends and  technologies."
     const paragraph1 = "  I have over 7 years of professional experience weaving UX best-practices, UI & graphic design, and software engineering.  The results are the creation of engaging and intutive user-experiences which are specific to each product's target-market."
+    // const paragraph3 = "I like pushing the possibilities of a successful user-experience. Incorporating tactility, visual and auditory feedback, to provide user guidance and confidence.   Be it by engaging in rapid prototyping, experimentation, and R&D. Utilizing under-used APIs native to any platform, and elements of multimedia."
+    // const paragraph4 = "Be it by engaging in current research in HCI rapid prototyping and experimentation, and R&DUtilizing under-used APIs native to any platform, and elements of multimedia.", I enjoy utilizing overlooked APIs that are native to platforms.  E.g., Javascript's Web Audio API, Web MIDI API, "
     const paragraphAnimation = {
         initial: { x: "120%", opacity: 0 },
         animate: { x: 0, opacity: 1 },

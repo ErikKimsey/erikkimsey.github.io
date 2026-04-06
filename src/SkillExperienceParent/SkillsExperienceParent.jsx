@@ -34,7 +34,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                     className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
                 >
 
-                    <div className="text-start  hover:text-yellowz text-3xl overflow-visible">CV</div>
+                    <div className="text-start  hover:text-pinkz text-3xl overflow-visible">CV</div>
                 </button>
 
                 <button
