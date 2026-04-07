@@ -159,7 +159,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                     />
 
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full  w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -167,14 +167,13 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                         exit={{ y: 24, scale: 0.1, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     >
-                        <div className="flex flex-row items-end p-2 w-full">
-
+                        <div className="flex flex-row items-end p-2 w-full text-2xl">
                             <button
                                 onClick={closeModal}
-                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300 text-xl"
+                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300"
                                 aria-label="Close"
                             >
-                                <FontAwesomeIcon icon={faXmark} className=" h-12" />
+                                <FontAwesomeIcon icon={faXmark} className="h-12 text-xl text-yellowz" />
                             </button>
                         </div>
 
