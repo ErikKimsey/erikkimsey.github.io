@@ -79,7 +79,7 @@ export default function ExperienceModal(props) {
     return (
         <AnimatePresence>
             <motion.div
-                className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 w-full h-full"
+                className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 w-full h-full backdrop-blur-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>

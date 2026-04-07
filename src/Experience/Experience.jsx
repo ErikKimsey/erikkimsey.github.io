@@ -24,7 +24,7 @@ export default function Experience() {
 
     return (
         <motion.div
-            className='px-2 lg:pl-20 w-full flex flex-col justify-center items-center'
+            className='px-2 lg:pl-20 w-full flex flex-col justify-center items-center '
             ref={containerRef}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -24,31 +24,32 @@ export default function ExperienceItem(props) {
     if (!modalOpen) {
         return (
             <motion.div
-                whileHover={{ scale: 1.01, mixBlendMode: "screen" }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer w-full relative flex flex-col flex-wrap justify-start content-start p-2 w-full min-w-70 border-grayzDark my-2 bg-[rgba(132, 132, 132, 0.2)] bg-opacity-20 backdrop-blur-xl overflow-visible"
+                className="experienceItemContainer relative flex flex-col flex-wrap justify-start content-start py-1 m-0 w-full min-w-70 border border-grayzDark rounded-md bg-opacity-35 backdrop-blur-lg overflow-hidden my-2"
                 onClick={() => (modalOpen ? close() : open())}
             >
-                <div className="name-role-icon-container flex justify-between backdrop-blur-xl bg-[rgba(132, 132, 132, 0.2)] p-2 w-full">
-                    <div className="text-md flex flex-col flex-wrap content-betweenp-2">
-                        <div className="text-yellowz pb-1 text-md font-comfortBold">{role}</div>
+                <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-35 backdrop-blur-xl overflow-visible mix-blend-screen`}>
+                    <div className="label-and-price flex flex-col justify-start px-8 pt-8  text-xl">
+                        <div className="text-white font-quantify font-black overflow-hidden z-20 text-pinkz">{role}</div>
+                        <div className=" text-tealz font-quantify font-black text-yellowz overflow-hidden m-0 pb-2 bg-transparent">{name}</div>
+                    </div>
+                    <div className="border-b-2 border-grayzDark mb-4 mx-8"></div>
+                    {/* <div className="service-description font-black px-8 pb-4">
                         <div className="text-pinkz text-sm font-comfortBold">{name}</div>
-                    </div>
-                    <div className="absolute w-full flex flex-col items-end justify-end overflow-clip">
-                        <FontAwesomeIcon icon={faEye} className="text-6xl" color="rgba(255,255,255, 0.3)" />
-                    </div>
-                </div>
-                <div className="tech-stack-icon-container flex flex-row flex-wrap ">
-                    {
-                        techStackItems &&
-                        techStackItems.map((e) => {
-                            return <div className="text-offWhitez py-1 px-5 m-2 text-sm text-center font-medium  rounded-xl border-grayzDark border-2" key={e}>
+                        {about ? <div className="text-offWhitez text-sm pt-2 h-44">{about}</div> : null}
+                    </div> */}
+                    <div className="tech-stack-icon-container flex flex-row flex-wrap px-6 pb-2 gap-1">
+                        {techStackItems && techStackItems.map((e) => (
+                            <div className="text-white py-1 px-1 m-0 text-sm text-center font-medium rounded-xl  border-grayzDark" key={e}>
                                 {e}
                             </div>
-                        })
-                    }
-
+                        ))}
+                    </div>
+                </div>
+                <div className="absolute w-full flex flex-col items-end justify-end overflow-clip pointer-events-none">
+                    <FontAwesomeIcon icon={faEye} className="text-6xl" color="rgba(255,255,255, 0.3)" />
                 </div>
             </motion.div >
         )
