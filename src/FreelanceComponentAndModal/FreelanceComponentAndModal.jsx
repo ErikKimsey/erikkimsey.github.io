@@ -171,10 +171,10 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
 
                             <button
                                 onClick={closeModal}
-                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300 text-2xl"
+                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300 text-xl"
                                 aria-label="Close"
                             >
-                                <FontAwesomeIcon icon={faXmark} className=" h-12 text-2xl" />
+                                <FontAwesomeIcon icon={faXmark} className=" h-12" />
                             </button>
                         </div>
 
