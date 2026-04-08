@@ -119,7 +119,7 @@ export default function ExperienceModal(props) {
                         }
 
 
-                        <div className="w-full flex flex-col justify-center content-center font-quantify text-4xl py-2 pt-8 overflow-clip">
+                        <div className="w-full flex flex-col justify-center content-center font-quantify text-xl py-2 pt-8 overflow-clip">
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-tealz overflow-clip">{name}</div>
                             <div className="flex flex-row content-between">
@@ -129,11 +129,11 @@ export default function ExperienceModal(props) {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex flex-row py-2 font-comfortBold">
-                            <div className="text-2xl">{stack}</div>
-                        </div>
+                        {/* <div className="flex flex-row py-2 font-comfortBold">
+                            <div className="text-sm">{stack}</div>
+                        </div> */}
 
-                        <>
+                        {/* <>
                             <ul className="overflow-y-scroll list-inside list-disc text-offWhitez text-sm font-comfortBold  pt-4" role="list">
                                 {
                                     about.map((e) => {
@@ -141,7 +141,7 @@ export default function ExperienceModal(props) {
                                     })
                                 }
                             </ul>
-                        </>
+                        </> */}
 
                     </div>
                 </motion.div>
