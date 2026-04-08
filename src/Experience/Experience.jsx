@@ -41,7 +41,7 @@ export default function Experience() {
                         className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50 self-start pl-2'
                         onClick={() => navigate('/')}
                     >
-                        <FontAwesomeIcon icon={faAngleLeft} className="h-full text-xl text-offWhitez hover:text-purps" />
+                        <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
                     <div className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-yellowz overflow-clip z-10 box-content'>Experience</div>
                 </div>

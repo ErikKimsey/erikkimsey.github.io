@@ -26,6 +26,8 @@ export default function Banner(props) {
     let [currRole, setCurrRole] = useState();
     let [isGrayscale, setIsGrayscale] = useState(true);
 
+    const hasAnimated = localStorage.getItem('bannerAnimated') === 'true';
+
     useEffect(() => {
         let interval = null;
         setIconActive(props.isActive);
@@ -62,12 +64,13 @@ export default function Banner(props) {
         <motion.div
             className="banner-container w-full text-6xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-"
             ref={bannerRef}
-            initial={{ opacity: 0, scale: 2 }}
+            initial={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 2 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
                 duration: 2,
                 delay: 0,
             }}
+            onAnimationComplete={!hasAnimated ? () => localStorage.setItem('bannerAnimated', 'true') : undefined}
         // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
 
@@ -75,7 +78,7 @@ export default function Banner(props) {
             <div className="text-container flex flex-col flex-nowrap overflow-clip">
                 <motion.div
                     className="banner-item"
-                    initial={{ opacity: 0 }}
+                    initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
                         duration: 1,
@@ -87,7 +90,7 @@ export default function Banner(props) {
 
                 <motion.div
                     className="role banner-item"
-                    initial={{ opacity: 0, scale: 0 }}
+                    initial={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
 
                     transition={{
@@ -102,7 +105,7 @@ export default function Banner(props) {
             </div>
 
             <motion.div
-                initial={{ opacity: 0, scale: 0, lineHeight: 1 }}
+                initial={hasAnimated ? { opacity: 1, scale: 1, lineHeight: 1 } : { opacity: 0, scale: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, scale: 1, lineHeight: 1 }}
                 transition={{
                     duration: 1,
