@@ -77,12 +77,12 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-75 backdrop-blur-4xl overflow-visible mix-blend-screen`}>
-                <div className="label-and-price flex flex-row content-start px-8 pt-8">
-                    <div className=" text-white text-4xl font-quantify font-black pb-2 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 border-spacing-x-12 text-yellowz">{label}</div>
+            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-50 backdrop-blur-4xl overflow-visible mix-blend-screen rounded-sm`}>
+                <div className="label-and-price flex flex-row content-start px-4 pt-8">
+                    <div className=" text-white text-2xl font-quantify font-black pb-2 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
                 <div className="border-b-2 border-grayzDark mb-4"></div>
-                <div className="service-description font-black px-8">
+                <div className="service-description font-black text-sm px-4">
                     {description}
                 </div>
                 <div className=" w-full text-tealz font-quantify font-black text-4xl text-right overflow-hidden right-1 bottom-1 px-4 pb-0 pt-2 mb-0 lg:right-8 lg:bottom-4 bg-transparent">{price}</div>
@@ -159,7 +159,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                     />
 
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 pt-10 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 pt-20 pb-20 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
