@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.91024881.css",
-    "main.js": "/static/js/main.a1cec518.js",
+    "main.js": "/static/js/main.d15f54aa.js",
     "static/media/07_29_25v2.webm": "/static/media/07_29_25v2.d387221b2e5317dfbf34.webm",
     "static/media/liquidsky.ttf": "/static/media/liquidsky.3276050a4d9ebce66fdc.ttf",
     "static/media/game_dev.PNG": "/static/media/game_dev.0ed0a13ac8c9be96f890.PNG",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.91024881.css",
-    "static/js/main.a1cec518.js"
+    "static/js/main.d15f54aa.js"
   ]
 }
