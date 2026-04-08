@@ -111,7 +111,7 @@ function LandingRightArea({ openEmail }) {
         >
 
             {/* https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775484678/droopy_e_fvyf3s.png */}
-            <div className="flex flex-col justify-end w-full h-full text-lg overflow-clip">
+            <div className="flex flex-col justify-start lg:justify-end w-full h-full text-lg overflow-clip">
                 {paragraph1 &&
                     <motion.p
                         className="text-sm lg:text-base py-2"
@@ -143,14 +143,14 @@ function LandingRightArea({ openEmail }) {
                             <li>Utilizing under-used APIs native to any platform, and elements of multimedia. </li>
                         </ul>
                 </motion.p> */}
-                <motion.p
+                {/* <motion.p
                     className=" py-2 text-pinkz text-sm lg:text-base overflow-clip"
                     initial={paragraphAnimation.initial}
                     animate={paragraphAnimation.animate}
                     transition={{ ...paragraphAnimation.transition, delay: 1.1 }}
                 >
                     {paragraph3Before}<span onClick={openEmail} className="cursor-pointer text-sm lg:text-base hover:text-yellowz text-tealz hover:scale-125 transition-all duration-500">{paragraph3Click}</span>
-                </motion.p>
+                </motion.p> */}
             </div>
 
         </div >
