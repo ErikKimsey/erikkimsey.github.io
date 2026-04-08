@@ -26,7 +26,7 @@ export default function Banner(props) {
     let [currRole, setCurrRole] = useState();
     let [isGrayscale, setIsGrayscale] = useState(true);
 
-    const hasAnimated = localStorage.getItem('bannerAnimated') === 'true';
+    const hasAnimated = localStorage.getItem('bannerAnimated') === 'false';
 
     useEffect(() => {
         let interval = null;
@@ -70,7 +70,6 @@ export default function Banner(props) {
                 duration: 2,
                 delay: 0,
             }}
-            onAnimationComplete={!hasAnimated ? () => localStorage.setItem('bannerAnimated', 'true') : undefined}
         // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
 

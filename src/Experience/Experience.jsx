@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from "framer-motion";
+import { motion, animate, stagger } from "framer-motion";
 import "./styles/experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
 import ExperienceItem from './ExperienceItem';
@@ -21,15 +21,35 @@ export default function Experience() {
         }
     }, []);
 
+    const headerVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0 },
+    }
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2, // 0.1s delay between each child
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: -100 },
+        visible: { opacity: 1, y: 0 },
+    };
+
 
     return (
         <motion.div
             className='px-2 lg:pl-20 w-full flex flex-col justify-center items-center '
             ref={containerRef}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // exit={{ opacity: 0 }}
+        // transition={{ duration: 0, ease: 'easeInOut' }}
         >
             <div className='w-full lg:w-9/12'>
 
@@ -43,18 +63,39 @@ export default function Experience() {
                     >
                         <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
-                    <div className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-yellowz overflow-clip z-10 box-content'>Experience</div>
+                    <motion.div
+                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-yellowz overflow-clip z-10 box-content'
+                        initial="hidden"
+                        animate="visible"
+                        exit={{ opacity: 0, y: -20 }}
+                        variants={headerVariants}
+                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                    >
+                        Experience
+
+                    </motion.div>
                 </div>
 
-                <div className="experienceItemsList w-full flex flex-col">
+                <motion.ul
+                    className=" w-full flex flex-col"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
                     {
                         data && data.map((e, i) => {
-                            return <div className="w-full" key={i} >
+                            return <motion.li
+                                variants={itemVariants}
+                                className="w-full"
+                                key={i}
+                                transition={{ duration: (0.1 * i), ease: 'easeInOut' }}
+                                exit={{ opacity: 0, y: 20 }}
+                            >
                                 <ExperienceItem key={e.name} name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} imgs={e.imgs} video={e.video} />
-                            </div>
+                            </motion.li>
                         })
                     }
-                </div>
+                </motion.ul>
             </div>
         </motion.div>
     );
