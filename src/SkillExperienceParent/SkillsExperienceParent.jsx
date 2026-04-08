@@ -54,7 +54,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 className=" bottom-20 rounded bg-transparent transition duration-500 hover:scale-105 overflow-visible origin-left textGlow"
                 style={{ lineHeight: 1.1 }}
             >
-                <div className="h-12 font-quantify text-grayz text-3xl overflow-hidden">FLAT-FEE SERVICES</div>
+                <div className="h-12 font-quantify text-yellowz text-3xl overflow-hidden">FLAT-FEE SERVICES</div>
             </motion.button>
 
             {/* Modal removed; navigation now handled via routes */}

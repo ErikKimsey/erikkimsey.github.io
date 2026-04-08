@@ -23,7 +23,7 @@ export default function ExperienceItem(props) {
 
     if (!modalOpen) {
         return (
-            <motion.li
+            <motion.div
                 whileHover={{ scale: 0.98, backgroundColor: "rgba(111,55,111, 0.6)" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
@@ -52,7 +52,7 @@ export default function ExperienceItem(props) {
                 <div className="absolute w-full flex flex-col items-end justify-start lg:pr-36 -top-32 overflow-clip pointer-events-none">
                     <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" />
                 </div>
-            </motion.li >
+            </motion.div>
         )
     }
     if (modalOpen) {
