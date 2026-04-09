@@ -130,7 +130,8 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
             <motion.div
                 initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
                 whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
-                transition={{ duration: 0.3 }} className="fixed flex justify-start content-start w-auto top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ lineHeight: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="fixed flex justify-start content-start w-full top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ lineHeight: 1.1 }}
                 onClick={FreelanceTabClick}>
 
                 {/* Flat-Fee<br></br>Contracts<br></br>(lmt. time) */}

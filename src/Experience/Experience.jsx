@@ -44,16 +44,17 @@ export default function Experience() {
 
     return (
         <motion.div
-            className='px-2 lg:pl-20 w-full flex flex-col justify-center items-center '
+            className='w-full flex flex-col justify-center items-center '
             ref={containerRef}
         // initial={{ opacity: 0 }}
         // animate={{ opacity: 1 }}
         // exit={{ opacity: 0 }}
         // transition={{ duration: 0, ease: 'easeInOut' }}
         >
-            <div className='w-full lg:w-9/12'>
+            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775484678/droopy_e_fvyf3s.png"} className="fixed w-full aspect-square bg-contain lg:w-ful l bottom-20 lg:top-96 lg:top-9 -right-24 lg:-right-48 rotate-270 lg:rotate-0 -z-20 opacity-50 blur-md grayscale"></img>
+            <div className='max-w-[1000px] w-full'>
 
-                <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/v1774021674/hemisphere_gradient_to_alpha_u34qdg.png"} className="fixed bg-cover left-0 bottom-0 lg:top-0 rotate-180 "></img>
+
 
                 <div className='flex flex-col content-between flex-wrap py-4 '>
                     <button
@@ -64,7 +65,7 @@ export default function Experience() {
                         <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
                     <motion.div
-                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-yellowz overflow-clip z-10 box-content'
+                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-tealz overflow-clip z-10 box-content'
                         initial="hidden"
                         animate="visible"
                         exit={{ opacity: 0, y: -20 }}

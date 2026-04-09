@@ -62,10 +62,10 @@ export default function Banner(props) {
 
     return (
         <motion.div
-            className="banner-container w-full text-6xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-"
+            className="banner-container w-auto text-6xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-blaq bg-opacity-60"
             ref={bannerRef}
-            initial={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 2 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
                 duration: 2,
                 delay: 0,
@@ -74,13 +74,13 @@ export default function Banner(props) {
         >
 
             {/* <UnderConstruction /> */}
-            <div className="text-container flex flex-col flex-nowrap overflow-clip">
+            <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip">
                 <motion.div
-                    className="banner-item"
-                    initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
+                    className="font-quantify overflow-clip text-6xl lg:text-9xl"
+                    initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
-                        duration: 1,
+                        duration: 0.6,
                         delay: 0.3,
                     }}
                 >
@@ -88,12 +88,12 @@ export default function Banner(props) {
                 </motion.div>
 
                 <motion.div
-                    className="role banner-item"
-                    initial={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                    className="aboutSelfDeveloperContainer font-quantify text-6xl overflow-clip"
+                    initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
 
                     transition={{
-                        duration: 1,
+                        duration: 0.5,
                         delay: 0.3,
                     }}
                     data-text={currRole}
@@ -103,18 +103,40 @@ export default function Banner(props) {
 
             </div>
 
+            <div className="border-b-2 pt-7 border-grayzDark"></div>
+
+
+            {/* <motion.div
+                initial={hasAnimated ? { opacity: 1, lineHeight: 1 } : { opacity: 0, lineHeight: 1 }}
+                animate={{ opacity: 1, lineHeight: 1 }}
+                transition={{
+                    duration: 0.5,
+                    delay: 1,
+                }}
+                className="aboutSelfDeveloperContainer overflow-clip pt-4 text-xl font-quantify">
+                digital interface services,
+            </motion.div> */}
+
             <motion.div
+                initial={hasAnimated ? { opacity: 1, lineHeight: 1 } : { opacity: 0, lineHeight: 1 }}
+                animate={{ opacity: 1, lineHeight: 1 }}
+                transition={{
+                    duration: 0.5,
+                    delay: 1,
+                }}
+                className=" text-grayz overflow-clip pt-4 text-lg font-comfortBold">
+                Targeted cognitive & non-cognitive re-adjustment, via digital user-interfaces.
+            </motion.div>
+            {/* <motion.div
                 initial={hasAnimated ? { opacity: 1, scale: 1, lineHeight: 1 } : { opacity: 0, scale: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, scale: 1, lineHeight: 1 }}
                 transition={{
-                    duration: 1,
+                    duration: 0.8,
                     delay: 1,
                 }}
-                className="aboutSelfDeveloperContainer overflow-clip">{SELF_STATEMENT}</motion.div>
-            {/* <BannerMenu /> */}
+                className="aboutSelfDeveloperContainer overflow-clip text-2xl py-1 ">{"digital user-interface services"}</motion.div> */}
 
-            {/* <div className="absolute right-12 top-9 w-[800px] h-[640px] "> */}
-            {/* </div> */}
+
 
         </motion.div>
     );

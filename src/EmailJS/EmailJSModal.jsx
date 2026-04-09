@@ -8,13 +8,13 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    className="fixed flex flex-row flex-wrap justify-center items-center z-[20] top-0 left-0 w-full h-full px-3"
+                    className="fixed flex flex-row flex-wrap justify-center items-center z-[20] top-0 left-0 w-full h-[100vh] px-3 bg-blaq bg-opacity-95 lg:bg-opacity-55 backdrop-blur-0 lg:backdrop-blur-md"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                 >
                     <motion.div
-                        className="absolute inset-0 backdrop-blur-md"
+                        className="absolute inset-0 "
                         onClick={onClose}
                         aria-hidden="true"
                         initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                     />
 
                     <motion.div
-                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[99vw] lg:w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 overflow-x-clip py-2 lg:p-8"
+                        className="relative flex flex-col z-50 h-full max-h-[85vh] w-[99vw] lg:w-[95vw] max-w-3xl overflow-auto rounded-lg shadow-2xl bg-black inset-shadow-indigo-500 overflow-x-clip py-2 lg:p-8"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Contact form"

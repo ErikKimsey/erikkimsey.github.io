@@ -59,25 +59,25 @@ function Landing(props) {
 
     return (
         <LandingContentBannerTemplate>
-            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775484678/droopy_e_fvyf3s.png"} className="fixed w-full bg-cover bottom-0 top-96  lg:-top-24 -right-24 lg:-right-48 rotate-270 lg:rotate-0 -z-20 opacity-50 blur-md"></img>
-            <div className="fixed w-full h-full bg-blaq mix-blend-hue -z-10"></div>
+
+            {/* <div className="fixed w-full h-full bg-blaq mix-blend-hue -z-10"></div> */}
 
             {/* <ThreeBackground /> */}
 
-            <div className="w-full flex flex-col flex-wrap overflow-clip pl-2 lg:pl-32">
+            <div className="w-full flex flex-col flex-wrap overflow-clip bg-blaq p-4 ">
                 {/* <LandingImageGallery /> */}
                 <Banner timerTime={3000} />
-                <SkillsExperienceParent onOpenFreelance={openFreelanceModal} onOpenEmail={openEmailModal} />
                 <FreelanceComponentAndModal
                     freelance={isFreelanceOpen}
                     onToggleFreelance={toggleFreelanceModal}
                     onCloseFreelance={closeFreelanceModal}
                 />
+
+                <EmailJSModal isOpen={isEmailOpen} onClose={closeEmailModal} />
+
+                {/* <LandingRightArea openEmail={openEmailModal} /> */}
+                <SkillsExperienceParent onOpenFreelance={openFreelanceModal} onOpenEmail={openEmailModal} />
             </div>
-
-            <EmailJSModal isOpen={isEmailOpen} onClose={closeEmailModal} />
-
-            <LandingRightArea openEmail={openEmailModal} />
         </LandingContentBannerTemplate>
     );
 }
@@ -106,7 +106,7 @@ function LandingRightArea({ openEmail }) {
 
     return (
         <div
-            className="w-full lg:w-1/2 h-72 lg:h-[60vh] text-6xl md:text-6xl lg:text-9xl m-0 mt-2 p-0 pt-10 flex-col overflow-hidden z-10 border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-grayzDark px-2 pt-6 lg:pt-0 lg:pl-10"
+            className="w-full lg:w-1/2 h-72 lg:h-[80vh] text-6xl md:text-6xl lg:text-9xl m-0 mt-2 p-0 pt-10 flex-col overflow-hidden z-10 border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-grayzDark px-2 pt-6 lg:pt-0 lg:pl-10"
 
         >
 

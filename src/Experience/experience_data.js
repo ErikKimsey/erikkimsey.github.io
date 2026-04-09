@@ -8,8 +8,7 @@ export const EXPERIENCE_DATA = [
         stack: 'Unity3D, C#, Blender, Git/Github, HLSL (C language), XCode, Copilot, Jetbrains Rider, VSCode.',
         url: '',
         github: '(private)',
-        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499698/Bebop/bebop_thunder_grid_and_chasingentity1_jvak4t.png'],
-        // video: 'https://res.cloudinary.com/dfez8ez2g/video/upload/v1770647413/bebop_trailer_owevvt.mp4',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775745260/bebop_screenshot_hu8xvr.png', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1763499698/Bebop/bebop_thunder_grid_and_chasingentity1_jvak4t.png'],
         video: 'https://res.cloudinary.com/dfez8ez2g/video/upload/v1770647413/bebop_trailer_owevvt.mp4',
         about: [
             'Bebop Boutique is a mobile application whose purpose is to aid in the creative process.  Its aesthetic and user-experience is an interpretation of some contemporary evidence-base psychological techniques, aspects of neuroscience pertaining to creativity, and even metaphysical models from Western Philosophy.',

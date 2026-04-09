@@ -16,27 +16,34 @@ export default function ExperienceItem(props) {
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
 
+
+
+
     useEffect(() => {
         let splitItems = stack.split(",");
         setTechStackItems(splitItems);
+
+
     }, []);
+
+
 
     if (!modalOpen) {
         return (
             <motion.div
-                whileHover={{ scale: 0.98, backgroundColor: "rgba(111,55,111, 0.6)" }}
+                whileHover={{ scale: 0.99 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", duration: 1 }}
-                className="experienceItemContainer relative flex flex-col flex-wrap justify-start content-start py-1 m-0 w-full min-w-70 border border-grayzDark rounded-sm bg-opacity-0 backdrop-blur-sm overflow-hidden my-2"
+                className="experienceItemContainer relative flex flex-col flex-wrap justify-start content-start py-1 m-0 w-full min-w-70 border border-grayzDark rounded-sm overflow-hidden my-2 pb-0 bg-none z-10"
                 onClick={() => (modalOpen ? close() : open())}
             >
 
-                <div className={`flex flex-col w-full ${index % 2 === 0 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-5 backdrop-blur-sm overflow-visible mix-blend-screen`}>
-                    <div className="label-and-price flex flex-col justify-start px-8 pt-8  text-xl">
-                        <div className="text-white font-quantify font-black overflow-hidden z-20 text-pinkz">{role}</div>
-                        <div className=" text-tealz font-quantify font-black text-yellowz overflow-hidden m-0 pb-2 bg-transparent">{name}</div>
+                <div className={`flex flex-col w-full lg:w-2/3  backdrop-blur-[1px] lg:backdrop-blur-sm overflow-visible pt-8`}>
+                    <div className="flex flex-col justify-start px-8 text-xl bg-blaq bg-opacity-80 lg:bg-opacity-55 ">
+                        <div className="pt-4 text-white font-quantify overflow-hidden text-white">{role}</div>
+                        <div className=" text-tealz font-quantify font-black overflow-hidden m-0 pb-2 ">{name}</div>
                     </div>
-                    <div className="border-b-2 border-grayzDark mb-4 mx-8"></div>
+                    {/* <div className="border-b-2 border-grayzDark mb-4 mx-8"></div> */}
                     {/* <div className="service-description font-black px-8 pb-4">
                         <div className="text-pinkz text-sm font-comfortBold">{name}</div>
                         {about ? <div className="text-offWhitez text-sm pt-2 h-44">{about}</div> : null}
@@ -49,8 +56,12 @@ export default function ExperienceItem(props) {
                         ))}
                     </div> */}
                 </div>
-                <div className="absolute w-full flex flex-col items-end justify-start lg:pr-36 -top-32 overflow-clip pointer-events-none">
-                    <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" />
+                {/* <div className="absolute w-full flex flex-col items-end justify-start lg:pr-36 -top-32 overflow-clip pointer-events-none"> */}
+                <div className={`absolute w-full lg:w-1/2 -right-12 -top-10 -z-10 -rotate-6 rounded-md`}>
+                    {
+                        <img src={imgs[0]} />
+                    }
+                    {/* <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" /> */}
                 </div>
             </motion.div>
         )

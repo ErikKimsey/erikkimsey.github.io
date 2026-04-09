@@ -11,7 +11,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
     return (
         <motion.div
-            className="box-content w-full h-auto flex flex-col items-start justify-start text-2xl mt-5 overflow-clip "
+            className="box-content w-full h-auto flex flex-row items-start justify-start text-2xl mt-10 overflow-clip"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -28,34 +28,29 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             </button> */}
 
 
-            <div className="flex flex-col items-start justify-between overflow-visible py-0">
-                <button
-                    onClick={openExperience}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
-                >
+            {/* <div className="flex flex-row items-start justify-between overflow-visible py-0"> */}
+            <button
+                onClick={openExperience}
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
+            >
 
-                    <div className="text-start  hover:text-pinkz text-3xl overflow-visible">CV</div>
-                </button>
+                <div className="text-start  hover:text-tealz text-xl overflow-visible">CV</div>
+            </button>
 
-                <button
-                    onClick={onOpenEmail}
-                    className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left"
-                >
-                    <div className="text-grayz hover:text-pinkz text-3xl overflow-visible">CONTACT</div>
-                </button>
-            </div>
+            <button
+                onClick={onOpenEmail}
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2"
+            >
+                <div className="text-grayz hover:text-yellowz text-xl overflow-visible">CONTACT</div>
+            </button>
+            {/* </div> */}
 
             {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
-
-            <motion.button
-                onClick={onOpenFreelance}
-
-                transition={{ duration: 2 }}
-                className=" bottom-20 rounded bg-transparent transition duration-500 hover:scale-105 overflow-visible origin-left textGlow"
-                style={{ lineHeight: 1.1 }}
+            <button
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pl-2"
             >
-                <div className="h-12 font-quantify text-yellowz text-3xl overflow-hidden">FLAT-FEE SERVICES</div>
-            </motion.button>
+                {/* <div className="h-12 font-quantify hover:text-pinkz text-xl overflow-hidden">FLAT-FEE SERVICES</div> */}
+            </button>
 
             {/* Modal removed; navigation now handled via routes */}
         </motion.div>

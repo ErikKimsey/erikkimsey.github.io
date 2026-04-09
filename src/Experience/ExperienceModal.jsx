@@ -79,7 +79,7 @@ export default function ExperienceModal(props) {
     return (
         <AnimatePresence>
             <motion.div
-                className="fixed flex flex-row flex-wrap justify-center items-center z-[10] top-0 left-0 w-full h-full backdrop-blur-lg"
+                className="fixed flex flex-row flex-wrap justify-center items-center z-[20] top-0 left-0 w-full h-full backdrop-blur-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>
@@ -93,7 +93,7 @@ export default function ExperienceModal(props) {
                 />
 
                 <motion.div
-                    className="relative flex flex-col z-1000 scroll w-[90vw] lg:w-[60vw] max-w-5xl rounded-lg shadow-2xl bg-blaq bg-opacity-70 inset-shadow-indigo-500 p-2 lg:p-10"
+                    className="relative flex flex-col z-1000 scroll w-[90vw] lg:w-[60vw] max-w-5xl rounded-sm shadow-2xl bg-blaq bg-opacity-70 inset-shadow-indigo-500 p-2 lg:p-10"
                     role="dialog"
                     aria-modal="true"
                     initial={{ y: 24, scale: 0.1, opacity: 0 }}
