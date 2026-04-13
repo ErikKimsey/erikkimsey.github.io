@@ -47,7 +47,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                                 contact
                             </div>
                             <div className="text-xl lg:text-xl pb-4 mt-4 font-black">
-                                Tell me your inner-most UI desires, I'll respond post-haste.
+                                Let us begin the alignment (cognitive or non-cognitive), between your target-market and your project.  Share your UI desires.  I will respond post-haste.
                             </div>
                         </div>
 
