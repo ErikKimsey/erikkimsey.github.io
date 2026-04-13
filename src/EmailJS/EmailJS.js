@@ -66,7 +66,7 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
     if (submissionState === "success") {
         return (
             <div className={successContainerClassName}>
-                <p className="text-xl lg:text-2xl font-black">Your message has been sent successfully.</p>
+                <p className="h-auto text-xl lg:text-2xl font-black">Your message has been sent successfully.</p>
                 <button
                     type="button"
                     onClick={onSuccessAcknowledge}

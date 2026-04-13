@@ -37,6 +37,18 @@ function Landing(props) {
 
     }, [])
 
+    useEffect(() => {
+        if (isEmailOpen) {
+            document.body.classList.add("hide-footer");
+        } else {
+            document.body.classList.remove("hide-footer");
+        }
+
+        return () => {
+            document.body.classList.remove("hide-footer");
+        };
+    }, [isEmailOpen])
+
     function openFreelanceModal() {
         setIsFreelanceOpen(true);
     }

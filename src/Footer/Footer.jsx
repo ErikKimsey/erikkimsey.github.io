@@ -30,7 +30,7 @@ export default function Footer() {
     if (isActive) {
         return (
             <AnimatePresence mode='wait' >
-                <motion.div className="footerContainer"
+                <motion.div className="footerContainer scale-75 "
                     initial={{ x: 0, opacity: 0, scale: 1 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 10, opacity: 0 }}
@@ -47,16 +47,16 @@ export default function Footer() {
                             ease: [0, 0.71, 0.2, 1.01]
                         }}>
                         <a target="_blank" href={resume}>
-                            <FontAwesomeIcon icon={faUserAstronaut} size="3x" />
+                            <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
                         </a>
                         <a target="_blank" href="https://github.com/erikkimsey">
-                            <FontAwesomeIcon icon={faGithub} size="3x" />
+                            <FontAwesomeIcon icon={faGithub} size="2x" />
                         </a>
                         <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
-                            <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
                         <a target="_blank" href="https://soundcloud.com/etaether">
-                            <FontAwesomeIcon icon={faSoundcloud} size="3x" />
+                            <FontAwesomeIcon icon={faSoundcloud} size="2x" />
                         </a>
                     </motion.div>
                 </motion.div>

@@ -1,6 +1,11 @@
 @import "../styles/globals.scss";
 @import "../styles/responsive.scss";
 
+.hide-footer .footerContainer,
+.hide-footer .footerContainerInactive {
+    display: none !important;
+}
+
 .footerContainer {
     position: fixed;
     bottom: 20px;
