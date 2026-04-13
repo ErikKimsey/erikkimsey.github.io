@@ -47,7 +47,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { } }) {
                                 contact
                             </div>
                             <div className="text-xl lg:text-xl pb-4 mt-4 font-black">
-                                Tell me about your project and I will follow up soon.
+                                Tell me your inner-most UI desires, I'll respond post-haste.
                             </div>
                         </div>
 

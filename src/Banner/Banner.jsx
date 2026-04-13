@@ -103,7 +103,7 @@ export default function Banner(props) {
 
             </div>
 
-            <div className="border-b-2 pt-7 border-grayzDark"></div>
+            <div className="border-b-2 pt-4 border-grayzDark"></div>
 
 
             {/* <motion.div

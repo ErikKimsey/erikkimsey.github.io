@@ -44,16 +44,17 @@ $highlight-color: rgb(255, 75, 255);
     padding-top: 0;
     scroll-behavior: smooth;
 
-    .background-image {
-        // position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
 
-    }
+    // .background-image {
+    //     // position: fixed;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+
+    // }
 
 
     @media only screen and (max-width: $lgDevice) {
@@ -68,6 +69,7 @@ $highlight-color: rgb(255, 75, 255);
             top: 0;
             background-size: cover;
             background-repeat: no-repeat;
+            margin: 0;
             // background-image: url("./assets/images/1x/Asset\ 2.png");
 
         }
