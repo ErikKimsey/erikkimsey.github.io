@@ -133,7 +133,7 @@ export default function ExperienceModal(props) {
                             <div className="text-sm">{stack}</div>
                         </div> */}
 
-                        {/* <>
+                        <>
                             <ul className="overflow-y-scroll list-inside list-disc text-offWhitez text-sm font-comfortBold  pt-4" role="list">
                                 {
                                     about.map((e) => {
@@ -141,7 +141,7 @@ export default function ExperienceModal(props) {
                                     })
                                 }
                             </ul>
-                        </> */}
+                        </>
 
                     </div>
                 </motion.div>

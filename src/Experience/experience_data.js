@@ -13,14 +13,7 @@ export const EXPERIENCE_DATA = [
         about: [
             'Bebop Boutique is a mobile application whose purpose is to aid in the creative process.  Its aesthetic and user-experience is an interpretation of some contemporary evidence-base psychological techniques, aspects of neuroscience pertaining to creativity, and even metaphysical models from Western Philosophy.',
             '',
-            'I am the sole developer, designer, and asset (i.e., models, UI, sound FX, and soundtrack) creator.  So, I will highlight a few aspects that demonstrate the lengths to which I have gone to realize the purpose of Bebop Boutique.',
-
-            'PERFORMANCE WITHOUT SACRIFICING AESTHETIC:',
-            'the aesthetics and idiosyncratic experience is core to the purpose of Bebop Boutique.  Targeting performance on mobile devices required particular attention to architecture, creating lean assets (e.g., 3D models, animations, physics simulations), project structure, and light-rendering best practices.',
-            ' CUSTOM / BESPOKE:',
-            'In addition to stream-lined implementation of C# and the Unity platform, I am required to engineer everything not inherent to the Unity platform.  Such as bespoke mobile device API interaction and physics simulations.',
-            'DESIGN UX / UI:',
-            'In order to realize the purpose of Bebop Boutique (see above), I designed an UI that balances: an attractive, engaging aesthetic and intuitive UI/UX while while breaking best-practices for an intentionally awkward, unintuitive, non-linear experience.'
+            'I am the sole developer, designer, and asset (i.e., models, UI, sound FX, and soundtrack) creator.'
         ]
     },
     {
