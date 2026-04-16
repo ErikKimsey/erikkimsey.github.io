@@ -76,7 +76,7 @@ function Landing(props) {
 
             {/* <ThreeBackground /> */}
 
-            <div className="w-full flex flex-col flex-wrap overflow-clip bg-blaq p-4 ">
+            <div className="w-full flex flex-col flex-wrap overflow-clip bg-blaq p-4 " role="main">
                 {/* <LandingImageGallery /> */}
                 <Banner timerTime={3000} />
                 <FreelanceComponentAndModal

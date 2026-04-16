@@ -70,12 +70,13 @@ export default function Banner(props) {
                 duration: 2,
                 delay: 0,
             }}
+            role="banner"
         // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
 
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip">
-                <motion.div
+                <motion.h1
                     className="font-quantify overflow-clip text-6xl lg:text-9xl"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -85,7 +86,7 @@ export default function Banner(props) {
                     }}
                 >
                     Erik Kimsey
-                </motion.div>
+                </motion.h1>
 
                 <motion.div
                     className="aboutSelfDeveloperContainer font-quantify text-6xl overflow-clip"
@@ -97,6 +98,8 @@ export default function Banner(props) {
                         delay: 0.3,
                     }}
                     data-text={currRole}
+                    aria-live="polite"
+                    aria-atomic="true"
                 >
                     {currRole}
                 </motion.div>
@@ -130,7 +133,7 @@ export default function Banner(props) {
                 digital interface services,
             </motion.div> */}
 
-            <motion.div
+            <motion.p
                 initial={hasAnimated ? { opacity: 1, lineHeight: 1 } : { opacity: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, lineHeight: 1 }}
                 transition={{
@@ -139,7 +142,7 @@ export default function Banner(props) {
                 }}
                 className=" text-grayz overflow-clip pt-4 text-lg font-comfortBold">
                 Targeted cognitive & non-cognitive re-adjustment, via digital user-interfaces.
-            </motion.div>
+            </motion.p>
             {/* <motion.div
                 initial={hasAnimated ? { opacity: 1, scale: 1, lineHeight: 1 } : { opacity: 0, scale: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, scale: 1, lineHeight: 1 }}
