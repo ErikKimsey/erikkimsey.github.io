@@ -8,7 +8,7 @@ import LandingImageGallery from "../ImageGallery/LandingImageGallery";
 
 
 const ROLES = [
-    'UI Engineer',
+    'UI Developer',
     'Software Developer',
     'Frontend Developer',
     'Creative Technologist',
@@ -99,6 +99,19 @@ export default function Banner(props) {
                     data-text={currRole}
                 >
                     {currRole}
+                </motion.div>
+                <motion.div
+                    className="aboutSelfDeveloperContainer font-quantify text-3xl overflow-clip"
+                    initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                    }}
+
+                >
+                    web / mobile / games
                 </motion.div>
 
             </div>

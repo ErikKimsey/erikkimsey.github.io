@@ -37,6 +37,10 @@ export default function ExperienceItem(props) {
                 transition={{ type: "spring", duration: 1 }}
                 className=" relative flex flex-col flex-wrap justify-start content-start py-1 m-0 w-full min-w-70 border border-grayzDark rounded-sm overflow-hidden my-2 pb-0 bg-none z-10"
                 onClick={() => (modalOpen ? close() : open())}
+                role="button"
+                tabIndex="0"
+                aria-label={`Open details for ${name}`}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } }}
             >
 
                 <div className={`flex flex-col h-full w-11/12 lg:w-2/3  backdrop-blur-[1px] lg:backdrop-blur-sm overflow-visible pt-0 p-0 py-1 bg-blaq bg-opacity-90 lg:bg-opacity-60`}>
@@ -64,7 +68,7 @@ export default function ExperienceItem(props) {
                 {/* <div className="absolute w-full flex flex-col items-end justify-start lg:pr-36 -top-32 overflow-clip pointer-events-none"> */}
                 <div className={`absolute w-full lg:w-1/2 -right-12 -top-10 -z-10 -rotate-6 rounded-md`}>
                     {
-                        <img src={imgs[0]} />
+                        <img src={imgs[0]} alt={`Image for ${name}`} />
                     }
                     {/* <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" /> */}
                 </div>

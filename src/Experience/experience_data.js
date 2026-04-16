@@ -62,8 +62,14 @@ export const EXPERIENCE_DATA = [
         video: '',
 
         about: [
-            'Designed and Developed the UI and UX for SkillSTAR mobile app,',
-            'Implemented an algorithm interpreted from the behavioral modification technique known as "Forward Chaining".'
+            'Led the Design and Development of the evidence-based behavioral-training research iPad app, SkillSTAR.',
+            'Translated and reified the (above) behavioral-modification technique ("Forward Chaining"), using Typescript, Javascript, and React.',
+            'Coordinated, organized and maintained weekly consultations with SkillSTAR team, at University of Virginia.',
+            'Collaborated with University of Virginia team to establish...',
+            'Established an Agile project-management tooling framework -and- established a process for synchronous and asynchronous communication between myself and the team at University of Virginia.',
+
+
+
         ]
     },
 

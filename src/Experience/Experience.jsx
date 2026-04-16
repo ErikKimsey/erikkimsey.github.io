@@ -58,13 +58,14 @@ export default function Experience() {
 
                 <div className='flex flex-col content-between flex-wrap py-4 '>
                     <button
+                        aria-label="Navigate back to landing"
                         type="button"
                         className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50 self-start pl-2'
                         onClick={() => navigate('/')}
                     >
                         <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
-                    <motion.div
+                    <motion.h1
                         className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-tealz overflow-clip z-10 box-content'
                         initial="hidden"
                         animate="visible"
@@ -74,7 +75,7 @@ export default function Experience() {
                     >
                         Experience
 
-                    </motion.div>
+                    </motion.h1>
                 </div>
 
                 <motion.ul
