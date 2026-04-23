@@ -24,12 +24,13 @@ const SeekingWork = () => {
             duration: 0.5,
             delay: 1.5,
         }}
-        className='container fixed top-10 w-full px-10 flex flex-row items-center justify-center rounded-2xl'>
+        className='container fixed bottom-16 w-11/12 md:w-2/3 md:bottom-3 lg:w-full lg:top-10 lg:w-11/12 px-1 lg:px-10 flex flex-row items-center justify-center rounded-sm'>
+
         <Marquee
             speed={40}
         >
             <motion.p
-                className="w-full text-offWhitez overflow-clip text-center p-0 text-2xl font-quantify">
+                className="w-full text-yellowz overflow-clip text-center p-0 text-2xl font-quantify">
                 I am currently available for full-time employment and contract work. &nbsp;&nbsp;
             </motion.p>
             <motion.p
@@ -37,6 +38,7 @@ const SeekingWork = () => {
                 Let me bring superb useability, engagement, and vibrance to your project. &nbsp;&nbsp;
             </motion.p>
         </Marquee>
+
     </motion.div>
 }
 
