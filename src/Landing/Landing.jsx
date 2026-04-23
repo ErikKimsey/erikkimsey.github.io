@@ -6,6 +6,7 @@ import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperiencePar
 import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
 import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
 import EmailJSModal from "../EmailJS/EmailJSModal";
+import SeekingWork from "../SeekingWork/SeekingWork";
 
 
 
@@ -71,6 +72,8 @@ function Landing(props) {
 
     return (
         <LandingContentBannerTemplate>
+
+            <SeekingWork />
 
             {/* <div className="fixed w-full h-full bg-blaq mix-blend-hue -z-10"></div> */}
 

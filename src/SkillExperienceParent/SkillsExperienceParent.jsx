@@ -15,8 +15,8 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-                duration: 2,
-                delay: 1.4,
+                duration: 0.5,
+                delay: 2,
             }}>
             {/* Triggers */}
             {/* <button
@@ -36,6 +36,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
                 <div className="text-start  hover:text-tealz text-xl overflow-visible">CV</div>
             </button>
+
 
             <button
                 onClick={onOpenEmail}

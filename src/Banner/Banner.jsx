@@ -7,6 +7,7 @@ import { SELF_STATEMENT } from "../__data/data";
 import LandingImageGallery from "../ImageGallery/LandingImageGallery";
 
 
+
 const ROLES = [
     'UI Developer',
     'Software Developer',
@@ -74,6 +75,7 @@ export default function Banner(props) {
         // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
 
+
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip">
                 <motion.h1
@@ -114,7 +116,7 @@ export default function Banner(props) {
                     }}
 
                 >
-                    web / mobile / games
+                    websites / mobile apps / games
                 </motion.div>
 
             </div>
@@ -133,6 +135,7 @@ export default function Banner(props) {
                 digital interface services,
             </motion.div> */}
 
+
             <motion.p
                 initial={hasAnimated ? { opacity: 1, lineHeight: 1 } : { opacity: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, lineHeight: 1 }}
@@ -141,8 +144,11 @@ export default function Banner(props) {
                     delay: 1,
                 }}
                 className=" text-grayz overflow-clip pt-4 text-lg font-comfortBold">
-                Targeted cognitive & non-cognitive re-adjustment, via digital user-interfaces.
+                With over 7 years of experience, I specialize in frontend development and design.
             </motion.p>
+
+
+
             {/* <motion.div
                 initial={hasAnimated ? { opacity: 1, scale: 1, lineHeight: 1 } : { opacity: 0, scale: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, scale: 1, lineHeight: 1 }}

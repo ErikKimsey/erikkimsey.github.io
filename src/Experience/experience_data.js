@@ -72,6 +72,27 @@ export const EXPERIENCE_DATA = [
 
         ]
     },
+    {
+        name: 'Daystrom Institue',
+        role: 'User Interface Engineer',
+        dates: '2364 - 2368',
+        stack: 'Unity3D, C#, HLSL',
+        url: 'https://www.ditl.org/',
+        github: '',
+        imgs: ['https://res.cloudinary.com/dfez8ez2g/image/upload/v1776780792/sstrek_ui_rwakb3.jpg', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1776780792/sstrek_vg_ui_ndevfe.jpg', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1776780792/daystrom-stuff_cqfllx.jpg', 'https://res.cloudinary.com/dfez8ez2g/image/upload/v1776780792/Lcars_wallpaper.svg_a8mxnf.png'],
+        video: '',
+
+        about: [
+            'Engineered adaptive user interfaces for mission-critical starship systems, optimizing usability across touch, holographic, and voice-driven control environments.',
+            'Designed and implemented intuitive control panels for advanced research technologies, reducing operator error and improving response times in high-pressure scenarios.',
+            'Collaborated with multidisciplinary teams of scientists, engineers, and command personnel to translate complex technical requirements into seamless user experiences.',
+            'Developed accessible cross-species interaction standards, ensuring interfaces were operable by diverse users with varying physical and cognitive capabilities.',
+            'Led rapid prototyping and iterative testing of next-generation UI systems, incorporating user feedback to improve efficiency, reliability, and engagement.',
+
+
+
+        ]
+    },
 
     // {
     //     name: 'Chatwise',
