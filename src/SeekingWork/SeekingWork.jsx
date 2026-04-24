@@ -26,7 +26,7 @@ const SeekingWork = () => {
             </motion.p>
             <motion.p
                 className="w-full text-grayz overflow-clip text-center p-0 text-2xl font-quantify">
-                Let me bring superb useability, engagement, and vibrance to your project. &nbsp;&nbsp;
+                Let me bring superb usability, engagement, and vibrancy to your project. &nbsp;&nbsp;
             </motion.p>
         </Marquee>
 
