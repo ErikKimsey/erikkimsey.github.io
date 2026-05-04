@@ -144,7 +144,7 @@ export default function Banner(props) {
                     delay: 1,
                 }}
                 className=" text-grayz overflow-clip pt-4 text-lg font-comfortBold">
-                With over 7 years of experience, I specialize in frontend development and design.
+                Frontend / UI development, with over 7 years of experience.
             </motion.p>
 
 
