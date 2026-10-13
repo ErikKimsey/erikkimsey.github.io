@@ -15,7 +15,7 @@ const SeekingWork = () => {
             duration: 0.5,
             delay: 1.5,
         }}
-        className='container fixed bottom-16 w-11/12 md:w-2/3 md:bottom-3 lg:top-10 lg:w-9/12 px-1 lg:px-10 flex flex-row items-center justify-center rounded-sm'>
+        className='container bottom-16 w-11/12 md:w-2/3 md:bottom-3 lg:top-10 lg:w-9/12 flex flex-row items-center justify-center rounded-sm p-0  '>
 
         <Marquee
             speed='0'
@@ -25,8 +25,8 @@ const SeekingWork = () => {
                 Let me bring superb usability, engagement, and vibrancy to your project. &nbsp;&nbsp;
             </motion.p> */}
             <motion.p
-                className={`w-full text-white overflow-clip text-center p-0 text-xl font-comfortBold`}>
-                I am currently available for full-time employment and always available for Frontend and UI development contracts. &nbsp;&nbsp;
+                className="w-full text-white overflow-clip text-center p-0 text-2xl font-comfortBold">
+                I am currently available for work!  Contact me today! &nbsp;&nbsp;
             </motion.p>
         </Marquee>
 

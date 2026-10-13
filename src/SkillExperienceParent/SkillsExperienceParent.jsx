@@ -31,10 +31,10 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             {/* <div className="flex flex-row items-start justify-between overflow-visible py-0"> */}
             <button
                 onClick={openExperience}
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
             >
 
-                <div className="text-start  hover:text-tealz text-xl overflow-visible">CV</div>
+                <div className="text-start text-2xl overflow-visible">CV</div>
             </button>
 
 
@@ -42,13 +42,13 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 onClick={onOpenEmail}
                 className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2"
             >
-                <div className="text-grayz hover:text-yellowz text-xl overflow-visible">CONTACT</div>
+                <div className="text-yellowz text-2xl overflow-visible">CONTACT ME !</div>
             </button>
             {/* </div> */}
 
             {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
             <button
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pl-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pl-2"
             >
                 {/* <div className="h-12 font-quantify hover:text-pinkz text-xl overflow-hidden">FLAT-FEE SERVICES</div> */}
             </button>

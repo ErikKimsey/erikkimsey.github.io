@@ -5,6 +5,7 @@ import "./banner.scss";
 
 import { SELF_STATEMENT } from "../__data/data";
 import LandingImageGallery from "../ImageGallery/LandingImageGallery";
+import SeekingWork from "../SeekingWork/SeekingWork";
 
 
 
@@ -63,7 +64,7 @@ export default function Banner(props) {
 
     return (
         <motion.div
-            className="banner-container w-auto text-6xl md:text-6xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-blaq bg-opacity-60"
+            className="banner-container w-auto text-6xl md:text-3xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-blaq bg-opacity-60"
             ref={bannerRef}
             initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -79,7 +80,7 @@ export default function Banner(props) {
             {/* <UnderConstruction /> */}
             <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip">
                 <motion.h1
-                    className="font-quantify overflow-clip text-6xl lg:text-9xl"
+                    className="font-quantify overflow-clip text-6xl lg:text-7xl"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -118,10 +119,14 @@ export default function Banner(props) {
                 >
                     websites / mobile apps / games
                 </motion.div>
+                 {/* <motion.p
+                className="w-full text-white overflow-clip p-0 pt-10 text-2xl font-comfortBold">
+                Let's work together! &nbsp;&nbsp;
+            </motion.p> */}
 
             </div>
 
-            <div className="border-b-2 pt-4 border-grayzDark"></div>
+            {/* <div className="border-b-2 pt-4 border-grayzDark"></div> */}
 
 
             {/* <motion.div
@@ -136,7 +141,7 @@ export default function Banner(props) {
             </motion.div> */}
 
 
-            <motion.p
+            {/* <motion.p
                 initial={hasAnimated ? { opacity: 1, lineHeight: 1 } : { opacity: 0, lineHeight: 1 }}
                 animate={{ opacity: 1, lineHeight: 1 }}
                 transition={{
@@ -145,7 +150,7 @@ export default function Banner(props) {
                 }}
                 className=" text-grayz overflow-clip pt-4 text-lg font-comfortBold">
                 Frontend / UI development, with over 7 years of experience.
-            </motion.p>
+            </motion.p> */}
 
 
 

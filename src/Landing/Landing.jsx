@@ -73,11 +73,10 @@ function Landing(props) {
     return (
         <LandingContentBannerTemplate>
 
-            <SeekingWork />
-
             {/* <div className="fixed w-full h-full bg-blaq mix-blend-hue -z-10"></div> */}
 
             {/* <ThreeBackground /> */}
+
 
             <div className="w-full flex flex-col flex-wrap overflow-clip bg-blaq p-4 " role="main">
                 {/* <LandingImageGallery /> */}
