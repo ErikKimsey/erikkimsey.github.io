@@ -54,6 +54,12 @@
         }
     }
 
+    @media only screen and (min-width: $lgDevice) {
+        left: 0;
+        right: 0;
+        justify-content: center;
+    }
+
     @media only screen and (max-width: $smDevice) {
         padding: $pagePadding_Mobile;
     }
@@ -97,6 +103,14 @@
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+
+    @media only screen and (min-width: $lgDevice) {
+        // Centered with auto margins, not a transform, so framer-motion's hover scale doesn't override it.
+        left: 0;
+        right: 0;
+        width: fit-content;
+        margin-inline: auto;
+    }
 
     .inactiveItem {
         // width: 10px;
