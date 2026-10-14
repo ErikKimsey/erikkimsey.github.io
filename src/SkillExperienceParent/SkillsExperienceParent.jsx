@@ -11,12 +11,12 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
     return (
         <motion.div
-            className="box-content w-full h-auto flex flex-row items-start justify-start text-2xl mt-10 overflow-clip"
+            className="box-content w-full h-auto flex flex-row items-start justify-start text-2xl mt-6 overflow-clip"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-                duration: 0.5,
-                delay: 2,
+                duration: 0.4,
+                delay: 1,
             }}>
             {/* Triggers */}
             {/* <button

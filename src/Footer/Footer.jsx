@@ -6,7 +6,7 @@ import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripHorizontal, faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 
-import { faGithub, faLinkedin, faSoundcloud, faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import resume from "../assets/resume/erik_kimsey_software_engineer.pdf";
 
 
@@ -56,9 +56,9 @@ export default function Footer() {
                         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/erik-kimsey/" aria-label="LinkedIn profile (opens in a new tab)">
                             <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/etaether" aria-label="SoundCloud profile (opens in a new tab)">
+                        {/* <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/etaether" aria-label="SoundCloud profile (opens in a new tab)">
                             <FontAwesomeIcon icon={faSoundcloud} size="2x" />
-                        </a>
+                        </a> */}
                     </motion.div>
                 </motion.nav>
             </AnimatePresence>
