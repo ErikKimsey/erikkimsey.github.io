@@ -46,6 +46,10 @@ function ExperienceImages(props) {
     )
 }
 
+function isLink(value) {
+    return typeof value === "string" && /^https?:\/\//.test(value);
+}
+
 export default function ExperienceModal(props) {
     let { name, about, stack, dates, role, url, github, imgs, handleClose, video } = props;
 
@@ -107,17 +111,18 @@ export default function ExperienceModal(props) {
                     className="relative flex flex-col z-1000 scroll w-[90vw] lg:w-[60vw] max-w-5xl rounded-sm shadow-2xl inset-shadow-indigo-500 p-2 lg:p-10"
                     role="dialog"
                     aria-modal="true"
+                    aria-label={`${name} details`}
                     initial={{ y: 24, scale: 0.1, opacity: 0 }}
                     animate={{ y: 0, scale: 1, opacity: 1 }}
                     exit={{ y: 24, scale: 0.1, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 >
 
-                    <div className="flex flex-row items-end w-full justify-end ">
+                    <div className="flex flex-row items-end w-full justify-start ">
                         <button
                             onClick={handleClose}
                             className="rounded text-offWhitez hover:text-peach duration-300 w-12 h-12 overflow-clip"
-                            aria-label="Close"
+                            aria-label={`Close ${name} details`}
                         >
                             <FontAwesomeIcon icon={faXmark} className="h-full text-xl" />
                         </button>
@@ -126,7 +131,7 @@ export default function ExperienceModal(props) {
 
                         {/* <img src={img === '' ? PLACEHOLDER_IMAGE : img} className="w-full h-72 object-cover" /> */}
                         {
-                            hasVideoFile ? <video src={video} type="video/mp4" autoPlay muted controls /> : <ImageCarousel imgs={imgs} />
+                            hasVideoFile ? <video src={video} type="video/mp4" autoPlay muted controls aria-label={`${name} demo video`} /> : <ImageCarousel imgs={imgs} label={name} />
                         }
 
 
@@ -134,10 +139,15 @@ export default function ExperienceModal(props) {
                             <div className="text-purps overflow-clip">{role}</div>
                             <div className="text-tealz overflow-clip">{name}</div>
                             <div className="flex flex-row content-between">
-                                <a className="p-4" href={url} target="_blank"><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faRocket} />
-                                </a>
-                                <a className="p-4" href={github} target="_blank"><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faGithub} />
-                                </a>
+                                {/* Only real URLs; the data uses '' or '(private)' when there's no link. */}
+                                {isLink(url) &&
+                                    <a className="p-4" href={url} target="_blank" rel="noopener noreferrer" aria-label={`${name} website (opens in a new tab)`}><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faRocket} />
+                                    </a>
+                                }
+                                {isLink(github) &&
+                                    <a className="p-4" href={github} target="_blank" rel="noopener noreferrer" aria-label={`${name} source code (opens in a new tab)`}><FontAwesomeIcon className="scale-100 hover:scale-125 duration-100 " icon={faGithub} />
+                                    </a>
+                                }
                             </div>
                         </div>
                         {/* <div className="flex flex-row py-2 font-comfortBold">

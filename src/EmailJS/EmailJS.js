@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 
 function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAcknowledge = () => { } }) {
 
     const form = useRef();
+    const fieldId = useId();
 
     const [packageLabel, setPackageLabel] = useState("");
     const [submissionState, setSubmissionState] = useState("idle");
@@ -65,7 +66,7 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
 
     if (submissionState === "success") {
         return (
-            <div className={successContainerClassName}>
+            <div className={successContainerClassName} role="status">
                 <p className="h-auto text-xl lg:text-2xl font-black">Your message has been sent successfully.</p>
                 <button
                     type="button"
@@ -79,13 +80,13 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
     }
 
     return (
-        <form ref={form} onSubmit={sendEmail} className={formClassName}>
+        <form ref={form} onSubmit={sendEmail} className={formClassName} aria-busy={submissionState === "submitting"}>
 
-            <label className={labelClassName}>Name</label>
-            <input className={inputClassName} type="text" name="user_name" required />
+            <label className={labelClassName} htmlFor={`${fieldId}-name`}>Name</label>
+            <input className={inputClassName} id={`${fieldId}-name`} type="text" name="user_name" autoComplete="name" required />
 
-            <label className={labelClassName}>Email</label>
-            <input className={inputClassName} type="email" name="user_email" required />
+            <label className={labelClassName} htmlFor={`${fieldId}-email`}>Email</label>
+            <input className={inputClassName} id={`${fieldId}-email`} type="email" name="user_email" autoComplete="email" required />
 
             {/* <label className={labelClassName}>Let's chat about:</label>
             <input
@@ -95,8 +96,8 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
                 value={packageLabel}
             /> */}
 
-            <label className={labelClassName}>Message</label>
-            <textarea className={inputClassName} name="message" required />
+            <label className={labelClassName} htmlFor={`${fieldId}-message`}>Message</label>
+            <textarea className={inputClassName} id={`${fieldId}-message`} name="message" required />
 
             <input
                 type="submit"

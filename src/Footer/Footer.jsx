@@ -30,7 +30,8 @@ export default function Footer() {
     if (isActive) {
         return (
             <AnimatePresence mode='wait' >
-                <motion.div className="footerContainer scale-75 "
+                <motion.nav className="footerContainer scale-75 "
+                    aria-label="Résumé and social links"
                     initial={{ x: 0, opacity: 0, scale: 1 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 10, opacity: 0 }}
@@ -46,26 +47,29 @@ export default function Footer() {
                             delay: 4,
                             ease: [0, 0.71, 0.2, 1.01]
                         }}>
-                        <a target="_blank" href={resume}>
+                        <a target="_blank" rel="noopener noreferrer" href={resume} aria-label="Résumé (opens in a new tab)">
                             <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
                         </a>
-                        <a target="_blank" href="https://github.com/erikkimsey">
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/erikkimsey" aria-label="GitHub profile (opens in a new tab)">
                             <FontAwesomeIcon icon={faGithub} size="2x" />
                         </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/erik-kimsey/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/erik-kimsey/" aria-label="LinkedIn profile (opens in a new tab)">
                             <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </a>
-                        <a target="_blank" href="https://soundcloud.com/etaether">
+                        <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/etaether" aria-label="SoundCloud profile (opens in a new tab)">
                             <FontAwesomeIcon icon={faSoundcloud} size="2x" />
                         </a>
                     </motion.div>
-                </motion.div>
+                </motion.nav>
             </AnimatePresence>
         )
     } else {
         return (
             <AnimatePresence mode='wait'>
-                <motion.div className="footerContainerInactive"
+                <motion.button className="footerContainerInactive"
+                    type="button"
+                    aria-label="Show résumé and social links"
+                    aria-expanded="false"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setIsActive(true)}
@@ -73,7 +77,7 @@ export default function Footer() {
 
                     <FontAwesomeIcon icon={faGripHorizontal} size="3x" fill="#fff" />
 
-                </motion.div>
+                </motion.button>
             </AnimatePresence>)
     }
 }

@@ -37,7 +37,7 @@ function EmailJSModal({ isOpen = false, onClose = () => { }, onExitComplete }) {
                             <button
                                 onClick={onClose}
                                 className="p-2 pl-0 rounded-sm text-yellowz hover:text-peach duration-300"
-                                aria-label="Close"
+                                aria-label="Close contact form"
                             >
                                 <FontAwesomeIcon icon={faXmark} className="w-10 h-10 text-2xl" />
                             </button>

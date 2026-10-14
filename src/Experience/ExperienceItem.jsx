@@ -51,7 +51,16 @@ export default function ExperienceItem(props) {
             >
 
                 <div className={`flex flex-col h-full w-11/12 lg:w-2/3  backdrop-blur-[1px] lg:backdrop-blur-sm overflow-visible pt-0 p-0 py-1`}>
-                    <div className="flex flex-col justify-start px-8 pt-4 pb-2 text-xl ">
+                    <div className="relative isolate flex flex-col justify-start px-8 pt-4 pb-2 text-xl ">
+                        {/* Below lg the image spans the card, so give the text a backdrop to stay legible. */}
+                        <motion.div
+                            className="absolute inset-0 -z-10 lg:hidden"
+                            style={{ backgroundColor: "var(--c-bg)" }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.8 }}
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
+                            aria-hidden="true"
+                        />
                         <div className="pt-0 text-white font-quantify overflow-hidden text-white">{role}</div>
                         <div className=" text-tealz font-quantify font-black overflow-hidden m-0 ">{name}</div>
                         <div className="text-offWhitez text-sm font-comfortBold">{name}</div>
@@ -75,7 +84,7 @@ export default function ExperienceItem(props) {
                 {/* <div className="absolute w-full flex flex-col items-end justify-start lg:pr-36 -top-32 overflow-clip pointer-events-none"> */}
                 <div className={`absolute w-full lg:w-1/2 -right-12 -top-10 -z-10 -rotate-6 rounded-md`}>
                     {
-                        <img src={imgs[0]} alt={`Image for ${name}`} />
+                        <img src={imgs[0]} alt={`${name} preview`} />
                     }
                     {/* <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" /> */}
                 </div>

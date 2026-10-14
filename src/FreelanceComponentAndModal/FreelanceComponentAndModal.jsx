@@ -163,6 +163,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                         className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl inset-shadow-indigo-500 scroll overflow-x-clip p-2 pt-20 pb-20 lg:p-10"
                         role="dialog"
                         aria-modal="true"
+                        aria-label="Flat-fee services"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
                         animate={{ y: 0, scale: 1, opacity: 1 }}
                         exit={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -172,7 +173,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                             <button
                                 onClick={closeModal}
                                 className="p-2 pl-0 rounded text-yellowz hover:text-peach duration-300 text-xl"
-                                aria-label="Close"
+                                aria-label="Close flat-fee services"
                             >
                                 <FontAwesomeIcon icon={faXmark} className="h-12 text-xl text-yellowz" />
                             </button>

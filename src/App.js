@@ -7,7 +7,7 @@ import SkillsExperienceParent from './SkillExperienceParent/SkillsExperiencePare
 import Skillset from './Skillset/Skillset';
 import Experience from './Experience/Experience';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
 import ThemeToggle from "./ThemeToggle/ThemeToggle";
@@ -33,6 +33,7 @@ export default function App() {
     }, []);
 
     return (
+        <MotionConfig reducedMotion="user">
         <div >
             {/* <VideoBackground /> */}
             <ThemeToggle />
@@ -70,6 +71,7 @@ export default function App() {
                 </AnimatePresence>
             </Context.Provider>
         </div >
+        </MotionConfig>
     );
 }
 

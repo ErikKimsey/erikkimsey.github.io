@@ -60,14 +60,14 @@ export default function Experience({ onClose, onHidden = () => { } }) {
         // exit={{ opacity: 0 }}
         // transition={{ duration: 0, ease: 'easeInOut' }}
         >
-            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775484678/droopy_e_fvyf3s.png"} className="fixed w-full aspect-square bg-contain lg:w-ful l bottom-20 lg:top-96 lg:top-9 -right-24 lg:-right-48 rotate-270 lg:rotate-0 -z-20 opacity-50 blur-md grayscale"></img>
+            <img src={"https://res.cloudinary.com/dfez8ez2g/image/upload/q_auto/f_auto/v1775484678/droopy_e_fvyf3s.png"} className="fixed w-full aspect-square bg-contain lg:w-ful l bottom-20 lg:top-96 lg:top-9 -right-24 lg:-right-48 rotate-270 lg:rotate-0 -z-20 opacity-50 blur-md grayscale" alt="" aria-hidden="true"></img>
             <div className='max-w-[1000px] w-full'>
 
 
 
                 <div className='flex flex-col content-between flex-wrap py-4 '>
                     <button
-                        aria-label="Navigate back to landing"
+                        aria-label="Close experience and return to home"
                         type="button"
                         className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50 self-start pl-2'
                         onClick={onClose || (() => navigate('/'))}
@@ -75,7 +75,7 @@ export default function Experience({ onClose, onHidden = () => { } }) {
                         <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
                     <motion.h1
-                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-fg overflow-clip z-10 box-content'
+                        className='h-16 pt-16 indent-4 md:indent-0 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-fg overflow-clip z-10 box-content'
                         initial="hidden"
                         animate="visible"
                         exit={{ opacity: 0, y: -20 }}

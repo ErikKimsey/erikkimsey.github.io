@@ -31,6 +31,9 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             {/* <div className="flex flex-row items-start justify-between overflow-visible py-0"> */}
             <button
                 onClick={openExperience}
+                type="button"
+                aria-label="CV: view my experience"
+                aria-haspopup="dialog"
                 className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
             >
 
@@ -40,6 +43,8 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
             <button
                 onClick={onOpenEmail}
+                type="button"
+                aria-haspopup="dialog"
                 className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2"
             >
                 <div className="text-yellowz text-2xl overflow-visible">CONTACT ME !</div>
@@ -47,7 +52,11 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
             {/* </div> */}
 
             {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
+            {/* Empty placeholder; kept out of the tab order and accessibility tree until it has content. */}
             <button
+                type="button"
+                tabIndex={-1}
+                aria-hidden="true"
                 className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pl-2"
             >
                 {/* <div className="h-12 font-quantify hover:text-pinkz text-xl overflow-hidden">FLAT-FEE SERVICES</div> */}
