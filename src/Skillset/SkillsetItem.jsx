@@ -16,7 +16,7 @@ export default function SkillsetItem(props) {
     }, []);
 
     return (
-        <div className="w-full relative flex flex-col flex-wrap justify-start content-start px-2 my-1  rounded-md border-grayzDark bg-blaq bg-opacity-20 backdrop-blur-xl overflow-hidden">
+        <div className="w-full relative flex flex-col flex-wrap justify-start content-start px-2 my-1  rounded-md border-grayzDark backdrop-blur-xl overflow-hidden">
             {discipline && <p className="z-10 skillset-label">{discipline}__</p>}
             <div className="flex flex-row flex-wrap justify-between content-between z-10">
                 {

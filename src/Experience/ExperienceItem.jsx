@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
@@ -8,13 +9,19 @@ import ExperienceModal from "./ExperienceModal";
 
 
 export default function ExperienceItem(props) {
-    let { name, stack, dates, role, index, github, soundcloud, url, imgs, about, video } = props;
+    let { name, stack, dates, role, index, github, soundcloud, url, imgs, about, video, onOpen = () => { }, onClose = () => { } } = props;
 
     const [modalOpen, setModalOpen] = useState(false);
     const [techStackItems, setTechStackItems] = useState([]);
 
-    const close = () => setModalOpen(false);
-    const open = () => setModalOpen(true);
+    const close = () => {
+        setModalOpen(false);
+        onClose();
+    };
+    const open = () => {
+        setModalOpen(true);
+        onOpen();
+    };
 
 
 
@@ -29,8 +36,8 @@ export default function ExperienceItem(props) {
 
 
 
-    if (!modalOpen) {
-        return (
+    return (
+        <>
             <motion.div
                 whileHover={{ scale: 0.99 }}
                 whileTap={{ scale: 0.95 }}
@@ -43,7 +50,7 @@ export default function ExperienceItem(props) {
                 onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } }}
             >
 
-                <div className={`flex flex-col h-full w-11/12 lg:w-2/3  backdrop-blur-[1px] lg:backdrop-blur-sm overflow-visible pt-0 p-0 py-1 bg-blaq bg-opacity-90 lg:bg-opacity-60`}>
+                <div className={`flex flex-col h-full w-11/12 lg:w-2/3  backdrop-blur-[1px] lg:backdrop-blur-sm overflow-visible pt-0 p-0 py-1`}>
                     <div className="flex flex-col justify-start px-8 pt-4 pb-2 text-xl ">
                         <div className="pt-0 text-white font-quantify overflow-hidden text-white">{role}</div>
                         <div className=" text-tealz font-quantify font-black overflow-hidden m-0 ">{name}</div>
@@ -73,29 +80,16 @@ export default function ExperienceItem(props) {
                     {/* <FontAwesomeIcon icon={faEye} className="text-[400px] " color="rgba(111,111, 111,0.3)" /> */}
                 </div>
             </motion.div >
-        )
-    }
-    if (modalOpen) {
-        return (
-            <ModalContainer>
-                {modalOpen && (
-                    <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close} imgs={imgs} video={video}
-                        name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github}
-                    />
-                )}
-            </ModalContainer>
-        )
-    }
-}
-
-function ModalContainer({ children, label }) {
-    return (<AnimatePresence
-        mode='wait'
-
-        initial={false}
-
-        onExitComplete={() => console.log("Exit complete")}
-    >
-        {children}
-    </AnimatePresence >)
+            {createPortal(
+                <AnimatePresence>
+                    {modalOpen && (
+                        <ExperienceModal key={name} modalOpen={modalOpen} handleClose={close} imgs={imgs} video={video}
+                            name={name} stack={stack} about={about} dates={dates} role={role} url={url} github={github}
+                        />
+                    )}
+                </AnimatePresence>,
+                document.body
+            )}
+        </>
+    )
 }

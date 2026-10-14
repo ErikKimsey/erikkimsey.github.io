@@ -16,23 +16,6 @@ $dot-space: 8px;
 
 $highlight-color: rgb(255, 75, 255);
 
-// ::selection {
-//     --bg-size: 200%;
-//     --color-one: #5372ff;
-//     --color-two: #fe5bdb;
-//     background: linear-gradient(90deg,
-//             var(--color-one),
-//             var(--color-two),
-//             var(--color-one)) 0 0 / var(--bg-size) 100%;
-// }
-
-::selection {
-    background: #d6ff21;
-    /* Sets the highlight background color */
-    color: black;
-    /* Sets the color of the highlighted text */
-}
-
 .App {
     position: relative;
     display: flex;

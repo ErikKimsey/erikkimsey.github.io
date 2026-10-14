@@ -1,0 +1,80 @@
+/*
+ * Site-wide color tokens. The active theme is set on <html data-theme="dark|light">
+ * (see the inline script in public/index.html and src/ThemeToggle/useTheme.js).
+ * Dark is the default; tailwind.config.js and the SCSS files read these variables.
+ */
+:root,
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --c-bg: #000;
+    --c-fg: #fff;
+
+    /* Tailwind palette */
+    --c-peach: #ffceaf;
+    --c-purps: #aa5ef4;
+    --c-bluez: #7f47ff;
+    --c-blaq: #000;
+    --c-pinkz: #ff45dd;
+    --c-tealz: #1fffad;
+    --c-grayz: #ddd;
+    --c-grayz-border: #aaa;
+    --c-grayzDark: #444;
+    --c-offWhitez: #fffec8;
+    --c-yellowz: #d6ff21;
+
+    /* One-off accents used in SCSS and framer-motion */
+    --c-teal: #42d7a7;
+    --c-green: rgb(82, 237, 139);
+    --c-yellow: #e0ec31;
+    --c-aqua: aqua;
+    --c-rose: #ff76bb;
+    --c-blush: #ff9fcf;
+    --c-lilac: #fcf;
+    --c-lilac-hover: #faf;
+    --c-line: #222;
+    --c-shadow: #000;
+
+    /* Banner gradient text */
+    --c-banner-one: #a542d7;
+    --c-banner-two: #a7ffff;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+
+    --c-bg: #fafafa;
+    --c-fg: #111;
+
+    --c-peach: #b4541b;
+    --c-purps: #7b2fd1;
+    --c-bluez: #5326d9;
+    --c-blaq: #fafafa;
+    --c-pinkz: #b8159a;
+    --c-tealz: #00875a;
+    --c-grayz: #4a4a4a;
+    --c-grayz-border: #888;
+    --c-grayzDark: #c4c4c4;
+    --c-offWhitez: #24231b;
+    --c-yellowz: #5a7300;
+
+    --c-teal: #0b7a58;
+    --c-green: #127a3a;
+    --c-yellow: #6b7300;
+    --c-aqua: #007a7a;
+    --c-rose: #c2185b;
+    --c-blush: #ad1457;
+    --c-lilac: #8a2b8a;
+    --c-lilac-hover: #a0329f;
+    --c-line: #ddd;
+    --c-shadow: rgba(0, 0, 0, 0.25);
+
+    --c-banner-one: #7a1fb0;
+    --c-banner-two: #0b8a8a;
+}
+
+body {
+    background-color: var(--c-bg);
+    color: var(--c-fg);
+    transition: background-color 300ms ease, color 300ms ease;
+}

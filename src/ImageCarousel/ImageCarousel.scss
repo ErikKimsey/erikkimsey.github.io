@@ -1,18 +1,18 @@
 .carousel-container {
-  // Ensure arrows/dots are visible on dark backgrounds
+  // Ensure arrows/dots are visible in both themes
   .slick-prev:before,
   .slick-next:before {
-    color: #fff;
+    color: var(--c-fg);
     font-size: 28px;
     opacity: 0.9;
   }
 
   .slick-dots li button:before {
-    color: #fff;
+    color: var(--c-fg);
     opacity: 0.5;
   }
   .slick-dots li.slick-active button:before {
-    color: #fff;
+    color: var(--c-fg);
     opacity: 0.95;
   }
 

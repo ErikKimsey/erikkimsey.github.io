@@ -8,10 +8,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 
-export default function Experience() {
+export default function Experience({ onClose, onHidden = () => { } }) {
 
     const containerRef = useRef();
     const [data, setData] = useState();
+    const [isItemOpen, setIsItemOpen] = useState(false);
     const navigate = useNavigate();
 
 
@@ -46,6 +47,14 @@ export default function Experience() {
         <motion.div
             className='w-full flex flex-col justify-center items-center '
             ref={containerRef}
+            animate={{ opacity: isItemOpen ? 0 : 1 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            aria-hidden={isItemOpen}
+            onAnimationComplete={(definition) => {
+                if (definition.opacity === 0) {
+                    onHidden();
+                }
+            }}
         // initial={{ opacity: 0 }}
         // animate={{ opacity: 1 }}
         // exit={{ opacity: 0 }}
@@ -61,12 +70,12 @@ export default function Experience() {
                         aria-label="Navigate back to landing"
                         type="button"
                         className='pr-4 py-2 mb-12 rounded-md border border-blaq transition-colors z-50 self-start pl-2'
-                        onClick={() => navigate('/')}
+                        onClick={onClose || (() => navigate('/'))}
                     >
                         <FontAwesomeIcon icon={faAngleLeft} className=" text-xl text-offWhitez hover:text-purps" />
                     </button>
                     <motion.h1
-                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-blaq bg-tealz overflow-clip z-10 box-content'
+                        className='h-16 pt-16 lg:h-20 lg:pt-20 lg:pb-2 w-full self-end size-9 text-6xl lg:text-8xl font-quantify text-fg overflow-clip z-10 box-content'
                         initial="hidden"
                         animate="visible"
                         exit={{ opacity: 0, y: -20 }}
@@ -93,7 +102,7 @@ export default function Experience() {
                                 transition={{ duration: (0.1 * i), ease: 'easeInOut' }}
                                 exit={{ opacity: 0, y: 20 }}
                             >
-                                <ExperienceItem key={e.name} name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} imgs={e.imgs} video={e.video} />
+                                <ExperienceItem key={e.name} name={e.name} stack={e.stack} about={e.about} dates={e.dates} role={e.role} url={e.url} github={e.github} index={i} imgs={e.imgs} video={e.video} onOpen={() => setIsItemOpen(true)} onClose={() => setIsItemOpen(false)} />
                             </motion.li>
                         })
                     }

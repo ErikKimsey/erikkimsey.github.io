@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -76,10 +76,21 @@ export default function ExperienceModal(props) {
     }
 
 
+    useEffect(() => {
+        // Close only this modal on Escape, not the Experience overlay behind it.
+        function onKeyDown(e) {
+            if (e.key === "Escape") {
+                e.stopPropagation();
+                handleClose();
+            }
+        }
+        window.addEventListener("keydown", onKeyDown, true);
+        return () => window.removeEventListener("keydown", onKeyDown, true);
+    }, [handleClose]);
+
     return (
-        <AnimatePresence>
-            <motion.div
-                className="fixed flex flex-row flex-wrap justify-center items-center z-[20] top-0 left-0 w-full h-full backdrop-blur-lg"
+        <motion.div
+                className="fixed flex flex-row flex-wrap justify-center items-center z-[1050] top-0 left-0 w-full h-full backdrop-blur-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}>
@@ -93,7 +104,7 @@ export default function ExperienceModal(props) {
                 />
 
                 <motion.div
-                    className="relative flex flex-col z-1000 scroll w-[90vw] lg:w-[60vw] max-w-5xl rounded-sm shadow-2xl bg-blaq bg-opacity-70 inset-shadow-indigo-500 p-2 lg:p-10"
+                    className="relative flex flex-col z-1000 scroll w-[90vw] lg:w-[60vw] max-w-5xl rounded-sm shadow-2xl inset-shadow-indigo-500 p-2 lg:p-10"
                     role="dialog"
                     aria-modal="true"
                     initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -105,7 +116,7 @@ export default function ExperienceModal(props) {
                     <div className="flex flex-row items-end w-full justify-end ">
                         <button
                             onClick={handleClose}
-                            className="rounded hover:bg-offWhitez text-offWhitez hover:text-blaq duration-300 w-12 h-12 overflow-clip"
+                            className="rounded text-offWhitez hover:text-peach duration-300 w-12 h-12 overflow-clip"
                             aria-label="Close"
                         >
                             <FontAwesomeIcon icon={faXmark} className="h-full text-xl" />
@@ -146,8 +157,6 @@ export default function ExperienceModal(props) {
                     </div>
                 </motion.div>
             </motion.div>
-
-        </AnimatePresence >
     )
 }
 // <ModalBackdrop onClick={handleClose}>

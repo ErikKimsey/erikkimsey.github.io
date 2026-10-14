@@ -79,7 +79,7 @@ $hover-color: #fcfa85;
         }
 
         .role {
-            color: #fff;
+            color: var(--c-fg);
             padding-left: 0;
             position: relative;
             //overflow: hidden;
@@ -113,8 +113,8 @@ $hover-color: #fcfa85;
         font-weight: 900;
         line-height: 1;
         --bg-size: 200%;
-        --color-one: #a542d7;
-        --color-two: #a7ffff;
+        --color-one: var(--c-banner-one);
+        --color-two: var(--c-banner-two);
         background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
         color: transparent;
         -webkit-background-clip: text;
@@ -139,7 +139,7 @@ $hover-color: #fcfa85;
             //font-size: 1.5rem;
             // padding: 0 20px;
             //overflow: hidden;
-            color: #fff;
+            color: var(--c-fg);
             text-shadow: 0 0 5 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
 

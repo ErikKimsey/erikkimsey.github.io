@@ -50,7 +50,7 @@ function BannerMenuItem(props) {
         <motion.div
             ref={thisRef}
             variants={variants}
-            whileHover={{ scale: 1.05, color: "#ffceaf" }}
+            whileHover={{ scale: 1.05, color: "var(--c-peach)" }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToPage}
             className="overflow-clip"

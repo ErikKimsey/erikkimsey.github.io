@@ -50,7 +50,7 @@
 
         .textItem {
             font-size: 14px;
-            color: $teal;
+            color: var(--c-teal);
         }
     }
 
@@ -103,9 +103,8 @@
         // height: 10px;
         font-size: smaller;
         padding: 5px;
-        border: solid 1px #ddd;
+        border: solid 1px var(--c-grayz);
         border-radius: 2px;
         margin: 5px;
-        background-color: #ddd;
     }
 }

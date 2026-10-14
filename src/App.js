@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.scss';
 import './Banner/banner.scss';
-import Landing from './Landing/Landing';
+import LandingScreen from './Landing/LandingScreen';
 import Footer from "./Footer/Footer";
 import SkillsExperienceParent from './SkillExperienceParent/SkillsExperienceParent';
 import Skillset from './Skillset/Skillset';
@@ -10,6 +10,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
+import ThemeToggle from "./ThemeToggle/ThemeToggle";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -34,6 +35,7 @@ export default function App() {
     return (
         <div >
             {/* <VideoBackground /> */}
+            <ThemeToggle />
 
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <AnimatePresence mode="wait">
@@ -41,15 +43,7 @@ export default function App() {
                         <Route
                             path="/"
                             element={
-                                <>
-                                    <Landing label={"Experience"} navTo={"experience"} />
-                                    {/* <div className='background-image'> */}
-                                    {/* </div> */}
-
-                                    {/* <SkillsExperienceParent /> */}
-                                    <div style={{ height: "100px" }}></div>
-                                    <Footer />
-                                </>
+                                <LandingScreen />
                             }
                         />
                         <Route

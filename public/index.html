@@ -8,6 +8,21 @@
     <meta name="google-site-verification" content="DPkNZ1iszJwn1VwMskErGYWUMQ8KeNL7LfgF6hgrRvM" />
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <meta name="theme-color" content="#000000" />
+    <script>
+        // Set the theme before first paint so the page doesn't flash the wrong colors.
+        (function () {
+            var theme = "dark";
+            try {
+                var stored = localStorage.getItem("theme");
+                if (stored === "light" || stored === "dark") {
+                    theme = stored;
+                } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+                    theme = "light";
+                }
+            } catch (e) {}
+            document.documentElement.dataset.theme = theme;
+        })();
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

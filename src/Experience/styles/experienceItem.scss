@@ -33,12 +33,12 @@
     .expItemName {
         padding-left: 10px;
         padding-right: 10px;
-        color: aqua;
+        color: var(--c-aqua);
         // font-weight: 500;
     }
 
     .expItemRole {
-        color: #ff76bb;
+        color: var(--c-rose);
         font-size: .9rem;
         font-weight: 700;
         // padding-bottom: 5px;

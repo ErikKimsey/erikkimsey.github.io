@@ -64,7 +64,7 @@ export default function Banner(props) {
 
     return (
         <motion.div
-            className="banner-container w-auto text-6xl md:text-3xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10 bg-blaq bg-opacity-60"
+            className="banner-container w-auto text-6xl md:text-3xl lg:text-8xl m-0 p-0 flex-col overflow-hidden z-10"
             ref={bannerRef}
             initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}

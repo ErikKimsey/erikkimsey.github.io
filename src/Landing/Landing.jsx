@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import SkillsExperienceParent from "../SkillExperienceParent/SkillsExperienceParent"
 import { LandingContentBannerTemplate } from "./LandingContentBannerTemplate";
 import FreelanceComponentAndModal from "../FreelanceComponentAndModal/FreelanceComponentAndModal"
-import EmailJSModal from "../EmailJS/EmailJSModal";
 import SeekingWork from "../SeekingWork/SeekingWork";
 
 
@@ -22,7 +21,6 @@ function Landing(props) {
     const sketchRef = useRef();
     const [dimens, setDimens] = useState({ w: 0, h: 0 });
     const [isFreelanceOpen, setIsFreelanceOpen] = useState(false);
-    const [isEmailOpen, setIsEmailOpen] = useState(false);
 
     const backgroundGeometry = "/Users/erikkimsey/Desktop/erik_kimsey_portfolio_playground/src/assets/images/hemisphere_gray_purple.png";
 
@@ -38,18 +36,6 @@ function Landing(props) {
 
     }, [])
 
-    useEffect(() => {
-        if (isEmailOpen) {
-            document.body.classList.add("hide-footer");
-        } else {
-            document.body.classList.remove("hide-footer");
-        }
-
-        return () => {
-            document.body.classList.remove("hide-footer");
-        };
-    }, [isEmailOpen])
-
     function openFreelanceModal() {
         setIsFreelanceOpen(true);
     }
@@ -62,23 +48,15 @@ function Landing(props) {
         setIsFreelanceOpen(false);
     }
 
-    function openEmailModal() {
-        setIsEmailOpen(true);
-    }
-
-    function closeEmailModal() {
-        setIsEmailOpen(false);
-    }
-
     return (
         <LandingContentBannerTemplate>
 
-            {/* <div className="fixed w-full h-full bg-blaq mix-blend-hue -z-10"></div> */}
+            {/* <div className="fixed w-full h-full mix-blend-hue -z-10"></div> */}
 
             {/* <ThreeBackground /> */}
 
 
-            <div className="w-full flex flex-col flex-wrap overflow-clip bg-blaq p-4 " role="main">
+            <div className="w-full flex flex-col flex-wrap overflow-clip p-4 " role="main">
                 {/* <LandingImageGallery /> */}
                 <Banner timerTime={3000} />
                 <FreelanceComponentAndModal
@@ -87,10 +65,8 @@ function Landing(props) {
                     onCloseFreelance={closeFreelanceModal}
                 />
 
-                <EmailJSModal isOpen={isEmailOpen} onClose={closeEmailModal} />
-
                 {/* <LandingRightArea openEmail={openEmailModal} /> */}
-                <SkillsExperienceParent onOpenFreelance={openFreelanceModal} onOpenEmail={openEmailModal} />
+                <SkillsExperienceParent onOpenFreelance={openFreelanceModal} onOpenEmail={props.onOpenEmail} onOpenExperience={props.onOpenExperience} />
             </div>
         </LandingContentBannerTemplate>
     );

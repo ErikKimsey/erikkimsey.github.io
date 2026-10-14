@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 import "./skillsExperienceParent.scss";
 
-export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = () => { } }) {
+export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = () => { }, onOpenExperience }) {
     const navigate = useNavigate();
 
     const openSkillset = () => navigate('/skillset');
-    const openExperience = () => navigate('/experience');
+    const openExperience = onOpenExperience || (() => navigate('/experience'));
 
     return (
         <motion.div

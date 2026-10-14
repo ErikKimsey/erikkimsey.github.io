@@ -1,45 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+    darkMode: ['selector', '[data-theme="dark"]'],
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
         textColor: {
-            'peach': "#ffceaf",
-            'purps': "#AA5EF4",
-            'bluez': "#7f47ff",
-            'blaq': "#000",
-            'pinkz': "#ff45dd",
-            'tealz': "#1fffad",
-            'grayz': "#ddd",
-            'grayzDark': "#444444",
-            'offWhitez': "#fffec8",
-            'yellowz': "#d6ff21"
+            'fg': "var(--c-fg)",
+            'peach': "var(--c-peach)",
+            'purps': "var(--c-purps)",
+            'bluez': "var(--c-bluez)",
+            'blaq': "var(--c-blaq)",
+            'pinkz': "var(--c-pinkz)",
+            'tealz': "var(--c-tealz)",
+            'grayz': "var(--c-grayz)",
+            'grayzDark': "var(--c-grayzDark)",
+            'offWhitez': "var(--c-offWhitez)",
+            'yellowz': "var(--c-yellowz)",
         },
         borderColor: {
-            'peach': "#ffceaf",
-            'purps': "#AA5EF4",
-            'bluez': "#7f47ff",
-            'blaq': "#000",
-            'pinkz': "#ff45dd",
-            'tealz': "#1fffad",
-            'grayz': "#aaaaaa",
-            'grayzDark': "#444444",
-            'offWhitez': "#fffec8",
-            'yellowz': "#d6ff21"
-        },
-        backgroundColor: {
-            'peach': "#ffceaf",
-            'purps': "#AA5EF4",
-            'bluez': "#7f47ff",
-            'blaq': "#000",
-            'pinkz': "#ff45dd",
-            'tealz': "#1fffad",
-            'grayz': "#aaaaaa",
-            'grayzDark': "#444444",
-            'offWhitez': "#fffec8",
-            'yellowz': "#d6ff21"
+            'peach': "var(--c-peach)",
+            'purps': "var(--c-purps)",
+            'bluez': "var(--c-bluez)",
+            'blaq': "var(--c-blaq)",
+            'pinkz': "var(--c-pinkz)",
+            'tealz': "var(--c-tealz)",
+            'grayz': "var(--c-grayz-border)",
+            'grayzDark': "var(--c-grayzDark)",
+            'offWhitez': "var(--c-offWhitez)",
+            'yellowz': "var(--c-yellowz)",
         },
 
         extend: {

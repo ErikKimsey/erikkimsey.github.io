@@ -71,13 +71,13 @@ function DealPackage({ index, pack, onSelectPackage, isSelected }) {
                 transition: { duration: 0.2 }
             }}
 
-            className="relative flex flex-col flex-wrap justify-start content-end py-1 m-0 w-full min-w-70 border-1 rounded-md bg-opacity-35 border-grayzDark backdrop-blur-lg  overflow-hidden">
+            className="relative flex flex-col flex-wrap justify-start content-end py-1 m-0 w-full min-w-70 border-1 rounded-md border-grayzDark backdrop-blur-lg  overflow-hidden">
 
             {/* <div className="absolute w-full h-full flex flex-row justify-end items-end -z-10">
                 <img src={image} className="w-72 pt-12" />
             </div> */}
 
-            <div className={`flex flex-col w-full ${index % 2 ? 'bg-blaq' : 'bg-grayzDark'} bg-opacity-50 backdrop-blur-4xl overflow-visible mix-blend-screen rounded-sm`}>
+            <div className={`flex flex-col w-full backdrop-blur-4xl overflow-visible dark:mix-blend-screen rounded-sm`}>
                 <div className="label-and-price flex flex-row content-start px-4 pt-8">
                     <div className=" text-white text-2xl font-quantify font-black pb-2 w-full sm:w-full lg:w-2/3 text-left overflow-hidden z-20 border-spacing-x-12 text-yellowz">{label}</div>
                 </div>
@@ -128,8 +128,8 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
             {/* <div className="freelance-button-tab fixed flex flex-row justify-center p-20 top-2 left-1 w-full h-48" > */}
 
             <motion.div
-                initial={{ scale: 1, color: "#fcf", rotate: "0deg" }}
-                whileHover={{ scale: 1.02, color: "#faf", rotate: "-2deg" }}
+                initial={{ scale: 1, color: "var(--c-lilac)", rotate: "0deg" }}
+                whileHover={{ scale: 1.02, color: "var(--c-lilac-hover)", rotate: "-2deg" }}
                 transition={{ duration: 0.3 }}
                 className="fixed flex justify-start content-start w-full top-1 lg:left-10 lg:top-10 textGlow font-quantify text-center text-5xl lg:text-5xl text-grayz overflow-clip" style={{ lineHeight: 1.1 }}
                 onClick={FreelanceTabClick}>
@@ -160,7 +160,7 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                     />
 
                     <motion.div
-                        className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl bg-black bg-opacity-30 inset-shadow-indigo-500 scroll overflow-x-clip p-2 pt-20 pb-20 lg:p-10"
+                        className="relative flex flex-row flex-wrap z-50 h-full w-[95vw] max-w-5xl overflow-auto rounded-lg shadow-2xl inset-shadow-indigo-500 scroll overflow-x-clip p-2 pt-20 pb-20 lg:p-10"
                         role="dialog"
                         aria-modal="true"
                         initial={{ y: 24, scale: 0.1, opacity: 0 }}
@@ -171,17 +171,17 @@ function FreelanceComponentAndModal({ freelance = false, onToggleFreelance = () 
                         <div className="flex flex-row items-end p-2 w-full text-2xl">
                             <button
                                 onClick={closeModal}
-                                className="p-2 pl-0 rounded text-yellowz hover:text-blaq duration-300 text-xl"
+                                className="p-2 pl-0 rounded text-yellowz hover:text-peach duration-300 text-xl"
                                 aria-label="Close"
                             >
                                 <FontAwesomeIcon icon={faXmark} className="h-12 text-xl text-yellowz" />
                             </button>
                         </div>
 
-                        {/* <div className=" w-1/2 h-1/2 bg-fuchsia-900"> */}
+                        {/* <div className=" w-1/2 h-1/2"> */}
                         <div className="w-full flex flex-col justify-center content-center">
-                            <div className="w-full pb-0 mb-0 h-24 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip bg-yellowz text-blaq">flat-fee services</div>
-                            <div className="text-2xl px-4 mb-5 font-quantify bg-blaq text-yellowz border-t-[1px] border-grayz">Here are examples of some flat-fee services, that I provide.  </div>
+                            <div className="w-full pb-0 mb-0 h-24 pt-9 font-extrabold px-1 sm:px-2 text-6xl self-center font-quantify overflow-clip text-fg">flat-fee services</div>
+                            <div className="text-2xl px-4 mb-5 font-quantify text-yellowz border-t-[1px] border-grayz">Here are examples of some flat-fee services, that I provide.  </div>
                             {/* <div className="text-xl px-4 font-black">contact me</div> */}
                         </div>
                         {/* </div> */}

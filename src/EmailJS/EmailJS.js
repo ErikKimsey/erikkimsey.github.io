@@ -40,11 +40,11 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
     };
 
     const formClassName = modalStyle
-        ? "flex flex-col h-auto box-content p-5 bg-blaq bg-opacity-70 backdrop-blur-4xl text-offWhitez font-bold rounded-sm border border-grayzDark m-0"
-        : "flex flex-col w-full h-auto box-content p-5 bg-peach text-blaq font-bold rounded-lg";
+        ? "flex flex-col h-auto box-content p-5 backdrop-blur-4xl text-offWhitez font-bold rounded-sm border border-grayzDark m-0"
+        : "flex flex-col w-full h-auto box-content p-5 text-fg font-bold rounded-lg";
 
     const inputClassName = modalStyle
-        ? "border border-grayzDark bg-black bg-opacity-30 text-blaq p-2 "
+        ? "border border-grayzDark text-fg p-2 "
         : "border-s-pinkz p-2 rounded-sm";
 
     const labelClassName = modalStyle
@@ -52,16 +52,16 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
         : "border-s-pinkz p-1 px-1 pt-4 text-sm text-grayzDark font-black";
 
     const submitButtonClassName = modalStyle
-        ? "mt-6 p-3 rounded-sm border border-yellowz bg-blaq text-yellowz font-black hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+        ? "mt-6 p-3 rounded-sm border border-yellowz text-yellowz font-black hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
         : "mt-4";
 
     const successContainerClassName = modalStyle
-        ? "flex flex-col items-center gap-6 box-content p-8 bg-blaq bg-opacity-70 backdrop-blur-4xl text-offWhitez font-bold rounded-lg border border-grayzDark text-center"
-        : "flex flex-col items-center gap-4 box-content p-5 bg-peach text-blaq font-bold rounded-lg text-center";
+        ? "flex flex-col items-center gap-6 box-content p-8 backdrop-blur-4xl text-offWhitez font-bold rounded-lg border border-grayzDark text-center"
+        : "flex flex-col items-center gap-4 box-content p-5 text-fg font-bold rounded-lg text-center";
 
     const successButtonClassName = modalStyle
-        ? "w-full sm:w-auto px-8 py-3 rounded-md bg-blaq text-pinkz font-black hover:opacity-90 border border-pinkz"
-        : "px-8 py-3 rounded-md bg-blaq text-offWhitez font-black hover:opacity-90";
+        ? "w-full sm:w-auto px-8 py-3 rounded-md text-pinkz font-black hover:opacity-90 border border-pinkz"
+        : "px-8 py-3 rounded-md text-offWhitez font-black hover:opacity-90";
 
     if (submissionState === "success") {
         return (
@@ -90,7 +90,7 @@ function EmailJS({ selectedPackageLabel = "", modalStyle = false, onSuccessAckno
             {/* <label className={labelClassName}>Let's chat about:</label>
             <input
                 name="selected_package"
-                className={modalStyle ? inputClassName : "border-s-pinkz p-2 rounded-md bg-peach"}
+                className={modalStyle ? inputClassName : "border-s-pinkz p-2 rounded-md"}
                 readOnly
                 value={packageLabel}
             /> */}
