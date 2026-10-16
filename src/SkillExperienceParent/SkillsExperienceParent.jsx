@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "./skillsExperienceParent.scss";
 
@@ -34,22 +36,28 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 type="button"
                 aria-label="CV: view my experience"
                 aria-haspopup="dialog"
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-95 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2"
             >
 
-                <div className="text-start text-2xl overflow-visible">CV</div>
+                <div className="text-start text-2xl overflow-visible mr-4">EXPERIENCE</div>
             </button>
 
+            {/* Divider sits outside the buttons so it doesn't scale on hover. */}
+            <div aria-hidden="true" className="self-stretch w-px bg-grayzDark" />
 
             <button
                 onClick={onOpenEmail}
                 type="button"
                 aria-haspopup="dialog"
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-105 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-95 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2 ml-4"
             >
-                <div className="text-yellowz text-2xl overflow-visible">CONTACT ME !</div>
+                <div className="flex items-center gap-2 text-pinkz dark:text-yellowz text-2xl overflow-visible">
+                    <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
+                    CONTACT ME !
+                </div>
             </button>
             {/* </div> */}
+
 
             {/* <div className="w-full h-12 text-grayzDark text-8xl overflow-clip pr-2">  / </div> */}
             {/* Empty placeholder; kept out of the tab order and accessibility tree until it has content. */}
