@@ -1,6 +1,6 @@
-@import '../styles/responsive.scss';
-@import '../styles/globals.scss';
-@import '../index.scss';
+@use '../styles/responsive.scss';
+@use '../styles/globals.scss';
+@use '../index.scss';
 
 @tailwind base;
 @tailwind components;

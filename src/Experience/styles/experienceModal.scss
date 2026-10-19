@@ -1,5 +1,5 @@
-@import "../../styles/globals.scss";
-@import "../../styles/responsive.scss";
+@use "../../styles/globals.scss";
+@use "../../styles/responsive.scss";
 
 .backdrop {
     z-index: 111;

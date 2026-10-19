@@ -1,6 +1,6 @@
-@import './../styles/responsive.scss';
-@import './../styles/globals.scss';
-@import './../styles/mixins.scss';
+@use '../styles/responsive.scss';
+@use '../styles/globals.scss';
+@use '../styles/mixins.scss';
 
 @tailwind base;
 @tailwind components;
@@ -79,7 +79,7 @@
             }
         }
 
-        @media only screen and (max-width: $lgDevice) {
+        @media only screen and (max-width: responsive.$lgDevice) {
             width: 100%;
         }
     }

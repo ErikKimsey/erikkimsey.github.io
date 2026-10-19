@@ -1,5 +1,5 @@
-@import '../styles/globals.scss';
-@import '../styles/responsive.scss';
+@use '../styles/globals.scss';
+@use '../styles/responsive.scss';
 
 
 @mixin landing-bubble($max-elems) {
@@ -44,16 +44,16 @@
 
     10% {
         opacity: 0.25;
-        color: $pink;
+        color: globals.$pink;
     }
 
     25% {
         opacity: 0.5;
-        color: $pink;
+        color: globals.$pink;
     }
 
     50% {
-        color: $pink;
+        color: globals.$pink;
         opacity: 0;
     }
 

@@ -1,5 +1,5 @@
-@import "../styles/globals.scss";
-@import "../styles/responsive.scss";
+@use "../styles/globals.scss";
+@use "../styles/responsive.scss";
 
 .hide-footer .footerContainer,
 .hide-footer .footerContainerInactive {
@@ -54,18 +54,18 @@
         }
     }
 
-    @media only screen and (min-width: $lgDevice) {
+    @media only screen and (min-width: responsive.$lgDevice) {
         left: 0;
         right: 0;
         justify-content: center;
     }
 
-    @media only screen and (max-width: $smDevice) {
-        padding: $pagePadding_Mobile;
+    @media only screen and (max-width: responsive.$smDevice) {
+        padding: globals.$pagePadding_Mobile;
     }
 
-    @media only screen and (max-width: $xsDevice) {
-        padding: $pagePadding_Mobile;
+    @media only screen and (max-width: responsive.$xsDevice) {
+        padding: globals.$pagePadding_Mobile;
         font-size: 0.6em;
 
         .textItemContainer {
@@ -104,7 +104,7 @@
     flex-flow: row;
     justify-content: flex-end;
 
-    @media only screen and (min-width: $lgDevice) {
+    @media only screen and (min-width: responsive.$lgDevice) {
         // Centered with auto margins, not a transform, so framer-motion's hover scale doesn't override it.
         left: 0;
         right: 0;

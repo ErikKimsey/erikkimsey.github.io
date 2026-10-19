@@ -1,5 +1,5 @@
-@import "../../styles/globals.scss";
-@import "../../styles/responsive.scss";
+@use "../../styles/globals.scss";
+@use "../../styles/responsive.scss";
 
 .experienceContainer {
     position: relative;
@@ -46,7 +46,7 @@
         z-index: 3;
     }
 
-    @media only screen and (max-width: $smDevice) {
+    @media only screen and (max-width: responsive.$smDevice) {
         flex-flow: column;
         // width: 100%;
     }

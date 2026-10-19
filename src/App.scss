@@ -1,6 +1,6 @@
-@import './styles/responsive.scss';
-@import './styles/globals.scss';
-@import './styles/mixins.scss';
+@use 'styles/responsive.scss';
+@use 'styles/globals.scss';
+@use 'styles/mixins.scss';
 
 @tailwind base;
 @tailwind components;
@@ -40,11 +40,11 @@ $highlight-color: rgb(255, 75, 255);
     // }
 
 
-    @media only screen and (max-width: $lgDevice) {
+    @media only screen and (max-width: responsive.$lgDevice) {
         // padding: 0 10px 50px 10px;
     }
 
-    @media only screen and (max-width: $mdDevice) {
+    @media only screen and (max-width: responsive.$mdDevice) {
 
         .background-image {
             position: fixed;
@@ -59,7 +59,7 @@ $highlight-color: rgb(255, 75, 255);
 
     }
 
-    @media only screen and (max-width: $smDevice) {}
+    @media only screen and (max-width: responsive.$smDevice) {}
 
     // @media only screen and (max-width: $xsDevice) {
     //     padding: 0;

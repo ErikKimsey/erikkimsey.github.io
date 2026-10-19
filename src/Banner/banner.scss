@@ -1,6 +1,6 @@
-@import '../styles/responsive.scss';
-@import '../styles/globals.scss';
-@import '../index.scss';
+@use '../styles/responsive.scss';
+@use '../styles/globals.scss';
+@use '../index.scss';
 
 @tailwind base;
 @tailwind components;
@@ -41,7 +41,7 @@ $hover-color: #fcfa85;
 
         .banner-item {
             font-weight: 900;
-            font-family: $quantify;
+            font-family: index.$quantify;
             // font-size: 3rem;
             line-height: 1.2;
             //position: relative;
@@ -64,7 +64,7 @@ $hover-color: #fcfa85;
             padding-right: 20px;
             position: relative;
             //overflow: hidden;
-            font-family: $quantify;
+            font-family: index.$quantify;
             line-height: 0.8;
             --bg-size: 200%;
             --color-one: #5372ff;
@@ -140,7 +140,7 @@ $hover-color: #fcfa85;
             // padding: 0 20px;
             //overflow: hidden;
             color: var(--c-fg);
-            text-shadow: 0 0 5 $peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 5 globals.$peachPuff 0 0 0 rgba(255, 255, 255, 0.5);
         }
 
         // .bannerMenuItem:first-of-type {
