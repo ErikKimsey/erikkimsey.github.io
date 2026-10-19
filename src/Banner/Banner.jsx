@@ -64,7 +64,7 @@ export default function Banner(props) {
 
     return (
         <motion.div
-            className="banner-container w-auto text-6xl md:text-3xl lg:text-8xl m-0 mt-[20vh] p-0 flex-col overflow-hidden z-10"
+            className="banner-container w-auto text-6xl md:text-3xl lg:text-8xl m-0 mt-[20vh] p-0 flex-col overflow-hidden z-10 "
             ref={bannerRef}
             initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -73,12 +73,10 @@ export default function Banner(props) {
                 delay: 0,
             }}
             role="banner"
-        // style={{ filter: isGrayscale ? 'grayscale(100%)' : 'grayscale(0%)' }}
         >
 
 
-            {/* <UnderConstruction /> */}
-            <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip">
+            <div className="text-container flex flex-col flex-nowrap pl-0 overflow-clip overflow-clip ">
                 <motion.h1
                     className="font-quantify overflow-clip text-6xl lg:text-7xl"
                     initial={{ opacity: 0 }}
@@ -119,14 +117,12 @@ export default function Banner(props) {
                 >
                     websites / mobile apps / games
                 </motion.div>
-                 {/* <motion.p
-                className="w-full text-white overflow-clip p-0 pt-10 text-2xl font-comfortBold">
-                Let's work together! &nbsp;&nbsp;
-            </motion.p> */}
 
             </div>
+            <div className="for-hiring-managers-and-clients pt-4 w-full md:w-2/3 lg:w-2/3 h-auto flex flex-col items-center justify-center overflow-hidden text-black font-quantify text-lg">
+                Software dude reacting to the world with code, design, and creativity. I build digital experiences that are functional, accessible, and visually appealing.
 
-            {/* <div className="border-b-2 pt-4 border-grayzDark"></div> */}
+            </div>
 
 
             {/* <motion.div
