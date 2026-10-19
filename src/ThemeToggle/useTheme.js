@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from "react";
 
 const STORAGE_KEY = "theme";
 const THEME_COLORS = { dark: "#000000", light: "#fafafa" };
-const lightQuery = window.matchMedia("(prefers-color-scheme: light)");
 
 function getStoredTheme() {
     try {
@@ -13,10 +12,6 @@ function getStoredTheme() {
     }
 }
 
-function getSystemTheme() {
-    return lightQuery.matches ? "light" : "dark";
-}
-
 function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
     const meta = document.querySelector('meta[name="theme-color"]');
@@ -25,26 +20,16 @@ function applyTheme(theme) {
     }
 }
 
-// Returns the active theme and a toggle. An explicit choice is remembered;
-// until the user makes one, the site follows the OS color scheme.
+// Returns the active theme and a toggle. Light is the default; an explicit
+// choice from the toggle is remembered.
 export default function useTheme() {
     const [theme, setTheme] = useState(
-        () => document.documentElement.dataset.theme || getStoredTheme() || getSystemTheme()
+        () => document.documentElement.dataset.theme || getStoredTheme() || "light"
     );
 
     useEffect(() => {
         applyTheme(theme);
     }, [theme]);
-
-    useEffect(() => {
-        function onSystemChange() {
-            if (getStoredTheme() === null) {
-                setTheme(getSystemTheme());
-            }
-        }
-        lightQuery.addEventListener("change", onSystemChange);
-        return () => lightQuery.removeEventListener("change", onSystemChange);
-    }, []);
 
     const toggleTheme = useCallback(() => {
         setTheme((current) => {

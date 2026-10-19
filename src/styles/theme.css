@@ -1,9 +1,8 @@
 /*
  * Site-wide color tokens. The active theme is set on <html data-theme="dark|light">
  * (see the inline script in public/index.html and src/ThemeToggle/useTheme.js).
- * Dark is the default; tailwind.config.js and the SCSS files read these variables.
+ * Light is the default; tailwind.config.js and the SCSS files read these variables.
  */
-:root,
 :root[data-theme="dark"] {
     color-scheme: dark;
 
@@ -40,6 +39,7 @@
     --c-banner-two: #a7ffff;
 }
 
+:root,
 :root[data-theme="light"] {
     color-scheme: light;
 
