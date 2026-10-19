@@ -120,7 +120,7 @@ export default function Banner(props) {
 
             </div>
             <div className="for-hiring-managers-and-clients pt-4 w-full md:w-2/3 lg:w-2/3 h-auto flex flex-col items-center justify-center overflow-hidden text-black font-quantify text-lg">
-                Software dude reacting to the world with code, design, and creativity. I build digital experiences that are functional, accessible, and visually appealing.
+                Software guy reacting to the world with code, design, and creativity. I build digital experiences that are functional, accessible, and visually appealing.
 
             </div>
 
