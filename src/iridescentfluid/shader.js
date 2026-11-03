@@ -25,6 +25,14 @@ uniform float cream;
 uniform float pearl;
 // How hard the liquid churns: 1 is its resting state, higher folds it more tightly.
 uniform float turbulence;
+// The cursor or finger, in screen-height units from the top left, its smoothed velocity in
+// those units per second, and how strongly it touches the liquid (0 to 1).
+uniform vec2 pointer;
+uniform vec2 pointerVel;
+uniform float pointerStrength;
+
+// Stretches the liquid sideways, into long horizontal folds.
+const vec2 SCALE = vec2(2.8, 5.6);
 
 float hash(vec2 p) {
   p = fract(p * vec2(123.34, 456.21));
@@ -55,21 +63,25 @@ float fbm(vec2 p) {
 }
 
 // The liquid's surface height at p. Warping by noise folds it into long, slow ripples.
+// Near the pointer the liquid is dragged along with it and lifts into a soft bulge.
 float surface(vec2 p, float t) {
+  vec2 d = p / SCALE - pointer;
+  float touch = exp(-dot(d, d) / 0.018) * pointerStrength;
+  p -= pointerVel * SCALE * touch * 0.12;
+
   vec2 q = vec2(
     fbm(p + vec2(0.0, t * 0.10)),
     fbm(p + vec2(5.2, 1.3) - t * 0.08)
   );
-  return fbm(p + 1.8 * turbulence * q + vec2(t * 0.03, 0.0));
+  return fbm(p + 1.8 * turbulence * q + vec2(t * 0.03, 0.0)) + touch * 0.18;
 }
 
 void main() {
   // WebGL's origin is bottom-left; flip y so it matches the original top-left layout.
   vec2 xy = vec2(gl_FragCoord.x, resolution.y - gl_FragCoord.y);
 
-  // Stretched sideways, into long horizontal folds.
   vec2 uv = xy / resolution.y;
-  vec2 p = uv * vec2(2.8, 5.6);
+  vec2 p = uv * SCALE;
 
   float e = 0.01;
   float h = surface(p, time);

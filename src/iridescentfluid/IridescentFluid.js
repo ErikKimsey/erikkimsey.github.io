@@ -38,6 +38,14 @@ const BACKDROP_FADE = 0.8;
 /** How quickly the colors move between palettes after the intro (higher is faster). */
 const PALETTE_RATE = 2;
 
+/** How fast the bulge under the pointer grows in and settles back (per second). */
+const TOUCH_IN_RATE = 4;
+const TOUCH_OUT_RATE = 1.5;
+/** Milliseconds a still cursor keeps touching the liquid before it settles back. */
+const TOUCH_IDLE_MS = 2000;
+/** Caps how hard a fast flick can drag the liquid, in screen heights per second. */
+const MAX_DRAG = 1.5;
+
 // The timeline lives outside the component, so when the canvas comes back for Experience
 // or the contact form it picks up where the intro left off, calm. `pearl` is the current
 // pearl blend, which eases toward the requested palette once the intro is over.
@@ -118,6 +126,58 @@ function FluidCanvas({ palette, onIntroEnd, onFailed }) {
         const creamLoc = gl.getUniformLocation(program, 'cream');
         const pearlLoc = gl.getUniformLocation(program, 'pearl');
         const turbulenceLoc = gl.getUniformLocation(program, 'turbulence');
+        const pointerLoc = gl.getUniformLocation(program, 'pointer');
+        const pointerVelLoc = gl.getUniformLocation(program, 'pointerVel');
+        const pointerStrengthLoc = gl.getUniformLocation(program, 'pointerStrength');
+
+        // The cursor or finger, in screen heights from the top left (the shader's units).
+        // x/y is where it is; sx/sy trails behind it smoothly, and vx/vy is how fast that
+        // trailing point moves.
+        const pointer = { x: 0, y: 0, sx: 0, sy: 0, vx: 0, vy: 0, strength: 0, down: false, lastMove: -Infinity };
+
+        const onPointerMove = (e) => {
+            pointer.x = e.clientX / window.innerHeight;
+            pointer.y = e.clientY / window.innerHeight;
+            if (pointer.strength < 0.01) {
+                // Starting fresh: appear under the pointer instead of sliding in from afar.
+                pointer.sx = pointer.x;
+                pointer.sy = pointer.y;
+                pointer.vx = 0;
+                pointer.vy = 0;
+            }
+            pointer.lastMove = performance.now();
+            if (e.pointerType === 'mouse' || e.type === 'pointerdown') pointer.down = true;
+        };
+        const onPointerUp = (e) => {
+            // A lifted finger lets go; a mouse keeps hovering.
+            if (e.pointerType !== 'mouse') pointer.down = false;
+        };
+        const onPointerOut = (e) => {
+            if (!e.relatedTarget) pointer.down = false; // the cursor left the window
+        };
+
+        const updatePointer = (dt) => {
+            const touching = !motionQuery.matches && pointer.down
+                && performance.now() - pointer.lastMove < TOUCH_IDLE_MS;
+            const rate = touching ? TOUCH_IN_RATE : TOUCH_OUT_RATE;
+            pointer.strength += ((touching ? 1 : 0) - pointer.strength) * Math.min(1, dt * rate);
+
+            const follow = 1 - Math.exp(-dt * 10);
+            const nx = pointer.sx + (pointer.x - pointer.sx) * follow;
+            const ny = pointer.sy + (pointer.y - pointer.sy) * follow;
+            const ease = 1 - Math.exp(-dt * 6);
+            if (dt > 0) {
+                pointer.vx += ((nx - pointer.sx) / dt - pointer.vx) * ease;
+                pointer.vy += ((ny - pointer.sy) / dt - pointer.vy) * ease;
+            }
+            const speed = Math.hypot(pointer.vx, pointer.vy);
+            if (speed > MAX_DRAG) {
+                pointer.vx *= MAX_DRAG / speed;
+                pointer.vy *= MAX_DRAG / speed;
+            }
+            pointer.sx = nx;
+            pointer.sy = ny;
+        };
 
         // 1 at load, easing to 0 once the liquid has calmed.
         const churn = () => 1 - smoothstep(clock.elapsed / CALM_END);
@@ -137,6 +197,9 @@ function FluidCanvas({ palette, onIntroEnd, onFailed }) {
             // Under reduced motion the liquid holds still, so it skips the churn too.
             const warp = motionQuery.matches ? 1 : 1 + (START_WARP - 1) * churn();
             gl.uniform1f(turbulenceLoc, warp);
+            gl.uniform2f(pointerLoc, pointer.sx, pointer.sy);
+            gl.uniform2f(pointerVelLoc, pointer.vx, pointer.vy);
+            gl.uniform1f(pointerStrengthLoc, pointer.strength);
             gl.drawArrays(gl.TRIANGLES, 0, 3);
         };
 
@@ -163,6 +226,7 @@ function FluidCanvas({ palette, onIntroEnd, onFailed }) {
                     clock.pearl += (target - clock.pearl) * Math.min(1, dt * PALETTE_RATE);
                 }
                 if (!motionQuery.matches) clock.time += dt * (1 + (START_SPEED - 1) * churn());
+                updatePointer(dt);
             }
             last = now;
             draw();
@@ -190,11 +254,22 @@ function FluidCanvas({ palette, onIntroEnd, onFailed }) {
         update();
         window.addEventListener('resize', resize);
         document.addEventListener('visibilitychange', update);
+        // The canvas ignores clicks, so the pointer is watched on the window instead.
+        window.addEventListener('pointermove', onPointerMove, { passive: true });
+        window.addEventListener('pointerdown', onPointerMove, { passive: true });
+        window.addEventListener('pointerup', onPointerUp, { passive: true });
+        window.addEventListener('pointercancel', onPointerUp, { passive: true });
+        window.addEventListener('pointerout', onPointerOut, { passive: true });
 
         return () => {
             stop();
             window.removeEventListener('resize', resize);
             document.removeEventListener('visibilitychange', update);
+            window.removeEventListener('pointermove', onPointerMove);
+            window.removeEventListener('pointerdown', onPointerMove);
+            window.removeEventListener('pointerup', onPointerUp);
+            window.removeEventListener('pointercancel', onPointerUp);
+            window.removeEventListener('pointerout', onPointerOut);
             gl.deleteBuffer(buffer);
             gl.deleteProgram(program);
             gl.deleteShader(vert);
@@ -239,6 +314,8 @@ const fadeVariants = {
  * fades out and is removed. It starts out churning hard and calms down by the time the
  * colors settle on pearl. Afterwards it fades back in whenever a component calls
  * useShowFluidBackdrop (Experience and the contact form both use the pearlescent colors).
+ * The cursor, or a finger on touch screens, presses a soft bulge into the liquid and drags
+ * it along.
  * The timeline only runs while the tab is visible, and the liquid holds still when the
  * user prefers reduced motion.
  */

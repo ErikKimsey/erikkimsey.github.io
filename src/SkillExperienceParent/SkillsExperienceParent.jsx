@@ -13,7 +13,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
 
     return (
         <motion.div
-            className="box-content w-full h-auto flex flex-row items-start justify-start text-2xl mt-6 overflow-clip"
+            className="box-content w-full h-auto flex flex-col md:flex-row items-start justify-start gap-4 md:gap-0 text-2xl mt-6 overflow-clip"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -42,14 +42,15 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 <div className="text-start text-2xl overflow-visible mr-4">EXPERIENCE</div>
             </button>
 
-            {/* Divider sits outside the buttons so it doesn't scale on hover. */}
-            <div aria-hidden="true" className="self-stretch w-px bg-grayzDark" />
+            {/* Divider sits outside the buttons so it doesn't scale on hover. On phones the
+                buttons stack in a column, so it's hidden there. */}
+            <div aria-hidden="true" className="hidden md:block self-stretch w-px bg-grayzDark" />
 
             <button
                 onClick={onOpenEmail}
                 type="button"
                 aria-haspopup="dialog"
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-95 transition-all duration-500 flex content-start justify-start overflow-visible origin-left px-2 ml-4"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-95 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pr-2 md:pl-2 md:ml-4"
             >
                 <div className="flex items-center gap-2 text-pinkz dark:text-yellowz text-2xl overflow-visible">
                     <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
@@ -65,7 +66,7 @@ export default function SkillsExperienceParent({ onOpenFreelance, onOpenEmail = 
                 type="button"
                 tabIndex={-1}
                 aria-hidden="true"
-                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 flex content-start justify-start overflow-visible origin-left pl-2"
+                className="box-content font-quantify border-gray-600 bg-transparent hover:scale-110 transition-all duration-500 hidden md:flex content-start justify-start overflow-visible origin-left pl-2"
             >
                 {/* <div className="h-12 font-quantify hover:text-pinkz text-xl overflow-hidden">FLAT-FEE SERVICES</div> */}
             </button>
