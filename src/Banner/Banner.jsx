@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import BannerMenu from "./BannerMenu";
 import "./banner.scss";
 
@@ -14,14 +14,18 @@ const ROLES = [
     'Creative Engineer',
 ]
 
+/** Shared by the visible role and the invisible ones that hold the box's height. */
+const ROLE_CLASSES = "aboutSelfDeveloperContainer col-start-1 row-start-1 max-w-full overflow-visible py-[0.12em]";
+
+/** Milliseconds each role shows before the next one, unless Banner is given timerTime. */
+const ROLE_INTERVAL = 3000;
+
 export default function Banner(props) {
     let { timerTime } = props;
 
     let bannerRef = useRef();
     let [iconActive, setIconActive] = useState(false);
-    let [timer, setTimer] = useState(3000);
     let [rolesIndex, setRolesIndex] = useState(0);
-    let [currRole, setCurrRole] = useState();
     let [isGrayscale, setIsGrayscale] = useState(true);
 
     const hasAnimated = localStorage.getItem('bannerAnimated') === 'false';
@@ -29,7 +33,6 @@ export default function Banner(props) {
     useEffect(() => {
         let interval = null;
         setIconActive(props.isActive);
-        setTimer(timerTime);
     }, [])
 
     useEffect(() => {
@@ -41,22 +44,13 @@ export default function Banner(props) {
         return () => clearTimeout(timer);
     }, [])
 
+    // Cycle through the roles, wrapping back to the first.
     useEffect(() => {
-        changeRole();
-    }, [rolesIndex])
-
-
-    function iterateRoles() {
-        if (rolesIndex < ROLES.length) {
-            setRolesIndex(rolesIndex++);
-        } else {
-            setRolesIndex(0);
-        }
-    }
-
-    function changeRole() {
-        setCurrRole(ROLES[rolesIndex]);
-    }
+        const interval = setInterval(() => {
+            setRolesIndex((i) => (i + 1) % ROLES.length);
+        }, timerTime || ROLE_INTERVAL);
+        return () => clearInterval(interval);
+    }, [timerTime])
 
     return (
         <motion.div
@@ -85,8 +79,10 @@ export default function Banner(props) {
                     Erik Kimsey
                 </motion.h1>
 
+                {/* Sized to the screen so the longest role fits on a phone, and not
+                    clipped, so the letters and the slide between roles show in full. */}
                 <motion.div
-                    className="aboutSelfDeveloperContainer font-quantify text-6xl overflow-clip"
+                    className="grid justify-items-start font-quantify text-[clamp(2.25rem,9vw,3.75rem)] overflow-visible"
                     initial={hasAnimated ? { opacity: 1 } : { opacity: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
 
@@ -94,11 +90,39 @@ export default function Banner(props) {
                         duration: 0.5,
                         delay: 0.3,
                     }}
-                    data-text={currRole}
-                    aria-live="polite"
-                    aria-atomic="true"
                 >
-                    {currRole}
+                    {/* Screen readers hear every role once instead of each change. */}
+                    <span className="sr-only">{ROLES.join(", ")}</span>
+                    {/* Every role sits invisibly in the same grid cell, so the box is
+                        always as tall as the longest role and never changes height. */}
+                    {ROLES.map((role) => (
+                        <span
+                            key={role}
+                            className={`${ROLE_CLASSES} invisible`}
+                            aria-hidden="true"
+                        >
+                            {role}
+                        </span>
+                    ))}
+                    <AnimatePresence mode="wait" initial={false}>
+                        {/* The gradient class sits on the fading element itself, since
+                            gradient-clipped text can vanish inside a fading child.
+                            overflow-visible overrides the site-wide overflow-x: hidden,
+                            which would otherwise give the span its own scroll bar. The
+                            gradient only paints inside the span's box, so the vertical
+                            padding keeps tall letters and descenders from being cut off. */}
+                        <motion.span
+                            key={ROLES[rolesIndex]}
+                            className={ROLE_CLASSES}
+                            aria-hidden="true"
+                            initial={{ opacity: 0, y: 12 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -12 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                        >
+                            {ROLES[rolesIndex]}
+                        </motion.span>
+                    </AnimatePresence>
                 </motion.div>
                 <motion.div
                     className="aboutSelfDeveloperContainer font-quantify text-3xl overflow-clip"
