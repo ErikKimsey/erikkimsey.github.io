@@ -10,12 +10,8 @@ import SeekingWork from "../SeekingWork/SeekingWork";
 
 
 const ROLES = [
-    'UI Developer',
-    'Software Developer',
-    'Frontend Developer',
     'Creative Technologist',
-    'Full-Stack Developer',
-    'Software Engineer',
+    'Creative Engineer',
 ]
 
 export default function Banner(props) {
@@ -115,12 +111,12 @@ export default function Banner(props) {
                     }}
 
                 >
-                    websites / mobile apps / games
+                    {/* creative technologist / creative engineer */}
                 </motion.div>
 
             </div>
             <div className="for-hiring-managers-and-clients pt-4 w-full md:w-2/3 lg:w-2/3 h-auto flex flex-col items-center justify-center overflow-hidden text-black font-quantify text-lg">
-                Software guy reacting to the world with code, design, and creativity. I build digital experiences that are functional, accessible, and visually appealing.
+                {/* Software guy reacting to the world with code, design, and creativity. I build digital experiences that are functional, accessible, and visually appealing. */}
 
             </div>
 
