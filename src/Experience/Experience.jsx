@@ -4,11 +4,14 @@ import { motion, animate, stagger } from "framer-motion";
 import "./styles/experience.scss";
 import { EXPERIENCE_DATA } from "./experience_data";
 import ExperienceItem from './ExperienceItem';
+import { useShowFluidBackdrop } from '../iridescentfluid/backdrop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Experience({ onClose, onHidden = () => { } }) {
+    // The pearlescent fluid background fades in behind Experience while it's open.
+    useShowFluidBackdrop('pearl');
 
     const containerRef = useRef();
     const [data, setData] = useState();
@@ -88,7 +91,7 @@ export default function Experience({ onClose, onHidden = () => { } }) {
                 </div>
 
                 <motion.ul
-                    className=" w-full flex flex-col"
+                    className=" w-full flex flex-col pb-16 lg:pb-24"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"

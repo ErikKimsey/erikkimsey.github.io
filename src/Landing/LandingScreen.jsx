@@ -4,6 +4,7 @@ import Landing from "./Landing";
 import Footer from "../Footer/Footer";
 import Experience from "../Experience/Experience";
 import EmailJSModal from "../EmailJS/EmailJSModal";
+import { WHITE_TO_CREAM, CREAM_TO_COLOR } from "../iridescentfluid/IridescentFluid";
 
 // Landing fades to DIMMED_OPACITY; Experience mounts just before that fade finishes,
 // so its own entrance animations play once it's visible.
@@ -13,6 +14,20 @@ const DIMMED_OPACITY = 0.1;
 const HIDE_DURATION = 0.5;
 const EXPERIENCE_DELAY = DIM_DURATION * 0.85;
 
+// On the site's first load, Landing fades in while the background shifts from cream to
+// iridescent. The background's timeline starts with the page, so the delay is measured
+// from page load; coming back to this route later shows Landing right away.
+function getIntroFade() {
+    const secondsSinceLoad = performance.now() / 1000;
+    if (secondsSinceLoad >= WHITE_TO_CREAM + CREAM_TO_COLOR) {
+        return null;
+    }
+    return {
+        delay: Math.max(0, WHITE_TO_CREAM - secondsSinceLoad),
+        duration: Math.min(CREAM_TO_COLOR, WHITE_TO_CREAM + CREAM_TO_COLOR - secondsSinceLoad),
+    };
+}
+
 export default function LandingScreen() {
     const [isExperienceOpen, setIsExperienceOpen] = useState(false);
     const [isLandingDimmed, setIsLandingDimmed] = useState(false);
@@ -21,6 +36,7 @@ export default function LandingScreen() {
     const [isLandingHidden, setIsLandingHidden] = useState(false);
     const [isEmailOpen, setIsEmailOpen] = useState(false);
     const openTimer = useRef();
+    const [introFade] = useState(getIntroFade);
 
     function openExperience() {
         setIsLandingDimmed(true);
@@ -77,14 +93,20 @@ export default function LandingScreen() {
     return (
         <>
             <motion.div
-                initial={false}
-                animate={{ opacity: isLandingHidden ? 0 : isLandingDimmed ? DIMMED_OPACITY : 1 }}
-                transition={{ duration: isLandingHidden ? HIDE_DURATION : DIM_DURATION, ease: "easeInOut" }}
-                aria-hidden={isLandingDimmed || isLandingHidden}
+                initial={introFade ? { opacity: 0 } : false}
+                animate={{ opacity: 1 }}
+                transition={introFade ? { ...introFade, ease: "easeInOut" } : undefined}
             >
-                <Landing label={"Experience"} navTo={"experience"} onOpenExperience={openExperience} onOpenEmail={openEmail} />
-                <div style={{ height: "100px" }}></div>
-                <Footer />
+                <motion.div
+                    initial={false}
+                    animate={{ opacity: isLandingHidden ? 0 : isLandingDimmed ? DIMMED_OPACITY : 1 }}
+                    transition={{ duration: isLandingHidden ? HIDE_DURATION : DIM_DURATION, ease: "easeInOut" }}
+                    aria-hidden={isLandingDimmed || isLandingHidden}
+                >
+                    <Landing label={"Experience"} navTo={"experience"} onOpenExperience={openExperience} onOpenEmail={openEmail} />
+                    <div style={{ height: "100px" }}></div>
+                    <Footer />
+                </motion.div>
             </motion.div>
 
             <AnimatePresence

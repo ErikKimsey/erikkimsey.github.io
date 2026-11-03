@@ -2,8 +2,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import EmailJS from "./EmailJS";
+import { useShowFluidBackdrop } from "../iridescentfluid/backdrop";
 
 function EmailJSModal({ isOpen = false, onClose = () => { }, onExitComplete }) {
+    // The pearlescent fluid background fades in behind the form while it's open.
+    useShowFluidBackdrop("pearl", isOpen);
+
     return (
         <AnimatePresence onExitComplete={onExitComplete}>
             {isOpen && (
