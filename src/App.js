@@ -10,7 +10,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 import { Context } from "./context/Context"
 import VideoBackground from "./VideoBackground/VideoBackground";
-import ThemeToggle from "./ThemeToggle/ThemeToggle";
 import IridescentFluid from "./iridescentfluid/IridescentFluid";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,7 +37,6 @@ export default function App() {
         <div >
             {/* <VideoBackground /> */}
             <IridescentFluid />
-            <ThemeToggle />
 
             <Context.Provider value={{ headerAnimComplete, setHeaderAnimComplete }}>
                 <AnimatePresence mode="wait">

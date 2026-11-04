@@ -9,17 +9,10 @@
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <meta name="theme-color" content="#fafafa" />
     <script>
-        // Set the theme before first paint so the page doesn't flash the wrong colors.
-        (function () {
-            var theme = "light";
-            try {
-                var stored = localStorage.getItem("theme");
-                if (stored === "light" || stored === "dark") {
-                    theme = stored;
-                }
-            } catch (e) {}
-            document.documentElement.dataset.theme = theme;
-        })();
+        // The site is light-only for now: the theme toggle is removed, so any dark-mode
+        // choice saved from an earlier visit is ignored. Set before first paint so the
+        // page doesn't flash the wrong colors.
+        document.documentElement.dataset.theme = "light";
     </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
