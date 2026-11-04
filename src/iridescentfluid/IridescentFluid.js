@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { IRIDESCENT_FLUID_FRAG, IRIDESCENT_FLUID_VERT } from './shader';
 import { useFluidBackdropPalette } from './backdrop';
 
@@ -17,7 +16,7 @@ export const CREAM_TO_COLOR = 3.5;
 const COLOR_HOLD = 3;
 /** Seconds the shift from iridescent to pearlescent takes. */
 const COLOR_TO_PEARL = 2;
-/** Seconds the pearlescent colors show before the background fades away. */
+/** Seconds the pearlescent colors show before the intro counts as over. */
 const PEARL_HOLD = 5;
 
 const COLOR_END = WHITE_TO_CREAM + CREAM_TO_COLOR;
@@ -29,25 +28,18 @@ const START_WARP = 3.5;
 /** ...and moves this many times faster. */
 const START_SPEED = 10;
 
-/** Seconds after load when the background starts to fade away. */
-const FADE_START = PEARL_START + COLOR_TO_PEARL + PEARL_HOLD;
-/** Seconds the fade-out at the end of the intro takes. */
-const INTRO_FADE = 2;
-/** Seconds the background takes to fade in or out with Experience or the contact form. */
-const BACKDROP_FADE = 0.8;
+/** Seconds after load when the intro is over and the background rests on pearl. */
+const INTRO_END = PEARL_START + COLOR_TO_PEARL + PEARL_HOLD;
 /** How quickly the colors move between palettes after the intro (higher is faster). */
 const PALETTE_RATE = 2;
 
-// After the intro, the background also drops in by itself now and then: it fades in over
-// AMBIENT_FADE seconds in a random palette, stays for AMBIENT_MIN to AMBIENT_MAX seconds,
-// and fades out again. The quiet gap before each visit is AMBIENT_GAP_MIN to
-// AMBIENT_GAP_MAX seconds.
-const AMBIENT_FADE = 2;
+// After the intro, the pearl background turns iridescent by itself now and then: it stays
+// iridescent for AMBIENT_MIN to AMBIENT_MAX seconds, then eases back to pearl. The quiet
+// gap before each visit is AMBIENT_GAP_MIN to AMBIENT_GAP_MAX seconds.
 const AMBIENT_MIN = 5;
 const AMBIENT_MAX = 10;
 const AMBIENT_GAP_MIN = 10;
 const AMBIENT_GAP_MAX = 20;
-const AMBIENT_PALETTES = ['iridescent', 'pearl'];
 
 function randomBetween(min, max) {
     return min + Math.random() * (max - min);
@@ -61,9 +53,9 @@ const TOUCH_IDLE_MS = 2000;
 /** Caps how hard a fast flick can drag the liquid, in screen heights per second. */
 const MAX_DRAG = 1.5;
 
-// The timeline lives outside the component, so when the canvas comes back for Experience
-// or the contact form it picks up where the intro left off, calm. `pearl` is the current
-// pearl blend, which eases toward the requested palette once the intro is over.
+// The timeline lives outside the component, so it survives a remount (for example in
+// development's strict mode). `pearl` is the current pearl blend, which eases toward the
+// requested palette once the intro is over.
 const clock = { elapsed: 0, time: 0, pearl: 0 };
 
 function compile(gl, type, source) {
@@ -86,17 +78,17 @@ function smoothstep(x) {
 
 /**
  * The WebGL canvas. It draws for as long as it is mounted, and calls onIntroEnd once the
- * intro reaches its fade-out point, or onFailed if WebGL is unavailable.
+ * intro is over, or onFailed if WebGL is unavailable.
  */
-function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
+function FluidCanvas({ palette, onIntroEnd, onFailed }) {
     const canvasRef = useRef(null);
     const callbacks = useRef({ onIntroEnd, onFailed });
     callbacks.current = { onIntroEnd, onFailed };
     const targetPearl = useRef(0);
     targetPearl.current = palette === 'iridescent' ? 0 : 1;
 
-    // Coming back after the intro, start in the requested palette instead of easing into it.
-    if (clock.elapsed >= FADE_START && canvasRef.current === null) {
+    // Mounting after the intro, start in the requested palette instead of easing into it.
+    if (clock.elapsed >= INTRO_END && canvasRef.current === null) {
         clock.pearl = targetPearl.current;
     }
 
@@ -200,7 +192,7 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
         const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         let last = null;
         let rafId = null;
-        let introEnded = clock.elapsed >= FADE_START;
+        let introEnded = clock.elapsed >= INTRO_END;
 
         const draw = () => {
             gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
@@ -233,7 +225,7 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
             if (last !== null) {
                 const dt = (now - last) / 1000;
                 clock.elapsed += dt;
-                if (clock.elapsed < FADE_START) {
+                if (clock.elapsed < INTRO_END) {
                     clock.pearl = smoothstep((clock.elapsed - PEARL_START) / COLOR_TO_PEARL);
                 } else {
                     // Ease toward the requested palette.
@@ -245,7 +237,7 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
             }
             last = now;
             draw();
-            if (clock.elapsed >= FADE_START && !introEnded) {
+            if (clock.elapsed >= INTRO_END && !introEnded) {
                 introEnded = true;
                 callbacks.current.onIntroEnd();
             }
@@ -258,8 +250,8 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
             last = null;
         };
 
-        // The timeline keeps running under reduced motion (so the colors still shift and
-        // the fade still happens), but pauses while the tab is hidden.
+        // The timeline keeps running under reduced motion (so the colors still shift),
+        // but pauses while the tab is hidden.
         const update = () => {
             if (!document.hidden && rafId === null) rafId = requestAnimationFrame(frame);
             if (document.hidden) stop();
@@ -293,14 +285,9 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
     }, []);
 
     return (
-        <motion.canvas
+        <canvas
             ref={canvasRef}
             aria-hidden="true"
-            variants={fadeVariants}
-            custom={fadeIn}
-            initial={clock.elapsed >= FADE_START ? 'hidden' : false}
-            animate="shown"
-            exit="hidden"
             style={{
                 position: 'fixed',
                 inset: 0,
@@ -314,82 +301,43 @@ function FluidCanvas({ palette, fadeIn, onIntroEnd, onFailed }) {
     );
 }
 
-// Fade lengths come from `custom`: the canvas's own for fading in, AnimatePresence's for
-// fading out. That way it comes and goes slowly on its own, and quickly with Experience
-// or the contact form.
-const fadeVariants = {
-    shown: (seconds = BACKDROP_FADE) => ({
-        opacity: 1,
-        transition: { duration: seconds, ease: 'easeInOut' },
-    }),
-    hidden: (seconds = BACKDROP_FADE) => ({
-        opacity: 0,
-        transition: { duration: seconds, ease: 'easeInOut' },
-    }),
-};
-
 /**
  * A fixed, full-viewport background of viscous, iridescent liquid that sloshes gently.
- * On load it fades from pure white to silky cream to full color, turns pearlescent, then
- * fades out and is removed. It starts out churning hard and calms down by the time the
- * colors settle on pearl. Afterwards it fades back in whenever a component calls
- * useShowFluidBackdrop (Experience and the contact form both use the pearlescent colors).
- * Every so often it also fades in by itself, iridescent or pearlescent, for a few seconds.
+ * On load it fades from pure white to silky cream to full color, then turns pearlescent
+ * and stays on as a pearl background. It starts out churning hard and calms down by the
+ * time the colors settle on pearl. Every so often it turns iridescent by itself for a few
+ * seconds and then eases back to pearl. Components can ask for a palette with
+ * useShowFluidBackdrop (Experience and the contact form both ask for pearl), which wins
+ * over those visits.
  * The cursor, or a finger on touch screens, presses a soft bulge into the liquid and drags
  * it along.
  * The timeline only runs while the tab is visible, and the liquid holds still when the
  * user prefers reduced motion.
  */
 export default function IridescentFluid() {
-    const [introOver, setIntroOver] = useState(clock.elapsed >= FADE_START);
+    const [introOver, setIntroOver] = useState(clock.elapsed >= INTRO_END);
     const [failed, setFailed] = useState(false);
-    const [ambient, setAmbient] = useState(null); // the palette of a visit, or null
+    const [visiting, setVisiting] = useState(false); // an iridescent visit is on
     const backdropPalette = useFluidBackdropPalette();
-    const backdropShown = backdropPalette !== null;
-    // Experience and the contact form choose the colors over a visit.
-    const palette = backdropPalette || ambient;
+    const palette = backdropPalette || (visiting ? 'iridescent' : 'pearl');
 
-    // Schedule the visits: wait a random gap, show a random palette, then hide it again.
+    // Schedule the visits: wait a random gap, turn iridescent, then go back to pearl.
     useEffect(() => {
         if (!introOver || failed) return;
-        const timer = ambient === null
-            ? setTimeout(() => {
-                const pick = AMBIENT_PALETTES[Math.floor(Math.random() * AMBIENT_PALETTES.length)];
-                setAmbient(pick);
-            }, randomBetween(AMBIENT_GAP_MIN, AMBIENT_GAP_MAX) * 1000)
-            : setTimeout(() => {
-                setAmbient(null);
-            }, (AMBIENT_FADE + randomBetween(AMBIENT_MIN, AMBIENT_MAX)) * 1000);
+        const seconds = visiting
+            ? randomBetween(AMBIENT_MIN, AMBIENT_MAX)
+            : randomBetween(AMBIENT_GAP_MIN, AMBIENT_GAP_MAX);
+        const timer = setTimeout(() => setVisiting(!visiting), seconds * 1000);
         return () => clearTimeout(timer);
-    }, [introOver, failed, ambient]);
-    // Keep the last palette while fading out, so the colors don't jump as it leaves.
-    const lastPalette = useRef(palette);
-    if (palette !== null) lastPalette.current = palette;
+    }, [introOver, failed, visiting]);
 
-    // Leaving because Experience or the contact form closed is a quick fade; leaving at
-    // the end of the intro or of a visit is the slow one (INTRO_FADE and AMBIENT_FADE).
-    // Coming in works the same way.
-    const wasBackdropShown = useRef(backdropShown);
-    const exitSeconds = wasBackdropShown.current && !backdropShown ? BACKDROP_FADE : INTRO_FADE;
-    useEffect(() => {
-        wasBackdropShown.current = backdropShown;
-    });
-
-    const fadeIn = backdropShown ? BACKDROP_FADE : AMBIENT_FADE;
-
-    const visible = !failed && (!introOver || palette !== null);
+    if (failed) return null;
 
     return (
-        <AnimatePresence custom={exitSeconds}>
-            {visible && (
-                <FluidCanvas
-                    key="fluid"
-                    palette={lastPalette.current}
-                    fadeIn={fadeIn}
-                    onIntroEnd={() => setIntroOver(true)}
-                    onFailed={() => setFailed(true)}
-                />
-            )}
-        </AnimatePresence>
+        <FluidCanvas
+            palette={palette}
+            onIntroEnd={() => setIntroOver(true)}
+            onFailed={() => setFailed(true)}
+        />
     );
 }
